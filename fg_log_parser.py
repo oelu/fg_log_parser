@@ -14,6 +14,7 @@ __author__ = 'olivier'
 import shlex
 from docopt import docopt
 
+
 def read_fg_firewall_log(logfile):
     """
     Reads fortigate firewall log line.
