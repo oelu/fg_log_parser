@@ -1,10 +1,9 @@
 #!/usr/local/bin/python2.7
 """ Fortigate Log Parser
-
-Usage:
-      get_requests.py (-f <logfile> | --file <logfile>)
-      get_requests.py (-h | --help)
-      get_requests.py --version
+Usage: fg_log_parser.py
+      fg_log_parser.py (-f <logfile> | --file <logfile>)
+      fg_log_parser.py (-h | --help)
+      fg_log_parser.py --version
 
 Options:
     -h --help   Show this message.
