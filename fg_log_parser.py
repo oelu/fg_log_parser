@@ -1,17 +1,18 @@
 #!/usr/local/bin/python2.7
 """ Fortigate Log Parser
+
 Usage: fg_log_parser.py
-      fg_log_parser.py (-f <logfile> | --file <logfile>)
-      fg_log_parser.py (-h | --help)
-      fg_log_parser.py --version
+  fg_log_parser.py (-f <logfile> | --file <logfile>)
 
 Options:
     -h --help   Show this message.
+    --version  shows version information
 """
 __author__ = 'olivier'
 
 import shlex
 from docopt import docopt
+import os.path
 
 
 def read_fg_firewall_log(logfile):
@@ -136,6 +137,10 @@ def main():
     arguments = docopt(__doc__, version='Fortigate Log Parser 0.1')
     # assigns docopt argument to logfile
     logfile = arguments['<logfile>']
+
+    if logfile is None:
+        print __doc__
+        quit(2)
 
     # parse fortigate log
     parsedlog = read_fg_firewall_log(logfile)
