@@ -63,8 +63,6 @@ def get_communication_matrix(parsedlog):
     calculates a communication matrix
     from fortigate logs
     """
-    # sets contain no duplicate values
-    srclist = set(get_ips(parsedlog, source=True))
 
     matrix = {}
     """
