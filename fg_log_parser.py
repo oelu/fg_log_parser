@@ -43,21 +43,6 @@ def read_fg_firewall_log(logfile):
     return loglist
 
 
-def get_ips(loglist, source=True, dest=False):
-    """
-    returns list of either source or destination ip adresses
-    """
-    iplist = []
-    if source:
-        IPTYPE = 'srcip'
-    elif dest:
-        IPTYPE = 'dstip'
-
-    for item in loglist:
-        iplist.append(item[IPTYPE])
-    return iplist
-
-
 def translate_protonr(protocolnr):
     """
     Translates port nr as names.
@@ -90,26 +75,23 @@ def get_communication_matrix(parsedlog):
                 l4: proto (protocoll number)
                     l5: occurence count
     """
-    for src in srclist:
-        if src in matrix:
-            pass
-        else:
-            matrix[src] = {}
-        for logline in parsedlog:
-            if logline['srcip'] == src:
-                dstip = logline['dstip']
-                dstport = logline['dstport']
-                proto = translate_protonr(logline['proto'])
-                # sentbyte = logline['sentbyte'] # not used now
-                # rcvdbyte = logline['rcvdbyte'] # not used now
-                if dstip not in matrix[src]:
-                    matrix[src][dstip] = {}
-                    if dstport not in matrix[src][dstip]:
-                        matrix[src][dstip][dstport] = {}
-                        if proto not in matrix[src][dstip][dstport]:
-                            matrix[src][dstip][dstport][proto] = 1
-                elif proto in matrix[src][dstip][dstport]:
-                    matrix[src][dstip][dstport][proto] += 1
+    for logline in parsedlog:
+        srcip = logline['srcip']
+        dstip = logline['dstip']
+        dstport = logline['dstport']
+        proto = translate_protonr(logline['proto'])
+        # sentbyte = logline['sentbyte'] # not used now
+        # rcvdbyte = logline['rcvdbyte'] # not used now
+        if srcip not in matrix:
+            matrix[srcip] = {}
+        if dstip not in matrix[srcip]:
+            matrix[srcip][dstip] = {}
+        if dstport not in matrix[srcip][dstip]:
+            matrix[srcip][dstip][dstport] = {}
+        if proto not in matrix[srcip][dstip][dstport]:
+            matrix[srcip][dstip][dstport][proto] = 1
+        elif proto in matrix[srcip][dstip][dstport]:
+            matrix[srcip][dstip][dstport][proto] += 1
     return matrix
 
 
@@ -118,7 +100,6 @@ def print_communication_matrix(matrix, indent=0):
     prints the communication matrix in a nice format
     """
     # pprint(matrix)
-    # json.dumps(matrix, sort_keys=True, indent=4)
     for key, value in matrix.iteritems():
         print '\t' * indent + str(key)
         if isinstance(value, dict):
