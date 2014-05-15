@@ -10,8 +10,9 @@ Options:
 """
 __author__ = 'olivier'
 
-import shlex
 from docopt import docopt
+import shlex
+import sys
 
 
 def read_fg_firewall_log(logfile):
@@ -129,12 +130,13 @@ def main():
 
     if logfile is None:
         print __doc__
-        quit(2)
+        sys.exit(2)
 
     # parse fortigate log
     loglist = read_fg_firewall_log(logfile)
     matrix = get_communication_matrix(loglist)
     print_communication_matrix(matrix)
+    return 1
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
