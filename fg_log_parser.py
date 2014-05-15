@@ -12,13 +12,12 @@ __author__ = 'olivier'
 
 import shlex
 from docopt import docopt
-import os.path
 
 
 def read_fg_firewall_log(logfile):
     """
-    Reads fortigate firewall log line.
-    Returns a list with dictionaries per line
+    Reads fortigate firewall logfile. Returns a list with
+    a dictionary for each line.
     """
     KVDELIM = '='  # key and value deliminator
     try:
@@ -46,7 +45,16 @@ def read_fg_firewall_log(logfile):
 def translate_protonr(protocolnr):
     """
     Translates port nr as names.
-    Example: 6 should return "TCP"
+
+    Example:
+        >>> translate_protonr(53)
+        53
+        >>> translate_protonr(1)
+        'ICMP'
+        >>> translate_protonr(6)
+        'TCP'
+        >>> translate_protonr(17)
+        'UDP'
     """
     if int(protocolnr) == 1:
         return "ICMP"   # icmp has protonr 1
@@ -58,10 +66,12 @@ def translate_protonr(protocolnr):
         return protocolnr
 
 
-def get_communication_matrix(parsedlog):
+def get_communication_matrix(loglist):
     """
-    calculates a communication matrix
-    from fortigate logs
+    calculates a communication matrix from a loglist
+
+    Example:
+        TODO: add example
     """
 
     matrix = {}
@@ -73,7 +83,7 @@ def get_communication_matrix(parsedlog):
                 l4: proto (protocoll number)
                     l5: occurence count
     """
-    for logline in parsedlog:
+    for logline in loglist:
         srcip = logline['srcip']
         dstip = logline['dstip']
         dstport = logline['dstport']
@@ -122,8 +132,8 @@ def main():
         quit(2)
 
     # parse fortigate log
-    parsedlog = read_fg_firewall_log(logfile)
-    matrix = get_communication_matrix(parsedlog)
+    loglist = read_fg_firewall_log(logfile)
+    matrix = get_communication_matrix(loglist)
     print_communication_matrix(matrix)
 
 if __name__ == "__main__":
