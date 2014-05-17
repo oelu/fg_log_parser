@@ -26,7 +26,7 @@ def read_fg_firewall_log(logfile):
     except Exception, e:
         print "Error: file %s not readable" % (logfile)
         print e.message
-        quit(2)
+        sys.exit(2)
 
     loglist = []
 
