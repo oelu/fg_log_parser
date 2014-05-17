@@ -89,8 +89,8 @@ def get_communication_matrix(loglist):
         dstip = logline['dstip']
         dstport = logline['dstport']
         proto = translate_protonr(logline['proto'])
-        # sentbyte = logline['sentbyte'] # not used now
-        # rcvdbyte = logline['rcvdbyte'] # not used now
+        sentbytes = logline['sentbyte']  # not used now
+        rcvdbytes = logline['rcvdbyte']  # not used now
         if srcip not in matrix:
             matrix[srcip] = {}
         if dstip not in matrix[srcip]:
@@ -98,9 +98,15 @@ def get_communication_matrix(loglist):
         if dstport not in matrix[srcip][dstip]:
             matrix[srcip][dstip][dstport] = {}
         if proto not in matrix[srcip][dstip][dstport]:
-            matrix[srcip][dstip][dstport][proto] = 1
+            matrix[srcip][dstip][dstport][proto] = {}
+            matrix[srcip][dstip][dstport][proto]["count"] = 1
+            matrix[srcip][dstip][dstport][proto]["sentbytes"] = int(sentbytes)
+            matrix[srcip][dstip][dstport][proto]["rcvdbytes"] = int(rcvdbytes)
         elif proto in matrix[srcip][dstip][dstport]:
-            matrix[srcip][dstip][dstport][proto] += 1
+            matrix[srcip][dstip][dstport][proto]["count"] += 1
+            matrix[srcip][dstip][dstport][proto]["sentbytes"] += int(sentbytes)
+            matrix[srcip][dstip][dstport][proto]["rcvdbytes"] += int(rcvdbytes)
+
     return matrix
 
 
