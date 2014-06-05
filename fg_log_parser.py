@@ -2,46 +2,77 @@
 """ Fortigate Log Parser
 
 Usage: fg_log_parser.py
-  fg_log_parser.py (-f <logfile> | --file <logfile>)
+  fg_log_parser.py (-f <logfile> | --file <logfile>) [options]
 
 Options:
     -h --help   Show this message.
     --version  shows version information
+    -b --countbytes  count bytes for each communication
 """
 __author__ = 'olivier'
 
 from docopt import docopt
-import shlex
+from pprint import pprint
+import re
 import sys
 
 
-def read_fg_firewall_log(logfile):
+def split_kv(line):
     """
-    Reads fortigate firewall logfile. Returns a list with
-    a dictionary for each line.
+    splits lines in key and value pairs and returns a dict
     """
     KVDELIM = '='  # key and value deliminator
-    try:
-        fh = open(logfile, "r")
-    except Exception, e:
-        print "Error: file %s not readable" % (logfile)
-        print e.message
-        sys.exit(2)
+    logline = {}
+    for field in re.findall(r'(?:[^\s,""]|"(?:\\.|[^""])*")+', line):
+        key, value = field.split(KVDELIM)
+        logline[key] = value
+    return logline
 
-    loglist = []
 
-    for line in fh:
-        # lines are splited with shlex to recognise embeded substrings
-        # such as key="valword1 valword2"
-        keyvalues = {}
-        for field in shlex.split(line):
-            key, value = field.split(KVDELIM)
-            keyvalues[key] = value
-        loglist.append(keyvalues)
-        keyvalues = {}
-    fh.close()
-    return loglist
+def read_fg_firewall_log(logfile, countbytes=False):
+    """
+    reads fortigate logfile and returns a communication matrix as dict
+    """
 
+    matrix = {}
+
+    with open(logfile, 'r') as infile:
+        for line in infile:
+            logline = split_kv(line)
+            """
+            for loop creates a dictionary with multiple levels
+            l1: srcips (source ips)
+             l2: dstips (destination ips)
+              l3: dstport (destination port number)
+               l4: proto (protocoll number)
+                l5: occurence count
+            """
+            srcip = logline['srcip']
+            dstip = logline['dstip']
+            dstport = logline['dstport']
+            proto = translate_protonr(logline['proto'])
+            if countbytes:
+                sentbytes = logline['sentbyte']  # not used now
+                rcvdbytes = logline['rcvdbyte']  # not used now
+
+            if srcip not in matrix:
+                matrix[srcip] = {}
+            if dstip not in matrix[srcip]:
+                matrix[srcip][dstip] = {}
+            if dstport not in matrix[srcip][dstip]:
+                matrix[srcip][dstip][dstport] = {}
+            if proto not in matrix[srcip][dstip][dstport]:
+                matrix[srcip][dstip][dstport][proto] = {}
+                matrix[srcip][dstip][dstport][proto]["count"] = 1
+                if countbytes:
+                    matrix[srcip][dstip][dstport][proto]["sentbytes"] = int(sentbytes)
+                    matrix[srcip][dstip][dstport][proto]["rcvdbytes"] = int(rcvdbytes)
+            elif proto in matrix[srcip][dstip][dstport]:
+                matrix[srcip][dstip][dstport][proto]["count"] += 1
+                if countbytes:
+                    matrix[srcip][dstip][dstport][proto]["sentbytes"] += int(sentbytes)
+                    matrix[srcip][dstip][dstport][proto]["rcvdbytes"] += int(rcvdbytes)
+    return matrix
 
 def translate_protonr(protocolnr):
     """
@@ -67,49 +98,6 @@ def translate_protonr(protocolnr):
         return protocolnr
 
 
-def get_communication_matrix(loglist):
-    """
-    calculates a communication matrix from a loglist
-
-    Example:
-        TODO: add example
-    """
-
-    matrix = {}
-    """
-    for loop creates a dictionary with multiple levels
-    l1: srcips (source ips)
-        l2: dstips (destination ips)
-            l3: dstport (destination port number)
-                l4: proto (protocoll number)
-                    l5: occurence count
-    """
-    for logline in loglist:
-        srcip = logline['srcip']
-        dstip = logline['dstip']
-        dstport = logline['dstport']
-        proto = translate_protonr(logline['proto'])
-        sentbytes = logline['sentbyte']  # not used now
-        rcvdbytes = logline['rcvdbyte']  # not used now
-        if srcip not in matrix:
-            matrix[srcip] = {}
-        if dstip not in matrix[srcip]:
-            matrix[srcip][dstip] = {}
-        if dstport not in matrix[srcip][dstip]:
-            matrix[srcip][dstip][dstport] = {}
-        if proto not in matrix[srcip][dstip][dstport]:
-            matrix[srcip][dstip][dstport][proto] = {}
-            matrix[srcip][dstip][dstport][proto]["count"] = 1
-            matrix[srcip][dstip][dstport][proto]["sentbytes"] = int(sentbytes)
-            matrix[srcip][dstip][dstport][proto]["rcvdbytes"] = int(rcvdbytes)
-        elif proto in matrix[srcip][dstip][dstport]:
-            matrix[srcip][dstip][dstport][proto]["count"] += 1
-            matrix[srcip][dstip][dstport][proto]["sentbytes"] += int(sentbytes)
-            matrix[srcip][dstip][dstport][proto]["rcvdbytes"] += int(rcvdbytes)
-
-    return matrix
-
-
 def print_communication_matrix(matrix, indent=0):
     """
     prints the communication matrix in a nice format
@@ -133,14 +121,14 @@ def main():
     arguments = docopt(__doc__, version='Fortigate Log Parser 0.1')
     # assigns docopt argument to logfile
     logfile = arguments['<logfile>']
+    countbytes = arguments['--countbytes']
 
     if logfile is None:
         print __doc__
         sys.exit(2)
 
     # parse fortigate log
-    loglist = read_fg_firewall_log(logfile)
-    matrix = get_communication_matrix(loglist)
+    matrix = read_fg_firewall_log(logfile, countbytes)
     print_communication_matrix(matrix)
     return 1
 
