@@ -95,9 +95,11 @@ def read_fg_firewall_log(logfile, countbytes=False):
 
             # extend matrix for each source ip
             if srcip not in matrix:
+                log.info("found new srcip %s", srcip)
                 matrix[srcip] = {}
             # extend matrix for each dstip in srcip
             if dstip not in matrix[srcip]:
+                log.info("found new dstip %s for sourceip: %s", dstip, srcip)
                 matrix[srcip][dstip] = {}
             # extend matrix for each port in comm. pair
             if dstport not in matrix[srcip][dstip]:
@@ -167,7 +169,7 @@ def main():
     """
     # gets arguments from docopt
     arguments = docopt(__doc__)
-    arguments = docopt(__doc__, version='Fortigate Log Parser 0.1')
+    arguments = docopt(__doc__, version='Fortigate Log Parser 0.2')
     # assigns docopt argument to logfile
     logfile = arguments['<logfile>']
     countbytes = arguments['--countbytes']
