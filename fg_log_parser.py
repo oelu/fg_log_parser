@@ -5,15 +5,17 @@ Usage: fg_log_parser.py
   fg_log_parser.py (-f <logfile> | --file <logfile>) [options]
 
 Options:
-    -h --help   Show this message.
-    --version  shows version information
     -b --countbytes  count bytes for each communication
+    -h --help   Show this message.
+    --verbose  activate verbose messages
+    --version  shows version information
 """
 __author__ = 'olivier'
 
 from docopt import docopt
 import re
 import sys
+import logging as log
 
 
 def split_kv(line):
@@ -36,6 +38,7 @@ def read_fg_firewall_log(logfile, countbytes=False):
     matrix = {}
 
     with open(logfile, 'r') as infile:
+        # parse each line in file
         for line in infile:
             logline = split_kv(line)
             """
@@ -46,20 +49,30 @@ def read_fg_firewall_log(logfile, countbytes=False):
                l4: proto (protocoll number)
                 l5: occurence count
             """
-            srcip = logline['srcip']
-            dstip = logline['dstip']
-            dstport = logline['dstport']
-            proto = translate_protonr(logline['proto'])
-            if countbytes:
-                sentbytes = logline['sentbyte']  # not used now
-                rcvdbytes = logline['rcvdbyte']  # not used now
+            try:
+                srcip = logline['srcip']
+                dstip = logline['dstip']
+                dstport = logline['dstport']
+                proto = translate_protonr(logline['proto'])
+                # if user has specified --countbytes
+                if countbytes:
+                    sentbytes = logline['sentbyte']  # not used now
+                    rcvdbytes = logline['rcvdbyte']  # not used now
+            except KeyError as kerror:
+                log.error("could not parse logfile %s ", logfile)
+                log.error("could parse logfileds, python error message is: ")
+                log.error(kerror)
 
+            # extend matrix for each source ip
             if srcip not in matrix:
                 matrix[srcip] = {}
+            # extend matrix for each dstip in srcip
             if dstip not in matrix[srcip]:
                 matrix[srcip][dstip] = {}
+            # extend matrix for each port in comm. pair
             if dstport not in matrix[srcip][dstip]:
                 matrix[srcip][dstip][dstport] = {}
+            # if proto not in matrix extend matrix
             if proto not in matrix[srcip][dstip][dstport]:
                 matrix[srcip][dstip][dstport][proto] = {}
                 matrix[srcip][dstip][dstport][proto]["count"] = 1
@@ -68,6 +81,7 @@ def read_fg_firewall_log(logfile, countbytes=False):
                         = int(sentbytes)
                     matrix[srcip][dstip][dstport][proto]["rcvdbytes"] \
                         = int(rcvdbytes)
+            # increase count of variable count and sum bytes
             elif proto in matrix[srcip][dstip][dstport]:
                 matrix[srcip][dstip][dstport][proto]["count"] += 1
                 if countbytes:
@@ -102,6 +116,7 @@ def translate_protonr(protocolnr):
         return protocolnr
 
 
+# TODO: add print to csv function
 def print_communication_matrix(matrix, indent=0):
     """
     prints the communication matrix in a nice format
@@ -126,12 +141,24 @@ def main():
     # assigns docopt argument to logfile
     logfile = arguments['<logfile>']
     countbytes = arguments['--countbytes']
+    verbose = arguments['--verbose']
 
+    # set loglevel
+    if verbose:
+        log.basicConfig(format="%(levelname)s: %(message)s", level=log.DEBUG)
+        log.info("Verbose output activated.")
+    else:
+        log.basicConfig(format="%(levelname)s: %(message)s")
+    log.info("script was startet with arguments: ")
+    log.info(arguments)
+
+    # check if logfile argument is present
     if logfile is None:
         print __doc__
         sys.exit(2)
 
     # parse fortigate log
+    log.info("reading firewall log...")
     matrix = read_fg_firewall_log(logfile, countbytes)
     print_communication_matrix(matrix)
     return 1
