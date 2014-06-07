@@ -1,5 +1,5 @@
 #!/usr/local/bin/python2.7
-""" Fortigate Log Parser
+"""Fortigate Log Parser
 
 Usage: fg_log_parser.py
   fg_log_parser.py (-f <logfile> | --file <logfile>) [options]
@@ -9,6 +9,19 @@ Options:
     -h --help   Show this message.
     --verbose  activate verbose messages
     --version  shows version information
+
+
+Default Logfile Format:
+    The folowing log fields need to be available in the logfile:
+        srcip   source ip address
+        dstip   destination ip address
+        proto   protocoll
+        dstport destination port
+
+    If the countbytes option is set, the folowing
+    two fields need to be present:
+        sendbytes   number of sent bytes
+        rcvdbytes   number of received bytes
 """
 __author__ = 'olivier'
 
@@ -71,6 +84,7 @@ def read_fg_firewall_log(logfile, countbytes=False):
                 log.error("could not parse logfile %s ", logfile)
                 log.error("could parse logfileds, python error message is: ")
                 log.error(kerror)
+                log.error("consult help message for log format options")
 
             # extend matrix for each source ip
             if srcip not in matrix:
