@@ -1,5 +1,5 @@
 # Fortigate Log Parser
-Parsers a Fortigate traffic log and presents a communication matrix. 
+Parses a Fortigate traffic log and presents a communication matrix. 
 
 ## Usage
     Fortigate Log Parser
