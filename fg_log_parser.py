@@ -47,12 +47,20 @@ def split_kv(line):
 def read_fg_firewall_log(logfile, countbytes=False):
     """
     reads fortigate logfile and returns a communication matrix as dict
+
+    Parameters:
+        logfile     Logfile to parse
+        countbytes  sum up bytes sent and received
     """
+    log.info("read_fg_firewall_log startet with parameters: ")
+    log.info("logfile: %s", logfile)
+    log.info("countbytes: %s", countbytes)
 
     matrix = {}
 
     with open(logfile, 'r') as infile:
         # parse each line in file
+        log.info("open logfile %s", logfile)
         for line in infile:
             """
             for loop creates a nested dictionary with multiple levels
