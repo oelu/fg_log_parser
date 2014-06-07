@@ -12,7 +12,6 @@ Options:
 __author__ = 'olivier'
 
 from docopt import docopt
-from pprint import pprint
 import re
 import sys
 
@@ -21,10 +20,10 @@ def split_kv(line):
     """
     splits lines in key and value pairs and returns a dict
     """
-    KVDELIM = '='  # key and value deliminator
+    kvdelim = '='  # key and value deliminator
     logline = {}
     for field in re.findall(r'(?:[^\s,""]|"(?:\\.|[^""])*")+', line):
-        key, value = field.split(KVDELIM)
+        key, value = field.split(kvdelim)
         logline[key] = value
     return logline
 
@@ -65,14 +64,19 @@ def read_fg_firewall_log(logfile, countbytes=False):
                 matrix[srcip][dstip][dstport][proto] = {}
                 matrix[srcip][dstip][dstport][proto]["count"] = 1
                 if countbytes:
-                    matrix[srcip][dstip][dstport][proto]["sentbytes"] = int(sentbytes)
-                    matrix[srcip][dstip][dstport][proto]["rcvdbytes"] = int(rcvdbytes)
+                    matrix[srcip][dstip][dstport][proto]["sentbytes"] \
+                        = int(sentbytes)
+                    matrix[srcip][dstip][dstport][proto]["rcvdbytes"] \
+                        = int(rcvdbytes)
             elif proto in matrix[srcip][dstip][dstport]:
                 matrix[srcip][dstip][dstport][proto]["count"] += 1
                 if countbytes:
-                    matrix[srcip][dstip][dstport][proto]["sentbytes"] += int(sentbytes)
-                    matrix[srcip][dstip][dstport][proto]["rcvdbytes"] += int(rcvdbytes)
+                    matrix[srcip][dstip][dstport][proto]["sentbytes"] \
+                        += int(sentbytes)
+                    matrix[srcip][dstip][dstport][proto]["rcvdbytes"] \
+                        += int(rcvdbytes)
     return matrix
+
 
 def translate_protonr(protocolnr):
     """
