@@ -10,7 +10,6 @@ Options:
     --verbose  activate verbose messages
     --version  shows version information
 
-
 Default Logfile Format:
     The following log fields need to be available in the logfile:
         srcip   source ip address
