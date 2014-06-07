@@ -45,10 +45,10 @@ def read_fg_firewall_log(logfile, countbytes=False):
             """
             for loop creates a nested dictionary with multiple levels
             level 1:        srcips (source ips)
-             lelvel 2:      dstips (destination ips)
-              level 3:      dstport (destination port number)
-               level 4:     proto (protocoll number)
-                level5:     occurence count
+            level 2:       dstips (destination ips)
+            level 3:        dstport (destination port number)
+            level 4:        proto (protocoll number)
+            level 5:         occurence count
                             sendbytes
                             rcvdbytes
             """
