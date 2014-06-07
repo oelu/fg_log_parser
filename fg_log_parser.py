@@ -24,6 +24,8 @@ def split_kv(line):
     """
     kvdelim = '='  # key and value deliminator
     logline = {}
+    # split line in key and value pairs
+    # regex matches internal substrings such as key = "word1 word2"
     for field in re.findall(r'(?:[^\s,""]|"(?:\\.|[^""])*")+', line):
         key, value = field.split(kvdelim)
         logline[key] = value
@@ -40,15 +42,22 @@ def read_fg_firewall_log(logfile, countbytes=False):
     with open(logfile, 'r') as infile:
         # parse each line in file
         for line in infile:
+            """
+            for loop creates a nested dictionary with multiple levels
+            level 1:        srcips (source ips)
+             lelvel 2:      dstips (destination ips)
+              level 3:      dstport (destination port number)
+               level 4:     proto (protocoll number)
+                level5:     occurence count
+                            sendbytes
+                            rcvdbytes
+            """
+
+            # split each line in key and value pairs
             logline = split_kv(line)
-            """
-            for loop creates a dictionary with multiple levels
-            l1: srcips (source ips)
-             l2: dstips (destination ips)
-              l3: dstport (destination port number)
-               l4: proto (protocoll number)
-                l5: occurence count
-            """
+
+            # check if necessary logfiles are present and assign them
+            # to variables
             try:
                 srcip = logline['srcip']
                 dstip = logline['dstip']
