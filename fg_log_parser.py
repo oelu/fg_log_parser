@@ -12,13 +12,13 @@ Options:
 
 
 Default Logfile Format:
-    The folowing log fields need to be available in the logfile:
+    The following log fields need to be available in the logfile:
         srcip   source ip address
         dstip   destination ip address
-        proto   protocoll
+        proto   protocol
         dstport destination port
 
-    If the countbytes option is set, the folowing
+    If the countbytes option is set, the following
     two fields need to be present:
         sendbytes   number of sent bytes
         rcvdbytes   number of received bytes
@@ -38,7 +38,7 @@ def split_kv(line):
     kvdelim = '='  # key and value deliminator
     logline = {}
     # split line in key and value pairs
-    # regex matches internal substrings such as key = "word1 word2"
+    # regex matches internal sub strings such as key = "word1 word2"
     for field in re.findall(r'(?:[^\s,""]|"(?:\\.|[^""])*")+', line):
         key, value = field.split(kvdelim)
         logline[key] = value
@@ -58,10 +58,10 @@ def read_fg_firewall_log(logfile, countbytes=False):
             """
             for loop creates a nested dictionary with multiple levels
             level 1:        srcips (source ips)
-            level 2:       dstips (destination ips)
+            level 2:        dstips (destination ips)
             level 3:        dstport (destination port number)
-            level 4:        proto (protocoll number)
-            level 5:         occurence count
+            level 4:        proto (protocol number)
+            level 5:        occurrence count
                             sendbytes
                             rcvdbytes
             """
@@ -69,7 +69,7 @@ def read_fg_firewall_log(logfile, countbytes=False):
             # split each line in key and value pairs
             logline = split_kv(line)
 
-            # check if necessary logfiles are present and assign them
+            # check if necessary log fields are present and assign them
             # to variables
             try:
                 srcip = logline['srcip']
@@ -117,7 +117,7 @@ def read_fg_firewall_log(logfile, countbytes=False):
 
 def translate_protonr(protocolnr):
     """
-    Translates port nr as names.
+    Translates ports as names.
 
     Example:
         >>> translate_protonr(53)
@@ -172,7 +172,7 @@ def main():
         log.info("Verbose output activated.")
     else:
         log.basicConfig(format="%(levelname)s: %(message)s")
-    log.info("script was startet with arguments: ")
+    log.info("script was started with arguments: ")
     log.info(arguments)
 
     # check if logfile argument is present
