@@ -15,7 +15,7 @@ Parses a Fortigate traffic log and presents a communication matrix.
     
     Default Logfile Format:
         The following log fields need to be available in the logfile:
-             srcip   source ip address
+            srcip   source ip address
             dstip   destination ip address
             proto   protocol
             dstport destination port
@@ -27,6 +27,7 @@ Parses a Fortigate traffic log and presents a communication matrix.
 
 ## Requirements
 * Requires python docopt module.
+* Requires logging module.
 
 ## Example Session
 

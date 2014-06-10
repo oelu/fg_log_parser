@@ -24,6 +24,7 @@ Default Logfile Format:
 """
 __author__ = 'olivier'
 
+from csv import DictWriter
 from docopt import docopt
 import re
 import sys
@@ -148,7 +149,6 @@ def translate_protonr(protocolnr):
         return protocolnr
 
 
-# TODO: add print to csv function
 def print_communication_matrix(matrix, indent=0):
     """
     prints the communication matrix in a nice format
@@ -173,6 +173,7 @@ def main():
     # assigns docopt argument to logfile
     logfile = arguments['<logfile>']
     countbytes = arguments['--countbytes']
+    outputcsv = arguments['--outputcsv']
     verbose = arguments['--verbose']
 
     # set loglevel
