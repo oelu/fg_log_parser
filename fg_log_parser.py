@@ -24,11 +24,16 @@ Default Logfile Format:
 """
 __author__ = 'olivier'
 
-from csv import DictWriter
-from docopt import docopt
-import re
-import sys
-import logging as log
+try:
+    from csv import DictWriter
+    from docopt import docopt
+    import re
+    import sys
+    import logging as log
+except ImportError as ioex:
+    log.error("could not import a required module, check if all are installed.")
+    log.error(ioex)
+    sys.exit(1)
 
 
 def split_kv(line):
@@ -173,7 +178,6 @@ def main():
     # assigns docopt argument to logfile
     logfile = arguments['<logfile>']
     countbytes = arguments['--countbytes']
-    outputcsv = arguments['--outputcsv']
     verbose = arguments['--verbose']
 
     # set loglevel
