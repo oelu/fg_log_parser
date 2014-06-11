@@ -66,6 +66,7 @@ def read_fg_firewall_log(logfile, countbytes=False):
     with open(logfile, 'r') as infile:
         # parse each line in file
         log.info("open logfile %s", logfile)
+        linecount = 0  # linecount for detailed error message
         for line in infile:
             """
             for loop creates a nested dictionary with multiple levels
@@ -80,6 +81,7 @@ def read_fg_firewall_log(logfile, countbytes=False):
 
             # split each line in key and value pairs
             logline = split_kv(line)
+            linecount += 1
 
             # check if necessary log fields are present and assign them
             # to variables
@@ -93,8 +95,8 @@ def read_fg_firewall_log(logfile, countbytes=False):
                     sentbytes = logline['sentbyte']  # not used now
                     rcvdbytes = logline['rcvdbyte']  # not used now
             except KeyError as kerror:
-                log.error("could not parse logfile %s ", logfile)
-                log.error("could parse logfileds, python error message is: ")
+                log.error("could not parse logfile %s error on line %s", logfile, linecount)
+                log.error("could parse logfileds, the missing field value is: ")
                 log.error(kerror)
                 log.error("consult help message for log format options")
 
