@@ -25,7 +25,6 @@ Default Logfile Format:
 __author__ = 'olivier'
 
 try:
-    from csv import DictWriter
     from docopt import docopt
     import re
     import sys
