@@ -5,22 +5,23 @@ Usage: fg_log_parser.py
   fg_log_parser.py (-f <logfile> | --file <logfile>) [options]
 
 Options:
-    -b --countbytes  count bytes for each communication
-    -h --help   Show this message.
-    --verbose -v  activate verbose messages
-    --version   shows version information
-    -i --ignoreerrors  ignore parse errors in logfile format and continue
-                    to read the file
-    -n --noparserrormsg  do not print parse error messages (faster output)
+    -b --countbytes         Count bytes for each communication quartet
+    -h --help               Show this message
+    --verbose -v            activate verbose messages
+    --version               Shows version information
+    -i --ignoreerrors       Ignore parse errors in logfile format and continue
+                            to read the file
+    -n --noparserrormsg     Do not print parse error messages (faster output)
 
     Log Format Options (case sensitive):
-    --srcipfield=<srcipfield>  src ip address field [default: srcip]
-    --dstipfield=<dstipfield>  dst ip address field [default: dstip]
-    --dstportfield=<dstportfield>  dst port field [default: dstport]
-    --protofield=<protofield>  protocol field [default: proto]
+    --srcipfield=<srcipfield>       Src ip address field [default: srcip]
+    --dstipfield=<dstipfield>       Dst ip address field [default: dstip]
+    --dstportfield=<dstportfield>   Dst port field [default: dstport]
+    --protofield=<protofield>       Protocol field [default: proto]
 
-    --sentbytesfield=<sentbytesfield>  field for sent bytes [default: sentbyte]
-    --rcvdbytesfield=<rcvdbytesfield>  field for rcvd bytes [default: rcvdbyte]
+    If countbytes options is set you may have to specify:
+    --sentbytesfield=<sentbytesfield>  Field for sent bytes [default: sentbyte]
+    --rcvdbytesfield=<rcvdbytesfield>  Field for rcvd bytes [default: rcvdbyte]
 
 
 """
