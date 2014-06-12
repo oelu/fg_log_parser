@@ -1,4 +1,3 @@
-#!/usr/local/bin/python2.7
 """Fortigate Log Parser
 
 Usage: fg_log_parser.py
