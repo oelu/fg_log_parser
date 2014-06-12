@@ -7,8 +7,10 @@ Usage: fg_log_parser.py
 Options:
     -b --countbytes  count bytes for each communication
     -h --help   Show this message.
-    --verbose  activate verbose messages
-    --version  shows version information
+    --verbose -v  activate verbose messages
+    --version   shows version information
+    --ignoreerrors  ignore parse errors in logfile format and continue
+                    to read the file
 
 Default Logfile Format:
     The following log fields need to be available in the logfile:
@@ -30,7 +32,7 @@ try:
     import sys
     import logging as log
 except ImportError as ioex:
-    log.error("could not import a required module, check if all are installed.")
+    log.error("could not import a required module")
     log.error(ioex)
     sys.exit(1)
 
@@ -49,7 +51,7 @@ def split_kv(line):
     return logline
 
 
-def read_fg_firewall_log(logfile, countbytes=False):
+def read_fg_firewall_log(logfile, countbytes=False, ignoreerrors=False):
     """
     reads fortigate logfile and returns a communication matrix as dict
 
@@ -60,12 +62,12 @@ def read_fg_firewall_log(logfile, countbytes=False):
     log.info("read_fg_firewall_log startet with parameters: ")
     log.info("logfile: %s", logfile)
     log.info("countbytes: %s", countbytes)
+    log.info("ignoreerrors: %s", ignoreerrors)
 
     matrix = {}
 
     with open(logfile, 'r') as infile:
         # parse each line in file
-        log.info("open logfile %s", logfile)
         linecount = 0  # linecount for detailed error message
         for line in infile:
             """
@@ -95,10 +97,12 @@ def read_fg_firewall_log(logfile, countbytes=False):
                     sentbytes = logline['sentbyte']  # not used now
                     rcvdbytes = logline['rcvdbyte']  # not used now
             except KeyError as kerror:
-                log.error("could not parse logfile %s error on line %s", logfile, linecount)
-                log.error("could parse logfileds, the missing field value is: ")
-                log.error(kerror)
-                log.error("consult help message for log format options")
+                log.error("parse error on line %s, field %s",
+                          linecount, kerror)
+                if not ignoreerrors:
+                    log.error("consult help message for log format options")
+                    log.error("you can try the --ignoreerrors option")
+                    sys.exit(1)
 
             # extend matrix for each source ip
             if srcip not in matrix:
@@ -128,6 +132,7 @@ def read_fg_firewall_log(logfile, countbytes=False):
                         += int(sentbytes)
                     matrix[srcip][dstip][dstport][proto]["rcvdbytes"] \
                         += int(rcvdbytes)
+        log.info("parsed %s lines in logfile: %s ", linecount, logfile)
     return matrix
 
 
@@ -177,8 +182,10 @@ def main():
     arguments = docopt(__doc__)
     arguments = docopt(__doc__, version='Fortigate Log Parser 0.2')
     # assigns docopt argument to logfile
+    # check module documentattion for argument description
     logfile = arguments['<logfile>']
     countbytes = arguments['--countbytes']
+    ignoreerrors = arguments['--ignoreerrors']
     verbose = arguments['--verbose']
 
     # set loglevel
@@ -197,7 +204,7 @@ def main():
 
     # parse fortigate log
     log.info("reading firewall log...")
-    matrix = read_fg_firewall_log(logfile, countbytes)
+    matrix = read_fg_firewall_log(logfile, countbytes, ignoreerrors)
     print_communication_matrix(matrix)
     return 1
 
