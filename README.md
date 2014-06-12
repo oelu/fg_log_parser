@@ -1,37 +1,39 @@
 # Fortigate Log Parser
 Parses a Fortigate traffic log and presents a communication matrix. 
 
-## Usage
-    Fortigate Log Parser
+## Requirements
+* Requires python docopt module.
+* Requires logging module.
 
-    Usage: fg_log_parser.py
+## Usage
+
+    $ python fg_log_parser.py -h
+    Fortigate Log Parser
+        Parses a Fortigate logfile and presents a communication matrix.
+    
+    Usage: 
         fg_log_parser.py (-f <logfile> | --file <logfile>) [options]
 
     Options:
         -b --countbytes  count bytes for each communication
         -h --help   Show this message.
-        --verbose  activate verbose messages
-        --version  shows version information
-    
-    Default Logfile Format:
-        The following log fields need to be available in the logfile:
-            srcip   source ip address
-            dstip   destination ip address
-            proto   protocol
-            dstport destination port
-            
-        If the countbytes option is set, the following
-        two fields need to be present:
-            sendbytes   number of sent bytes
-            rcvdbytes   number of received bytes
+        --verbose -v  activate verbose messages
+        --version   shows version information
+        --ignoreerrors  ignore parse errors in logfile format and continue
+                        to read the file
 
-## Requirements
-* Requires python docopt module.
-* Requires logging module.
+    Log Format Options (case sensitive):
+        --srcipfield=<srcipfield>  src ip address field [default: srcip]
+        --dstipfield=<dstipfield>  dst ip address field [default: dstip]
+        --dstportfield=<dstportfield>  dst port field [default: dstport]
+        --protofield=<protofield>  protocol field [default: proto]
+
+        --sentbytesfield=<sentbytesfield>  field for sent bytes [default: sentbyte]
+        --rcvdbytesfield=<rcvdbytesfield>  field for rcvd bytes [default: rcvdbyte]
 
 ## Example Session
 
-    $ ./fg_log_parser.py -b -f example.log
+    $ ./fg_log_parser.py -b -f example.log 
     192.168.1.3
 	    1.2.3.4
 		    443
@@ -67,3 +69,4 @@ Parses a Fortigate traffic log and presents a communication matrix.
 					    10
 				    rcvdbytes
 					    2001
+
