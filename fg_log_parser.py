@@ -9,8 +9,9 @@ Options:
     -h --help   Show this message.
     --verbose -v  activate verbose messages
     --version   shows version information
-    --ignoreerrors  ignore parse errors in logfile format and continue
+    -i --ignoreerrors  ignore parse errors in logfile format and continue
                     to read the file
+    -n --noparserrormsg  do not print parse error messages (faster output)
 
     Log Format Options (case sensitive):
     --srcipfield=<srcipfield>  src ip address field [default: srcip]
@@ -46,15 +47,17 @@ def split_kv(line):
     # split line in key and value pairs
     # regex matches internal sub strings such as key = "word1 word2"
     for field in re.findall(r'(?:[^\s,""]|"(?:\\.|[^""])*")+', line):
-        key, value = field.split(kvdelim)
-        logline[key] = value
+	if kvdelim in field:
+        	key, value = field.split(kvdelim)
+        	logline[key] = value
     return logline
 
 
 def read_fg_firewall_log(logfile,
                          logformat,
                          countbytes=False,
-                         ignoreerrors=False):
+                         ignoreerrors=False,
+                         noparserrormsg=False):
     """
     Reads fortigate logfile and returns communication matrix as a dictionary.
 
@@ -63,6 +66,7 @@ def read_fg_firewall_log(logfile,
         logformat       dictionary containing log format
         countbytes      sum up bytes sent and received
         ignoreerrors    ignore parse errors
+        noparserrormsg  do not print parse error messages
 
     """
     log.info("Function: read_fg_firewall_log started with parameters: ")
@@ -113,8 +117,9 @@ def read_fg_firewall_log(logfile,
                     sentbytes = logline[sentbytesfield]
                     rcvdbytes = logline[rcvdbytesfield]
             except KeyError as kerror:
-                log.error("Parse error on line %s, field %s",
-                          linecount, kerror)
+                if not noparserrormsg:
+                    log.error("Parse error on line %s, field %s",
+                              linecount, kerror)
                 # check if user has specified --ignoreerrors
                 if not ignoreerrors:
                     log.error("Consult help message for log format options")
@@ -167,13 +172,14 @@ def translate_protonr(protocolnr):
         >>> translate_protonr(17)
         'UDP'
     """
-    if int(protocolnr) == 1:
-        return "ICMP"   # icmp has protocol nr 1
-    elif int(protocolnr) == 6:
-        return "TCP"    # tcp has protocol nr 6
-    elif int(protocolnr) == 17:
-        return "UDP"    # udp has protocol nr 17
-    else:
+    try:
+    	if int(protocolnr) == 1:
+            return "ICMP"   # icmp has protocol nr 1
+    	elif int(protocolnr) == 6:
+            return "TCP"    # tcp has protocol nr 6
+    	elif int(protocolnr) == 17:
+            return "UDP"    # udp has protocol nr 17
+    except ValueError as valueer:
         return protocolnr
 
 
@@ -203,6 +209,7 @@ def main():
     logfile = arguments['<logfile>']
     countbytes = arguments['--countbytes']
     ignoreerrors = arguments['--ignoreerrors']
+    noparserrormsg = arguments['--noparserrormsg']
     verbose = arguments['--verbose']
 
     # define logfile format
@@ -231,7 +238,7 @@ def main():
 
     # parse fortigate log
     log.info("Reading firewall log...")
-    matrix = read_fg_firewall_log(logfile, logformat, countbytes, ignoreerrors)
+    matrix = read_fg_firewall_log(logfile, logformat, countbytes, ignoreerrors, noparserrormsg)
     print_communication_matrix(matrix)
     return 0
 
