@@ -12,17 +12,16 @@ Options:
     --ignoreerrors  ignore parse errors in logfile format and continue
                     to read the file
 
-Default Logfile Format:
-    The following log fields need to be available in the logfile:
-        srcip   source ip address
-        dstip   destination ip address
-        proto   protocol
-        dstport destination port
+    Log Format Options (case sensitive):
+    --srcipfield=<srcipfield>  src ip address field [default: srcip]
+    --dstipfield=<dstipfield>  dst ip address field [default: dstip]
+    --dstportfield=<dstportfield>  dst port field [default: dstport]
+    --protofield=<protofield>  protocol field [default: proto]
 
-    If the countbytes option is set, the following
-    two fields need to be present:
-        sendbytes   number of sent bytes
-        rcvdbytes   number of received bytes
+    --sentbytesfield=<sentbytesfield>  field for sent bytes [default: sentbyte]
+    --rcvdbytesfield=<rcvdbytesfield>  field for rcvd bytes [default: rcvdbyte]
+
+
 """
 __author__ = 'olivier'
 
@@ -51,18 +50,30 @@ def split_kv(line):
     return logline
 
 
-def read_fg_firewall_log(logfile, countbytes=False, ignoreerrors=False):
+def read_fg_firewall_log(logfile,
+                         logformat,
+                         countbytes=False,
+                         ignoreerrors=False):
     """
     reads fortigate logfile and returns a communication matrix as dict
 
     Parameters:
         logfile     Logfile to parse
         countbytes  sum up bytes sent and received
+        ignoreerrors  ignore parse errors
     """
-    log.info("read_fg_firewall_log startet with parameters: ")
+    log.info("read_fg_firewall_log started with parameters: ")
     log.info("logfile: %s", logfile)
     log.info("countbytes: %s", countbytes)
     log.info("ignoreerrors: %s", ignoreerrors)
+
+    # assign log format options from logformat dict
+    srcipfield = logformat['srcipfield']
+    dstipfield = logformat['dstipfield']
+    dstportfield = logformat['dstportfield']
+    protofield = logformat['protofield']
+    sentbytesfield = logformat['sentbytesfield']
+    rcvdbytesfield = logformat['rcvdbytesfield']
 
     matrix = {}
 
@@ -77,7 +88,7 @@ def read_fg_firewall_log(logfile, countbytes=False, ignoreerrors=False):
             level 3:        dstport (destination port number)
             level 4:        proto (protocol number)
             level 5:        occurrence count
-                            sendbytes
+                            sentbytes
                             rcvdbytes
             """
 
@@ -88,14 +99,14 @@ def read_fg_firewall_log(logfile, countbytes=False, ignoreerrors=False):
             # check if necessary log fields are present and assign them
             # to variables
             try:
-                srcip = logline['srcip']
-                dstip = logline['dstip']
-                dstport = logline['dstport']
-                proto = translate_protonr(logline['proto'])
+                srcip = logline[srcipfield]
+                dstip = logline[dstipfield]
+                dstport = logline[dstportfield]
+                proto = translate_protonr(logline[protofield])
                 # if user has specified --countbytes
                 if countbytes:
-                    sentbytes = logline['sentbyte']  # not used now
-                    rcvdbytes = logline['rcvdbyte']  # not used now
+                    sentbytes = logline[sentbytesfield]
+                    rcvdbytes = logline[rcvdbytesfield]
             except KeyError as kerror:
                 log.error("parse error on line %s, field %s",
                           linecount, kerror)
@@ -188,6 +199,15 @@ def main():
     ignoreerrors = arguments['--ignoreerrors']
     verbose = arguments['--verbose']
 
+    # define logfile format
+    # note: default values are set in the docopt string, see __doc__
+    logformat = {'srcipfield': arguments['--srcipfield'],
+                 'dstipfield': arguments['--dstipfield'],
+                 'dstportfield': arguments['--dstportfield'],
+                 'protofield': arguments['--protofield'],
+                 'sentbytesfield': arguments['--dstportfield'],
+                 'rcvdbytesfield': arguments['--rcvdbytesfield']
+                 }
     # set loglevel
     if verbose:
         log.basicConfig(format="%(levelname)s: %(message)s", level=log.DEBUG)
@@ -204,7 +224,7 @@ def main():
 
     # parse fortigate log
     log.info("reading firewall log...")
-    matrix = read_fg_firewall_log(logfile, countbytes, ignoreerrors)
+    matrix = read_fg_firewall_log(logfile, logformat, countbytes, ignoreerrors)
     print_communication_matrix(matrix)
     return 1
 
