@@ -7,11 +7,8 @@ Usage: fg_log_parser.py
 Options:
     -b --countbytes         Count bytes for each communication quartet
     -h --help               Show this message
-    --verbose -v            activate verbose messages
+    -v --verbose            activate verbose messages
     --version               Shows version information
-    -i --ignoreerrors       Ignore parse errors in logfile format and continue
-                            to read the file
-    -n --noparserrormsg     Do not print parse error messages (faster output)
 
     Log Format Options (case sensitive):
     --srcipfield=<srcipfield>       Src ip address field [default: srcip]
@@ -23,6 +20,13 @@ Options:
     --sentbytesfield=<sentbytesfield>  Field for sent bytes [default: sentbyte]
     --rcvdbytesfield=<rcvdbytesfield>  Field for rcvd bytes [default: rcvdbyte]
 
+Examples:
+    Parse Fortigate Log:
+        fg_log_parser.py -f fg.log
+    Parse Iptables Log:
+        fg_log_parser.py -f filter --srcipfield=SRC --dstipfield=DST --dstportfield=DPT --protofield=PROTO
+    Parse Fortianalyzer Log:
+        fg_log_parser.py -f faz.log --srcipfield=src --dstipfield=dst
 
 """
 
@@ -48,32 +52,72 @@ def split_kv(line):
     # split line in key and value pairs
     # regex matches internal sub strings such as key = "word1 word2"
     for field in re.findall(r'(?:[^\s,""]|"(?:\\.|[^""])*")+', line):
-	if kvdelim in field:
-        	key, value = field.split(kvdelim)
-        	logline[key] = value
+        if kvdelim in field:
+            key, value = field.split(kvdelim)
+            logline[key] = value
     return logline
 
 
-def read_fg_firewall_log(logfile,
-                         logformat,
-                         countbytes=False,
-                         ignoreerrors=False,
-                         noparserrormsg=False):
+def check_log_format(line, srcipfield, dstipfield):
     """
-    Reads fortigate logfile and returns communication matrix as a dictionary.
+    checks if srcipfield and dstipfield are in logline
+    """
+    log.info("check_log_format: checking line: ")
+    log.info(line)
+    if srcipfield in line and dstipfield in line:
+        log.info("check_log_format: found srcipfield %s", srcipfield)
+        log.info("check_log_format: found dstipfield %s", dstipfield)
+        return True
+    else:
+        return False
+
+
+def translate_protonr(protocolnr):
+    """
+    Translates ports as names.
+
+    Example:
+        >>> translate_protonr(53)
+        53
+        >>> translate_protonr(1)
+        'ICMP'
+        >>> translate_protonr(6)
+        'TCP'
+        >>> translate_protonr(17)
+        'UDP'
+    """
+    try:
+        if int(protocolnr) == 1:
+            return "ICMP"   # icmp has protocol nr 1
+        elif int(protocolnr) == 6:
+            return "TCP"    # tcp has protocol nr 6
+        elif int(protocolnr) == 17:
+            return "UDP"    # udp has protocol nr 17
+    except (ValueError, TypeError):
+        # protofield does not contain a value of type int
+        # return function input argument
+        return protocolnr
+
+
+def get_communication_matrix(logfile,
+                             logformat,
+                             countbytes=False):
+    """
+    Reads firewall logfile and returns communication matrix as a dictionary.
 
     Parameters:
         logfile         Logfile to parse
         logformat       dictionary containing log format
         countbytes      sum up bytes sent and received
-        ignoreerrors    ignore parse errors
-        noparserrormsg  do not print parse error messages
+
+    Sample return matrix (one logline parsed):
+        {'192.168.1.1': {'8.8.8.8': {'53': {'UDP': {'count': 1}}}}}
 
     """
-    log.info("Function: read_fg_firewall_log started with parameters: ")
-    log.info("Logfile: %s", logfile)
+
+    log.info("get_communication_matrix() started with parameters: ")
+    log.info("Option logfile: %s", logfile)
     log.info("Option countbytes: %s", countbytes)
-    log.info("Option ignoreerrors: %s", ignoreerrors)
 
     # assign log format options from logformat dict
     srcipfield = logformat['srcipfield']
@@ -83,11 +127,12 @@ def read_fg_firewall_log(logfile,
     sentbytesfield = logformat['sentbytesfield']
     rcvdbytesfield = logformat['rcvdbytesfield']
 
-    matrix = {}
+    matrix = {}  # communication matrix
 
     with open(logfile, 'r') as infile:
         # parse each line in file
-        linecount = 0  # linecount for detailed error message
+        linecount = 1  # linecount for detailed error message
+
         for line in infile:
             """
             For loop creates a nested dictionary with multiple levels.
@@ -102,30 +147,28 @@ def read_fg_firewall_log(logfile,
                             rcvdbytes
             """
 
+            # check if necessary fields are in first line
+            if linecount is 1:
+                # print error message if srcip or dstip are missing
+                if not check_log_format(line, srcipfield, dstipfield):
+                    log.error("srcipfield or dstipfield not in line: %s ", linecount)
+                    log.error("Check Log Format options and consult help message!")
+                    sys.exit(1)
+
             # split each line in key and value pairs.
             logline = split_kv(line)
             linecount += 1
 
-            # check if necessary log fields are present and assign them
-            # to variables
-            try:
-                srcip = logline[srcipfield]
-                dstip = logline[dstipfield]
-                dstport = logline[dstportfield]
-                proto = translate_protonr(logline[protofield])
-                # if user has specified --countbytes
-                if countbytes:
-                    sentbytes = logline[sentbytesfield]
-                    rcvdbytes = logline[rcvdbytesfield]
-            except KeyError as kerror:
-                if not noparserrormsg:
-                    log.error("Parse error on line %s, field %s",
-                              linecount, kerror)
-                # check if user has specified --ignoreerrors
-                if not ignoreerrors:
-                    log.error("Consult help message for log format options")
-                    log.error("or you can try the --ignoreerrors option")
-                    sys.exit(1)
+            # get() does substitute missing values with None
+            # missing log fields will show None in the matrix
+            srcip = logline.get(srcipfield)
+            dstip = logline.get(dstipfield)
+            dstport = logline.get(dstportfield)
+            proto = translate_protonr(logline.get(protofield))
+            # if user has specified countbytes
+            if countbytes:
+                sentbytes = logline.get(sentbytesfield)
+                rcvdbytes = logline.get(rcvdbytesfield)
 
             # extend matrix for each source ip
             if srcip not in matrix:
@@ -147,6 +190,7 @@ def read_fg_firewall_log(logfile,
                         = int(sentbytes)
                     matrix[srcip][dstip][dstport][proto]["rcvdbytes"] \
                         = int(rcvdbytes)
+            # if proto is already in matrix
             # increase count of variable count and sum bytes
             elif proto in matrix[srcip][dstip][dstport]:
                 matrix[srcip][dstip][dstport][proto]["count"] += 1
@@ -157,31 +201,6 @@ def read_fg_firewall_log(logfile,
                         += int(rcvdbytes)
         log.info("Parsed %s lines in logfile: %s ", linecount, logfile)
     return matrix
-
-
-def translate_protonr(protocolnr):
-    """
-    Translates ports as names.
-
-    Example:
-        >>> translate_protonr(53)
-        53
-        >>> translate_protonr(1)
-        'ICMP'
-        >>> translate_protonr(6)
-        'TCP'
-        >>> translate_protonr(17)
-        'UDP'
-    """
-    try:
-    	if int(protocolnr) == 1:
-            return "ICMP"   # icmp has protocol nr 1
-    	elif int(protocolnr) == 6:
-            return "TCP"    # tcp has protocol nr 6
-    	elif int(protocolnr) == 17:
-            return "UDP"    # udp has protocol nr 17
-    except ValueError as valueer:
-        return protocolnr
 
 
 def print_communication_matrix(matrix, indent=0):
@@ -206,11 +225,9 @@ def main():
     arguments = docopt(__doc__)
     arguments = docopt(__doc__, version='Fortigate Log Parser 0.3')
     # assign docopt argument
-    # check module documentattion for argument description
+    # check module documentation for argument description
     logfile = arguments['<logfile>']
     countbytes = arguments['--countbytes']
-    ignoreerrors = arguments['--ignoreerrors']
-    noparserrormsg = arguments['--noparserrormsg']
     verbose = arguments['--verbose']
 
     # define logfile format
@@ -237,9 +254,9 @@ def main():
         print __doc__
         sys.exit(1)
 
-    # parse fortigate log
+    # parse log
     log.info("Reading firewall log...")
-    matrix = read_fg_firewall_log(logfile, logformat, countbytes, ignoreerrors, noparserrormsg)
+    matrix = get_communication_matrix(logfile, logformat, countbytes)
     print_communication_matrix(matrix)
     return 0
 
