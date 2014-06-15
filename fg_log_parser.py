@@ -9,6 +9,7 @@ Options:
     -h --help               Show this message
     -v --verbose            activate verbose messages
     --version               Shows version information
+    -n --noipcheck          Do not check if src and dst ip are present
 
     Log Format Options (case sensitive):
     --srcipfield=<srcipfield>       Src ip address field [default: srcip]
@@ -101,7 +102,8 @@ def translate_protonr(protocolnr):
 
 def get_communication_matrix(logfile,
                              logformat,
-                             countbytes=False):
+                             countbytes=False,
+                             noipcheck=False):
     """
     Reads firewall logfile and returns communication matrix as a dictionary.
 
@@ -148,7 +150,7 @@ def get_communication_matrix(logfile,
             """
 
             # check if necessary fields are in first line
-            if linecount is 1:
+            if linecount is 1 and noipcheck:
                 # print error message if srcip or dstip are missing
                 if not check_log_format(line, srcipfield, dstipfield):
                     log.error("srcipfield or dstipfield not in line: %s ", linecount)
@@ -229,6 +231,7 @@ def main():
     logfile = arguments['<logfile>']
     countbytes = arguments['--countbytes']
     verbose = arguments['--verbose']
+    noipcheck = arguments['--noipcheck']
 
     # define logfile format
     # note: default values are set in the docopt string, see __doc__
@@ -256,7 +259,7 @@ def main():
 
     # parse log
     log.info("Reading firewall log...")
-    matrix = get_communication_matrix(logfile, logformat, countbytes)
+    matrix = get_communication_matrix(logfile, logformat, countbytes, noipcheck)
     print_communication_matrix(matrix)
     return 0
 
