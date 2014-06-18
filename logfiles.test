@@ -1,0 +1,17 @@
+>>> from fg_log_parser import get_communication_matrix
+>>> logformat = {'srcipfield': 'srcip',
+... 'dstipfield': 'dstip',
+... 'dstportfield': 'dstport',
+... 'protofield': 'proto',
+... 'sentbytesfield': 'sentbyte',
+... 'rcvdbytesfield': 'rcvdbyte'}
+>>> get_communication_matrix('testlogs/fg.log', logformat)
+{'192.168.1.1': {'8.8.8.8': {None: {None: {'count': 1}}, '53': {'UDP': {'count': 3}}}}}
+>>> logformat = {'srcipfield': 'SRC',
+... 'dstipfield': 'DST',
+... 'protofield': 'PROTO',
+... 'dstportfield': 'DPT',
+... 'sentbytesfield': 'None',
+... 'rcvdbytesfield': 'None'}
+>>> get_communication_matrix('testlogs/iptables', logformat)
+{'192.168.1.1': {'8.8.8.8': {None: {'ICMP': {'count': 1}}, '22': {'TCP': {'count': 3}}}, '8.8.4.4': {'22': {'UDP': {'count': 1}}}}}

@@ -49,7 +49,8 @@ def split_kv(line):
     Splits lines in key and value pairs and returns a dictionary.
 
     Example:
-        >>> line = 'srcip=192.168.1.1 dstip=8.8.8.8 dport=53 proto=53 dstcountry="United States"'
+        >>> line = 'srcip=192.168.1.1 dstip=8.8.8.8 \
+        ...         dport=53 proto=53 dstcountry="United States"'
         >>> split_kv(line)
         {'srcip': '192.168.1.1', 'dport': '53', 'dstip': '8.8.8.8', 'dstcountry': '"United States"', 'proto': '53'}
 
