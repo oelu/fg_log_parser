@@ -1,4 +1,4 @@
 date=2014-04-30 time=18:22:54  srcip=192.168.1.1 srcport=46166 dstip=8.8.8.8 dstport=53 dstcountry="United States"  proto=17 sentbyte=1 rcvdbyte=1 sentpkt=1 rcvdpkt=1
 date=2014-04-30 time=18:22:54  srcip=192.168.1.1 srcport=46166 dstip=8.8.8.8 dstport=53 dstcountry="United States"  proto=17 sentbyte=1 rcvdbyte=1 sentpkt=1 rcvdpkt=1
 date=2014-04-30 time=18:22:54  srcip=192.168.1.1 srcport=46166 dstip=8.8.8.8 dstport=53 dstcountry="United States"  proto=17 sentbyte=1 rcvdbyte=1 sentpkt=1 rcvdpkt=1
-date=2014-04-30 time=18:22:54  srcip=192.168.1.1 srcport=46166 dstip=8.8.8.8 dstcountry="United States"  sentbyte=1 rcvdbyte=1 sentpkt=1 rcvdpkt=1
+date=2014-04-30 time=18:22:54  srcip=192.168.1.1 srcport=46166 dstip=8.8.8.8 dstcountry="United States" sentbyte=1 rcvdbyte=1 sentpkt=1 rcvdpkt=1
