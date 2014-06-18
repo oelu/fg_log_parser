@@ -47,6 +47,12 @@ except ImportError as ioex:
 def split_kv(line):
     """
     Splits lines in key and value pairs and returns a dictionary.
+
+    Example:
+        >>> line = 'srcip=192.168.1.1 dstip=8.8.8.8 dport=53 proto=53 dstcountry="United States"'
+        >>> split_kv(line)
+        {'srcip': '192.168.1.1', 'dport': '53', 'dstip': '8.8.8.8', 'dstcountry': '"United States"', 'proto': '53'}
+
     """
     kvdelim = '='  # key and value deliminator
     logline = {}  # dictionary for logline
@@ -62,6 +68,15 @@ def split_kv(line):
 def check_log_format(line, srcipfield, dstipfield):
     """
     checks if srcipfield and dstipfield are in logline
+
+    Examples:
+        >>> line ='srcip=192.168.1.1 dstip=8.8.8.8 dstport=53 proto=53'
+        >>> check_log_format(line, "srcip", "dstip")
+        True
+
+        >>> line ='srcip=192.168.1.1 dstport=53 proto=53'
+        >>> check_log_format(line, "srcip", "dstip")
+        False
     """
     log.info("check_log_format: checking line: ")
     log.info(line)
@@ -77,7 +92,7 @@ def translate_protonr(protocolnr):
     """
     Translates ports as names.
 
-    Example:
+    Examples:
         >>> translate_protonr(53)
         53
         >>> translate_protonr(1)
@@ -87,16 +102,18 @@ def translate_protonr(protocolnr):
         >>> translate_protonr(17)
         'UDP'
     """
-    try:
+    # check if function input was a integer
+    if type(protocolnr) is int:
         if int(protocolnr) == 1:
             return "ICMP"   # icmp has protocol nr 1
         elif int(protocolnr) == 6:
             return "TCP"    # tcp has protocol nr 6
         elif int(protocolnr) == 17:
             return "UDP"    # udp has protocol nr 17
-    except (ValueError, TypeError):
-        # protofield does not contain a value of type int
-        # return function input argument
+        else:
+            return protocolnr
+    # if function input was something else than int
+    else:
         return protocolnr
 
 
@@ -114,6 +131,8 @@ def get_communication_matrix(logfile,
 
     Sample return matrix (one logline parsed):
         {'192.168.1.1': {'8.8.8.8': {'53': {'UDP': {'count': 1}}}}}
+
+    Example:
 
     """
 
@@ -208,14 +227,23 @@ def get_communication_matrix(logfile,
 def print_communication_matrix(matrix, indent=0):
     """
     Prints the communication matrix in a nice format.
+
+    Example:
+    >>> matrix = {'192.168.1.1': {'8.8.8.8': {'53': {'UDP': {'count': 1}}}}}
+    >>> print_communication_matrix(matrix)
+    192.168.1.1
+        8.8.8.8
+            53
+                UDP
+                    count
+                        1
     """
-    # pprint(matrix)
     for key, value in matrix.iteritems():
-        print '\t' * indent + str(key)
+        print '    ' * indent + str(key)
         if isinstance(value, dict):
             print_communication_matrix(value, indent+1)
         else:
-            print '\t' * (indent+1) + str(value)
+            print '    ' * (indent+1) + str(value)
     return None
 
 
