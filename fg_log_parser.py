@@ -114,7 +114,7 @@ def translate_protonr(protocolnr):
         else:
             return int(protocolnr)
     # if function input was something else than int
-    except ValueError:
+    except (ValueError, AttributeError, TypeError):
         return protocolnr
 
 
