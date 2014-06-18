@@ -103,7 +103,8 @@ def translate_protonr(protocolnr):
         'UDP'
     """
     # check if function input was a integer
-    if type(protocolnr) is int:
+    # and translate if we know translation
+    try:
         if int(protocolnr) == 1:
             return "ICMP"   # icmp has protocol nr 1
         elif int(protocolnr) == 6:
@@ -111,9 +112,9 @@ def translate_protonr(protocolnr):
         elif int(protocolnr) == 17:
             return "UDP"    # udp has protocol nr 17
         else:
-            return protocolnr
+            return int(protocolnr)
     # if function input was something else than int
-    else:
+    except ValueError:
         return protocolnr
 
 
