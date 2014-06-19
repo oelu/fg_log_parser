@@ -17,3 +17,24 @@
 ... 'rcvdbytesfield': 'None'}
 >>> get_communication_matrix('testlogs/iptables', logformat)
 {'192.168.1.1': {'8.8.8.8': {None: {'ICMP': {'count': 1}}, '22': {'TCP': {'count': 3}}}, '8.8.4.4': {'22': {'UDP': {'count': 1}}}}}
+>>> from fg_log_parser import print_communication_matrix
+>>> matrix = {'192.168.1.1': {'8.8.8.8': {None: {None: {'count': 1}}, '53': {'UDP': {'count': 3}}}}}
+>>> print_communication_matrix(matrix)
+192.168.1.1
+    8.8.8.8
+        None
+            None
+                count
+                    1
+        53
+            UDP
+                count
+                    3
+>>> matrix = {'192.168.1.1': {None: {'53': {'UDP': {'count': 1}}}}}
+>>> print_communication_matrix(matrix)
+192.168.1.1
+    None
+        53
+            UDP
+                count
+                    1
