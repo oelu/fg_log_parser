@@ -7,8 +7,14 @@
 ... 'rcvdbytesfield': 'rcvdbyte'}
 >>> get_communication_matrix('testlogs/fg.log', logformat)
 {'192.168.1.1': {'8.8.8.8': {None: {None: {'count': 1}}, '53': {'UDP': {'count': 3}}}}}
->>> get_communication_matrix('testlogs/fgnone.log', logformat)
+>>> get_communication_matrix('testlogs/fgnone.log', logformat, noipcheck=True)
 {'192.168.1.1': {None: {'53': {'UDP': {'count': 1}}}}}
+>>> logformat = {'srcipfield': 'srcip',
+... 'dstipfield': 'dstip',
+... 'dstportfield': 'dstport',
+... 'protofield': 'proto',
+... 'sentbytesfield': 'sentbyte',
+... 'rcvdbytesfield': 'rcvdbyte'}
 >>> logformat = {'srcipfield': 'SRC',
 ... 'dstipfield': 'DST',
 ... 'protofield': 'PROTO',

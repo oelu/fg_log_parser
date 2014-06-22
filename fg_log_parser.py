@@ -74,8 +74,10 @@ def check_log_format(line, srcipfield, dstipfield):
         >>> line ='srcip=192.168.1.1 dstip=8.8.8.8 dstport=53 proto=53'
         >>> check_log_format(line, "srcip", "dstip")
         True
-
         >>> line ='srcip=192.168.1.1 dstport=53 proto=53'
+        >>> check_log_format(line, "srcip", "dstip")
+        False
+        >>> line = ''
         >>> check_log_format(line, "srcip", "dstip")
         False
     """
@@ -171,7 +173,7 @@ def get_communication_matrix(logfile,
             """
 
             # check if necessary fields are in first line
-            if linecount is 1 and noipcheck:
+            if linecount is 1 and not noipcheck:
                 # print error message if srcip or dstip are missing
                 if not check_log_format(line, srcipfield, dstipfield):
                     log.error("srcipfield or dstipfield not in line: %s ", linecount)
