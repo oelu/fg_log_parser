@@ -92,3 +92,9 @@ The help message contains information about general options and log format optio
             fg_log_parser.py -f filter --srcipfield=SRC --dstipfield=DST --dstportfield=DPT --protofield=PROTO
         Parse Fortianalyzer Log:
             fg_log_parser.py -f faz.log --srcipfield=src --dstipfield=dst
+
+# Tests
+
+The python `doctest` module is used for tests. The tests are located either 
+in the function docstring directly or in the `logfiles.test` file. Some common
+logfiles with different logformats are in `testlogs/` and are tested each time.
