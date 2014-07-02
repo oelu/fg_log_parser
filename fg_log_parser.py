@@ -32,6 +32,8 @@ Examples:
 """
 
 __author__ = 'olivier'
+__title__ = 'fg_log_parser'
+__version__ = '0.3'
 
 try:
     from docopt import docopt
