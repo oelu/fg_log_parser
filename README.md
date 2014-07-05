@@ -1,4 +1,17 @@
 # Fortigate Log Parser
+
+<!-- toc -->
+  * [Features](#features)
+  * [Requirements](#requirements)
+  * [Example Session](#example-session)
+  * [Usage](#usage)
+    * [Usage: fg_log_parser.py](#usage-fglogparserpy)
+    * [Options:](#options)
+    * [Log Format Options (case sensitive):](#log-format-options-case-sensitive)
+    * [Examples:](#examples)
+* [Tests](#tests)
+
+<!-- toc stop -->
 Parses a Fortigate traffic log and presents a communication matrix. The communication
 matrix has the form: 
 
