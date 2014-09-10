@@ -222,10 +222,16 @@ def get_communication_matrix(logfile,
             elif proto in matrix[srcip][dstip][dstport]:
                 matrix[srcip][dstip][dstport][proto]["count"] += 1
                 if countbytes:
-                    matrix[srcip][dstip][dstport][proto]["sentbytes"] \
-                        += int(sentbytes)
-                    matrix[srcip][dstip][dstport][proto]["rcvdbytes"] \
-                        += int(rcvdbytes)
+                    try:
+                        matrix[srcip][dstip][dstport][proto]["sentbytes"] \
+                            += int(sentbytes)
+                    except TypeError:
+                        pass
+                    try:
+                        matrix[srcip][dstip][dstport][proto]["rcvdbytes"] \
+                            += int(rcvdbytes)
+                    except TypeError:
+                        pass
         log.info("Parsed %s lines in logfile: %s ", linecount, logfile)
     return matrix
 
@@ -274,7 +280,7 @@ def main():
                  'dstipfield': arguments['--dstipfield'],
                  'dstportfield': arguments['--dstportfield'],
                  'protofield': arguments['--protofield'],
-                 'sentbytesfield': arguments['--dstportfield'],
+                 'sentbytesfield': arguments['--sentbytesfield'],
                  'rcvdbytesfield': arguments['--rcvdbytesfield']
                  }
 
