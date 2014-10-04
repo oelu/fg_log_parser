@@ -10,7 +10,7 @@ Options:
     -v --verbose            Activate verbose messages
     --version               Shows version information
     -n --noipcheck          Do not check if src and dst ip are present
-    -c --csv                Print matrix in csv format (default is netsted format)
+    -c --csv                Print matrix in csv format (default is nested format)
 
     Log Format Options (case sensitive):
     --srcipfield=<srcipfield>       Src ip address field [default: srcip]
