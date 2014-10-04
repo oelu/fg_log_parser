@@ -336,7 +336,7 @@ def main():
     log.info("Reading firewall log...")
     matrix = get_communication_matrix(logfile, logformat, countbytes, noipcheck)
     if csv:
-        print_communication_matrix_as_csv(matrix)
+        print_communication_matrix_as_csv(matrix, countbytes)
     else:
         print_communication_matrix(matrix)
     return 0
