@@ -7,15 +7,17 @@ Usage: fg_log_parser.py
 Options:
     -b --countbytes         Count bytes for each communication quartet
     -h --help               Show this message
-    -v --verbose            activate verbose messages
+    -v --verbose            Activate verbose messages
     --version               Shows version information
     -n --noipcheck          Do not check if src and dst ip are present
+    -c --csv                Print matrix in csv format (default is netsted format)
 
     Log Format Options (case sensitive):
     --srcipfield=<srcipfield>       Src ip address field [default: srcip]
     --dstipfield=<dstipfield>       Dst ip address field [default: dstip]
     --dstportfield=<dstportfield>   Dst port field [default: dstport]
     --protofield=<protofield>       Protocol field [default: proto]
+
 
     If countbytes options is set you may have to specify:
     --sentbytesfield=<sentbytesfield>  Field for sent bytes [default: sentbyte]
@@ -259,6 +261,37 @@ def print_communication_matrix(matrix, indent=0):
             print '    ' * (indent+1) + str(value)
     return None
 
+def print_communication_matrix_as_csv(matrix, countbytes=False):
+    """
+    Prints communication matrix in csv format.
+
+    Example:
+    >>> matrix = {'192.168.1.1': {'8.8.8.8': {'53': {'UDP': {'count': 1}}}}}
+    >>> print_communication_matrix_as_csv(matrix)
+    srcip;dstip;dport;proto;count;sentbytes;rcvdbytes
+    192.168.1.1;8.8.8.8;53;UDP;1
+
+    Example 2 (option countbytes set):
+    >>> matrix = {'192.168.1.1': {'8.8.8.8': {'53': {'UDP': {'count': 1, 'sentbytes': 10, 'rcvdbytes': 10}}}}}
+    >>> print_communication_matrix_as_csv(matrix, countbytes=True)
+    srcip;dstip;dport;proto;count;sentbytes;rcvdbytes
+    192.168.1.1;8.8.8.8;53;UDP;1;10;10
+
+    """
+    # Header
+    print "srcip;dstip;dport;proto;count;sentbytes;rcvdbytes"
+    for srcip in matrix.keys():
+        for dstip in matrix.get(srcip):
+            for dport in matrix[srcip][dstip].keys():
+                for proto in matrix[srcip][dstip].get(dport):
+                    count = matrix[srcip][dstip][dport][proto].get("count")
+                    if countbytes:
+                        rcvdbytes = matrix[srcip][dstip][dport][proto].get("rcvdbytes")
+                        sentbytes = matrix[srcip][dstip][dport][proto].get("sentbytes")
+                        print "%s;%s;%s;%s;%s;%s;%s" % (srcip, dstip, dport, proto, count, rcvdbytes, sentbytes)
+                    else:
+                        print "%s;%s;%s;%s;%s" % (srcip, dstip, dport, proto, count)
+
 
 def main():
     """
@@ -273,6 +306,7 @@ def main():
     countbytes = arguments['--countbytes']
     verbose = arguments['--verbose']
     noipcheck = arguments['--noipcheck']
+    csv = arguments['--csv']
 
     # define logfile format
     # note: default values are set in the docopt string, see __doc__
@@ -301,7 +335,10 @@ def main():
     # parse log
     log.info("Reading firewall log...")
     matrix = get_communication_matrix(logfile, logformat, countbytes, noipcheck)
-    print_communication_matrix(matrix)
+    if csv:
+        print_communication_matrix_as_csv(matrix)
+    else:
+        print_communication_matrix(matrix)
     return 0
 
 if __name__ == "__main__":
