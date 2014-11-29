@@ -1,14 +1,10 @@
 # Fortigate Log Parser
 
 <!-- toc -->
-  * [Features](#features)
-  * [Requirements](#requirements)
-  * [Example Session](#example-session)
-  * [Usage](#usage)
-    * [Usage: fg_log_parser.py](#usage-fglogparserpy)
-    * [Options:](#options)
-    * [Log Format Options (case sensitive):](#log-format-options-case-sensitive)
-    * [Examples:](#examples)
+* [Features](#features)
+* [Example Session](#example-session)
+* [Usage](#usage)
+  * [Usage: fg_log_parser.py](#usage-fglogparserpy)
 * [Tests](#tests)
 
 <!-- toc stop -->
@@ -23,16 +19,13 @@ matrix has the form:
                     Rcvdbytes
                     Sentbytes
 
-## Features
+# Features
 * Missing values will be substituted with ‘None’
 * Log format can be specified with parameters for `srcip`, `dstip`, `dport`, `protocol`, `rcvdbytes`, `sentbytes` fields. 
 * Default logfile format is the fortigate traffic log. The log format can be adjusted to other log formats, for example iptables logs. 
+* Export to .csv format is possible
 
-## Requirements
-* Requires python docopt module.
-* Requires logging module.
-
-## Example Session
+# Example Session
 
     $ python fg_log_parser.py -b -f example.log 
     192.168.1.3
@@ -71,34 +64,38 @@ matrix has the form:
 				    rcvdbytes
 					    2001
 
-## Usage
+# Usage
 The help message contains information about general options and log format options. 
 
-### Usage: fg_log_parser.py
+## Usage: fg_log_parser.py
 
+    $ python fg_log_parser.py --help
+    Fortigate Log Parser
+    Parses a Fortigate logfile and presents a communication matrix.
+    
+    Usage: fg_log_parser.py
         fg_log_parser.py (-f <logfile> | --file <logfile>) [options]
 
-### Options:
-
+    Options:
         -b --countbytes         Count bytes for each communication quartet
         -h --help               Show this message
-        -v --verbose            activate verbose messages
+        -v --verbose            Activate verbose messages
         --version               Shows version information
         -n --noipcheck          Do not check if src and dst ip are present
-    
-### Log Format Options (case sensitive):
+        -c --csv                Print matrix in csv format (default is nested format)
 
+        Log Format Options (case sensitive):
         --srcipfield=<srcipfield>       Src ip address field [default: srcip]
         --dstipfield=<dstipfield>       Dst ip address field [default: dstip]
         --dstportfield=<dstportfield>   Dst port field [default: dstport]
         --protofield=<protofield>       Protocol field [default: proto]
-
-    If countbytes options is set you may have to specify:
+    
+    
+        If countbytes options is set you may have to specify:
         --sentbytesfield=<sentbytesfield>  Field for sent bytes [default: sentbyte]
         --rcvdbytesfield=<rcvdbytesfield>  Field for rcvd bytes [default: rcvdbyte]
-
-### Examples:
-
+    
+    Examples:
         Parse Fortigate Log:
             fg_log_parser.py -f fg.log
         Parse Iptables Log:
