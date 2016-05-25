@@ -4,7 +4,8 @@
 ... 'dstportfield': 'dstport',
 ... 'protofield': 'proto',
 ... 'sentbytesfield': 'sentbyte',
-... 'rcvdbytesfield': 'rcvdbyte'}
+... 'rcvdbytesfield': 'rcvdbyte',
+... 'actionfield': 'action'}
 >>> get_communication_matrix('testlogs/fg.log', logformat)
 {'192.168.1.1': {'8.8.8.8': {None: {None: {'count': 1}}, '53': {'UDP': {'count': 3}}}}}
 >>> get_communication_matrix('testlogs/fgnone.log', logformat, noipcheck=True)
@@ -20,7 +21,8 @@
 ... 'protofield': 'PROTO',
 ... 'dstportfield': 'DPT',
 ... 'sentbytesfield': 'None',
-... 'rcvdbytesfield': 'None'}
+... 'rcvdbytesfield': 'None',
+... 'actionfield': 'action'}
 >>> get_communication_matrix('testlogs/iptables', logformat)
 {'192.168.1.1': {'8.8.8.8': {None: {'ICMP': {'count': 1}}, '22': {'TCP': {'count': 3}}}, '8.8.4.4': {'22': {'UDP': {'count': 1}}}}}
 >>> from fg_log_parser import print_communication_matrix
