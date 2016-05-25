@@ -1,5 +1,6 @@
+#!/usr/bin/python
 """Fortigate Log Parser
-Parses a Fortigate logfile and presents a communication matrix.
+Parses a Fortigate log file and presents a communication matrix.
 
 Usage: fg_log_parser.py
   fg_log_parser.py (-f <logfile> | --file <logfile>) [options]
