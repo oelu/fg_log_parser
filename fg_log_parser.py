@@ -1,10 +1,12 @@
+#!/usr/bin/python
 """Fortigate Log Parser
-Parses a Fortigate logfile and presents a communication matrix.
+Parses a Fortigate log file and presents a communication matrix.
 
 Usage: fg_log_parser.py
   fg_log_parser.py (-f <logfile> | --file <logfile>) [options]
 
 Options:
+    -s --showaction         Show action field.
     -b --countbytes         Count bytes for each communication quartet
     -h --help               Show this message
     -v --verbose            Activate verbose messages
@@ -17,6 +19,7 @@ Options:
     --dstipfield=<dstipfield>       Dst ip address field [default: dstip]
     --dstportfield=<dstportfield>   Dst port field [default: dstport]
     --protofield=<protofield>       Protocol field [default: proto]
+    --actionfield=<actionfield>     Action field [default: action]
 
 
     If countbytes options is set you may have to specify:
@@ -128,7 +131,8 @@ def translate_protonr(protocolnr):
 def get_communication_matrix(logfile,
                              logformat,
                              countbytes=False,
-                             noipcheck=False):
+                             noipcheck=False,
+                             showaction=False):
     """
     Reads firewall logfile and returns communication matrix as a dictionary.
 
@@ -147,6 +151,7 @@ def get_communication_matrix(logfile,
     log.info("get_communication_matrix() started with parameters: ")
     log.info("Option logfile: %s", logfile)
     log.info("Option countbytes: %s", countbytes)
+    log.info("Option showaction: %s", showaction)
 
     # assign log format options from logformat dict
     srcipfield = logformat['srcipfield']
@@ -155,6 +160,7 @@ def get_communication_matrix(logfile,
     protofield = logformat['protofield']
     sentbytesfield = logformat['sentbytesfield']
     rcvdbytesfield = logformat['rcvdbytesfield']
+    actionfield = logformat['actionfield']
 
     matrix = {}  # communication matrix
 
@@ -171,6 +177,7 @@ def get_communication_matrix(logfile,
             Level 2:        dstips (destination ips)
             Level 3:        dstport (destination port number)
             Level 4:        proto (protocol number)
+            Level 4.5:      action (Fortigate action)
             Level 5:        occurrence count
                             sentbytes
                             rcvdbytes
@@ -194,11 +201,13 @@ def get_communication_matrix(logfile,
             dstip = logline.get(dstipfield)
             dstport = logline.get(dstportfield)
             proto = translate_protonr(logline.get(protofield))
-            # if user has specified countbytes
+            # user has set --action
+            if showaction:
+                action = logline.get(actionfield)
+            # if user has set --countbytes
             if countbytes:
                 sentbytes = logline.get(sentbytesfield)
                 rcvdbytes = logline.get(rcvdbytesfield)
-
             # extend matrix for each source ip
             if srcip not in matrix:
                 log.info("Found new srcip %s", srcip)
@@ -214,6 +223,8 @@ def get_communication_matrix(logfile,
             if proto not in matrix[srcip][dstip][dstport]:
                 matrix[srcip][dstip][dstport][proto] = {}
                 matrix[srcip][dstip][dstport][proto]["count"] = 1
+                if showaction:
+                    matrix[srcip][dstip][dstport][proto]["action"] = action
                 if countbytes:
                     matrix[srcip][dstip][dstport][proto]["sentbytes"] \
                         = int(sentbytes)
@@ -261,37 +272,40 @@ def print_communication_matrix(matrix, indent=0):
             print '    ' * (indent+1) + str(value)
     return None
 
-def print_communication_matrix_as_csv(matrix, countbytes=False):
+def print_communication_matrix_as_csv(matrix, countbytes=False, showaction=False):
     """
     Prints communication matrix in csv format.
 
     Example:
     >>> matrix = {'192.168.1.1': {'8.8.8.8': {'53': {'UDP': {'count': 1}}}}}
     >>> print_communication_matrix_as_csv(matrix)
-    srcip;dstip;dport;proto;count;sentbytes;rcvdbytes
-    192.168.1.1;8.8.8.8;53;UDP;1
+    srcip;dstip;dport;proto;count;action;sentbytes;rcvdbytes
+    192.168.1.1;8.8.8.8;53;UDP;1;None
 
     Example 2 (option countbytes set):
     >>> matrix = {'192.168.1.1': {'8.8.8.8': {'53': {'UDP': {'count': 1, 'sentbytes': 10, 'rcvdbytes': 10}}}}}
     >>> print_communication_matrix_as_csv(matrix, countbytes=True)
-    srcip;dstip;dport;proto;count;sentbytes;rcvdbytes
-    192.168.1.1;8.8.8.8;53;UDP;1;10;10
+    srcip;dstip;dport;proto;count;action;sentbytes;rcvdbytes
+    192.168.1.1;8.8.8.8;53;UDP;1;None;10;10
 
     """
     # Header
-    print "srcip;dstip;dport;proto;count;sentbytes;rcvdbytes"
+    print "srcip;dstip;dport;proto;count;action;sentbytes;rcvdbytes"
     for srcip in matrix.keys():
         for dstip in matrix.get(srcip):
             for dport in matrix[srcip][dstip].keys():
                 for proto in matrix[srcip][dstip].get(dport):
                     count = matrix[srcip][dstip][dport][proto].get("count")
-                    if countbytes:
-                        rcvdbytes = matrix[srcip][dstip][dport][proto].get("rcvdbytes")
-                        sentbytes = matrix[srcip][dstip][dport][proto].get("sentbytes")
-                        print "%s;%s;%s;%s;%s;%s;%s" % (srcip, dstip, dport, proto, count, rcvdbytes, sentbytes)
+                    if showaction:
+                        action = matrix[srcip][dstip][dport][proto].get("action")
                     else:
-                        print "%s;%s;%s;%s;%s" % (srcip, dstip, dport, proto, count)
-
+                        action = "None"
+                    if countbytes:
+                            rcvdbytes = matrix[srcip][dstip][dport][proto].get("rcvdbytes")
+                            sentbytes = matrix[srcip][dstip][dport][proto].get("sentbytes")
+                            print "%s;%s;%s;%s;%s;%s;%s;%s" % (srcip, dstip, dport, proto, count, action, sentbytes, rcvdbytes)
+                    else:
+                        print "%s;%s;%s;%s;%s;%s" % (srcip, dstip, dport, proto, count, action)
 
 def main():
     """
@@ -307,6 +321,7 @@ def main():
     verbose = arguments['--verbose']
     noipcheck = arguments['--noipcheck']
     csv = arguments['--csv']
+    showaction = arguments['--showaction']
 
     # define logfile format
     # note: default values are set in the docopt string, see __doc__
@@ -315,7 +330,8 @@ def main():
                  'dstportfield': arguments['--dstportfield'],
                  'protofield': arguments['--protofield'],
                  'sentbytesfield': arguments['--sentbytesfield'],
-                 'rcvdbytesfield': arguments['--rcvdbytesfield']
+                 'rcvdbytesfield': arguments['--rcvdbytesfield'],
+                 'actionfield': arguments['--actionfield']
                  }
 
     # set loglevel
@@ -334,9 +350,9 @@ def main():
 
     # parse log
     log.info("Reading firewall log...")
-    matrix = get_communication_matrix(logfile, logformat, countbytes, noipcheck)
+    matrix = get_communication_matrix(logfile, logformat, countbytes, noipcheck, showaction)
     if csv:
-        print_communication_matrix_as_csv(matrix, countbytes)
+        print_communication_matrix_as_csv(matrix, countbytes, showaction)
     else:
         print_communication_matrix(matrix)
     return 0

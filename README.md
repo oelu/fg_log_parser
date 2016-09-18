@@ -77,6 +77,7 @@ The help message contains information about general options and log format optio
         fg_log_parser.py (-f <logfile> | --file <logfile>) [options]
 
     Options:
+        -s --showaction         Show action field.
         -b --countbytes         Count bytes for each communication quartet
         -h --help               Show this message
         -v --verbose            Activate verbose messages
