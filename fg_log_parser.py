@@ -40,16 +40,16 @@ __author__ = 'olivier'
 __title__ = 'fg_log_parser'
 __version__ = '0.3'
 
+import sys
+import logging as log
+
 try:
     from docopt import docopt
     import re
-    import sys
-    import logging as log
 except ImportError as ioex:
     log.error("Could not import a required module")
     log.error(ioex)
     sys.exit(1)
-
 
 def split_kv(line):
     """
@@ -184,7 +184,7 @@ def get_communication_matrix(logfile,
             """
 
             # check if necessary fields are in first line
-            if linecount is 1 and not noipcheck:
+            if linecount == 1 and not noipcheck:
                 # print error message if srcip or dstip are missing
                 if not check_log_format(line, srcipfield, dstipfield):
                     log.error("srcipfield or dstipfield not in line: %s ", linecount)
@@ -265,11 +265,11 @@ def print_communication_matrix(matrix, indent=0):
     """
     for key, value in matrix.iteritems():
         # values are printed with 4 whitespace indent
-        print '    ' * indent + str(key)
+        print('    ' * indent + str(key))
         if isinstance(value, dict):
             print_communication_matrix(value, indent+1)
         else:
-            print '    ' * (indent+1) + str(value)
+            print('    ' * (indent+1) + str(value))
     return None
 
 def print_communication_matrix_as_csv(matrix, countbytes=False, showaction=False):
@@ -290,7 +290,7 @@ def print_communication_matrix_as_csv(matrix, countbytes=False, showaction=False
 
     """
     # Header
-    print "srcip;dstip;dport;proto;count;action;sentbytes;rcvdbytes"
+    print("srcip;dstip;dport;proto;count;action;sentbytes;rcvdbytes")
     for srcip in matrix.keys():
         for dstip in matrix.get(srcip):
             for dport in matrix[srcip][dstip].keys():
@@ -303,9 +303,9 @@ def print_communication_matrix_as_csv(matrix, countbytes=False, showaction=False
                     if countbytes:
                             rcvdbytes = matrix[srcip][dstip][dport][proto].get("rcvdbytes")
                             sentbytes = matrix[srcip][dstip][dport][proto].get("sentbytes")
-                            print "%s;%s;%s;%s;%s;%s;%s;%s" % (srcip, dstip, dport, proto, count, action, sentbytes, rcvdbytes)
+                            print("%s;%s;%s;%s;%s;%s;%s;%s" % (srcip, dstip, dport, proto, count, action, sentbytes, rcvdbytes))
                     else:
-                        print "%s;%s;%s;%s;%s;%s" % (srcip, dstip, dport, proto, count, action)
+                        print("%s;%s;%s;%s;%s;%s" % (srcip, dstip, dport, proto, count, action))
 
 def main():
     """
@@ -345,7 +345,7 @@ def main():
 
     # check if logfile argument is present
     if logfile is None:
-        print __doc__
+        print(__doc__)
         sys.exit(1)
 
     # parse log
