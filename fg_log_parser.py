@@ -184,7 +184,7 @@ def get_communication_matrix(logfile,
             """
 
             # check if necessary fields are in first line
-            if linecount is 1 and not noipcheck:
+            if linecount == 1 and not noipcheck:
                 # print error message if srcip or dstip are missing
                 if not check_log_format(line, srcipfield, dstipfield):
                     log.error("srcipfield or dstipfield not in line: %s ", linecount)
