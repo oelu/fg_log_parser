@@ -8,7 +8,48 @@
 * [Tests](#tests)
 
 <!-- toc stop -->
-Parses a Fortigate traffic log and presents a communication matrix. The communication
+
+*Parses a Fortigate traffic log and presents a communication matrix.*
+
+# Usage
+The help message contains information about general options and log format options. 
+
+    $ python fg_log_parser.py --help
+    Fortigate Log Parser
+    Parses a Fortigate logfile and presents a communication matrix.
+    
+    Usage: fg_log_parser.py
+        fg_log_parser.py (-f <logfile> | --file <logfile>) [options]
+
+    Options:
+        -s --showaction         Show action field.
+        -b --countbytes         Count bytes for each communication quartet
+        -h --help               Show this message
+        -v --verbose            Activate verbose messages
+        --version               Shows version information
+        -n --noipcheck          Do not check if src and dst ip are present
+        -c --csv                Print matrix in csv format (default is nested format)
+
+        Log Format Options (case sensitive):
+        --srcipfield=<srcipfield>       Src ip address field [default: srcip]
+        --dstipfield=<dstipfield>       Dst ip address field [default: dstip]
+        --dstportfield=<dstportfield>   Dst port field [default: dstport]
+        --protofield=<protofield>       Protocol field [default: proto]
+    
+    
+        If countbytes options is set you may have to specify:
+        --sentbytesfield=<sentbytesfield>  Field for sent bytes [default: sentbyte]
+        --rcvdbytesfield=<rcvdbytesfield>  Field for rcvd bytes [default: rcvdbyte]
+    
+    Examples:
+        Parse Fortigate Log:
+            fg_log_parser.py -f fg.log
+        Parse Iptables Log:
+            fg_log_parser.py -f filter --srcipfield=SRC --dstipfield=DST --dstportfield=DPT --protofield=PROTO
+        Parse Fortianalyzer Log:
+            fg_log_parser.py -f faz.log --srcipfield=src --dstipfield=dst
+
+The communication
 matrix has the form: 
 
     Source IP
@@ -64,45 +105,12 @@ matrix has the form:
 				    rcvdbytes
 					    2001
 
-# Usage
-The help message contains information about general options and log format options. 
+# Example Session with CSV output
 
-## Usage: fg_log_parser.py
-
-    $ python fg_log_parser.py --help
-    Fortigate Log Parser
-    Parses a Fortigate logfile and presents a communication matrix.
-    
-    Usage: fg_log_parser.py
-        fg_log_parser.py (-f <logfile> | --file <logfile>) [options]
-
-    Options:
-        -s --showaction         Show action field.
-        -b --countbytes         Count bytes for each communication quartet
-        -h --help               Show this message
-        -v --verbose            Activate verbose messages
-        --version               Shows version information
-        -n --noipcheck          Do not check if src and dst ip are present
-        -c --csv                Print matrix in csv format (default is nested format)
-
-        Log Format Options (case sensitive):
-        --srcipfield=<srcipfield>       Src ip address field [default: srcip]
-        --dstipfield=<dstipfield>       Dst ip address field [default: dstip]
-        --dstportfield=<dstportfield>   Dst port field [default: dstport]
-        --protofield=<protofield>       Protocol field [default: proto]
-    
-    
-        If countbytes options is set you may have to specify:
-        --sentbytesfield=<sentbytesfield>  Field for sent bytes [default: sentbyte]
-        --rcvdbytesfield=<rcvdbytesfield>  Field for rcvd bytes [default: rcvdbyte]
-    
-    Examples:
-        Parse Fortigate Log:
-            fg_log_parser.py -f fg.log
-        Parse Iptables Log:
-            fg_log_parser.py -f filter --srcipfield=SRC --dstipfield=DST --dstportfield=DPT --protofield=PROTO
-        Parse Fortianalyzer Log:
-            fg_log_parser.py -f faz.log --srcipfield=src --dstipfield=dst
+python3 fg_log_parser.py -c -f testlogs/fg.log 
+srcip;dstip;dport;proto;count;action;sentbytes;rcvdbytes
+192.168.1.1;8.8.8.8;53;UDP;3;None
+192.168.1.1;8.8.8.8;None;None;1;None
 
 # Tests
 
