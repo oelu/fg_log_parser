@@ -107,10 +107,10 @@ matrix has the form:
 
 # Example Session with CSV output
 
-python3 fg_log_parser.py -c -f testlogs/fg.log 
-srcip;dstip;dport;proto;count;action;sentbytes;rcvdbytes
-192.168.1.1;8.8.8.8;53;UDP;3;None
-192.168.1.1;8.8.8.8;None;None;1;None
+    python3 fg_log_parser.py -c -f testlogs/fg.log 
+    srcip;dstip;dport;proto;count;action;sentbytes;rcvdbytes
+    192.168.1.1;8.8.8.8;53;UDP;3;None
+    192.168.1.1;8.8.8.8;None;None;1;None
 
 # Tests
 
