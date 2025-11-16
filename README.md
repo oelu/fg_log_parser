@@ -11,6 +11,37 @@
 
 *Parses a Fortigate traffic log and presents a communication matrix.*
 
+# Installation
+
+## Download the Repository
+
+Clone the repository from GitHub:
+
+    git clone https://github.com/yourusername/fg_log_parser.git
+    cd fg_log_parser
+
+Alternatively, download the repository as a ZIP file and extract it.
+
+## Install Dependencies
+
+Install the required Python packages:
+
+    pip3 install -r requirements.txt
+
+Or install manually:
+
+    pip3 install docopt>=0.6.2
+
+## Make the Script Executable (Optional)
+
+On Linux/macOS, you can make the script executable:
+
+    chmod +x fg_log_parser.py
+
+Then run it directly:
+
+    ./fg_log_parser.py -f your_logfile.log
+
 # Usage
 The help message contains information about general options and log format options. 
 
