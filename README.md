@@ -145,6 +145,14 @@ matrix has the form:
 
 # Tests
 
-The python `doctest` module is used for tests. The tests are located either 
-in the function docstring directly or in the `logfiles.test` file. Some common
-logfiles with different logformats are in `testlogs/` and are tested each time.
+The python `unittest` module is used for tests. The tests are located in the
+`tests/test_fg_log_parser.py` file. Some common logfiles with different
+logformats are in `testlogs/` and are tested each time.
+
+To run the tests:
+
+    python3 -m unittest discover tests
+
+Or run the test file directly:
+
+    python3 tests/test_fg_log_parser.py
