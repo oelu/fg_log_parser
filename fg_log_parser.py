@@ -265,7 +265,7 @@ def print_communication_matrix(matrix, indent=0):
                     count
                         1
     """
-    for key, value in matrix.iteritems():
+    for key, value in matrix.items():
         # values are printed with 4 whitespace indent
         print('    ' * indent + str(key))
         if isinstance(value, dict):
