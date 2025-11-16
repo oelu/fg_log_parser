@@ -40,14 +40,16 @@ __author__ = 'olivier'
 __title__ = 'fg_log_parser'
 __version__ = '0.3'
 
+import sys
+import re
+import logging as log
+
 try:
     from docopt import docopt
-    import re
-    import sys
-    import logging as log
 except ImportError as ioex:
-    log.error("Could not import a required module")
-    log.error(ioex)
+    print("ERROR: Could not import a required module", file=sys.stderr)
+    print(f"ERROR: {ioex}", file=sys.stderr)
+    print("Please install dependencies: pip3 install -r requirements.txt", file=sys.stderr)
     sys.exit(1)
 
 
