@@ -1,0 +1,292 @@
+#!/usr/bin/python3
+"""Unit tests for fg_log_parser module."""
+
+import unittest
+import sys
+import os
+from io import StringIO
+
+# Add parent directory to path to import fg_log_parser
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from fg_log_parser import (
+    split_kv,
+    check_log_format,
+    translate_protonr,
+    get_communication_matrix,
+    print_communication_matrix,
+    print_communication_matrix_as_csv
+)
+
+
+class TestSplitKV(unittest.TestCase):
+    """Test cases for split_kv function."""
+
+    def test_split_kv_basic(self):
+        """Test basic key-value splitting."""
+        line = 'srcip=192.168.1.1 dstip=8.8.8.8 dport=53 proto=53 dstcountry="United States"'
+        result = split_kv(line)
+        expected = {
+            'srcip': '192.168.1.1',
+            'dport': '53',
+            'dstip': '8.8.8.8',
+            'dstcountry': '"United States"',
+            'proto': '53'
+        }
+        self.assertEqual(result, expected)
+
+
+class TestCheckLogFormat(unittest.TestCase):
+    """Test cases for check_log_format function."""
+
+    def test_check_log_format_valid(self):
+        """Test with valid log format containing both fields."""
+        line = 'srcip=192.168.1.1 dstip=8.8.8.8 dstport=53 proto=53'
+        result = check_log_format(line, "srcip", "dstip")
+        self.assertTrue(result)
+
+    def test_check_log_format_missing_field(self):
+        """Test with missing dstip field."""
+        line = 'srcip=192.168.1.1 dstport=53 proto=53'
+        result = check_log_format(line, "srcip", "dstip")
+        self.assertFalse(result)
+
+    def test_check_log_format_empty_line(self):
+        """Test with empty line."""
+        line = ''
+        result = check_log_format(line, "srcip", "dstip")
+        self.assertFalse(result)
+
+
+class TestTranslateProtonr(unittest.TestCase):
+    """Test cases for translate_protonr function."""
+
+    def test_translate_protonr_unknown(self):
+        """Test protocol number that has no translation."""
+        result = translate_protonr(53)
+        self.assertEqual(result, 53)
+
+    def test_translate_protonr_icmp(self):
+        """Test ICMP protocol (1)."""
+        result = translate_protonr(1)
+        self.assertEqual(result, 'ICMP')
+
+    def test_translate_protonr_tcp(self):
+        """Test TCP protocol (6)."""
+        result = translate_protonr(6)
+        self.assertEqual(result, 'TCP')
+
+    def test_translate_protonr_udp(self):
+        """Test UDP protocol (17)."""
+        result = translate_protonr(17)
+        self.assertEqual(result, 'UDP')
+
+
+class TestGetCommunicationMatrix(unittest.TestCase):
+    """Test cases for get_communication_matrix function."""
+
+    def setUp(self):
+        """Set up common test fixtures."""
+        self.logformat = {
+            'srcipfield': 'srcip',
+            'dstipfield': 'dstip',
+            'dstportfield': 'dstport',
+            'protofield': 'proto',
+            'sentbytesfield': 'sentbyte',
+            'rcvdbytesfield': 'rcvdbyte',
+            'actionfield': 'action'
+        }
+
+    def test_get_communication_matrix_fortigate(self):
+        """Test parsing Fortigate log file."""
+        result = get_communication_matrix('testlogs/fg.log', self.logformat)
+        expected = {
+            '192.168.1.1': {
+                '8.8.8.8': {
+                    None: {None: {'count': 1}},
+                    '53': {'UDP': {'count': 3}}
+                }
+            }
+        }
+        self.assertEqual(result, expected)
+
+    def test_get_communication_matrix_with_none_values(self):
+        """Test parsing log file with None values (noipcheck)."""
+        result = get_communication_matrix('testlogs/fgnone.log', self.logformat, noipcheck=True)
+        expected = {
+            '192.168.1.1': {
+                None: {
+                    '53': {'UDP': {'count': 1}}
+                }
+            }
+        }
+        self.assertEqual(result, expected)
+
+    def test_get_communication_matrix_iptables(self):
+        """Test parsing iptables log file."""
+        logformat_iptables = {
+            'srcipfield': 'SRC',
+            'dstipfield': 'DST',
+            'protofield': 'PROTO',
+            'dstportfield': 'DPT',
+            'sentbytesfield': 'None',
+            'rcvdbytesfield': 'None',
+            'actionfield': 'action'
+        }
+        result = get_communication_matrix('testlogs/iptables', logformat_iptables)
+        expected = {
+            '192.168.1.1': {
+                '8.8.8.8': {
+                    None: {'ICMP': {'count': 1}},
+                    '22': {'TCP': {'count': 3}}
+                },
+                '8.8.4.4': {
+                    '22': {'UDP': {'count': 1}}
+                }
+            }
+        }
+        self.assertEqual(result, expected)
+
+
+class TestPrintCommunicationMatrix(unittest.TestCase):
+    """Test cases for print_communication_matrix function."""
+
+    def test_print_communication_matrix_simple(self):
+        """Test printing simple communication matrix."""
+        matrix = {'192.168.1.1': {'8.8.8.8': {'53': {'UDP': {'count': 1}}}}}
+
+        # Capture stdout
+        captured_output = StringIO()
+        sys.stdout = captured_output
+
+        print_communication_matrix(matrix)
+
+        # Restore stdout
+        sys.stdout = sys.__stdout__
+
+        output = captured_output.getvalue()
+        expected_lines = [
+            '192.168.1.1',
+            '    8.8.8.8',
+            '        53',
+            '            UDP',
+            '                count',
+            '                    1'
+        ]
+
+        for line in expected_lines:
+            self.assertIn(line, output)
+
+    def test_print_communication_matrix_with_none(self):
+        """Test printing communication matrix with None values."""
+        matrix = {'192.168.1.1': {'8.8.8.8': {None: {None: {'count': 1}}, '53': {'UDP': {'count': 3}}}}}
+
+        # Capture stdout
+        captured_output = StringIO()
+        sys.stdout = captured_output
+
+        print_communication_matrix(matrix)
+
+        # Restore stdout
+        sys.stdout = sys.__stdout__
+
+        output = captured_output.getvalue()
+        expected_lines = [
+            '192.168.1.1',
+            '    8.8.8.8',
+            '        None',
+            '            None',
+            '                count',
+            '                    1',
+            '        53',
+            '            UDP',
+            '                count',
+            '                    3'
+        ]
+
+        for line in expected_lines:
+            self.assertIn(line, output)
+
+    def test_print_communication_matrix_missing_dstip(self):
+        """Test printing communication matrix with missing destination IP."""
+        matrix = {'192.168.1.1': {None: {'53': {'UDP': {'count': 1}}}}}
+
+        # Capture stdout
+        captured_output = StringIO()
+        sys.stdout = captured_output
+
+        print_communication_matrix(matrix)
+
+        # Restore stdout
+        sys.stdout = sys.__stdout__
+
+        output = captured_output.getvalue()
+        expected_lines = [
+            '192.168.1.1',
+            '    None',
+            '        53',
+            '            UDP',
+            '                count',
+            '                    1'
+        ]
+
+        for line in expected_lines:
+            self.assertIn(line, output)
+
+
+class TestPrintCommunicationMatrixAsCSV(unittest.TestCase):
+    """Test cases for print_communication_matrix_as_csv function."""
+
+    def test_print_csv_simple(self):
+        """Test CSV output for simple matrix."""
+        matrix = {'192.168.1.1': {'8.8.8.8': {'53': {'UDP': {'count': 1}}}}}
+
+        # Capture stdout
+        captured_output = StringIO()
+        sys.stdout = captured_output
+
+        print_communication_matrix_as_csv(matrix)
+
+        # Restore stdout
+        sys.stdout = sys.__stdout__
+
+        output = captured_output.getvalue()
+        lines = output.strip().split('\n')
+
+        self.assertEqual(lines[0], 'srcip;dstip;dport;proto;count;action;sentbytes;rcvdbytes')
+        self.assertEqual(lines[1], '192.168.1.1;8.8.8.8;53;UDP;1;None')
+
+    def test_print_csv_with_bytes(self):
+        """Test CSV output with byte counts."""
+        matrix = {
+            '192.168.1.1': {
+                '8.8.8.8': {
+                    '53': {
+                        'UDP': {
+                            'count': 1,
+                            'sentbytes': 10,
+                            'rcvdbytes': 10
+                        }
+                    }
+                }
+            }
+        }
+
+        # Capture stdout
+        captured_output = StringIO()
+        sys.stdout = captured_output
+
+        print_communication_matrix_as_csv(matrix, countbytes=True)
+
+        # Restore stdout
+        sys.stdout = sys.__stdout__
+
+        output = captured_output.getvalue()
+        lines = output.strip().split('\n')
+
+        self.assertEqual(lines[0], 'srcip;dstip;dport;proto;count;action;sentbytes;rcvdbytes')
+        self.assertEqual(lines[1], '192.168.1.1;8.8.8.8;53;UDP;1;None;10;10')
+
+
+if __name__ == '__main__':
+    unittest.main()
