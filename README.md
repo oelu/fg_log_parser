@@ -14,7 +14,7 @@
 # Usage
 The help message contains information about general options and log format options. 
 
-    $ python fg_log_parser.py --help
+    $ python3 fg_log_parser.py --help
     Fortigate Log Parser
     Parses a Fortigate logfile and presents a communication matrix.
     
@@ -68,7 +68,7 @@ matrix has the form:
 
 # Example Session
 
-    $ python fg_log_parser.py -b -f example.log 
+    $ python3 fg_log_parser.py -b -f example.log 
     192.168.1.3
 	    1.2.3.4
 		    443
