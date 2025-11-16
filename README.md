@@ -1,10 +1,14 @@
 # Fortigate Log Parser
 
 <!-- toc -->
+* [Installation](#installation)
+  * [Download the Repository](#download-the-repository)
+  * [Install Dependencies](#install-dependencies)
+  * [Make the Script Executable (Optional)](#make-the-script-executable-optional)
+* [Usage](#usage)
 * [Features](#features)
 * [Example Session](#example-session)
-* [Usage](#usage)
-  * [Usage: fg_log_parser.py](#usage-fglogparserpy)
+* [Example Session with CSV output](#example-session-with-csv-output)
 * [Tests](#tests)
 
 <!-- toc stop -->
