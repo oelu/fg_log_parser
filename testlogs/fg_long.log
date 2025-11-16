@@ -1,0 +1,1004 @@
+date=2014-04-30 time=18:22:54  srcip=192.168.1.1 srcport=46166 dstip=8.8.8.8 dstport=53 dstcountry="United States"  proto=17 sentbyte=1 rcvdbyte=1 sentpkt=1 rcvdpkt=1
+date=2014-04-30 time=18:22:54  srcip=192.168.1.1 srcport=46166 dstip=8.8.8.8 dstport=53 dstcountry="United States"  proto=17 sentbyte=1 rcvdbyte=1 sentpkt=1 rcvdpkt=1
+date=2014-04-30 time=18:22:54  srcip=192.168.1.1 srcport=46166 dstip=8.8.8.8 dstport=53 dstcountry="United States"  proto=17 sentbyte=1 rcvdbyte=1 sentpkt=1 rcvdpkt=1
+date=2014-04-30 time=18:22:54  srcip=192.168.1.1 srcport=46166 dstip=8.8.8.8 dstcountry="United States" sentbyte=1 rcvdbyte=1 sentpkt=1 rcvdpkt=1
+date=2014-04-30 time=18:22:54  srcip=192.168.1.50 srcport=33530 dstip=208.67.222.222 dstport=80 dstcountry="United Kingdom"  proto=17 sentbyte=1796 rcvdbyte=147 sentpkt=53 rcvdpkt=12
+date=2014-04-30 time=18:22:59  srcip=192.168.1.50 srcport=39179 dstip=1.1.1.1 dstport=25 dstcountry="India"  proto=17 sentbyte=2811 rcvdbyte=2092 sentpkt=73 rcvdpkt=96
+date=2014-04-30 time=18:23:14  srcip=192.168.1.100 srcport=54852 dstip=151.101.1.69 dstcountry="China" sentbyte=7435 rcvdbyte=2814 sentpkt=30 rcvdpkt=67
+date=2014-04-30 time=18:23:06  srcip=192.168.1.50 srcport=45263 dstip=8.8.8.8 dstport=3306 dstcountry="China"  proto=17 sentbyte=912 rcvdbyte=4237 sentpkt=67 rcvdpkt=62
+date=2014-04-30 time=18:23:18  srcip=192.168.1.100 srcport=49642 dstip=10.0.0.1 dstport=22 dstcountry="Canada"  proto=6 sentbyte=6226 rcvdbyte=6735 sentpkt=38 rcvdpkt=34
+date=2014-04-30 time=18:22:59  srcip=192.168.1.25 srcport=51470 dstip=172.16.0.1 dstport=6379 dstcountry="Canada"  proto=6 sentbyte=7048 rcvdbyte=9066 sentpkt=69 rcvdpkt=72
+date=2014-04-30 time=18:23:00  srcip=10.0.0.50 srcport=26479 dstip=208.67.222.222 dstport=8080 dstcountry="Brazil"  proto=17 sentbyte=4996 rcvdbyte=3563 sentpkt=35 rcvdpkt=22
+date=2014-04-30 time=18:23:36  srcip=10.0.0.50 srcport=31087 dstip=1.1.1.1 dstport=5432 dstcountry="United States"  proto=17 sentbyte=1513 rcvdbyte=5424 sentpkt=9 rcvdpkt=38
+date=2014-04-30 time=18:23:26  srcip=10.0.0.100 srcport=56255 dstip=172.16.0.1 dstport=80 dstcountry="France"  proto=17 sentbyte=4246 rcvdbyte=5098 sentpkt=62 rcvdpkt=15
+date=2014-04-30 time=18:23:39  srcip=10.0.0.50 srcport=7934 dstip=74.125.224.72 dstport=53 dstcountry="Australia"  proto=6 sentbyte=4982 rcvdbyte=8863 sentpkt=21 rcvdpkt=15
+date=2014-04-30 time=18:23:34  srcip=10.0.0.50 srcport=33312 dstip=74.125.224.72 dstport=21 dstcountry="Japan"  proto=17 sentbyte=3324 rcvdbyte=8726 sentpkt=93 rcvdpkt=99
+date=2014-04-30 time=18:23:49  srcip=192.168.1.50 srcport=19392 dstip=8.8.8.8 dstport=80 dstcountry="Brazil"  proto=6 sentbyte=4076 rcvdbyte=5183 sentpkt=89 rcvdpkt=16
+date=2014-04-30 time=18:23:18  srcip=10.0.0.100 srcport=21337 dstip=172.16.0.1 dstport=3306 dstcountry="India"  proto=17 sentbyte=1470 rcvdbyte=5702 sentpkt=68 rcvdpkt=80
+date=2014-04-30 time=18:24:25  srcip=10.0.0.100 srcport=17354 dstip=208.67.222.222 dstport=25 dstcountry="Australia"  proto=17 sentbyte=7924 rcvdbyte=7549 sentpkt=62 rcvdpkt=63
+date=2014-04-30 time=18:25:00  srcip=192.168.1.100 srcport=41350 dstip=192.168.1.254 dstport=53 dstcountry="Japan"  proto=6 sentbyte=9693 rcvdbyte=6411 sentpkt=66 rcvdpkt=95
+date=2014-04-30 time=18:24:24  srcip=192.168.1.1 srcport=10795 dstip=74.125.224.72 dstport=80 dstcountry="France"  proto=17 sentbyte=8368 rcvdbyte=8229 sentpkt=19 rcvdpkt=59
+date=2014-04-30 time=18:23:26  srcip=192.168.1.25 srcport=26827 dstip=151.101.1.69 dstport=8080 dstcountry="Canada"  proto=6 sentbyte=229 rcvdbyte=6305 sentpkt=98 rcvdpkt=84
+date=2014-04-30 time=18:25:27  srcip=192.168.1.100 srcport=29411 dstip=1.1.1.1 dstport=6379 dstcountry="India"  proto=6 sentbyte=9930 rcvdbyte=2924 sentpkt=75 rcvdpkt=8
+date=2014-04-30 time=18:23:12  srcip=192.168.1.50 srcport=48154 dstip=74.125.224.72 dstport=443 dstcountry="Canada"  proto=6 sentbyte=9246 rcvdbyte=1894 sentpkt=58 rcvdpkt=16
+date=2014-04-30 time=18:26:04  srcip=192.168.1.1 srcport=29681 dstip=8.8.8.8 dstport=143 dstcountry="India"  proto=17 sentbyte=3339 rcvdbyte=3267 sentpkt=58 rcvdpkt=37
+date=2014-04-30 time=18:24:54  srcip=192.168.1.50 srcport=16540 dstip=1.1.1.1 dstport=143 dstcountry="Germany"  proto=6 sentbyte=236 rcvdbyte=8719 sentpkt=86 rcvdpkt=87
+date=2014-04-30 time=18:23:57  srcip=10.0.0.50 srcport=61256 dstip=172.16.0.1 dstport=5432 dstcountry="Japan"  proto=17 sentbyte=8554 rcvdbyte=5577 sentpkt=53 rcvdpkt=92
+date=2014-04-30 time=18:23:16  srcip=192.168.1.1 srcport=11146 dstip=8.8.8.8 dstport=143 dstcountry="Germany"  proto=17 sentbyte=1169 rcvdbyte=7424 sentpkt=17 rcvdpkt=24
+date=2014-04-30 time=18:24:03  srcip=10.0.0.100 srcport=15834 dstip=10.0.0.1 dstport=143 dstcountry="Japan"  proto=6 sentbyte=4814 rcvdbyte=308 sentpkt=5 rcvdpkt=46
+date=2014-04-30 time=18:26:06  srcip=192.168.1.50 srcport=8008 dstip=192.168.1.254 dstport=143 dstcountry="India"  proto=6 sentbyte=3679 rcvdbyte=4526 sentpkt=99 rcvdpkt=72
+date=2014-04-30 time=18:26:39  srcip=10.0.0.50 srcport=33539 dstip=10.0.0.1 dstport=3306 dstcountry="France"  proto=17 sentbyte=8537 rcvdbyte=6799 sentpkt=59 rcvdpkt=83
+date=2014-04-30 time=18:23:20  srcip=192.168.1.25 srcport=22675 dstip=192.168.1.254 dstcountry="China" sentbyte=990 rcvdbyte=7921 sentpkt=23 rcvdpkt=3
+date=2014-04-30 time=18:24:15  srcip=192.168.1.100 srcport=20193 dstip=172.16.0.1 dstport=443 dstcountry="Australia"  proto=6 sentbyte=971 rcvdbyte=3570 sentpkt=12 rcvdpkt=47
+date=2014-04-30 time=18:27:34  srcip=10.0.0.100 srcport=7123 dstip=151.101.1.69 dstport=143 dstcountry="United States"  proto=6 sentbyte=2535 rcvdbyte=492 sentpkt=48 rcvdpkt=41
+date=2014-04-30 time=18:23:52  srcip=10.0.0.100 srcport=3506 dstip=192.168.1.254 dstport=25 dstcountry="United States"  proto=6 sentbyte=5312 rcvdbyte=5302 sentpkt=9 rcvdpkt=3
+date=2014-04-30 time=18:27:24  srcip=10.0.0.100 srcport=12445 dstip=172.16.0.1 dstport=443 dstcountry="Japan"  proto=6 sentbyte=4689 rcvdbyte=9831 sentpkt=33 rcvdpkt=23
+date=2014-04-30 time=18:26:31  srcip=192.168.1.25 srcport=65489 dstip=192.168.1.254 dstport=5432 dstcountry="Australia"  proto=17 sentbyte=473 rcvdbyte=1370 sentpkt=57 rcvdpkt=13
+date=2014-04-30 time=18:25:34  srcip=10.0.0.50 srcport=18761 dstip=172.16.0.1 dstport=8080 dstcountry="Brazil"  proto=6 sentbyte=6344 rcvdbyte=1694 sentpkt=25 rcvdpkt=31
+date=2014-04-30 time=18:25:06  srcip=192.168.1.1 srcport=26957 dstip=10.0.0.1 dstport=22 dstcountry="China"  proto=6 sentbyte=1233 rcvdbyte=9581 sentpkt=27 rcvdpkt=41
+date=2014-04-30 time=18:24:02  srcip=192.168.1.50 srcport=40406 dstip=10.0.0.1 dstport=5432 dstcountry="France"  proto=17 sentbyte=2133 rcvdbyte=8710 sentpkt=74 rcvdpkt=25
+date=2014-04-30 time=18:28:09  srcip=10.0.0.50 srcport=10284 dstip=10.0.0.1 dstport=110 dstcountry="Japan"  proto=6 sentbyte=7204 rcvdbyte=6017 sentpkt=75 rcvdpkt=2
+date=2014-04-30 time=18:28:18  srcip=192.168.1.25 srcport=44644 dstip=172.16.0.1 dstport=25 dstcountry="Brazil"  proto=6 sentbyte=4301 rcvdbyte=1304 sentpkt=37 rcvdpkt=86
+date=2014-04-30 time=18:29:04  srcip=10.0.0.100 srcport=34276 dstip=10.0.0.1 dstport=21 dstcountry="Germany"  proto=17 sentbyte=2207 rcvdbyte=5052 sentpkt=52 rcvdpkt=32
+date=2014-04-30 time=18:27:58  srcip=192.168.1.100 srcport=17047 dstip=208.67.222.222 dstport=53 dstcountry="Canada"  proto=17 sentbyte=5732 rcvdbyte=1989 sentpkt=1 rcvdpkt=44
+date=2014-04-30 time=18:26:09  srcip=10.0.0.50 srcport=14062 dstip=192.168.1.254 dstport=21 dstcountry="China"  proto=6 sentbyte=9849 rcvdbyte=3399 sentpkt=37 rcvdpkt=96
+date=2014-04-30 time=18:25:34  srcip=192.168.1.100 srcport=43787 dstip=208.67.222.222 dstport=6379 dstcountry="China"  proto=17 sentbyte=4716 rcvdbyte=5752 sentpkt=18 rcvdpkt=61
+date=2014-04-30 time=18:24:57  srcip=10.0.0.50 srcport=35161 dstip=172.16.0.1 dstport=21 dstcountry="Australia"  proto=6 sentbyte=6919 rcvdbyte=7860 sentpkt=54 rcvdpkt=17
+date=2014-04-30 time=18:25:42  srcip=192.168.1.25 srcport=11628 dstip=8.8.8.8 dstport=53 dstcountry="China"  proto=17 sentbyte=6699 rcvdbyte=8344 sentpkt=98 rcvdpkt=87
+date=2014-04-30 time=18:29:21  srcip=192.168.1.25 srcport=37676 dstip=172.16.0.1 dstport=5432 dstcountry="United Kingdom"  proto=17 sentbyte=9849 rcvdbyte=3679 sentpkt=13 rcvdpkt=16
+date=2014-04-30 time=18:29:30  srcip=192.168.1.25 srcport=65136 dstip=1.1.1.1 dstport=143 dstcountry="Japan"  proto=17 sentbyte=3410 rcvdbyte=1562 sentpkt=90 rcvdpkt=20
+date=2014-04-30 time=18:29:39  srcip=192.168.1.1 srcport=36828 dstip=8.8.8.8 dstport=443 dstcountry="Brazil"  proto=6 sentbyte=9655 rcvdbyte=3547 sentpkt=19 rcvdpkt=20
+date=2014-04-30 time=18:26:44  srcip=192.168.1.50 srcport=36783 dstip=208.67.222.222 dstport=80 dstcountry="United States"  proto=6 sentbyte=4813 rcvdbyte=134 sentpkt=2 rcvdpkt=41
+date=2014-04-30 time=18:29:10  srcip=192.168.1.25 srcport=25710 dstip=74.125.224.72 dstport=22 dstcountry="Germany"  proto=17 sentbyte=575 rcvdbyte=2360 sentpkt=6 rcvdpkt=23
+date=2014-04-30 time=18:28:30  srcip=192.168.1.25 srcport=47084 dstip=208.67.222.222 dstport=25 dstcountry="China"  proto=17 sentbyte=5236 rcvdbyte=9546 sentpkt=18 rcvdpkt=30
+date=2014-04-30 time=18:23:43  srcip=192.168.1.100 srcport=47549 dstip=1.1.1.1 dstport=21 dstcountry="Australia"  proto=17 sentbyte=7387 rcvdbyte=5240 sentpkt=47 rcvdpkt=42
+date=2014-04-30 time=18:23:44  srcip=192.168.1.50 srcport=48759 dstip=172.16.0.1 dstport=110 dstcountry="Brazil"  proto=17 sentbyte=2364 rcvdbyte=2117 sentpkt=57 rcvdpkt=10
+date=2014-04-30 time=18:28:51  srcip=192.168.1.100 srcport=39314 dstip=10.0.0.1 dstport=53 dstcountry="France"  proto=6 sentbyte=6422 rcvdbyte=2655 sentpkt=61 rcvdpkt=18
+date=2014-04-30 time=18:25:30  srcip=10.0.0.50 srcport=12965 dstip=192.168.1.254 dstport=143 dstcountry="United Kingdom"  proto=6 sentbyte=3151 rcvdbyte=8192 sentpkt=25 rcvdpkt=85
+date=2014-04-30 time=18:28:12  srcip=192.168.1.1 srcport=22641 dstip=172.16.0.1 dstport=110 dstcountry="China"  proto=17 sentbyte=7249 rcvdbyte=4161 sentpkt=81 rcvdpkt=73
+date=2014-04-30 time=18:29:12  srcip=192.168.1.1 srcport=44013 dstip=10.0.0.1 dstport=5432 dstcountry="France"  proto=17 sentbyte=3462 rcvdbyte=9548 sentpkt=93 rcvdpkt=27
+date=2014-04-30 time=18:31:09  srcip=192.168.1.1 srcport=10745 dstip=10.0.0.1 dstport=53 dstcountry="Canada"  proto=6 sentbyte=9641 rcvdbyte=8935 sentpkt=15 rcvdpkt=47
+date=2014-04-30 time=18:30:22  srcip=192.168.1.25 srcport=19378 dstip=10.0.0.1 dstport=53 dstcountry="France"  proto=6 sentbyte=325 rcvdbyte=3591 sentpkt=67 rcvdpkt=57
+date=2014-04-30 time=18:23:51  srcip=192.168.1.1 srcport=56179 dstip=10.0.0.1 dstport=53 dstcountry="India"  proto=17 sentbyte=1365 rcvdbyte=4971 sentpkt=97 rcvdpkt=52
+date=2014-04-30 time=18:30:38  srcip=10.0.0.50 srcport=53692 dstip=208.67.222.222 dstport=22 dstcountry="United Kingdom"  proto=6 sentbyte=3659 rcvdbyte=4226 sentpkt=46 rcvdpkt=6
+date=2014-04-30 time=18:29:47  srcip=192.168.1.100 srcport=50476 dstip=151.101.1.69 dstcountry="Brazil" sentbyte=9612 rcvdbyte=2793 sentpkt=62 rcvdpkt=75
+date=2014-04-30 time=18:30:54  srcip=192.168.1.50 srcport=49684 dstip=1.1.1.1 dstport=3306 dstcountry="China"  proto=6 sentbyte=1570 rcvdbyte=7378 sentpkt=67 rcvdpkt=90
+date=2014-04-30 time=18:25:57  srcip=192.168.1.1 srcport=57283 dstip=151.101.1.69 dstport=80 dstcountry="Canada"  proto=6 sentbyte=4869 rcvdbyte=4253 sentpkt=48 rcvdpkt=65
+date=2014-04-30 time=18:27:02  srcip=192.168.1.50 srcport=44183 dstip=192.168.1.254 dstport=22 dstcountry="Japan"  proto=6 sentbyte=293 rcvdbyte=3353 sentpkt=2 rcvdpkt=39
+date=2014-04-30 time=18:28:09  srcip=10.0.0.100 srcport=48627 dstip=151.101.1.69 dstport=53 dstcountry="France"  proto=17 sentbyte=1705 rcvdbyte=1485 sentpkt=8 rcvdpkt=7
+date=2014-04-30 time=18:27:10  srcip=10.0.0.100 srcport=49982 dstip=151.101.1.69 dstport=22 dstcountry="China"  proto=6 sentbyte=2623 rcvdbyte=4086 sentpkt=34 rcvdpkt=18
+date=2014-04-30 time=18:29:24  srcip=10.0.0.100 srcport=56649 dstip=8.8.8.8 dstcountry="Brazil" sentbyte=8583 rcvdbyte=9313 sentpkt=53 rcvdpkt=41
+date=2014-04-30 time=18:29:30  srcip=192.168.1.25 srcport=11423 dstip=192.168.1.254 dstport=6379 dstcountry="United Kingdom"  proto=17 sentbyte=5044 rcvdbyte=4869 sentpkt=29 rcvdpkt=84
+date=2014-04-30 time=18:29:36  srcip=10.0.0.100 srcport=38343 dstip=192.168.1.254 dstport=3306 dstcountry="Germany"  proto=17 sentbyte=9609 rcvdbyte=2135 sentpkt=51 rcvdpkt=15
+date=2014-04-30 time=18:31:58  srcip=192.168.1.25 srcport=6080 dstip=8.8.8.8 dstport=53 dstcountry="United Kingdom"  proto=6 sentbyte=3339 rcvdbyte=118 sentpkt=2 rcvdpkt=53
+date=2014-04-30 time=18:24:03  srcip=192.168.1.100 srcport=7463 dstip=172.16.0.1 dstcountry="Brazil" sentbyte=1306 rcvdbyte=143 sentpkt=34 rcvdpkt=30
+date=2014-04-30 time=18:32:14  srcip=192.168.1.100 srcport=21967 dstip=1.1.1.1 dstport=143 dstcountry="Australia"  proto=6 sentbyte=268 rcvdbyte=2899 sentpkt=60 rcvdpkt=88
+date=2014-04-30 time=18:26:27  srcip=192.168.1.50 srcport=18982 dstip=208.67.222.222 dstport=443 dstcountry="Canada"  proto=17 sentbyte=4089 rcvdbyte=9105 sentpkt=45 rcvdpkt=28
+date=2014-04-30 time=18:26:30  srcip=10.0.0.50 srcport=61135 dstip=74.125.224.72 dstport=25 dstcountry="Canada"  proto=17 sentbyte=643 rcvdbyte=4828 sentpkt=15 rcvdpkt=27
+date=2014-04-30 time=18:26:33  srcip=192.168.1.1 srcport=33933 dstip=8.8.8.8 dstport=143 dstcountry="China"  proto=6 sentbyte=3033 rcvdbyte=2606 sentpkt=8 rcvdpkt=33
+date=2014-04-30 time=18:25:22  srcip=192.168.1.25 srcport=49281 dstip=151.101.1.69 dstport=3306 dstcountry="India"  proto=17 sentbyte=6008 rcvdbyte=332 sentpkt=26 rcvdpkt=5
+date=2014-04-30 time=18:27:54  srcip=10.0.0.50 srcport=41509 dstip=172.16.0.1 dstport=22 dstcountry="Germany"  proto=6 sentbyte=5112 rcvdbyte=8085 sentpkt=82 rcvdpkt=59
+date=2014-04-30 time=18:34:18  srcip=10.0.0.50 srcport=19390 dstip=151.101.1.69 dstport=5432 dstcountry="India"  proto=6 sentbyte=3666 rcvdbyte=3141 sentpkt=82 rcvdpkt=70
+date=2014-04-30 time=18:33:10  srcip=192.168.1.50 srcport=13991 dstip=74.125.224.72 dstport=6379 dstcountry="China"  proto=17 sentbyte=8894 rcvdbyte=8750 sentpkt=9 rcvdpkt=2
+date=2014-04-30 time=18:35:54  srcip=10.0.0.50 srcport=57434 dstip=74.125.224.72 dstport=21 dstcountry="Brazil"  proto=6 sentbyte=6253 rcvdbyte=3941 sentpkt=95 rcvdpkt=86
+date=2014-04-30 time=18:33:26  srcip=10.0.0.50 srcport=39675 dstip=192.168.1.254 dstport=8080 dstcountry="Canada"  proto=6 sentbyte=3301 rcvdbyte=3104 sentpkt=21 rcvdpkt=74
+date=2014-04-30 time=18:25:34  srcip=10.0.0.50 srcport=53747 dstip=192.168.1.254 dstcountry="France" sentbyte=84 rcvdbyte=2869 sentpkt=74 rcvdpkt=94
+date=2014-04-30 time=18:25:36  srcip=192.168.1.100 srcport=21332 dstip=74.125.224.72 dstport=25 dstcountry="Australia"  proto=6 sentbyte=9829 rcvdbyte=9453 sentpkt=48 rcvdpkt=84
+date=2014-04-30 time=18:33:50  srcip=192.168.1.25 srcport=20518 dstip=172.16.0.1 dstport=5432 dstcountry="China"  proto=6 sentbyte=7483 rcvdbyte=651 sentpkt=16 rcvdpkt=97
+date=2014-04-30 time=18:29:49  srcip=192.168.1.100 srcport=24572 dstip=8.8.8.8 dstport=6379 dstcountry="France"  proto=17 sentbyte=9221 rcvdbyte=2045 sentpkt=8 rcvdpkt=65
+date=2014-04-30 time=18:32:42  srcip=192.168.1.1 srcport=24353 dstip=8.8.8.8 dstport=80 dstcountry="United States"  proto=6 sentbyte=6530 rcvdbyte=9228 sentpkt=86 rcvdpkt=7
+date=2014-04-30 time=18:31:24  srcip=192.168.1.100 srcport=64629 dstip=208.67.222.222 dstport=110 dstcountry="India"  proto=6 sentbyte=1809 rcvdbyte=12 sentpkt=92 rcvdpkt=10
+date=2014-04-30 time=18:32:56  srcip=10.0.0.50 srcport=19099 dstip=10.0.0.1 dstport=21 dstcountry="India"  proto=6 sentbyte=215 rcvdbyte=7203 sentpkt=41 rcvdpkt=17
+date=2014-04-30 time=18:35:57  srcip=192.168.1.50 srcport=39268 dstip=10.0.0.1 dstport=110 dstcountry="Brazil"  proto=17 sentbyte=4595 rcvdbyte=568 sentpkt=38 rcvdpkt=35
+date=2014-04-30 time=18:24:22  srcip=192.168.1.100 srcport=13151 dstip=151.101.1.69 dstport=6379 dstcountry="Brazil"  proto=17 sentbyte=4913 rcvdbyte=1396 sentpkt=35 rcvdpkt=32
+date=2014-04-30 time=18:24:23  srcip=192.168.1.25 srcport=29509 dstip=208.67.222.222 dstport=6379 dstcountry="United Kingdom"  proto=6 sentbyte=9594 rcvdbyte=5128 sentpkt=86 rcvdpkt=55
+date=2014-04-30 time=18:24:24  srcip=192.168.1.100 srcport=25797 dstip=8.8.8.8 dstport=80 dstcountry="United Kingdom"  proto=6 sentbyte=1076 rcvdbyte=6191 sentpkt=79 rcvdpkt=11
+date=2014-04-30 time=18:27:27  srcip=192.168.1.50 srcport=49535 dstip=172.16.0.1 dstport=3306 dstcountry="United Kingdom"  proto=6 sentbyte=3487 rcvdbyte=4142 sentpkt=100 rcvdpkt=66
+date=2014-04-30 time=18:27:30  srcip=10.0.0.100 srcport=33906 dstip=74.125.224.72 dstport=3306 dstcountry="Germany"  proto=6 sentbyte=5660 rcvdbyte=4248 sentpkt=38 rcvdpkt=75
+date=2014-04-30 time=18:36:51  srcip=192.168.1.1 srcport=23236 dstip=74.125.224.72 dstport=8080 dstcountry="United Kingdom"  proto=6 sentbyte=231 rcvdbyte=1081 sentpkt=73 rcvdpkt=95
+date=2014-04-30 time=18:32:18  srcip=10.0.0.100 srcport=43354 dstip=1.1.1.1 dstport=25 dstcountry="China"  proto=6 sentbyte=6000 rcvdbyte=2250 sentpkt=21 rcvdpkt=79
+date=2014-04-30 time=18:29:14  srcip=192.168.1.25 srcport=25965 dstip=151.101.1.69 dstport=3306 dstcountry="Germany"  proto=17 sentbyte=8401 rcvdbyte=6880 sentpkt=76 rcvdpkt=21
+date=2014-04-30 time=18:35:42  srcip=192.168.1.1 srcport=1971 dstip=8.8.8.8 dstport=8080 dstcountry="Japan"  proto=17 sentbyte=6515 rcvdbyte=64 sentpkt=59 rcvdpkt=42
+date=2014-04-30 time=18:24:31  srcip=10.0.0.50 srcport=8398 dstip=10.0.0.1 dstport=53 dstcountry="Japan"  proto=17 sentbyte=4925 rcvdbyte=3397 sentpkt=23 rcvdpkt=75
+date=2014-04-30 time=18:39:14  srcip=192.168.1.1 srcport=38966 dstip=1.1.1.1 dstport=6379 dstcountry="Germany"  proto=6 sentbyte=4988 rcvdbyte=4738 sentpkt=21 rcvdpkt=41
+date=2014-04-30 time=18:29:30  srcip=10.0.0.50 srcport=42506 dstip=74.125.224.72 dstport=443 dstcountry="Australia"  proto=6 sentbyte=9550 rcvdbyte=4036 sentpkt=10 rcvdpkt=97
+date=2014-04-30 time=18:26:14  srcip=192.168.1.1 srcport=19505 dstip=74.125.224.72 dstport=22 dstcountry="Australia"  proto=17 sentbyte=5477 rcvdbyte=4546 sentpkt=98 rcvdpkt=4
+date=2014-04-30 time=18:39:44  srcip=192.168.1.50 srcport=56901 dstip=192.168.1.254 dstcountry="Germany" sentbyte=1420 rcvdbyte=6464 sentpkt=90 rcvdpkt=72
+date=2014-04-30 time=18:24:36  srcip=10.0.0.50 srcport=3700 dstip=172.16.0.1 dstport=22 dstcountry="United States"  proto=17 sentbyte=8443 rcvdbyte=4898 sentpkt=75 rcvdpkt=34
+date=2014-04-30 time=18:28:03  srcip=10.0.0.100 srcport=60110 dstip=208.67.222.222 dstport=22 dstcountry="Canada"  proto=6 sentbyte=9130 rcvdbyte=8271 sentpkt=60 rcvdpkt=89
+date=2014-04-30 time=18:29:50  srcip=10.0.0.50 srcport=20492 dstip=74.125.224.72 dstport=80 dstcountry="Brazil"  proto=17 sentbyte=3976 rcvdbyte=850 sentpkt=1 rcvdpkt=99
+date=2014-04-30 time=18:33:24  srcip=192.168.1.50 srcport=40195 dstip=74.125.224.72 dstport=143 dstcountry="Brazil"  proto=6 sentbyte=8993 rcvdbyte=6342 sentpkt=41 rcvdpkt=81
+date=2014-04-30 time=18:29:58  srcip=192.168.1.25 srcport=63377 dstip=172.16.0.1 dstport=25 dstcountry="Japan"  proto=6 sentbyte=1594 rcvdbyte=9246 sentpkt=5 rcvdpkt=35
+date=2014-04-30 time=18:40:44  srcip=192.168.1.50 srcport=21759 dstip=10.0.0.1 dstport=53 dstcountry="United States"  proto=6 sentbyte=6755 rcvdbyte=4284 sentpkt=64 rcvdpkt=47
+date=2014-04-30 time=18:35:30  srcip=192.168.1.25 srcport=53034 dstip=192.168.1.254 dstport=21 dstcountry="United Kingdom"  proto=6 sentbyte=2819 rcvdbyte=273 sentpkt=55 rcvdpkt=38
+date=2014-04-30 time=18:39:15  srcip=10.0.0.50 srcport=62091 dstip=8.8.8.8 dstport=143 dstcountry="Germany"  proto=17 sentbyte=4318 rcvdbyte=4911 sentpkt=28 rcvdpkt=70
+date=2014-04-30 time=18:39:24  srcip=192.168.1.50 srcport=60761 dstip=151.101.1.69 dstport=443 dstcountry="France"  proto=17 sentbyte=3352 rcvdbyte=6630 sentpkt=29 rcvdpkt=83
+date=2014-04-30 time=18:30:18  srcip=192.168.1.50 srcport=11270 dstip=151.101.1.69 dstport=25 dstcountry="Australia"  proto=6 sentbyte=1184 rcvdbyte=3974 sentpkt=29 rcvdpkt=22
+date=2014-04-30 time=18:26:38  srcip=10.0.0.100 srcport=51825 dstip=208.67.222.222 dstport=110 dstcountry="Australia"  proto=6 sentbyte=6264 rcvdbyte=1118 sentpkt=76 rcvdpkt=17
+date=2014-04-30 time=18:36:05  srcip=10.0.0.100 srcport=60222 dstip=10.0.0.1 dstport=21 dstcountry="Canada"  proto=17 sentbyte=5901 rcvdbyte=4702 sentpkt=77 rcvdpkt=63
+date=2014-04-30 time=18:40:00  srcip=10.0.0.100 srcport=23884 dstip=172.16.0.1 dstport=443 dstcountry="Japan"  proto=6 sentbyte=477 rcvdbyte=590 sentpkt=21 rcvdpkt=89
+date=2014-04-30 time=18:38:14  srcip=192.168.1.1 srcport=62626 dstip=74.125.224.72 dstport=143 dstcountry="Japan"  proto=6 sentbyte=744 rcvdbyte=662 sentpkt=64 rcvdpkt=15
+date=2014-04-30 time=18:36:26  srcip=192.168.1.1 srcport=54172 dstip=8.8.8.8 dstport=3306 dstcountry="United Kingdom"  proto=17 sentbyte=1752 rcvdbyte=1595 sentpkt=68 rcvdpkt=17
+date=2014-04-30 time=18:24:51  srcip=10.0.0.100 srcport=2674 dstip=172.16.0.1 dstport=6379 dstcountry="France"  proto=6 sentbyte=7321 rcvdbyte=6034 sentpkt=83 rcvdpkt=89
+date=2014-04-30 time=18:36:40  srcip=192.168.1.1 srcport=11048 dstip=8.8.8.8 dstport=6379 dstcountry="United Kingdom"  proto=6 sentbyte=2447 rcvdbyte=9674 sentpkt=94 rcvdpkt=30
+date=2014-04-30 time=18:38:46  srcip=10.0.0.100 srcport=36220 dstip=208.67.222.222 dstport=6379 dstcountry="Japan"  proto=6 sentbyte=492 rcvdbyte=3256 sentpkt=39 rcvdpkt=96
+date=2014-04-30 time=18:32:54  srcip=192.168.1.100 srcport=53923 dstip=1.1.1.1 dstcountry="United States" sentbyte=2562 rcvdbyte=1898 sentpkt=60 rcvdpkt=55
+date=2014-04-30 time=18:32:59  srcip=10.0.0.100 srcport=51250 dstip=208.67.222.222 dstport=25 dstcountry="Japan"  proto=17 sentbyte=9466 rcvdbyte=8012 sentpkt=67 rcvdpkt=19
+date=2014-04-30 time=18:33:04  srcip=192.168.1.100 srcport=1227 dstip=192.168.1.254 dstport=443 dstcountry="United Kingdom"  proto=17 sentbyte=4495 rcvdbyte=1822 sentpkt=9 rcvdpkt=63
+date=2014-04-30 time=18:27:00  srcip=10.0.0.50 srcport=47882 dstip=74.125.224.72 dstport=22 dstcountry="Australia"  proto=17 sentbyte=9950 rcvdbyte=7181 sentpkt=74 rcvdpkt=54
+date=2014-04-30 time=18:27:02  srcip=192.168.1.1 srcport=18935 dstip=10.0.0.1 dstport=53 dstcountry="Canada"  proto=17 sentbyte=656 rcvdbyte=5537 sentpkt=92 rcvdpkt=19
+date=2014-04-30 time=18:33:19  srcip=192.168.1.100 srcport=51539 dstip=74.125.224.72 dstport=3306 dstcountry="France"  proto=6 sentbyte=9223 rcvdbyte=314 sentpkt=63 rcvdpkt=73
+date=2014-04-30 time=18:39:42  srcip=192.168.1.50 srcport=12533 dstip=208.67.222.222 dstport=6379 dstcountry="Japan"  proto=6 sentbyte=2364 rcvdbyte=1073 sentpkt=90 rcvdpkt=47
+date=2014-04-30 time=18:33:29  srcip=192.168.1.1 srcport=29344 dstip=10.0.0.1 dstport=22 dstcountry="India"  proto=6 sentbyte=2191 rcvdbyte=4796 sentpkt=34 rcvdpkt=6
+date=2014-04-30 time=18:25:02  srcip=10.0.0.50 srcport=2145 dstip=151.101.1.69 dstport=8080 dstcountry="China"  proto=17 sentbyte=3622 rcvdbyte=5570 sentpkt=32 rcvdpkt=9
+date=2014-04-30 time=18:33:39  srcip=192.168.1.25 srcport=3818 dstip=151.101.1.69 dstport=53 dstcountry="Japan"  proto=6 sentbyte=3120 rcvdbyte=1430 sentpkt=88 rcvdpkt=91
+date=2014-04-30 time=18:38:04  srcip=192.168.1.1 srcport=26345 dstip=74.125.224.72 dstport=3306 dstcountry="Canada"  proto=17 sentbyte=5060 rcvdbyte=913 sentpkt=76 rcvdpkt=34
+date=2014-04-30 time=18:33:49  srcip=192.168.1.1 srcport=13245 dstip=172.16.0.1 dstport=5432 dstcountry="France"  proto=6 sentbyte=7617 rcvdbyte=2748 sentpkt=20 rcvdpkt=30
+date=2014-04-30 time=18:31:42  srcip=192.168.1.25 srcport=3572 dstip=1.1.1.1 dstport=25 dstcountry="Australia"  proto=6 sentbyte=6631 rcvdbyte=4149 sentpkt=41 rcvdpkt=41
+date=2014-04-30 time=18:40:38  srcip=192.168.1.25 srcport=7638 dstip=192.168.1.254 dstcountry="Canada" sentbyte=5062 rcvdbyte=4259 sentpkt=5 rcvdpkt=100
+date=2014-04-30 time=18:45:14  srcip=192.168.1.1 srcport=56826 dstip=1.1.1.1 dstport=443 dstcountry="France"  proto=17 sentbyte=2258 rcvdbyte=589 sentpkt=77 rcvdpkt=68
+date=2014-04-30 time=18:36:24  srcip=192.168.1.50 srcport=25998 dstip=74.125.224.72 dstport=110 dstcountry="Germany"  proto=6 sentbyte=9942 rcvdbyte=9033 sentpkt=69 rcvdpkt=81
+date=2014-04-30 time=18:45:34  srcip=192.168.1.100 srcport=18306 dstip=172.16.0.1 dstport=6379 dstcountry="Australia"  proto=17 sentbyte=1136 rcvdbyte=6632 sentpkt=89 rcvdpkt=56
+date=2014-04-30 time=18:29:45  srcip=192.168.1.50 srcport=60718 dstip=172.16.0.1 dstcountry="Australia" sentbyte=9000 rcvdbyte=4714 sentpkt=39 rcvdpkt=55
+date=2014-04-30 time=18:34:24  srcip=192.168.1.50 srcport=18425 dstip=172.16.0.1 dstport=8080 dstcountry="Brazil"  proto=6 sentbyte=3268 rcvdbyte=6333 sentpkt=84 rcvdpkt=55
+date=2014-04-30 time=18:41:26  srcip=192.168.1.100 srcport=44555 dstip=8.8.8.8 dstcountry="United States" sentbyte=6211 rcvdbyte=440 sentpkt=90 rcvdpkt=41
+date=2014-04-30 time=18:39:14  srcip=10.0.0.50 srcport=37320 dstip=192.168.1.254 dstport=25 dstcountry="India"  proto=17 sentbyte=6718 rcvdbyte=1479 sentpkt=91 rcvdpkt=17
+date=2014-04-30 time=18:29:57  srcip=192.168.1.50 srcport=10187 dstip=8.8.8.8 dstport=5432 dstcountry="India"  proto=6 sentbyte=3348 rcvdbyte=8785 sentpkt=60 rcvdpkt=52
+date=2014-04-30 time=18:34:44  srcip=192.168.1.25 srcport=54403 dstip=1.1.1.1 dstport=53 dstcountry="Australia"  proto=17 sentbyte=4764 rcvdbyte=197 sentpkt=56 rcvdpkt=12
+date=2014-04-30 time=18:44:21  srcip=192.168.1.100 srcport=48573 dstip=74.125.224.72 dstport=25 dstcountry="China"  proto=17 sentbyte=1061 rcvdbyte=4194 sentpkt=39 rcvdpkt=48
+date=2014-04-30 time=18:44:30  srcip=10.0.0.50 srcport=28551 dstip=1.1.1.1 dstcountry="United Kingdom" sentbyte=9083 rcvdbyte=8392 sentpkt=81 rcvdpkt=79
+date=2014-04-30 time=18:34:59  srcip=192.168.1.100 srcport=16871 dstip=172.16.0.1 dstport=3306 dstcountry="France"  proto=17 sentbyte=4004 rcvdbyte=6046 sentpkt=9 rcvdpkt=59
+date=2014-04-30 time=18:32:38  srcip=192.168.1.1 srcport=46958 dstip=172.16.0.1 dstport=5432 dstcountry="Australia"  proto=6 sentbyte=2301 rcvdbyte=4069 sentpkt=57 rcvdpkt=31
+date=2014-04-30 time=18:37:36  srcip=192.168.1.1 srcport=29469 dstip=172.16.0.1 dstport=5432 dstcountry="United Kingdom"  proto=6 sentbyte=6354 rcvdbyte=3727 sentpkt=51 rcvdpkt=71
+date=2014-04-30 time=18:30:18  srcip=192.168.1.100 srcport=4841 dstip=208.67.222.222 dstport=25 dstcountry="Germany"  proto=6 sentbyte=7976 rcvdbyte=9047 sentpkt=22 rcvdpkt=96
+date=2014-04-30 time=18:40:17  srcip=10.0.0.50 srcport=20494 dstip=74.125.224.72 dstport=110 dstcountry="France"  proto=6 sentbyte=940 rcvdbyte=4436 sentpkt=43 rcvdpkt=73
+date=2014-04-30 time=18:35:24  srcip=192.168.1.1 srcport=16077 dstip=74.125.224.72 dstport=22 dstcountry="Germany"  proto=17 sentbyte=6571 rcvdbyte=3696 sentpkt=2 rcvdpkt=80
+date=2014-04-30 time=18:32:58  srcip=10.0.0.50 srcport=22417 dstip=10.0.0.1 dstcountry="Canada" sentbyte=2210 rcvdbyte=4281 sentpkt=11 rcvdpkt=81
+date=2014-04-30 time=18:38:06  srcip=192.168.1.50 srcport=36779 dstip=10.0.0.1 dstport=8080 dstcountry="Australia"  proto=6 sentbyte=8733 rcvdbyte=2130 sentpkt=70 rcvdpkt=50
+date=2014-04-30 time=18:40:45  srcip=10.0.0.100 srcport=9757 dstip=172.16.0.1 dstport=5432 dstcountry="Japan"  proto=6 sentbyte=7891 rcvdbyte=1147 sentpkt=25 rcvdpkt=30
+date=2014-04-30 time=18:46:00  srcip=192.168.1.50 srcport=63196 dstip=1.1.1.1 dstport=22 dstcountry="Germany"  proto=17 sentbyte=6543 rcvdbyte=5663 sentpkt=34 rcvdpkt=38
+date=2014-04-30 time=18:30:39  srcip=192.168.1.50 srcport=3371 dstip=151.101.1.69 dstport=22 dstcountry="India"  proto=6 sentbyte=9610 rcvdbyte=7299 sentpkt=94 rcvdpkt=69
+date=2014-04-30 time=18:30:42  srcip=10.0.0.50 srcport=33426 dstip=10.0.0.1 dstport=3306 dstcountry="Japan"  proto=6 sentbyte=1063 rcvdbyte=9891 sentpkt=31 rcvdpkt=22
+date=2014-04-30 time=18:38:36  srcip=192.168.1.1 srcport=61141 dstip=1.1.1.1 dstcountry="Japan" sentbyte=7123 rcvdbyte=7290 sentpkt=45 rcvdpkt=24
+date=2014-04-30 time=18:41:20  srcip=192.168.1.1 srcport=52718 dstip=192.168.1.254 dstport=8080 dstcountry="United States"  proto=17 sentbyte=9315 rcvdbyte=3713 sentpkt=26 rcvdpkt=40
+date=2014-04-30 time=18:44:06  srcip=10.0.0.50 srcport=9206 dstip=10.0.0.1 dstport=80 dstcountry="United Kingdom"  proto=17 sentbyte=9904 rcvdbyte=299 sentpkt=71 rcvdpkt=16
+date=2014-04-30 time=18:41:34  srcip=192.168.1.1 srcport=11099 dstip=172.16.0.1 dstport=25 dstcountry="France"  proto=6 sentbyte=7426 rcvdbyte=233 sentpkt=93 rcvdpkt=9
+date=2014-04-30 time=18:49:44  srcip=10.0.0.50 srcport=58163 dstip=208.67.222.222 dstport=6379 dstcountry="United Kingdom"  proto=17 sentbyte=1400 rcvdbyte=3664 sentpkt=10 rcvdpkt=21
+date=2014-04-30 time=18:33:42  srcip=10.0.0.100 srcport=62144 dstip=151.101.1.69 dstport=53 dstcountry="Brazil"  proto=17 sentbyte=3697 rcvdbyte=8270 sentpkt=73 rcvdpkt=55
+date=2014-04-30 time=18:41:55  srcip=192.168.1.50 srcport=21773 dstip=10.0.0.1 dstport=5432 dstcountry="Germany"  proto=17 sentbyte=4889 rcvdbyte=5617 sentpkt=76 rcvdpkt=72
+date=2014-04-30 time=18:42:02  srcip=192.168.1.50 srcport=35442 dstip=74.125.224.72 dstport=80 dstcountry="Germany"  proto=17 sentbyte=8072 rcvdbyte=7507 sentpkt=63 rcvdpkt=89
+date=2014-04-30 time=18:42:09  srcip=192.168.1.100 srcport=37833 dstip=1.1.1.1 dstport=8080 dstcountry="France"  proto=17 sentbyte=624 rcvdbyte=3431 sentpkt=54 rcvdpkt=50
+date=2014-04-30 time=18:28:26  srcip=10.0.0.100 srcport=62812 dstip=74.125.224.72 dstport=8080 dstcountry="China"  proto=6 sentbyte=8665 rcvdbyte=5304 sentpkt=21 rcvdpkt=74
+date=2014-04-30 time=18:25:41  srcip=192.168.1.1 srcport=45820 dstip=172.16.0.1 dstport=53 dstcountry="Canada"  proto=17 sentbyte=2295 rcvdbyte=4804 sentpkt=54 rcvdpkt=66
+date=2014-04-30 time=18:42:30  srcip=192.168.1.25 srcport=39103 dstip=74.125.224.72 dstport=21 dstcountry="India"  proto=6 sentbyte=6298 rcvdbyte=1503 sentpkt=48 rcvdpkt=39
+date=2014-04-30 time=18:45:26  srcip=10.0.0.50 srcport=51805 dstip=1.1.1.1 dstport=25 dstcountry="Australia"  proto=17 sentbyte=7935 rcvdbyte=3092 sentpkt=88 rcvdpkt=58
+date=2014-04-30 time=18:45:34  srcip=192.168.1.25 srcport=53226 dstip=208.67.222.222 dstport=21 dstcountry="Brazil"  proto=6 sentbyte=242 rcvdbyte=7053 sentpkt=87 rcvdpkt=39
+date=2014-04-30 time=18:42:51  srcip=10.0.0.50 srcport=23183 dstip=8.8.8.8 dstport=22 dstcountry="Japan"  proto=6 sentbyte=6717 rcvdbyte=8574 sentpkt=40 rcvdpkt=42
+date=2014-04-30 time=18:31:30  srcip=10.0.0.100 srcport=54753 dstip=1.1.1.1 dstport=6379 dstcountry="United States"  proto=17 sentbyte=241 rcvdbyte=9204 sentpkt=28 rcvdpkt=32
+date=2014-04-30 time=18:45:58  srcip=10.0.0.100 srcport=41786 dstip=172.16.0.1 dstport=22 dstcountry="Brazil"  proto=6 sentbyte=5201 rcvdbyte=4300 sentpkt=93 rcvdpkt=53
+date=2014-04-30 time=18:46:06  srcip=10.0.0.50 srcport=54127 dstip=74.125.224.72 dstport=8080 dstcountry="China"  proto=17 sentbyte=841 rcvdbyte=3463 sentpkt=73 rcvdpkt=88
+date=2014-04-30 time=18:40:24  srcip=10.0.0.50 srcport=34432 dstip=172.16.0.1 dstport=143 dstcountry="Japan"  proto=6 sentbyte=9251 rcvdbyte=7478 sentpkt=8 rcvdpkt=47
+date=2014-04-30 time=18:49:18  srcip=10.0.0.50 srcport=48751 dstip=74.125.224.72 dstport=53 dstcountry="United States"  proto=17 sentbyte=5275 rcvdbyte=2902 sentpkt=41 rcvdpkt=2
+date=2014-04-30 time=18:28:48  srcip=10.0.0.100 srcport=17814 dstip=208.67.222.222 dstport=3306 dstcountry="United States"  proto=6 sentbyte=4307 rcvdbyte=9208 sentpkt=15 rcvdpkt=45
+date=2014-04-30 time=18:31:48  srcip=192.168.1.1 srcport=35276 dstip=151.101.1.69 dstport=110 dstcountry="United Kingdom"  proto=17 sentbyte=637 rcvdbyte=9530 sentpkt=87 rcvdpkt=68
+date=2014-04-30 time=18:31:51  srcip=10.0.0.100 srcport=36722 dstip=151.101.1.69 dstport=8080 dstcountry="Germany"  proto=6 sentbyte=491 rcvdbyte=5755 sentpkt=27 rcvdpkt=26
+date=2014-04-30 time=18:49:54  srcip=192.168.1.50 srcport=25417 dstip=151.101.1.69 dstport=3306 dstcountry="United Kingdom"  proto=6 sentbyte=7273 rcvdbyte=1067 sentpkt=60 rcvdpkt=84
+date=2014-04-30 time=18:31:57  srcip=192.168.1.100 srcport=62522 dstip=74.125.224.72 dstport=443 dstcountry="Japan"  proto=17 sentbyte=196 rcvdbyte=4380 sentpkt=11 rcvdpkt=93
+date=2014-04-30 time=18:35:02  srcip=10.0.0.100 srcport=39106 dstip=74.125.224.72 dstport=80 dstcountry="China"  proto=17 sentbyte=5719 rcvdbyte=8014 sentpkt=61 rcvdpkt=25
+date=2014-04-30 time=18:44:15  srcip=10.0.0.100 srcport=6484 dstip=208.67.222.222 dstport=53 dstcountry="Germany"  proto=17 sentbyte=8424 rcvdbyte=3854 sentpkt=11 rcvdpkt=47
+date=2014-04-30 time=18:50:30  srcip=10.0.0.100 srcport=54248 dstip=172.16.0.1 dstcountry="France" sentbyte=1026 rcvdbyte=6674 sentpkt=3 rcvdpkt=17
+date=2014-04-30 time=18:44:29  srcip=10.0.0.100 srcport=27005 dstip=1.1.1.1 dstcountry="United States" sentbyte=7638 rcvdbyte=1963 sentpkt=84 rcvdpkt=97
+date=2014-04-30 time=18:47:42  srcip=192.168.1.25 srcport=49431 dstip=208.67.222.222 dstport=80 dstcountry="Canada"  proto=6 sentbyte=1919 rcvdbyte=2421 sentpkt=54 rcvdpkt=72
+date=2014-04-30 time=18:41:36  srcip=192.168.1.100 srcport=5135 dstip=1.1.1.1 dstport=25 dstcountry="Australia"  proto=6 sentbyte=9642 rcvdbyte=164 sentpkt=39 rcvdpkt=49
+date=2014-04-30 time=18:32:18  srcip=10.0.0.100 srcport=42685 dstip=208.67.222.222 dstport=8080 dstcountry="United Kingdom"  proto=17 sentbyte=9683 rcvdbyte=7324 sentpkt=21 rcvdpkt=10
+date=2014-04-30 time=18:41:48  srcip=192.168.1.25 srcport=40326 dstip=8.8.8.8 dstport=25 dstcountry="Germany"  proto=17 sentbyte=6588 rcvdbyte=6157 sentpkt=32 rcvdpkt=54
+date=2014-04-30 time=18:54:34  srcip=192.168.1.1 srcport=35742 dstip=192.168.1.254 dstport=110 dstcountry="India"  proto=6 sentbyte=6906 rcvdbyte=2527 sentpkt=83 rcvdpkt=44
+date=2014-04-30 time=18:35:38  srcip=192.168.1.25 srcport=4019 dstip=8.8.8.8 dstport=3306 dstcountry="Canada"  proto=17 sentbyte=1548 rcvdbyte=3943 sentpkt=33 rcvdpkt=47
+date=2014-04-30 time=18:54:54  srcip=10.0.0.100 srcport=28008 dstip=8.8.8.8 dstport=22 dstcountry="Canada"  proto=17 sentbyte=8992 rcvdbyte=1279 sentpkt=24 rcvdpkt=95
+date=2014-04-30 time=18:26:07  srcip=192.168.1.100 srcport=51466 dstip=208.67.222.222 dstport=3306 dstcountry="Canada"  proto=17 sentbyte=7459 rcvdbyte=7341 sentpkt=7 rcvdpkt=27
+date=2014-04-30 time=18:45:32  srcip=192.168.1.100 srcport=63234 dstip=172.16.0.1 dstport=21 dstcountry="Canada"  proto=17 sentbyte=452 rcvdbyte=7653 sentpkt=47 rcvdpkt=43
+date=2014-04-30 time=18:42:24  srcip=192.168.1.50 srcport=63325 dstip=74.125.224.72 dstport=80 dstcountry="India"  proto=17 sentbyte=8849 rcvdbyte=8262 sentpkt=90 rcvdpkt=68
+date=2014-04-30 time=18:35:58  srcip=192.168.1.50 srcport=35625 dstip=8.8.8.8 dstport=143 dstcountry="Canada"  proto=6 sentbyte=3462 rcvdbyte=7176 sentpkt=53 rcvdpkt=52
+date=2014-04-30 time=18:26:11  srcip=10.0.0.100 srcport=47851 dstip=74.125.224.72 dstport=3306 dstcountry="Canada"  proto=17 sentbyte=4069 rcvdbyte=8431 sentpkt=29 rcvdpkt=4
+date=2014-04-30 time=18:36:06  srcip=192.168.1.25 srcport=9943 dstip=10.0.0.1 dstport=8080 dstcountry="United Kingdom"  proto=17 sentbyte=1636 rcvdbyte=3899 sentpkt=47 rcvdpkt=24
+date=2014-04-30 time=18:56:04  srcip=10.0.0.100 srcport=22622 dstip=10.0.0.1 dstport=53 dstcountry="Japan"  proto=6 sentbyte=9364 rcvdbyte=7182 sentpkt=54 rcvdpkt=14
+date=2014-04-30 time=18:42:54  srcip=192.168.1.1 srcport=11877 dstip=172.16.0.1 dstport=25 dstcountry="Japan"  proto=17 sentbyte=7669 rcvdbyte=2683 sentpkt=88 rcvdpkt=63
+date=2014-04-30 time=18:43:00  srcip=192.168.1.1 srcport=56586 dstip=10.0.0.1 dstcountry="Canada" sentbyte=5995 rcvdbyte=2043 sentpkt=80 rcvdpkt=7
+date=2014-04-30 time=18:46:28  srcip=192.168.1.25 srcport=19589 dstip=192.168.1.254 dstport=443 dstcountry="United States"  proto=6 sentbyte=1693 rcvdbyte=506 sentpkt=67 rcvdpkt=17
+date=2014-04-30 time=18:56:44  srcip=10.0.0.100 srcport=8757 dstip=8.8.8.8 dstport=21 dstcountry="United States"  proto=17 sentbyte=4129 rcvdbyte=3699 sentpkt=94 rcvdpkt=79
+date=2014-04-30 time=18:29:42  srcip=192.168.1.50 srcport=7591 dstip=208.67.222.222 dstport=3306 dstcountry="Canada"  proto=17 sentbyte=3484 rcvdbyte=2537 sentpkt=99 rcvdpkt=86
+date=2014-04-30 time=18:43:24  srcip=192.168.1.100 srcport=55183 dstip=74.125.224.72 dstport=5432 dstcountry="Canada"  proto=17 sentbyte=5900 rcvdbyte=7810 sentpkt=29 rcvdpkt=68
+date=2014-04-30 time=18:26:20  srcip=10.0.0.50 srcport=51373 dstip=8.8.8.8 dstport=143 dstcountry="Canada"  proto=17 sentbyte=8136 rcvdbyte=5545 sentpkt=18 rcvdpkt=33
+date=2014-04-30 time=18:50:30  srcip=10.0.0.100 srcport=12203 dstip=74.125.224.72 dstport=22 dstcountry="China"  proto=6 sentbyte=5596 rcvdbyte=7053 sentpkt=98 rcvdpkt=56
+date=2014-04-30 time=18:43:42  srcip=10.0.0.100 srcport=26397 dstip=1.1.1.1 dstport=6379 dstcountry="France"  proto=6 sentbyte=2654 rcvdbyte=4260 sentpkt=92 rcvdpkt=22
+date=2014-04-30 time=18:50:46  srcip=10.0.0.50 srcport=60356 dstip=208.67.222.222 dstport=53 dstcountry="Brazil"  proto=6 sentbyte=6412 rcvdbyte=8909 sentpkt=17 rcvdpkt=41
+date=2014-04-30 time=18:29:54  srcip=192.168.1.1 srcport=8967 dstip=8.8.8.8 dstport=53 dstcountry="France"  proto=6 sentbyte=5892 rcvdbyte=2598 sentpkt=91 rcvdpkt=64
+date=2014-04-30 time=18:36:58  srcip=192.168.1.100 srcport=14363 dstip=172.16.0.1 dstport=21 dstcountry="Germany"  proto=6 sentbyte=6327 rcvdbyte=107 sentpkt=100 rcvdpkt=24
+date=2014-04-30 time=18:44:06  srcip=192.168.1.50 srcport=7897 dstip=192.168.1.254 dstport=53 dstcountry="Brazil"  proto=6 sentbyte=7608 rcvdbyte=4348 sentpkt=69 rcvdpkt=2
+date=2014-04-30 time=18:26:27  srcip=192.168.1.25 srcport=41932 dstip=151.101.1.69 dstport=110 dstcountry="Canada"  proto=17 sentbyte=7894 rcvdbyte=1497 sentpkt=60 rcvdpkt=27
+date=2014-04-30 time=18:37:10  srcip=10.0.0.50 srcport=33023 dstip=172.16.0.1 dstport=5432 dstcountry="India"  proto=6 sentbyte=3699 rcvdbyte=1996 sentpkt=14 rcvdpkt=80
+date=2014-04-30 time=18:30:04  srcip=192.168.1.100 srcport=59863 dstip=8.8.8.8 dstcountry="India" sentbyte=6230 rcvdbyte=2676 sentpkt=86 rcvdpkt=91
+date=2014-04-30 time=18:51:42  srcip=192.168.1.25 srcport=33602 dstip=192.168.1.254 dstport=21 dstcountry="India"  proto=6 sentbyte=9683 rcvdbyte=3739 sentpkt=23 rcvdpkt=78
+date=2014-04-30 time=18:51:50  srcip=192.168.1.1 srcport=22465 dstip=10.0.0.1 dstport=443 dstcountry="Australia"  proto=17 sentbyte=4066 rcvdbyte=5096 sentpkt=82 rcvdpkt=12
+date=2014-04-30 time=18:59:14  srcip=10.0.0.100 srcport=50634 dstip=8.8.8.8 dstport=443 dstcountry="United Kingdom"  proto=6 sentbyte=3663 rcvdbyte=4617 sentpkt=95 rcvdpkt=21
+date=2014-04-30 time=18:59:24  srcip=192.168.1.100 srcport=42437 dstip=74.125.224.72 dstport=3306 dstcountry="Japan"  proto=6 sentbyte=5254 rcvdbyte=2196 sentpkt=61 rcvdpkt=61
+date=2014-04-30 time=18:55:54  srcip=192.168.1.1 srcport=56046 dstip=192.168.1.254 dstport=25 dstcountry="Japan"  proto=17 sentbyte=1313 rcvdbyte=9236 sentpkt=80 rcvdpkt=99
+date=2014-04-30 time=18:41:19  srcip=192.168.1.25 srcport=43076 dstip=192.168.1.254 dstport=143 dstcountry="Japan"  proto=6 sentbyte=3078 rcvdbyte=954 sentpkt=83 rcvdpkt=37
+date=2014-04-30 time=18:26:36  srcip=192.168.1.50 srcport=41925 dstip=151.101.1.69 dstport=53 dstcountry="United States"  proto=17 sentbyte=2408 rcvdbyte=7698 sentpkt=79 rcvdpkt=29
+date=2014-04-30 time=18:52:38  srcip=10.0.0.50 srcport=19694 dstip=10.0.0.1 dstport=143 dstcountry="Japan"  proto=17 sentbyte=1802 rcvdbyte=3095 sentpkt=84 rcvdpkt=56
+date=2014-04-30 time=18:56:30  srcip=10.0.0.50 srcport=51392 dstip=208.67.222.222 dstcountry="Germany" sentbyte=924 rcvdbyte=1630 sentpkt=94 rcvdpkt=47
+date=2014-04-30 time=18:30:24  srcip=192.168.1.25 srcport=22503 dstip=208.67.222.222 dstport=22 dstcountry="France"  proto=6 sentbyte=1039 rcvdbyte=6875 sentpkt=65 rcvdpkt=33
+date=2014-04-30 time=18:34:12  srcip=192.168.1.50 srcport=49872 dstip=192.168.1.254 dstport=53 dstcountry="Brazil"  proto=6 sentbyte=9005 rcvdbyte=3358 sentpkt=74 rcvdpkt=74
+date=2014-04-30 time=18:53:10  srcip=10.0.0.100 srcport=14915 dstip=8.8.8.8 dstport=80 dstcountry="India"  proto=6 sentbyte=6894 rcvdbyte=8343 sentpkt=19 rcvdpkt=88
+date=2014-04-30 time=18:45:42  srcip=192.168.1.100 srcport=28343 dstip=8.8.8.8 dstport=443 dstcountry="Japan"  proto=6 sentbyte=2750 rcvdbyte=8688 sentpkt=21 rcvdpkt=1
+date=2014-04-30 time=19:01:04  srcip=192.168.1.1 srcport=11286 dstip=192.168.1.254 dstport=53 dstcountry="Germany"  proto=17 sentbyte=7571 rcvdbyte=2996 sentpkt=83 rcvdpkt=80
+date=2014-04-30 time=19:01:14  srcip=192.168.1.25 srcport=21763 dstip=10.0.0.1 dstport=25 dstcountry="China"  proto=6 sentbyte=7349 rcvdbyte=8925 sentpkt=97 rcvdpkt=16
+date=2014-04-30 time=18:34:27  srcip=192.168.1.50 srcport=30987 dstip=74.125.224.72 dstport=25 dstcountry="Germany"  proto=17 sentbyte=8214 rcvdbyte=4063 sentpkt=92 rcvdpkt=18
+date=2014-04-30 time=19:01:34  srcip=10.0.0.100 srcport=35298 dstip=151.101.1.69 dstport=3306 dstcountry="Canada"  proto=17 sentbyte=7899 rcvdbyte=4231 sentpkt=92 rcvdpkt=71
+date=2014-04-30 time=18:46:12  srcip=192.168.1.25 srcport=31317 dstip=151.101.1.69 dstport=5432 dstcountry="Japan"  proto=17 sentbyte=7418 rcvdbyte=9640 sentpkt=98 rcvdpkt=45
+date=2014-04-30 time=18:38:30  srcip=10.0.0.100 srcport=45272 dstip=192.168.1.254 dstport=143 dstcountry="China"  proto=17 sentbyte=8130 rcvdbyte=6375 sentpkt=89 rcvdpkt=86
+date=2014-04-30 time=18:46:24  srcip=192.168.1.1 srcport=53952 dstip=151.101.1.69 dstport=143 dstcountry="Germany"  proto=6 sentbyte=1072 rcvdbyte=3256 sentpkt=3 rcvdpkt=44
+date=2014-04-30 time=19:02:14  srcip=10.0.0.100 srcport=65409 dstip=74.125.224.72 dstport=143 dstcountry="France"  proto=6 sentbyte=1080 rcvdbyte=239 sentpkt=78 rcvdpkt=25
+date=2014-04-30 time=18:42:39  srcip=192.168.1.100 srcport=60413 dstip=172.16.0.1 dstport=21 dstcountry="Australia"  proto=17 sentbyte=8132 rcvdbyte=2413 sentpkt=6 rcvdpkt=44
+date=2014-04-30 time=18:30:50  srcip=192.168.1.50 srcport=42494 dstip=192.168.1.254 dstport=6379 dstcountry="India"  proto=6 sentbyte=5962 rcvdbyte=9696 sentpkt=54 rcvdpkt=15
+date=2014-04-30 time=18:30:52  srcip=10.0.0.50 srcport=62999 dstip=74.125.224.72 dstport=53 dstcountry="United Kingdom"  proto=6 sentbyte=727 rcvdbyte=360 sentpkt=76 rcvdpkt=98
+date=2014-04-30 time=18:50:54  srcip=192.168.1.100 srcport=19331 dstip=74.125.224.72 dstport=22 dstcountry="Brazil"  proto=6 sentbyte=8075 rcvdbyte=3493 sentpkt=16 rcvdpkt=91
+date=2014-04-30 time=18:38:58  srcip=192.168.1.1 srcport=64648 dstip=10.0.0.1 dstport=6379 dstcountry="United Kingdom"  proto=6 sentbyte=2196 rcvdbyte=8530 sentpkt=11 rcvdpkt=32
+date=2014-04-30 time=18:47:06  srcip=192.168.1.1 srcport=63421 dstip=1.1.1.1 dstcountry="Australia" sentbyte=5982 rcvdbyte=3278 sentpkt=48 rcvdpkt=41
+date=2014-04-30 time=18:43:09  srcip=10.0.0.100 srcport=19401 dstip=172.16.0.1 dstport=5432 dstcountry="Brazil"  proto=17 sentbyte=3149 rcvdbyte=9312 sentpkt=90 rcvdpkt=83
+date=2014-04-30 time=18:31:02  srcip=10.0.0.50 srcport=62614 dstip=172.16.0.1 dstport=143 dstcountry="France"  proto=6 sentbyte=9487 rcvdbyte=544 sentpkt=84 rcvdpkt=48
+date=2014-04-30 time=18:55:34  srcip=192.168.1.1 srcport=14031 dstip=1.1.1.1 dstport=53 dstcountry="Canada"  proto=17 sentbyte=1922 rcvdbyte=3351 sentpkt=10 rcvdpkt=21
+date=2014-04-30 time=19:03:54  srcip=10.0.0.50 srcport=7573 dstip=8.8.8.8 dstport=143 dstcountry="United States"  proto=6 sentbyte=7357 rcvdbyte=1154 sentpkt=77 rcvdpkt=23
+date=2014-04-30 time=19:04:04  srcip=192.168.1.100 srcport=33018 dstip=192.168.1.254 dstport=143 dstcountry="France"  proto=17 sentbyte=4284 rcvdbyte=4711 sentpkt=73 rcvdpkt=19
+date=2014-04-30 time=18:35:18  srcip=192.168.1.1 srcport=31414 dstip=192.168.1.254 dstport=143 dstcountry="France"  proto=6 sentbyte=1531 rcvdbyte=9184 sentpkt=57 rcvdpkt=40
+date=2014-04-30 time=18:31:12  srcip=192.168.1.25 srcport=25979 dstip=74.125.224.72 dstport=25 dstcountry="Japan"  proto=17 sentbyte=3114 rcvdbyte=5024 sentpkt=3 rcvdpkt=65
+date=2014-04-30 time=19:00:24  srcip=192.168.1.1 srcport=37538 dstip=208.67.222.222 dstport=443 dstcountry="Australia"  proto=6 sentbyte=6368 rcvdbyte=756 sentpkt=97 rcvdpkt=91
+date=2014-04-30 time=18:35:27  srcip=10.0.0.100 srcport=12170 dstip=10.0.0.1 dstport=25 dstcountry="Brazil"  proto=17 sentbyte=3112 rcvdbyte=5741 sentpkt=59 rcvdpkt=28
+date=2014-04-30 time=18:27:06  srcip=192.168.1.1 srcport=57352 dstip=74.125.224.72 dstcountry="Japan" sentbyte=7384 rcvdbyte=3288 sentpkt=89 rcvdpkt=54
+date=2014-04-30 time=18:35:33  srcip=192.168.1.50 srcport=16977 dstip=74.125.224.72 dstport=22 dstcountry="Australia"  proto=6 sentbyte=9318 rcvdbyte=389 sentpkt=15 rcvdpkt=14
+date=2014-04-30 time=18:39:50  srcip=10.0.0.100 srcport=13645 dstip=8.8.8.8 dstport=143 dstcountry="India"  proto=17 sentbyte=1910 rcvdbyte=8722 sentpkt=50 rcvdpkt=97
+date=2014-04-30 time=18:39:54  srcip=192.168.1.100 srcport=1723 dstip=208.67.222.222 dstport=5432 dstcountry="Canada"  proto=6 sentbyte=8099 rcvdbyte=132 sentpkt=2 rcvdpkt=58
+date=2014-04-30 time=18:57:02  srcip=10.0.0.50 srcport=60634 dstip=8.8.8.8 dstport=25 dstcountry="Canada"  proto=6 sentbyte=7724 rcvdbyte=2876 sentpkt=87 rcvdpkt=73
+date=2014-04-30 time=18:40:02  srcip=10.0.0.50 srcport=49354 dstip=1.1.1.1 dstport=8080 dstcountry="Japan"  proto=17 sentbyte=9276 rcvdbyte=5260 sentpkt=17 rcvdpkt=80
+date=2014-04-30 time=18:27:12  srcip=192.168.1.100 srcport=50698 dstip=151.101.1.69 dstport=80 dstcountry="United Kingdom"  proto=6 sentbyte=6980 rcvdbyte=7332 sentpkt=68 rcvdpkt=26
+date=2014-04-30 time=19:01:45  srcip=192.168.1.50 srcport=56278 dstip=151.101.1.69 dstcountry="Japan" sentbyte=8207 rcvdbyte=3972 sentpkt=14 rcvdpkt=77
+date=2014-04-30 time=18:57:34  srcip=192.168.1.50 srcport=16537 dstip=8.8.8.8 dstport=53 dstcountry="United States"  proto=17 sentbyte=2102 rcvdbyte=1295 sentpkt=41 rcvdpkt=54
+date=2014-04-30 time=18:44:39  srcip=192.168.1.100 srcport=52262 dstip=1.1.1.1 dstport=8080 dstcountry="Germany"  proto=6 sentbyte=1122 rcvdbyte=4772 sentpkt=68 rcvdpkt=90
+date=2014-04-30 time=18:40:22  srcip=192.168.1.100 srcport=47901 dstip=172.16.0.1 dstport=80 dstcountry="China"  proto=17 sentbyte=4615 rcvdbyte=8333 sentpkt=32 rcvdpkt=24
+date=2014-04-30 time=18:36:03  srcip=10.0.0.100 srcport=1947 dstip=151.101.1.69 dstcountry="United Kingdom" sentbyte=4484 rcvdbyte=7993 sentpkt=56 rcvdpkt=29
+date=2014-04-30 time=18:36:06  srcip=192.168.1.50 srcport=32552 dstip=151.101.1.69 dstport=21 dstcountry="France"  proto=17 sentbyte=5916 rcvdbyte=9880 sentpkt=23 rcvdpkt=27
+date=2014-04-30 time=18:49:24  srcip=192.168.1.50 srcport=38435 dstip=151.101.1.69 dstport=110 dstcountry="United Kingdom"  proto=17 sentbyte=3226 rcvdbyte=8095 sentpkt=87 rcvdpkt=33
+date=2014-04-30 time=18:49:30  srcip=10.0.0.50 srcport=19194 dstip=8.8.8.8 dstport=21 dstcountry="Japan"  proto=17 sentbyte=3809 rcvdbyte=9506 sentpkt=63 rcvdpkt=72
+date=2014-04-30 time=19:02:57  srcip=192.168.1.50 srcport=61939 dstip=8.8.8.8 dstport=3306 dstcountry="Japan"  proto=17 sentbyte=6429 rcvdbyte=1164 sentpkt=97 rcvdpkt=62
+date=2014-04-30 time=18:31:50  srcip=192.168.1.100 srcport=14678 dstip=8.8.8.8 dstport=3306 dstcountry="China"  proto=6 sentbyte=3748 rcvdbyte=8090 sentpkt=24 rcvdpkt=70
+date=2014-04-30 time=18:40:50  srcip=192.168.1.1 srcport=11944 dstip=192.168.1.254 dstport=6379 dstcountry="India"  proto=6 sentbyte=2219 rcvdbyte=9884 sentpkt=55 rcvdpkt=64
+date=2014-04-30 time=18:36:24  srcip=10.0.0.50 srcport=32613 dstip=172.16.0.1 dstport=110 dstcountry="China"  proto=6 sentbyte=3937 rcvdbyte=9942 sentpkt=27 rcvdpkt=33
+date=2014-04-30 time=18:59:02  srcip=192.168.1.100 srcport=2872 dstip=10.0.0.1 dstport=5432 dstcountry="Germany"  proto=6 sentbyte=96 rcvdbyte=381 sentpkt=37 rcvdpkt=35
+date=2014-04-30 time=18:31:58  srcip=10.0.0.50 srcport=14941 dstip=192.168.1.254 dstport=8080 dstcountry="United Kingdom"  proto=6 sentbyte=8636 rcvdbyte=1170 sentpkt=33 rcvdpkt=69
+date=2014-04-30 time=18:36:33  srcip=192.168.1.25 srcport=28070 dstip=8.8.8.8 dstport=53 dstcountry="Germany"  proto=6 sentbyte=4778 rcvdbyte=7501 sentpkt=45 rcvdpkt=76
+date=2014-04-30 time=18:54:52  srcip=192.168.1.25 srcport=21299 dstip=8.8.8.8 dstport=53 dstcountry="China"  proto=17 sentbyte=3753 rcvdbyte=8506 sentpkt=14 rcvdpkt=70
+date=2014-04-30 time=18:27:29  srcip=192.168.1.100 srcport=56819 dstip=1.1.1.1 dstport=143 dstcountry="Germany"  proto=17 sentbyte=276 rcvdbyte=1551 sentpkt=35 rcvdpkt=80
+date=2014-04-30 time=18:55:06  srcip=192.168.1.25 srcport=13287 dstip=1.1.1.1 dstport=53 dstcountry="Australia"  proto=6 sentbyte=2604 rcvdbyte=866 sentpkt=50 rcvdpkt=71
+date=2014-04-30 time=19:04:27  srcip=192.168.1.25 srcport=34705 dstip=74.125.224.72 dstport=6379 dstcountry="Australia"  proto=6 sentbyte=7404 rcvdbyte=2434 sentpkt=96 rcvdpkt=72
+date=2014-04-30 time=19:09:14  srcip=192.168.1.1 srcport=46074 dstip=74.125.224.72 dstport=3306 dstcountry="United States"  proto=17 sentbyte=2091 rcvdbyte=3990 sentpkt=97 rcvdpkt=37
+date=2014-04-30 time=18:27:33  srcip=10.0.0.100 srcport=39173 dstip=74.125.224.72 dstport=443 dstcountry="Japan"  proto=6 sentbyte=911 rcvdbyte=8284 sentpkt=6 rcvdpkt=81
+date=2014-04-30 time=18:32:14  srcip=192.168.1.100 srcport=64050 dstip=10.0.0.1 dstport=22 dstcountry="Australia"  proto=6 sentbyte=6086 rcvdbyte=7527 sentpkt=54 rcvdpkt=19
+date=2014-04-30 time=19:00:22  srcip=192.168.1.100 srcport=2119 dstip=151.101.1.69 dstport=21 dstcountry="Brazil"  proto=17 sentbyte=1994 rcvdbyte=5093 sentpkt=90 rcvdpkt=39
+date=2014-04-30 time=18:32:18  srcip=10.0.0.100 srcport=27287 dstip=74.125.224.72 dstport=80 dstcountry="Australia"  proto=6 sentbyte=1744 rcvdbyte=2222 sentpkt=85 rcvdpkt=54
+date=2014-04-30 time=18:51:12  srcip=192.168.1.1 srcport=39829 dstip=208.67.222.222 dstport=80 dstcountry="China"  proto=6 sentbyte=7184 rcvdbyte=7282 sentpkt=53 rcvdpkt=45
+date=2014-04-30 time=18:56:02  srcip=192.168.1.50 srcport=34472 dstip=172.16.0.1 dstport=3306 dstcountry="United States"  proto=17 sentbyte=3204 rcvdbyte=3898 sentpkt=2 rcvdpkt=32
+date=2014-04-30 time=19:00:54  srcip=192.168.1.100 srcport=65297 dstip=10.0.0.1 dstport=21 dstcountry="Japan"  proto=17 sentbyte=1208 rcvdbyte=963 sentpkt=95 rcvdpkt=21
+date=2014-04-30 time=19:10:34  srcip=10.0.0.100 srcport=56776 dstip=10.0.0.1 dstport=53 dstcountry="United Kingdom"  proto=6 sentbyte=4146 rcvdbyte=3141 sentpkt=92 rcvdpkt=88
+date=2014-04-30 time=18:42:02  srcip=10.0.0.50 srcport=13819 dstip=8.8.8.8 dstport=53 dstcountry="United Kingdom"  proto=6 sentbyte=7697 rcvdbyte=3698 sentpkt=83 rcvdpkt=58
+date=2014-04-30 time=18:27:42  srcip=192.168.1.100 srcport=15184 dstip=208.67.222.222 dstport=110 dstcountry="United States"  proto=17 sentbyte=1514 rcvdbyte=7853 sentpkt=73 rcvdpkt=78
+date=2014-04-30 time=18:46:59  srcip=10.0.0.50 srcport=28188 dstip=74.125.224.72 dstport=53 dstcountry="France"  proto=6 sentbyte=3687 rcvdbyte=1727 sentpkt=89 rcvdpkt=85
+date=2014-04-30 time=18:27:44  srcip=192.168.1.100 srcport=8002 dstip=1.1.1.1 dstport=25 dstcountry="Canada"  proto=17 sentbyte=5509 rcvdbyte=7095 sentpkt=86 rcvdpkt=91
+date=2014-04-30 time=19:01:42  srcip=192.168.1.50 srcport=39572 dstip=10.0.0.1 dstport=25 dstcountry="Germany"  proto=17 sentbyte=1991 rcvdbyte=4566 sentpkt=73 rcvdpkt=63
+date=2014-04-30 time=18:56:58  srcip=192.168.1.25 srcport=37881 dstip=192.168.1.254 dstport=6379 dstcountry="Canada"  proto=17 sentbyte=6518 rcvdbyte=5320 sentpkt=28 rcvdpkt=9
+date=2014-04-30 time=19:01:58  srcip=192.168.1.1 srcport=59070 dstip=8.8.8.8 dstcountry="United Kingdom" sentbyte=4633 rcvdbyte=5910 sentpkt=69 rcvdpkt=39
+date=2014-04-30 time=18:37:36  srcip=192.168.1.50 srcport=9253 dstip=10.0.0.1 dstport=143 dstcountry="Australia"  proto=17 sentbyte=7366 rcvdbyte=2094 sentpkt=86 rcvdpkt=72
+date=2014-04-30 time=19:07:09  srcip=192.168.1.100 srcport=14173 dstip=192.168.1.254 dstport=53 dstcountry="Japan"  proto=6 sentbyte=8001 rcvdbyte=3676 sentpkt=73 rcvdpkt=65
+date=2014-04-30 time=19:07:18  srcip=10.0.0.50 srcport=33066 dstip=192.168.1.254 dstport=5432 dstcountry="Australia"  proto=6 sentbyte=5479 rcvdbyte=7617 sentpkt=25 rcvdpkt=84
+date=2014-04-30 time=18:27:51  srcip=192.168.1.100 srcport=12800 dstip=208.67.222.222 dstport=21 dstcountry="China"  proto=6 sentbyte=2072 rcvdbyte=9178 sentpkt=1 rcvdpkt=100
+date=2014-04-30 time=18:27:52  srcip=10.0.0.100 srcport=40146 dstip=10.0.0.1 dstport=21 dstcountry="Australia"  proto=6 sentbyte=2303 rcvdbyte=5030 sentpkt=82 rcvdpkt=70
+date=2014-04-30 time=18:27:53  srcip=192.168.1.25 srcport=35346 dstip=8.8.8.8 dstport=3306 dstcountry="Canada"  proto=17 sentbyte=4586 rcvdbyte=9865 sentpkt=80 rcvdpkt=72
+date=2014-04-30 time=18:37:54  srcip=192.168.1.100 srcport=62734 dstip=8.8.8.8 dstport=22 dstcountry="Canada"  proto=17 sentbyte=1930 rcvdbyte=4887 sentpkt=16 rcvdpkt=18
+date=2014-04-30 time=18:32:56  srcip=10.0.0.100 srcport=55207 dstip=8.8.8.8 dstport=25 dstcountry="Australia"  proto=6 sentbyte=3545 rcvdbyte=6517 sentpkt=84 rcvdpkt=47
+date=2014-04-30 time=18:38:00  srcip=192.168.1.1 srcport=29270 dstip=208.67.222.222 dstcountry="Canada" sentbyte=9906 rcvdbyte=3644 sentpkt=100 rcvdpkt=94
+date=2014-04-30 time=18:53:12  srcip=10.0.0.100 srcport=7569 dstip=172.16.0.1 dstport=25 dstcountry="United Kingdom"  proto=6 sentbyte=8082 rcvdbyte=4633 sentpkt=3 rcvdpkt=55
+date=2014-04-30 time=19:08:30  srcip=192.168.1.25 srcport=40553 dstip=208.67.222.222 dstport=25 dstcountry="India"  proto=6 sentbyte=2551 rcvdbyte=1662 sentpkt=44 rcvdpkt=76
+date=2014-04-30 time=18:27:59  srcip=10.0.0.100 srcport=59081 dstip=1.1.1.1 dstport=110 dstcountry="United Kingdom"  proto=17 sentbyte=4762 rcvdbyte=5265 sentpkt=58 rcvdpkt=77
+date=2014-04-30 time=18:53:30  srcip=192.168.1.100 srcport=65372 dstip=1.1.1.1 dstport=6379 dstcountry="Germany"  proto=17 sentbyte=5611 rcvdbyte=5508 sentpkt=47 rcvdpkt=61
+date=2014-04-30 time=18:38:15  srcip=192.168.1.1 srcport=40203 dstip=151.101.1.69 dstport=22 dstcountry="Japan"  proto=17 sentbyte=2520 rcvdbyte=7344 sentpkt=75 rcvdpkt=89
+date=2014-04-30 time=18:48:34  srcip=192.168.1.25 srcport=39399 dstip=74.125.224.72 dstport=6379 dstcountry="United States"  proto=6 sentbyte=3107 rcvdbyte=2144 sentpkt=67 rcvdpkt=34
+date=2014-04-30 time=18:33:12  srcip=192.168.1.100 srcport=13150 dstip=10.0.0.1 dstport=22 dstcountry="India"  proto=17 sentbyte=9783 rcvdbyte=1595 sentpkt=13 rcvdpkt=47
+date=2014-04-30 time=18:33:14  srcip=10.0.0.100 srcport=58027 dstip=74.125.224.72 dstport=443 dstcountry="Australia"  proto=17 sentbyte=5516 rcvdbyte=9895 sentpkt=89 rcvdpkt=81
+date=2014-04-30 time=19:14:44  srcip=192.168.1.100 srcport=62092 dstip=8.8.8.8 dstport=110 dstcountry="Brazil"  proto=17 sentbyte=208 rcvdbyte=2900 sentpkt=59 rcvdpkt=36
+date=2014-04-30 time=18:48:54  srcip=192.168.1.25 srcport=6919 dstip=151.101.1.69 dstport=8080 dstcountry="Brazil"  proto=6 sentbyte=70 rcvdbyte=4816 sentpkt=41 rcvdpkt=2
+date=2014-04-30 time=18:38:33  srcip=192.168.1.50 srcport=2567 dstip=8.8.8.8 dstport=5432 dstcountry="Germany"  proto=17 sentbyte=1094 rcvdbyte=7986 sentpkt=58 rcvdpkt=18
+date=2014-04-30 time=19:10:00  srcip=192.168.1.25 srcport=6093 dstip=192.168.1.254 dstport=21 dstcountry="Germany"  proto=6 sentbyte=5183 rcvdbyte=2039 sentpkt=75 rcvdpkt=9
+date=2014-04-30 time=18:59:39  srcip=10.0.0.100 srcport=59718 dstip=192.168.1.254 dstport=3306 dstcountry="Australia"  proto=6 sentbyte=6761 rcvdbyte=1489 sentpkt=61 rcvdpkt=56
+date=2014-04-30 time=19:15:34  srcip=10.0.0.50 srcport=13284 dstip=208.67.222.222 dstport=80 dstcountry="Germany"  proto=6 sentbyte=9461 rcvdbyte=2112 sentpkt=95 rcvdpkt=36
+date=2014-04-30 time=18:59:53  srcip=192.168.1.50 srcport=34157 dstip=192.168.1.254 dstport=53 dstcountry="China"  proto=6 sentbyte=4882 rcvdbyte=2127 sentpkt=51 rcvdpkt=71
+date=2014-04-30 time=19:00:00  srcip=192.168.1.1 srcport=3340 dstip=208.67.222.222 dstport=6379 dstcountry="Japan"  proto=6 sentbyte=3434 rcvdbyte=7581 sentpkt=72 rcvdpkt=77
+date=2014-04-30 time=18:28:13  srcip=10.0.0.50 srcport=28439 dstip=192.168.1.254 dstport=3306 dstcountry="Canada"  proto=17 sentbyte=1917 rcvdbyte=2338 sentpkt=79 rcvdpkt=65
+date=2014-04-30 time=18:28:14  srcip=192.168.1.100 srcport=30097 dstip=74.125.224.72 dstcountry="Germany" sentbyte=5095 rcvdbyte=5930 sentpkt=49 rcvdpkt=78
+date=2014-04-30 time=18:55:00  srcip=10.0.0.100 srcport=27905 dstip=208.67.222.222 dstport=5432 dstcountry="Australia"  proto=6 sentbyte=920 rcvdbyte=8370 sentpkt=62 rcvdpkt=99
+date=2014-04-30 time=18:49:44  srcip=192.168.1.50 srcport=31475 dstip=74.125.224.72 dstport=3306 dstcountry="India"  proto=6 sentbyte=8139 rcvdbyte=8243 sentpkt=67 rcvdpkt=48
+date=2014-04-30 time=18:44:26  srcip=10.0.0.100 srcport=29230 dstip=192.168.1.254 dstport=53 dstcountry="China"  proto=6 sentbyte=4775 rcvdbyte=9664 sentpkt=51 rcvdpkt=55
+date=2014-04-30 time=18:44:30  srcip=10.0.0.100 srcport=12718 dstip=172.16.0.1 dstport=110 dstcountry="France"  proto=17 sentbyte=6943 rcvdbyte=5760 sentpkt=65 rcvdpkt=73
+date=2014-04-30 time=18:28:19  srcip=10.0.0.100 srcport=15975 dstip=74.125.224.72 dstport=110 dstcountry="Brazil"  proto=6 sentbyte=933 rcvdbyte=1790 sentpkt=71 rcvdpkt=91
+date=2014-04-30 time=19:17:14  srcip=192.168.1.100 srcport=31781 dstip=10.0.0.1 dstport=3306 dstcountry="United States"  proto=6 sentbyte=8478 rcvdbyte=2387 sentpkt=16 rcvdpkt=71
+date=2014-04-30 time=19:01:03  srcip=192.168.1.25 srcport=38561 dstip=151.101.1.69 dstport=8080 dstcountry="Germany"  proto=17 sentbyte=6085 rcvdbyte=4179 sentpkt=82 rcvdpkt=1
+date=2014-04-30 time=18:55:42  srcip=192.168.1.100 srcport=46012 dstip=74.125.224.72 dstport=21 dstcountry="Brazil"  proto=6 sentbyte=3061 rcvdbyte=9289 sentpkt=21 rcvdpkt=79
+date=2014-04-30 time=18:28:23  srcip=192.168.1.100 srcport=42143 dstip=192.168.1.254 dstport=21 dstcountry="Germany"  proto=17 sentbyte=9747 rcvdbyte=5696 sentpkt=76 rcvdpkt=51
+date=2014-04-30 time=19:12:24  srcip=10.0.0.50 srcport=60752 dstip=74.125.224.72 dstport=80 dstcountry="France"  proto=17 sentbyte=670 rcvdbyte=8727 sentpkt=14 rcvdpkt=95
+date=2014-04-30 time=19:18:04  srcip=10.0.0.100 srcport=25750 dstip=1.1.1.1 dstport=80 dstcountry="India"  proto=6 sentbyte=7871 rcvdbyte=8587 sentpkt=38 rcvdpkt=82
+date=2014-04-30 time=19:07:10  srcip=192.168.1.100 srcport=55405 dstip=192.168.1.254 dstport=143 dstcountry="Australia"  proto=17 sentbyte=3147 rcvdbyte=8363 sentpkt=28 rcvdpkt=5
+date=2014-04-30 time=18:28:27  srcip=192.168.1.25 srcport=31740 dstip=10.0.0.1 dstport=143 dstcountry="Canada"  proto=6 sentbyte=584 rcvdbyte=5103 sentpkt=22 rcvdpkt=25
+date=2014-04-30 time=18:56:18  srcip=192.168.1.50 srcport=57177 dstip=172.16.0.1 dstport=443 dstcountry="United Kingdom"  proto=6 sentbyte=9565 rcvdbyte=28 sentpkt=31 rcvdpkt=85
+date=2014-04-30 time=19:01:59  srcip=192.168.1.100 srcport=41783 dstip=192.168.1.254 dstport=143 dstcountry="Japan"  proto=17 sentbyte=2532 rcvdbyte=9024 sentpkt=28 rcvdpkt=82
+date=2014-04-30 time=18:28:30  srcip=10.0.0.50 srcport=2696 dstip=208.67.222.222 dstport=8080 dstcountry="Germany"  proto=17 sentbyte=7375 rcvdbyte=5401 sentpkt=55 rcvdpkt=86
+date=2014-04-30 time=18:34:08  srcip=192.168.1.1 srcport=47747 dstip=192.168.1.254 dstport=25 dstcountry="Canada"  proto=6 sentbyte=4845 rcvdbyte=515 sentpkt=58 rcvdpkt=28
+date=2014-04-30 time=18:39:48  srcip=192.168.1.100 srcport=37473 dstip=172.16.0.1 dstport=5432 dstcountry="Australia"  proto=17 sentbyte=4904 rcvdbyte=3534 sentpkt=66 rcvdpkt=27
+date=2014-04-30 time=19:08:06  srcip=192.168.1.25 srcport=41469 dstip=208.67.222.222 dstport=53 dstcountry="Japan"  proto=17 sentbyte=778 rcvdbyte=5557 sentpkt=10 rcvdpkt=44
+date=2014-04-30 time=19:02:34  srcip=192.168.1.25 srcport=43284 dstip=74.125.224.72 dstport=5432 dstcountry="France"  proto=6 sentbyte=4336 rcvdbyte=1938 sentpkt=62 rcvdpkt=58
+date=2014-04-30 time=18:28:35  srcip=192.168.1.25 srcport=58238 dstip=172.16.0.1 dstport=6379 dstcountry="Brazil"  proto=6 sentbyte=3316 rcvdbyte=3951 sentpkt=64 rcvdpkt=64
+date=2014-04-30 time=18:57:06  srcip=192.168.1.100 srcport=5596 dstip=192.168.1.254 dstport=22 dstcountry="United Kingdom"  proto=6 sentbyte=9403 rcvdbyte=4788 sentpkt=36 rcvdpkt=23
+date=2014-04-30 time=19:08:38  srcip=192.168.1.100 srcport=2567 dstip=8.8.8.8 dstport=443 dstcountry="Canada"  proto=6 sentbyte=1888 rcvdbyte=6750 sentpkt=95 rcvdpkt=64
+date=2014-04-30 time=18:28:38  srcip=10.0.0.100 srcport=59546 dstip=172.16.0.1 dstport=443 dstcountry="Germany"  proto=17 sentbyte=8239 rcvdbyte=9794 sentpkt=77 rcvdpkt=16
+date=2014-04-30 time=18:57:24  srcip=192.168.1.1 srcport=27450 dstip=74.125.224.72 dstport=21 dstcountry="United Kingdom"  proto=17 sentbyte=2498 rcvdbyte=7850 sentpkt=24 rcvdpkt=28
+date=2014-04-30 time=18:51:44  srcip=192.168.1.50 srcport=61184 dstip=74.125.224.72 dstport=3306 dstcountry="France"  proto=6 sentbyte=20 rcvdbyte=4725 sentpkt=95 rcvdpkt=95
+date=2014-04-30 time=18:28:41  srcip=192.168.1.25 srcport=37140 dstip=8.8.8.8 dstcountry="China" sentbyte=8755 rcvdbyte=1905 sentpkt=12 rcvdpkt=37
+date=2014-04-30 time=19:09:18  srcip=192.168.1.50 srcport=4672 dstip=10.0.0.1 dstport=80 dstcountry="Germany"  proto=17 sentbyte=9882 rcvdbyte=330 sentpkt=40 rcvdpkt=3
+date=2014-04-30 time=18:51:59  srcip=192.168.1.50 srcport=10714 dstip=208.67.222.222 dstport=3306 dstcountry="Japan"  proto=6 sentbyte=2140 rcvdbyte=1108 sentpkt=78 rcvdpkt=22
+date=2014-04-30 time=18:57:54  srcip=10.0.0.100 srcport=52558 dstip=74.125.224.72 dstport=21 dstcountry="Germany"  proto=17 sentbyte=9129 rcvdbyte=4600 sentpkt=23 rcvdpkt=50
+date=2014-04-30 time=19:21:24  srcip=192.168.1.25 srcport=47672 dstip=172.16.0.1 dstport=5432 dstcountry="United Kingdom"  proto=6 sentbyte=212 rcvdbyte=837 sentpkt=71 rcvdpkt=38
+date=2014-04-30 time=18:58:06  srcip=192.168.1.25 srcport=36693 dstip=8.8.8.8 dstport=3306 dstcountry="China"  proto=6 sentbyte=1530 rcvdbyte=4538 sentpkt=55 rcvdpkt=9
+date=2014-04-30 time=18:40:33  srcip=192.168.1.25 srcport=26960 dstip=192.168.1.254 dstport=143 dstcountry="United States"  proto=6 sentbyte=8693 rcvdbyte=2282 sentpkt=9 rcvdpkt=20
+date=2014-04-30 time=18:46:30  srcip=192.168.1.50 srcport=18344 dstip=172.16.0.1 dstport=143 dstcountry="Canada"  proto=6 sentbyte=2872 rcvdbyte=8751 sentpkt=28 rcvdpkt=88
+date=2014-04-30 time=18:58:24  srcip=192.168.1.25 srcport=55972 dstip=208.67.222.222 dstport=6379 dstcountry="Japan"  proto=17 sentbyte=128 rcvdbyte=8338 sentpkt=44 rcvdpkt=56
+date=2014-04-30 time=19:10:22  srcip=192.168.1.100 srcport=21880 dstip=8.8.8.8 dstport=3306 dstcountry="Australia"  proto=6 sentbyte=8611 rcvdbyte=8023 sentpkt=39 rcvdpkt=48
+date=2014-04-30 time=18:46:42  srcip=10.0.0.50 srcport=32231 dstip=1.1.1.1 dstport=25 dstcountry="Australia"  proto=6 sentbyte=9272 rcvdbyte=7562 sentpkt=70 rcvdpkt=74
+date=2014-04-30 time=19:04:40  srcip=192.168.1.25 srcport=63168 dstip=1.1.1.1 dstport=3306 dstcountry="Australia"  proto=17 sentbyte=494 rcvdbyte=5230 sentpkt=36 rcvdpkt=24
+date=2014-04-30 time=18:34:52  srcip=192.168.1.25 srcport=60109 dstip=1.1.1.1 dstport=53 dstcountry="Germany"  proto=17 sentbyte=9903 rcvdbyte=6520 sentpkt=31 rcvdpkt=11
+date=2014-04-30 time=18:40:54  srcip=192.168.1.50 srcport=23701 dstip=151.101.1.69 dstport=21 dstcountry="Australia"  proto=6 sentbyte=4354 rcvdbyte=1928 sentpkt=17 rcvdpkt=96
+date=2014-04-30 time=18:59:00  srcip=192.168.1.100 srcport=59737 dstip=172.16.0.1 dstport=6379 dstcountry="France"  proto=17 sentbyte=8224 rcvdbyte=9554 sentpkt=34 rcvdpkt=87
+date=2014-04-30 time=19:23:14  srcip=192.168.1.100 srcport=48258 dstip=151.101.1.69 dstport=53 dstcountry="India"  proto=17 sentbyte=6150 rcvdbyte=6644 sentpkt=76 rcvdpkt=2
+date=2014-04-30 time=18:47:06  srcip=192.168.1.100 srcport=40235 dstip=151.101.1.69 dstport=110 dstcountry="Germany"  proto=17 sentbyte=6296 rcvdbyte=5500 sentpkt=33 rcvdpkt=100
+date=2014-04-30 time=18:53:14  srcip=192.168.1.100 srcport=24144 dstip=208.67.222.222 dstport=6379 dstcountry="Germany"  proto=6 sentbyte=3544 rcvdbyte=5567 sentpkt=100 rcvdpkt=36
+date=2014-04-30 time=19:23:44  srcip=192.168.1.100 srcport=18347 dstip=208.67.222.222 dstport=143 dstcountry="India"  proto=6 sentbyte=643 rcvdbyte=8847 sentpkt=75 rcvdpkt=27
+date=2014-04-30 time=18:47:18  srcip=192.168.1.50 srcport=24874 dstip=10.0.0.1 dstport=53 dstcountry="Japan"  proto=17 sentbyte=3451 rcvdbyte=9032 sentpkt=2 rcvdpkt=37
+date=2014-04-30 time=19:17:57  srcip=10.0.0.100 srcport=40251 dstip=208.67.222.222 dstcountry="Brazil" sentbyte=476 rcvdbyte=4776 sentpkt=81 rcvdpkt=37
+date=2014-04-30 time=19:11:58  srcip=192.168.1.1 srcport=24407 dstip=208.67.222.222 dstport=3306 dstcountry="Germany"  proto=17 sentbyte=475 rcvdbyte=7235 sentpkt=77 rcvdpkt=52
+date=2014-04-30 time=19:18:15  srcip=10.0.0.100 srcport=48229 dstip=74.125.224.72 dstport=21 dstcountry="Brazil"  proto=17 sentbyte=3657 rcvdbyte=4709 sentpkt=73 rcvdpkt=49
+date=2014-04-30 time=19:06:04  srcip=192.168.1.100 srcport=21401 dstip=10.0.0.1 dstport=143 dstcountry="Brazil"  proto=6 sentbyte=6459 rcvdbyte=9929 sentpkt=82 rcvdpkt=47
+date=2014-04-30 time=18:53:49  srcip=192.168.1.100 srcport=33060 dstip=151.101.1.69 dstport=8080 dstcountry="Germany"  proto=17 sentbyte=2288 rcvdbyte=885 sentpkt=49 rcvdpkt=7
+date=2014-04-30 time=18:53:54  srcip=192.168.1.50 srcport=6846 dstip=192.168.1.254 dstport=3306 dstcountry="India"  proto=17 sentbyte=9364 rcvdbyte=3943 sentpkt=80 rcvdpkt=96
+date=2014-04-30 time=18:47:46  srcip=192.168.1.100 srcport=25366 dstip=74.125.224.72 dstport=80 dstcountry="Germany"  proto=6 sentbyte=9464 rcvdbyte=4352 sentpkt=92 rcvdpkt=43
+date=2014-04-30 time=18:47:50  srcip=192.168.1.1 srcport=1515 dstip=1.1.1.1 dstport=25 dstcountry="United Kingdom"  proto=6 sentbyte=6209 rcvdbyte=6990 sentpkt=82 rcvdpkt=35
+date=2014-04-30 time=19:19:09  srcip=10.0.0.50 srcport=50070 dstip=172.16.0.1 dstport=143 dstcountry="India"  proto=6 sentbyte=1355 rcvdbyte=7603 sentpkt=93 rcvdpkt=65
+date=2014-04-30 time=18:29:10  srcip=10.0.0.50 srcport=24717 dstip=208.67.222.222 dstport=25 dstcountry="France"  proto=17 sentbyte=9699 rcvdbyte=8719 sentpkt=4 rcvdpkt=9
+date=2014-04-30 time=19:13:10  srcip=192.168.1.50 srcport=7081 dstip=192.168.1.254 dstport=25 dstcountry="France"  proto=17 sentbyte=2689 rcvdbyte=7849 sentpkt=1 rcvdpkt=90
+date=2014-04-30 time=19:00:42  srcip=10.0.0.50 srcport=57847 dstip=8.8.8.8 dstport=443 dstcountry="United Kingdom"  proto=6 sentbyte=4474 rcvdbyte=4822 sentpkt=31 rcvdpkt=88
+date=2014-04-30 time=19:00:48  srcip=192.168.1.25 srcport=40208 dstip=1.1.1.1 dstport=22 dstcountry="Brazil"  proto=6 sentbyte=2558 rcvdbyte=8348 sentpkt=98 rcvdpkt=71
+date=2014-04-30 time=18:41:54  srcip=192.168.1.100 srcport=55649 dstip=74.125.224.72 dstport=143 dstcountry="United Kingdom"  proto=17 sentbyte=8556 rcvdbyte=2104 sentpkt=42 rcvdpkt=9
+date=2014-04-30 time=19:20:03  srcip=192.168.1.100 srcport=36038 dstip=1.1.1.1 dstport=110 dstcountry="Australia"  proto=6 sentbyte=2716 rcvdbyte=448 sentpkt=6 rcvdpkt=73
+date=2014-04-30 time=18:29:16  srcip=192.168.1.1 srcport=29193 dstip=10.0.0.1 dstport=3306 dstcountry="Japan"  proto=17 sentbyte=8275 rcvdbyte=8964 sentpkt=20 rcvdpkt=94
+date=2014-04-30 time=18:42:03  srcip=192.168.1.50 srcport=36194 dstip=1.1.1.1 dstport=110 dstcountry="China"  proto=6 sentbyte=6178 rcvdbyte=5821 sentpkt=52 rcvdpkt=70
+date=2014-04-30 time=18:42:06  srcip=192.168.1.50 srcport=11340 dstip=1.1.1.1 dstport=3306 dstcountry="Japan"  proto=6 sentbyte=2624 rcvdbyte=1792 sentpkt=53 rcvdpkt=40
+date=2014-04-30 time=18:35:44  srcip=192.168.1.1 srcport=62044 dstip=192.168.1.254 dstport=21 dstcountry="China"  proto=17 sentbyte=5578 rcvdbyte=5019 sentpkt=70 rcvdpkt=94
+date=2014-04-30 time=18:42:12  srcip=192.168.1.1 srcport=10706 dstip=192.168.1.254 dstcountry="India" sentbyte=351 rcvdbyte=1104 sentpkt=33 rcvdpkt=1
+date=2014-04-30 time=19:14:30  srcip=192.168.1.25 srcport=21103 dstip=208.67.222.222 dstport=53 dstcountry="Canada"  proto=17 sentbyte=6012 rcvdbyte=6156 sentpkt=74 rcvdpkt=85
+date=2014-04-30 time=19:08:10  srcip=10.0.0.100 srcport=30653 dstip=1.1.1.1 dstport=8080 dstcountry="France"  proto=6 sentbyte=2548 rcvdbyte=7074 sentpkt=23 rcvdpkt=27
+date=2014-04-30 time=18:29:23  srcip=10.0.0.100 srcport=4776 dstip=10.0.0.1 dstport=25 dstcountry="United Kingdom"  proto=6 sentbyte=4068 rcvdbyte=2459 sentpkt=99 rcvdpkt=80
+date=2014-04-30 time=19:27:54  srcip=192.168.1.25 srcport=21759 dstip=192.168.1.254 dstport=3306 dstcountry="United Kingdom"  proto=6 sentbyte=424 rcvdbyte=3358 sentpkt=26 rcvdpkt=90
+date=2014-04-30 time=18:29:25  srcip=192.168.1.100 srcport=25519 dstip=74.125.224.72 dstport=80 dstcountry="Canada"  proto=17 sentbyte=9300 rcvdbyte=2695 sentpkt=27 rcvdpkt=75
+date=2014-04-30 time=18:42:30  srcip=10.0.0.100 srcport=6989 dstip=10.0.0.1 dstport=5432 dstcountry="China"  proto=6 sentbyte=3921 rcvdbyte=8888 sentpkt=77 rcvdpkt=21
+date=2014-04-30 time=18:49:06  srcip=192.168.1.25 srcport=45456 dstip=151.101.1.69 dstport=110 dstcountry="United Kingdom"  proto=17 sentbyte=3029 rcvdbyte=8274 sentpkt=19 rcvdpkt=22
+date=2014-04-30 time=19:15:26  srcip=192.168.1.50 srcport=37908 dstip=172.16.0.1 dstport=25 dstcountry="United Kingdom"  proto=17 sentbyte=5408 rcvdbyte=4626 sentpkt=5 rcvdpkt=55
+date=2014-04-30 time=19:15:34  srcip=192.168.1.100 srcport=20200 dstip=172.16.0.1 dstport=25 dstcountry="Brazil"  proto=6 sentbyte=6666 rcvdbyte=9453 sentpkt=73 rcvdpkt=7
+date=2014-04-30 time=18:55:54  srcip=10.0.0.50 srcport=51922 dstip=151.101.1.69 dstport=8080 dstcountry="Japan"  proto=17 sentbyte=6148 rcvdbyte=4892 sentpkt=3 rcvdpkt=90
+date=2014-04-30 time=18:55:59  srcip=192.168.1.25 srcport=29388 dstip=8.8.8.8 dstport=8080 dstcountry="Canada"  proto=17 sentbyte=4326 rcvdbyte=9764 sentpkt=17 rcvdpkt=98
+date=2014-04-30 time=18:49:26  srcip=192.168.1.1 srcport=65347 dstip=172.16.0.1 dstport=80 dstcountry="United States"  proto=17 sentbyte=8536 rcvdbyte=4801 sentpkt=92 rcvdpkt=72
+date=2014-04-30 time=19:02:48  srcip=192.168.1.50 srcport=18851 dstip=8.8.8.8 dstport=3306 dstcountry="United States"  proto=17 sentbyte=4274 rcvdbyte=187 sentpkt=24 rcvdpkt=8
+date=2014-04-30 time=19:29:34  srcip=192.168.1.100 srcport=43586 dstip=1.1.1.1 dstport=143 dstcountry="China"  proto=6 sentbyte=4706 rcvdbyte=5316 sentpkt=15 rcvdpkt=33
+date=2014-04-30 time=19:23:03  srcip=10.0.0.50 srcport=34085 dstip=10.0.0.1 dstport=22 dstcountry="China"  proto=6 sentbyte=4002 rcvdbyte=6660 sentpkt=28 rcvdpkt=28
+date=2014-04-30 time=18:36:18  srcip=192.168.1.25 srcport=65496 dstip=172.16.0.1 dstport=6379 dstcountry="France"  proto=6 sentbyte=9173 rcvdbyte=7537 sentpkt=76 rcvdpkt=97
+date=2014-04-30 time=19:30:04  srcip=192.168.1.25 srcport=39578 dstip=192.168.1.254 dstport=53 dstcountry="United Kingdom"  proto=17 sentbyte=8318 rcvdbyte=2608 sentpkt=25 rcvdpkt=50
+date=2014-04-30 time=19:10:02  srcip=192.168.1.25 srcport=62436 dstip=74.125.224.72 dstport=443 dstcountry="Germany"  proto=17 sentbyte=7228 rcvdbyte=5068 sentpkt=75 rcvdpkt=40
+date=2014-04-30 time=19:16:54  srcip=10.0.0.100 srcport=12466 dstip=8.8.8.8 dstport=21 dstcountry="Germany"  proto=17 sentbyte=5776 rcvdbyte=8249 sentpkt=94 rcvdpkt=36
+date=2014-04-30 time=19:30:34  srcip=10.0.0.100 srcport=39873 dstip=10.0.0.1 dstport=143 dstcountry="Brazil"  proto=17 sentbyte=4097 rcvdbyte=6451 sentpkt=4 rcvdpkt=15
+date=2014-04-30 time=19:03:36  srcip=192.168.1.25 srcport=5547 dstip=151.101.1.69 dstport=143 dstcountry="Japan"  proto=17 sentbyte=6434 rcvdbyte=8873 sentpkt=82 rcvdpkt=2
+date=2014-04-30 time=18:36:30  srcip=192.168.1.25 srcport=9025 dstip=151.101.1.69 dstport=443 dstcountry="China"  proto=17 sentbyte=4656 rcvdbyte=4787 sentpkt=37 rcvdpkt=55
+date=2014-04-30 time=19:03:48  srcip=10.0.0.50 srcport=17342 dstip=151.101.1.69 dstport=110 dstcountry="Australia"  proto=17 sentbyte=6549 rcvdbyte=8012 sentpkt=93 rcvdpkt=93
+date=2014-04-30 time=18:36:34  srcip=10.0.0.50 srcport=54543 dstip=192.168.1.254 dstport=5432 dstcountry="Germany"  proto=17 sentbyte=9273 rcvdbyte=3443 sentpkt=19 rcvdpkt=70
+date=2014-04-30 time=18:36:36  srcip=10.0.0.50 srcport=21463 dstip=1.1.1.1 dstport=80 dstcountry="Canada"  proto=6 sentbyte=1067 rcvdbyte=2957 sentpkt=44 rcvdpkt=6
+date=2014-04-30 time=19:10:58  srcip=10.0.0.100 srcport=14561 dstip=192.168.1.254 dstport=6379 dstcountry="France"  proto=17 sentbyte=6516 rcvdbyte=2463 sentpkt=34 rcvdpkt=55
+date=2014-04-30 time=18:50:26  srcip=10.0.0.100 srcport=13347 dstip=1.1.1.1 dstport=5432 dstcountry="India"  proto=17 sentbyte=6291 rcvdbyte=6835 sentpkt=57 rcvdpkt=62
+date=2014-04-30 time=18:50:30  srcip=192.168.1.50 srcport=12361 dstip=8.8.8.8 dstport=53 dstcountry="France"  proto=17 sentbyte=3395 rcvdbyte=5747 sentpkt=6 rcvdpkt=98
+date=2014-04-30 time=19:18:14  srcip=10.0.0.50 srcport=59954 dstip=151.101.1.69 dstport=443 dstcountry="Japan"  proto=6 sentbyte=6069 rcvdbyte=3754 sentpkt=22 rcvdpkt=88
+date=2014-04-30 time=19:04:30  srcip=10.0.0.50 srcport=31490 dstip=1.1.1.1 dstport=143 dstcountry="Japan"  proto=6 sentbyte=7532 rcvdbyte=5893 sentpkt=1 rcvdpkt=6
+date=2014-04-30 time=19:25:27  srcip=10.0.0.50 srcport=12869 dstip=74.125.224.72 dstport=22 dstcountry="Brazil"  proto=17 sentbyte=7649 rcvdbyte=4067 sentpkt=40 rcvdpkt=63
+date=2014-04-30 time=19:11:40  srcip=192.168.1.1 srcport=64582 dstip=172.16.0.1 dstcountry="Australia" sentbyte=3539 rcvdbyte=7678 sentpkt=60 rcvdpkt=96
+date=2014-04-30 time=18:36:52  srcip=192.168.1.100 srcport=1990 dstip=8.8.8.8 dstport=3306 dstcountry="Brazil"  proto=17 sentbyte=144 rcvdbyte=8187 sentpkt=35 rcvdpkt=97
+date=2014-04-30 time=18:50:54  srcip=192.168.1.1 srcport=61487 dstip=151.101.1.69 dstport=25 dstcountry="Brazil"  proto=6 sentbyte=1575 rcvdbyte=1420 sentpkt=60 rcvdpkt=57
+date=2014-04-30 time=19:26:03  srcip=10.0.0.100 srcport=8311 dstip=151.101.1.69 dstport=22 dstcountry="United Kingdom"  proto=17 sentbyte=6422 rcvdbyte=898 sentpkt=70 rcvdpkt=91
+date=2014-04-30 time=18:58:04  srcip=192.168.1.100 srcport=36207 dstip=74.125.224.72 dstport=110 dstcountry="Japan"  proto=17 sentbyte=9480 rcvdbyte=5909 sentpkt=16 rcvdpkt=83
+date=2014-04-30 time=19:33:24  srcip=192.168.1.50 srcport=41866 dstip=1.1.1.1 dstcountry="Australia" sentbyte=6568 rcvdbyte=5157 sentpkt=25 rcvdpkt=20
+date=2014-04-30 time=18:51:10  srcip=192.168.1.50 srcport=10523 dstip=1.1.1.1 dstport=3306 dstcountry="Germany"  proto=17 sentbyte=5810 rcvdbyte=3603 sentpkt=66 rcvdpkt=67
+date=2014-04-30 time=19:33:44  srcip=10.0.0.100 srcport=19129 dstip=74.125.224.72 dstport=6379 dstcountry="India"  proto=17 sentbyte=9910 rcvdbyte=5759 sentpkt=32 rcvdpkt=93
+date=2014-04-30 time=18:51:18  srcip=192.168.1.100 srcport=4513 dstip=8.8.8.8 dstport=110 dstcountry="France"  proto=17 sentbyte=7200 rcvdbyte=4832 sentpkt=85 rcvdpkt=41
+date=2014-04-30 time=18:37:08  srcip=192.168.1.1 srcport=51603 dstip=172.16.0.1 dstport=5432 dstcountry="France"  proto=17 sentbyte=5971 rcvdbyte=4588 sentpkt=86 rcvdpkt=50
+date=2014-04-30 time=19:05:42  srcip=192.168.1.25 srcport=62437 dstip=192.168.1.254 dstport=80 dstcountry="India"  proto=17 sentbyte=4086 rcvdbyte=5705 sentpkt=30 rcvdpkt=98
+date=2014-04-30 time=18:44:21  srcip=192.168.1.100 srcport=64566 dstip=10.0.0.1 dstport=110 dstcountry="India"  proto=6 sentbyte=8903 rcvdbyte=8735 sentpkt=89 rcvdpkt=64
+date=2014-04-30 time=19:27:24  srcip=192.168.1.1 srcport=25215 dstip=1.1.1.1 dstcountry="Canada" sentbyte=7767 rcvdbyte=6816 sentpkt=69 rcvdpkt=67
+date=2014-04-30 time=18:37:16  srcip=10.0.0.100 srcport=21014 dstip=192.168.1.254 dstport=3306 dstcountry="Brazil"  proto=17 sentbyte=1257 rcvdbyte=186 sentpkt=71 rcvdpkt=71
+date=2014-04-30 time=19:20:30  srcip=192.168.1.50 srcport=41419 dstip=10.0.0.1 dstport=25 dstcountry="France"  proto=17 sentbyte=1532 rcvdbyte=3859 sentpkt=54 rcvdpkt=37
+date=2014-04-30 time=19:35:04  srcip=192.168.1.25 srcport=18046 dstip=8.8.8.8 dstport=25 dstcountry="United States"  proto=6 sentbyte=8529 rcvdbyte=739 sentpkt=42 rcvdpkt=91
+date=2014-04-30 time=18:30:08  srcip=192.168.1.25 srcport=12910 dstip=8.8.8.8 dstport=8080 dstcountry="France"  proto=17 sentbyte=1350 rcvdbyte=5595 sentpkt=36 rcvdpkt=89
+date=2014-04-30 time=19:13:39  srcip=10.0.0.50 srcport=50824 dstip=10.0.0.1 dstport=21 dstcountry="India"  proto=17 sentbyte=8715 rcvdbyte=6015 sentpkt=75 rcvdpkt=20
+date=2014-04-30 time=18:37:26  srcip=192.168.1.50 srcport=58923 dstip=8.8.8.8 dstport=80 dstcountry="China"  proto=6 sentbyte=8916 rcvdbyte=8521 sentpkt=46 rcvdpkt=65
+date=2014-04-30 time=18:37:28  srcip=192.168.1.1 srcport=17890 dstip=151.101.1.69 dstport=25 dstcountry="France"  proto=6 sentbyte=2538 rcvdbyte=4404 sentpkt=24 rcvdpkt=10
+date=2014-04-30 time=18:30:12  srcip=192.168.1.100 srcport=30303 dstip=208.67.222.222 dstport=143 dstcountry="United States"  proto=6 sentbyte=4589 rcvdbyte=4401 sentpkt=89 rcvdpkt=46
+date=2014-04-30 time=19:14:07  srcip=10.0.0.50 srcport=45624 dstip=208.67.222.222 dstport=6379 dstcountry="China"  proto=17 sentbyte=7745 rcvdbyte=5045 sentpkt=11 rcvdpkt=57
+date=2014-04-30 time=19:36:14  srcip=192.168.1.1 srcport=30128 dstip=74.125.224.72 dstport=3306 dstcountry="United Kingdom"  proto=17 sentbyte=827 rcvdbyte=6548 sentpkt=14 rcvdpkt=73
+date=2014-04-30 time=18:52:18  srcip=192.168.1.100 srcport=62254 dstip=8.8.8.8 dstport=5432 dstcountry="France"  proto=6 sentbyte=9661 rcvdbyte=7925 sentpkt=33 rcvdpkt=44
+date=2014-04-30 time=18:37:38  srcip=192.168.1.25 srcport=11893 dstip=8.8.8.8 dstport=8080 dstcountry="Australia"  proto=17 sentbyte=1849 rcvdbyte=5245 sentpkt=70 rcvdpkt=90
+date=2014-04-30 time=18:45:03  srcip=192.168.1.50 srcport=54544 dstip=172.16.0.1 dstport=110 dstcountry="United States"  proto=17 sentbyte=3376 rcvdbyte=4128 sentpkt=38 rcvdpkt=46
+date=2014-04-30 time=18:52:30  srcip=192.168.1.50 srcport=8200 dstip=151.101.1.69 dstport=443 dstcountry="Germany"  proto=17 sentbyte=1571 rcvdbyte=6443 sentpkt=61 rcvdpkt=46
+date=2014-04-30 time=18:37:44  srcip=192.168.1.50 srcport=59414 dstip=8.8.8.8 dstport=6379 dstcountry="Brazil"  proto=6 sentbyte=6943 rcvdbyte=2830 sentpkt=93 rcvdpkt=93
+date=2014-04-30 time=19:22:22  srcip=192.168.1.100 srcport=8742 dstip=172.16.0.1 dstport=5432 dstcountry="Germany"  proto=6 sentbyte=6690 rcvdbyte=2748 sentpkt=26 rcvdpkt=35
+date=2014-04-30 time=18:30:21  srcip=192.168.1.100 srcport=42769 dstip=1.1.1.1 dstport=443 dstcountry="Canada"  proto=17 sentbyte=8352 rcvdbyte=6127 sentpkt=13 rcvdpkt=72
+date=2014-04-30 time=18:45:18  srcip=192.168.1.1 srcport=40371 dstip=208.67.222.222 dstport=21 dstcountry="France"  proto=6 sentbyte=3239 rcvdbyte=3547 sentpkt=84 rcvdpkt=81
+date=2014-04-30 time=19:07:48  srcip=10.0.0.100 srcport=48382 dstip=192.168.1.254 dstport=5432 dstcountry="Germany"  proto=6 sentbyte=8476 rcvdbyte=2131 sentpkt=37 rcvdpkt=94
+date=2014-04-30 time=18:30:24  srcip=192.168.1.100 srcport=2013 dstip=172.16.0.1 dstport=53 dstcountry="Australia"  proto=17 sentbyte=1905 rcvdbyte=1570 sentpkt=82 rcvdpkt=11
+date=2014-04-30 time=19:15:31  srcip=192.168.1.1 srcport=55091 dstip=10.0.0.1 dstport=6379 dstcountry="Australia"  proto=6 sentbyte=5551 rcvdbyte=6106 sentpkt=67 rcvdpkt=83
+date=2014-04-30 time=18:37:58  srcip=10.0.0.50 srcport=4739 dstip=10.0.0.1 dstport=8080 dstcountry="Japan"  proto=17 sentbyte=4381 rcvdbyte=170 sentpkt=5 rcvdpkt=45
+date=2014-04-30 time=19:15:45  srcip=192.168.1.1 srcport=41563 dstip=151.101.1.69 dstport=8080 dstcountry="France"  proto=17 sentbyte=9342 rcvdbyte=5953 sentpkt=85 rcvdpkt=73
+date=2014-04-30 time=18:53:10  srcip=10.0.0.100 srcport=52598 dstip=192.168.1.254 dstport=80 dstcountry="India"  proto=6 sentbyte=9631 rcvdbyte=6292 sentpkt=75 rcvdpkt=17
+date=2014-04-30 time=18:38:04  srcip=192.168.1.50 srcport=40501 dstip=151.101.1.69 dstcountry="United Kingdom" sentbyte=2494 rcvdbyte=1364 sentpkt=85 rcvdpkt=51
+date=2014-04-30 time=19:31:18  srcip=192.168.1.50 srcport=46676 dstip=172.16.0.1 dstcountry="China" sentbyte=9413 rcvdbyte=5416 sentpkt=84 rcvdpkt=49
+date=2014-04-30 time=19:00:59  srcip=10.0.0.100 srcport=63929 dstip=1.1.1.1 dstport=22 dstcountry="China"  proto=6 sentbyte=6575 rcvdbyte=3361 sentpkt=91 rcvdpkt=90
+date=2014-04-30 time=19:08:42  srcip=192.168.1.50 srcport=18095 dstip=10.0.0.1 dstcountry="India" sentbyte=7772 rcvdbyte=5936 sentpkt=27 rcvdpkt=96
+date=2014-04-30 time=19:01:09  srcip=192.168.1.50 srcport=46517 dstip=10.0.0.1 dstport=25 dstcountry="Canada"  proto=6 sentbyte=456 rcvdbyte=6131 sentpkt=71 rcvdpkt=37
+date=2014-04-30 time=19:08:54  srcip=192.168.1.100 srcport=35666 dstip=192.168.1.254 dstport=22 dstcountry="Germany"  proto=6 sentbyte=1272 rcvdbyte=3963 sentpkt=71 rcvdpkt=96
+date=2014-04-30 time=18:45:57  srcip=192.168.1.25 srcport=45912 dstip=8.8.8.8 dstport=80 dstcountry="United Kingdom"  proto=17 sentbyte=3022 rcvdbyte=8828 sentpkt=49 rcvdpkt=88
+date=2014-04-30 time=19:24:30  srcip=192.168.1.50 srcport=56556 dstip=172.16.0.1 dstport=25 dstcountry="Japan"  proto=17 sentbyte=1207 rcvdbyte=4381 sentpkt=100 rcvdpkt=61
+date=2014-04-30 time=19:32:21  srcip=192.168.1.1 srcport=58088 dstip=10.0.0.1 dstport=25 dstcountry="United Kingdom"  proto=17 sentbyte=4751 rcvdbyte=8926 sentpkt=32 rcvdpkt=18
+date=2014-04-30 time=19:40:14  srcip=10.0.0.100 srcport=60946 dstip=8.8.8.8 dstport=80 dstcountry="United Kingdom"  proto=17 sentbyte=2068 rcvdbyte=8026 sentpkt=56 rcvdpkt=58
+date=2014-04-30 time=18:53:54  srcip=192.168.1.1 srcport=45385 dstip=8.8.8.8 dstport=5432 dstcountry="Canada"  proto=17 sentbyte=7995 rcvdbyte=542 sentpkt=32 rcvdpkt=22
+date=2014-04-30 time=19:09:30  srcip=192.168.1.100 srcport=34154 dstip=192.168.1.254 dstport=8080 dstcountry="China"  proto=17 sentbyte=2811 rcvdbyte=4081 sentpkt=100 rcvdpkt=34
+date=2014-04-30 time=18:30:41  srcip=10.0.0.50 srcport=17916 dstip=10.0.0.1 dstport=25 dstcountry="Japan"  proto=17 sentbyte=9122 rcvdbyte=9174 sentpkt=62 rcvdpkt=64
+date=2014-04-30 time=19:33:06  srcip=10.0.0.50 srcport=1179 dstip=208.67.222.222 dstport=22 dstcountry="France"  proto=17 sentbyte=4141 rcvdbyte=486 sentpkt=99 rcvdpkt=25
+date=2014-04-30 time=19:33:15  srcip=192.168.1.25 srcport=46610 dstip=208.67.222.222 dstcountry="Australia" sentbyte=5383 rcvdbyte=3158 sentpkt=96 rcvdpkt=23
+date=2014-04-30 time=18:30:44  srcip=192.168.1.100 srcport=59832 dstip=151.101.1.69 dstcountry="Brazil" sentbyte=1550 rcvdbyte=2460 sentpkt=36 rcvdpkt=97
+date=2014-04-30 time=19:33:33  srcip=192.168.1.50 srcport=28378 dstip=1.1.1.1 dstport=6379 dstcountry="Australia"  proto=6 sentbyte=1714 rcvdbyte=6518 sentpkt=24 rcvdpkt=77
+date=2014-04-30 time=19:02:14  srcip=192.168.1.100 srcport=15697 dstip=1.1.1.1 dstport=143 dstcountry="Brazil"  proto=17 sentbyte=9422 rcvdbyte=8538 sentpkt=74 rcvdpkt=35
+date=2014-04-30 time=18:30:47  srcip=192.168.1.50 srcport=50795 dstip=10.0.0.1 dstport=8080 dstcountry="Canada"  proto=6 sentbyte=7984 rcvdbyte=8562 sentpkt=22 rcvdpkt=76
+date=2014-04-30 time=19:26:06  srcip=192.168.1.100 srcport=45233 dstip=208.67.222.222 dstport=53 dstcountry="United Kingdom"  proto=6 sentbyte=4696 rcvdbyte=6118 sentpkt=67 rcvdpkt=67
+date=2014-04-30 time=18:46:39  srcip=192.168.1.100 srcport=64567 dstip=10.0.0.1 dstport=5432 dstcountry="Canada"  proto=6 sentbyte=8506 rcvdbyte=4687 sentpkt=57 rcvdpkt=78
+date=2014-04-30 time=18:46:42  srcip=192.168.1.1 srcport=53358 dstip=172.16.0.1 dstport=110 dstcountry="Brazil"  proto=6 sentbyte=2787 rcvdbyte=6954 sentpkt=87 rcvdpkt=21
+date=2014-04-30 time=18:46:45  srcip=192.168.1.100 srcport=56458 dstip=1.1.1.1 dstport=80 dstcountry="Japan"  proto=6 sentbyte=2128 rcvdbyte=5688 sentpkt=37 rcvdpkt=88
+date=2014-04-30 time=19:10:42  srcip=192.168.1.25 srcport=34657 dstip=172.16.0.1 dstport=25 dstcountry="Brazil"  proto=17 sentbyte=5551 rcvdbyte=3872 sentpkt=9 rcvdpkt=73
+date=2014-04-30 time=18:46:51  srcip=192.168.1.25 srcport=31081 dstip=1.1.1.1 dstport=110 dstcountry="United States"  proto=17 sentbyte=2743 rcvdbyte=6692 sentpkt=56 rcvdpkt=90
+date=2014-04-30 time=18:38:54  srcip=192.168.1.1 srcport=55398 dstip=208.67.222.222 dstport=443 dstcountry="United Kingdom"  proto=17 sentbyte=6696 rcvdbyte=7877 sentpkt=95 rcvdpkt=40
+date=2014-04-30 time=18:30:55  srcip=10.0.0.50 srcport=36713 dstip=8.8.8.8 dstport=143 dstcountry="China"  proto=17 sentbyte=2154 rcvdbyte=4816 sentpkt=56 rcvdpkt=65
+date=2014-04-30 time=18:47:00  srcip=192.168.1.1 srcport=2607 dstip=192.168.1.254 dstcountry="Canada" sentbyte=934 rcvdbyte=3098 sentpkt=84 rcvdpkt=55
+date=2014-04-30 time=19:43:24  srcip=10.0.0.50 srcport=31854 dstip=10.0.0.1 dstport=22 dstcountry="Australia"  proto=17 sentbyte=3584 rcvdbyte=6065 sentpkt=89 rcvdpkt=32
+date=2014-04-30 time=19:43:34  srcip=10.0.0.100 srcport=53531 dstip=1.1.1.1 dstport=443 dstcountry="Australia"  proto=6 sentbyte=6569 rcvdbyte=9131 sentpkt=2 rcvdpkt=67
+date=2014-04-30 time=19:11:24  srcip=192.168.1.100 srcport=49839 dstip=1.1.1.1 dstport=53 dstcountry="India"  proto=17 sentbyte=6426 rcvdbyte=9494 sentpkt=29 rcvdpkt=71
+date=2014-04-30 time=18:31:00  srcip=10.0.0.50 srcport=36774 dstip=151.101.1.69 dstport=21 dstcountry="Brazil"  proto=6 sentbyte=3894 rcvdbyte=3109 sentpkt=57 rcvdpkt=72
+date=2014-04-30 time=18:31:01  srcip=192.168.1.50 srcport=35428 dstip=151.101.1.69 dstport=53 dstcountry="China"  proto=17 sentbyte=6920 rcvdbyte=9919 sentpkt=16 rcvdpkt=75
+date=2014-04-30 time=18:31:02  srcip=10.0.0.50 srcport=56519 dstip=74.125.224.72 dstport=3306 dstcountry="United States"  proto=17 sentbyte=8734 rcvdbyte=4376 sentpkt=10 rcvdpkt=19
+date=2014-04-30 time=19:11:48  srcip=192.168.1.100 srcport=45109 dstip=8.8.8.8 dstport=6379 dstcountry="Germany"  proto=6 sentbyte=1758 rcvdbyte=2612 sentpkt=83 rcvdpkt=24
+date=2014-04-30 time=19:20:04  srcip=192.168.1.50 srcport=49668 dstip=74.125.224.72 dstport=3306 dstcountry="Germany"  proto=17 sentbyte=297 rcvdbyte=7391 sentpkt=30 rcvdpkt=58
+date=2014-04-30 time=19:36:33  srcip=192.168.1.1 srcport=58138 dstip=172.16.0.1 dstport=110 dstcountry="China"  proto=17 sentbyte=2948 rcvdbyte=2678 sentpkt=58 rcvdpkt=80
+date=2014-04-30 time=19:44:54  srcip=192.168.1.25 srcport=55691 dstip=192.168.1.254 dstcountry="France" sentbyte=6486 rcvdbyte=9421 sentpkt=92 rcvdpkt=62
+date=2014-04-30 time=18:55:46  srcip=10.0.0.100 srcport=61102 dstip=151.101.1.69 dstcountry="Germany" sentbyte=1045 rcvdbyte=3565 sentpkt=1 rcvdpkt=3
+date=2014-04-30 time=19:04:04  srcip=10.0.0.100 srcport=15405 dstip=1.1.1.1 dstport=8080 dstcountry="Australia"  proto=6 sentbyte=1757 rcvdbyte=8061 sentpkt=80 rcvdpkt=26
+date=2014-04-30 time=18:31:09  srcip=10.0.0.50 srcport=32689 dstip=10.0.0.1 dstport=110 dstcountry="Canada"  proto=6 sentbyte=3508 rcvdbyte=6668 sentpkt=69 rcvdpkt=23
+date=2014-04-30 time=18:47:42  srcip=192.168.1.25 srcport=1853 dstip=8.8.8.8 dstport=443 dstcountry="Japan"  proto=6 sentbyte=8262 rcvdbyte=8575 sentpkt=58 rcvdpkt=24
+date=2014-04-30 time=19:12:36  srcip=192.168.1.1 srcport=38388 dstip=151.101.1.69 dstport=443 dstcountry="Japan"  proto=6 sentbyte=6672 rcvdbyte=150 sentpkt=6 rcvdpkt=74
+date=2014-04-30 time=19:04:24  srcip=10.0.0.100 srcport=35773 dstip=74.125.224.72 dstport=143 dstcountry="China"  proto=6 sentbyte=4137 rcvdbyte=8677 sentpkt=56 rcvdpkt=25
+date=2014-04-30 time=19:29:26  srcip=192.168.1.50 srcport=38632 dstip=10.0.0.1 dstport=8080 dstcountry="France"  proto=6 sentbyte=5289 rcvdbyte=2735 sentpkt=44 rcvdpkt=30
+date=2014-04-30 time=18:31:14  srcip=192.168.1.1 srcport=51720 dstip=8.8.8.8 dstport=8080 dstcountry="Japan"  proto=17 sentbyte=8239 rcvdbyte=1742 sentpkt=84 rcvdpkt=93
+date=2014-04-30 time=19:04:39  srcip=10.0.0.100 srcport=9501 dstip=172.16.0.1 dstport=6379 dstcountry="India"  proto=6 sentbyte=8692 rcvdbyte=6814 sentpkt=67 rcvdpkt=90
+date=2014-04-30 time=18:56:22  srcip=192.168.1.50 srcport=62828 dstip=208.67.222.222 dstport=143 dstcountry="India"  proto=17 sentbyte=6531 rcvdbyte=4250 sentpkt=35 rcvdpkt=57
+date=2014-04-30 time=19:13:12  srcip=192.168.1.1 srcport=49064 dstip=1.1.1.1 dstport=3306 dstcountry="Japan"  proto=17 sentbyte=1616 rcvdbyte=2271 sentpkt=38 rcvdpkt=68
+date=2014-04-30 time=19:38:30  srcip=192.168.1.50 srcport=7367 dstip=172.16.0.1 dstport=80 dstcountry="Australia"  proto=17 sentbyte=7846 rcvdbyte=3986 sentpkt=92 rcvdpkt=89
+date=2014-04-30 time=18:31:19  srcip=10.0.0.100 srcport=41805 dstip=172.16.0.1 dstport=143 dstcountry="Australia"  proto=6 sentbyte=6782 rcvdbyte=1468 sentpkt=51 rcvdpkt=30
+date=2014-04-30 time=18:56:38  srcip=192.168.1.1 srcport=60825 dstip=10.0.0.1 dstcountry="Brazil" sentbyte=8862 rcvdbyte=4214 sentpkt=81 rcvdpkt=65
+date=2014-04-30 time=19:05:09  srcip=192.168.1.1 srcport=19814 dstip=192.168.1.254 dstport=8080 dstcountry="United States"  proto=17 sentbyte=7342 rcvdbyte=4406 sentpkt=11 rcvdpkt=54
+date=2014-04-30 time=18:56:46  srcip=192.168.1.100 srcport=56629 dstip=208.67.222.222 dstport=143 dstcountry="Japan"  proto=6 sentbyte=7945 rcvdbyte=9469 sentpkt=10 rcvdpkt=13
+date=2014-04-30 time=19:47:44  srcip=192.168.1.25 srcport=7247 dstip=208.67.222.222 dstport=5432 dstcountry="China"  proto=6 sentbyte=1477 rcvdbyte=1783 sentpkt=92 rcvdpkt=1
+date=2014-04-30 time=18:31:24  srcip=192.168.1.1 srcport=27826 dstip=74.125.224.72 dstport=443 dstcountry="Brazil"  proto=17 sentbyte=3432 rcvdbyte=113 sentpkt=19 rcvdpkt=22
+date=2014-04-30 time=19:14:00  srcip=192.168.1.100 srcport=15225 dstip=208.67.222.222 dstport=53 dstcountry="Germany"  proto=6 sentbyte=9364 rcvdbyte=2355 sentpkt=59 rcvdpkt=88
+date=2014-04-30 time=19:39:42  srcip=10.0.0.100 srcport=31642 dstip=172.16.0.1 dstport=110 dstcountry="Brazil"  proto=6 sentbyte=3983 rcvdbyte=481 sentpkt=6 rcvdpkt=49
+date=2014-04-30 time=19:39:51  srcip=192.168.1.1 srcport=1473 dstip=192.168.1.254 dstcountry="Japan" sentbyte=8979 rcvdbyte=5341 sentpkt=24 rcvdpkt=22
+date=2014-04-30 time=18:31:28  srcip=192.168.1.100 srcport=5049 dstip=172.16.0.1 dstport=25 dstcountry="Brazil"  proto=6 sentbyte=7409 rcvdbyte=9186 sentpkt=3 rcvdpkt=39
+date=2014-04-30 time=19:05:49  srcip=10.0.0.50 srcport=61065 dstip=208.67.222.222 dstport=110 dstcountry="India"  proto=17 sentbyte=7799 rcvdbyte=7331 sentpkt=11 rcvdpkt=6
+date=2014-04-30 time=18:31:30  srcip=192.168.1.50 srcport=12747 dstip=172.16.0.1 dstport=53 dstcountry="China"  proto=17 sentbyte=277 rcvdbyte=3404 sentpkt=63 rcvdpkt=39
+date=2014-04-30 time=19:40:27  srcip=192.168.1.100 srcport=30366 dstip=192.168.1.254 dstport=443 dstcountry="Japan"  proto=6 sentbyte=7258 rcvdbyte=4050 sentpkt=30 rcvdpkt=11
+date=2014-04-30 time=18:57:26  srcip=192.168.1.100 srcport=57385 dstip=208.67.222.222 dstport=8080 dstcountry="Japan"  proto=17 sentbyte=7735 rcvdbyte=4922 sentpkt=80 rcvdpkt=1
+date=2014-04-30 time=19:23:27  srcip=192.168.1.100 srcport=56591 dstip=192.168.1.254 dstport=21 dstcountry="China"  proto=17 sentbyte=4427 rcvdbyte=7498 sentpkt=90 rcvdpkt=81
+date=2014-04-30 time=19:40:54  srcip=10.0.0.100 srcport=27612 dstip=8.8.8.8 dstport=6379 dstcountry="United Kingdom"  proto=6 sentbyte=9159 rcvdbyte=4680 sentpkt=65 rcvdpkt=26
+date=2014-04-30 time=19:49:44  srcip=192.168.1.25 srcport=64989 dstip=74.125.224.72 dstport=25 dstcountry="India"  proto=17 sentbyte=1504 rcvdbyte=9869 sentpkt=65 rcvdpkt=70
+date=2014-04-30 time=19:15:06  srcip=10.0.0.100 srcport=25753 dstip=1.1.1.1 dstport=443 dstcountry="United States"  proto=6 sentbyte=4482 rcvdbyte=7151 sentpkt=72 rcvdpkt=40
+date=2014-04-30 time=19:06:29  srcip=192.168.1.25 srcport=45588 dstip=192.168.1.254 dstport=143 dstcountry="Brazil"  proto=6 sentbyte=9306 rcvdbyte=771 sentpkt=96 rcvdpkt=21
+date=2014-04-30 time=18:40:22  srcip=192.168.1.1 srcport=32212 dstip=74.125.224.72 dstport=110 dstcountry="Japan"  proto=17 sentbyte=6163 rcvdbyte=6575 sentpkt=92 rcvdpkt=95
+date=2014-04-30 time=19:06:39  srcip=10.0.0.100 srcport=40740 dstip=192.168.1.254 dstport=5432 dstcountry="Brazil"  proto=6 sentbyte=6564 rcvdbyte=4387 sentpkt=79 rcvdpkt=67
+date=2014-04-30 time=19:06:44  srcip=192.168.1.50 srcport=7079 dstip=172.16.0.1 dstport=21 dstcountry="Brazil"  proto=17 sentbyte=2997 rcvdbyte=5910 sentpkt=95 rcvdpkt=14
+date=2014-04-30 time=18:31:41  srcip=192.168.1.1 srcport=63659 dstip=172.16.0.1 dstport=80 dstcountry="Japan"  proto=6 sentbyte=6922 rcvdbyte=6092 sentpkt=89 rcvdpkt=12
+date=2014-04-30 time=19:42:06  srcip=192.168.1.1 srcport=56628 dstip=208.67.222.222 dstport=143 dstcountry="China"  proto=6 sentbyte=5713 rcvdbyte=3555 sentpkt=47 rcvdpkt=28
+date=2014-04-30 time=19:06:59  srcip=10.0.0.100 srcport=63504 dstip=10.0.0.1 dstport=80 dstcountry="Brazil"  proto=17 sentbyte=2116 rcvdbyte=5184 sentpkt=18 rcvdpkt=83
+date=2014-04-30 time=18:40:34  srcip=192.168.1.1 srcport=3964 dstip=172.16.0.1 dstport=143 dstcountry="China"  proto=17 sentbyte=3866 rcvdbyte=2452 sentpkt=6 rcvdpkt=100
+date=2014-04-30 time=19:51:24  srcip=192.168.1.100 srcport=56183 dstip=208.67.222.222 dstport=6379 dstcountry="Germany"  proto=17 sentbyte=4875 rcvdbyte=9370 sentpkt=78 rcvdpkt=78
+date=2014-04-30 time=19:33:50  srcip=192.168.1.50 srcport=28501 dstip=208.67.222.222 dstport=22 dstcountry="Canada"  proto=17 sentbyte=1488 rcvdbyte=2054 sentpkt=27 rcvdpkt=15
+date=2014-04-30 time=18:40:40  srcip=10.0.0.50 srcport=47483 dstip=151.101.1.69 dstport=443 dstcountry="Canada"  proto=6 sentbyte=8267 rcvdbyte=7566 sentpkt=77 rcvdpkt=100
+date=2014-04-30 time=19:25:12  srcip=192.168.1.1 srcport=12975 dstip=10.0.0.1 dstport=25 dstcountry="United Kingdom"  proto=17 sentbyte=7220 rcvdbyte=4782 sentpkt=61 rcvdpkt=60
+date=2014-04-30 time=19:34:14  srcip=192.168.1.1 srcport=56545 dstip=172.16.0.1 dstport=53 dstcountry="Brazil"  proto=17 sentbyte=8926 rcvdbyte=9245 sentpkt=96 rcvdpkt=76
+date=2014-04-30 time=18:31:50  srcip=192.168.1.1 srcport=28505 dstip=172.16.0.1 dstport=3306 dstcountry="United Kingdom"  proto=6 sentbyte=9221 rcvdbyte=3188 sentpkt=17 rcvdpkt=59
+date=2014-04-30 time=19:16:36  srcip=192.168.1.100 srcport=23456 dstip=172.16.0.1 dstport=6379 dstcountry="United Kingdom"  proto=6 sentbyte=2717 rcvdbyte=1713 sentpkt=52 rcvdpkt=96
+date=2014-04-30 time=18:31:52  srcip=10.0.0.100 srcport=33039 dstip=8.8.8.8 dstport=53 dstcountry="Canada"  proto=6 sentbyte=63 rcvdbyte=7971 sentpkt=80 rcvdpkt=22
+date=2014-04-30 time=19:34:46  srcip=192.168.1.1 srcport=17351 dstip=208.67.222.222 dstport=25 dstcountry="United Kingdom"  proto=17 sentbyte=1188 rcvdbyte=3259 sentpkt=63 rcvdpkt=49
+date=2014-04-30 time=18:40:54  srcip=192.168.1.1 srcport=56652 dstip=10.0.0.1 dstport=8080 dstcountry="Brazil"  proto=6 sentbyte=2981 rcvdbyte=2218 sentpkt=90 rcvdpkt=48
+date=2014-04-30 time=19:07:59  srcip=10.0.0.100 srcport=59802 dstip=1.1.1.1 dstport=5432 dstcountry="United Kingdom"  proto=6 sentbyte=7729 rcvdbyte=3147 sentpkt=26 rcvdpkt=17
+date=2014-04-30 time=19:53:14  srcip=10.0.0.100 srcport=14331 dstip=192.168.1.254 dstport=143 dstcountry="Japan"  proto=6 sentbyte=6107 rcvdbyte=4924 sentpkt=70 rcvdpkt=44
+date=2014-04-30 time=19:44:21  srcip=192.168.1.25 srcport=19050 dstip=8.8.8.8 dstport=3306 dstcountry="China"  proto=17 sentbyte=3721 rcvdbyte=2675 sentpkt=65 rcvdpkt=77
+date=2014-04-30 time=19:26:22  srcip=192.168.1.50 srcport=56288 dstip=1.1.1.1 dstcountry="Australia" sentbyte=5511 rcvdbyte=2958 sentpkt=29 rcvdpkt=27
+date=2014-04-30 time=19:26:29  srcip=10.0.0.50 srcport=13500 dstip=208.67.222.222 dstport=6379 dstcountry="United Kingdom"  proto=6 sentbyte=5349 rcvdbyte=1826 sentpkt=30 rcvdpkt=60
+date=2014-04-30 time=18:41:06  srcip=192.168.1.25 srcport=23248 dstip=74.125.224.72 dstport=3306 dstcountry="France"  proto=6 sentbyte=895 rcvdbyte=5822 sentpkt=88 rcvdpkt=10
+date=2014-04-30 time=19:44:57  srcip=192.168.1.1 srcport=49264 dstip=8.8.8.8 dstport=6379 dstcountry="Canada"  proto=6 sentbyte=6775 rcvdbyte=1142 sentpkt=53 rcvdpkt=72
+date=2014-04-30 time=19:08:34  srcip=10.0.0.100 srcport=29999 dstip=151.101.1.69 dstport=8080 dstcountry="India"  proto=17 sentbyte=8835 rcvdbyte=9475 sentpkt=38 rcvdpkt=95
+date=2014-04-30 time=19:26:57  srcip=192.168.1.100 srcport=11514 dstip=1.1.1.1 dstport=22 dstcountry="United States"  proto=6 sentbyte=4127 rcvdbyte=9259 sentpkt=37 rcvdpkt=83
+date=2014-04-30 time=19:08:44  srcip=192.168.1.1 srcport=63594 dstip=192.168.1.254 dstport=53 dstcountry="India"  proto=6 sentbyte=7315 rcvdbyte=5703 sentpkt=72 rcvdpkt=99
+date=2014-04-30 time=19:18:00  srcip=192.168.1.100 srcport=49468 dstip=192.168.1.254 dstport=443 dstcountry="Brazil"  proto=17 sentbyte=36 rcvdbyte=2372 sentpkt=8 rcvdpkt=3
+date=2014-04-30 time=18:32:06  srcip=192.168.1.50 srcport=19498 dstip=192.168.1.254 dstport=6379 dstcountry="China"  proto=6 sentbyte=3437 rcvdbyte=8147 sentpkt=27 rcvdpkt=2
+date=2014-04-30 time=19:18:12  srcip=192.168.1.1 srcport=40197 dstip=208.67.222.222 dstport=8080 dstcountry="China"  proto=6 sentbyte=9428 rcvdbyte=4690 sentpkt=2 rcvdpkt=41
+date=2014-04-30 time=19:55:14  srcip=10.0.0.100 srcport=39518 dstip=151.101.1.69 dstport=6379 dstcountry="Australia"  proto=17 sentbyte=1964 rcvdbyte=6296 sentpkt=83 rcvdpkt=46
+date=2014-04-30 time=19:09:09  srcip=192.168.1.100 srcport=26939 dstip=74.125.224.72 dstport=8080 dstcountry="Canada"  proto=17 sentbyte=3096 rcvdbyte=2986 sentpkt=40 rcvdpkt=8
+date=2014-04-30 time=18:50:42  srcip=192.168.1.1 srcport=14381 dstip=151.101.1.69 dstport=53 dstcountry="France"  proto=17 sentbyte=8686 rcvdbyte=6702 sentpkt=66 rcvdpkt=65
+date=2014-04-30 time=18:41:28  srcip=192.168.1.100 srcport=25590 dstip=172.16.0.1 dstport=6379 dstcountry="United Kingdom"  proto=6 sentbyte=8058 rcvdbyte=6028 sentpkt=45 rcvdpkt=81
+date=2014-04-30 time=18:50:48  srcip=10.0.0.100 srcport=14808 dstip=172.16.0.1 dstport=22 dstcountry="United Kingdom"  proto=6 sentbyte=7244 rcvdbyte=2945 sentpkt=54 rcvdpkt=97
+date=2014-04-30 time=18:50:51  srcip=10.0.0.100 srcport=31640 dstip=74.125.224.72 dstport=53 dstcountry="United States"  proto=17 sentbyte=157 rcvdbyte=8895 sentpkt=88 rcvdpkt=64
+date=2014-04-30 time=18:41:34  srcip=192.168.1.100 srcport=64696 dstip=8.8.8.8 dstport=8080 dstcountry="United States"  proto=17 sentbyte=9390 rcvdbyte=2885 sentpkt=90 rcvdpkt=3
+date=2014-04-30 time=18:50:57  srcip=10.0.0.50 srcport=58876 dstip=1.1.1.1 dstport=8080 dstcountry="United States"  proto=17 sentbyte=5003 rcvdbyte=5992 sentpkt=59 rcvdpkt=7
+date=2014-04-30 time=19:47:12  srcip=192.168.1.25 srcport=35326 dstip=192.168.1.254 dstport=25 dstcountry="France"  proto=6 sentbyte=8441 rcvdbyte=5660 sentpkt=84 rcvdpkt=68
+date=2014-04-30 time=19:56:44  srcip=192.168.1.50 srcport=54921 dstip=74.125.224.72 dstport=443 dstcountry="United Kingdom"  proto=17 sentbyte=2171 rcvdbyte=2798 sentpkt=11 rcvdpkt=11
+date=2014-04-30 time=18:32:18  srcip=192.168.1.1 srcport=62196 dstip=8.8.8.8 dstport=6379 dstcountry="Germany"  proto=17 sentbyte=5174 rcvdbyte=589 sentpkt=40 rcvdpkt=21
+date=2014-04-30 time=19:28:49  srcip=192.168.1.25 srcport=61176 dstip=172.16.0.1 dstport=443 dstcountry="Japan"  proto=17 sentbyte=7472 rcvdbyte=9419 sentpkt=65 rcvdpkt=58
+date=2014-04-30 time=19:00:38  srcip=10.0.0.100 srcport=2460 dstip=8.8.8.8 dstport=21 dstcountry="Brazil"  proto=17 sentbyte=8232 rcvdbyte=4035 sentpkt=21 rcvdpkt=82
+date=2014-04-30 time=18:51:15  srcip=192.168.1.25 srcport=34284 dstip=208.67.222.222 dstport=110 dstcountry="France"  proto=6 sentbyte=5413 rcvdbyte=8390 sentpkt=12 rcvdpkt=73
+date=2014-04-30 time=19:29:10  srcip=10.0.0.100 srcport=20346 dstip=151.101.1.69 dstport=22 dstcountry="United States"  proto=17 sentbyte=6615 rcvdbyte=5757 sentpkt=75 rcvdpkt=6
+date=2014-04-30 time=19:57:44  srcip=192.168.1.25 srcport=63535 dstip=8.8.8.8 dstport=21 dstcountry="France"  proto=6 sentbyte=8540 rcvdbyte=2977 sentpkt=8 rcvdpkt=70
+date=2014-04-30 time=19:48:24  srcip=10.0.0.50 srcport=31851 dstip=8.8.8.8 dstport=21 dstcountry="Japan"  proto=6 sentbyte=8856 rcvdbyte=8607 sentpkt=64 rcvdpkt=85
+date=2014-04-30 time=19:10:29  srcip=192.168.1.25 srcport=62056 dstip=172.16.0.1 dstport=80 dstcountry="Canada"  proto=17 sentbyte=6508 rcvdbyte=1888 sentpkt=31 rcvdpkt=10
+date=2014-04-30 time=18:41:58  srcip=192.168.1.50 srcport=36307 dstip=10.0.0.1 dstport=5432 dstcountry="China"  proto=17 sentbyte=2771 rcvdbyte=2244 sentpkt=92 rcvdpkt=57
+date=2014-04-30 time=19:20:12  srcip=10.0.0.100 srcport=57425 dstip=1.1.1.1 dstport=110 dstcountry="United Kingdom"  proto=6 sentbyte=7351 rcvdbyte=6133 sentpkt=95 rcvdpkt=46
+date=2014-04-30 time=19:10:44  srcip=10.0.0.100 srcport=24043 dstip=74.125.224.72 dstcountry="Brazil" sentbyte=9047 rcvdbyte=9691 sentpkt=57 rcvdpkt=4
+date=2014-04-30 time=19:10:49  srcip=192.168.1.25 srcport=48159 dstip=74.125.224.72 dstport=25 dstcountry="Brazil"  proto=17 sentbyte=4349 rcvdbyte=5527 sentpkt=77 rcvdpkt=11
+date=2014-04-30 time=19:20:30  srcip=192.168.1.100 srcport=46770 dstip=192.168.1.254 dstport=3306 dstcountry="Brazil"  proto=6 sentbyte=4980 rcvdbyte=3926 sentpkt=79 rcvdpkt=70
+date=2014-04-30 time=18:32:31  srcip=10.0.0.100 srcport=63764 dstip=74.125.224.72 dstport=443 dstcountry="Canada"  proto=6 sentbyte=3457 rcvdbyte=1667 sentpkt=99 rcvdpkt=93
+date=2014-04-30 time=19:01:26  srcip=192.168.1.25 srcport=27431 dstip=10.0.0.1 dstport=3306 dstcountry="France"  proto=17 sentbyte=8568 rcvdbyte=9728 sentpkt=74 rcvdpkt=41
+date=2014-04-30 time=19:20:48  srcip=192.168.1.50 srcport=46185 dstip=192.168.1.254 dstport=143 dstcountry="France"  proto=6 sentbyte=2874 rcvdbyte=6506 sentpkt=60 rcvdpkt=100
+date=2014-04-30 time=19:40:14  srcip=192.168.1.25 srcport=23052 dstip=208.67.222.222 dstcountry="India" sentbyte=472 rcvdbyte=6197 sentpkt=84 rcvdpkt=21
+date=2014-04-30 time=18:51:57  srcip=10.0.0.50 srcport=45717 dstip=8.8.8.8 dstport=53 dstcountry="United Kingdom"  proto=6 sentbyte=4856 rcvdbyte=9879 sentpkt=8 rcvdpkt=15
+date=2014-04-30 time=19:01:42  srcip=10.0.0.100 srcport=30258 dstip=172.16.0.1 dstport=6379 dstcountry="India"  proto=17 sentbyte=552 rcvdbyte=2173 sentpkt=47 rcvdpkt=88
+date=2014-04-30 time=20:00:04  srcip=10.0.0.50 srcport=19980 dstip=192.168.1.254 dstport=53 dstcountry="Germany"  proto=17 sentbyte=6498 rcvdbyte=6650 sentpkt=52 rcvdpkt=78
+date=2014-04-30 time=18:32:38  srcip=192.168.1.25 srcport=33197 dstip=192.168.1.254 dstport=3306 dstcountry="France"  proto=17 sentbyte=2404 rcvdbyte=5626 sentpkt=86 rcvdpkt=70
+date=2014-04-30 time=19:31:09  srcip=192.168.1.1 srcport=38748 dstip=10.0.0.1 dstport=443 dstcountry="India"  proto=6 sentbyte=862 rcvdbyte=9485 sentpkt=96 rcvdpkt=46
+date=2014-04-30 time=20:00:34  srcip=192.168.1.1 srcport=64624 dstip=172.16.0.1 dstport=8080 dstcountry="Japan"  proto=6 sentbyte=1869 rcvdbyte=7192 sentpkt=59 rcvdpkt=93
+date=2014-04-30 time=19:41:10  srcip=192.168.1.50 srcport=7714 dstip=208.67.222.222 dstport=53 dstcountry="China"  proto=6 sentbyte=7499 rcvdbyte=5880 sentpkt=95 rcvdpkt=64
+date=2014-04-30 time=18:32:42  srcip=10.0.0.100 srcport=18715 dstip=208.67.222.222 dstcountry="India" sentbyte=6801 rcvdbyte=8871 sentpkt=92 rcvdpkt=44
+date=2014-04-30 time=19:51:15  srcip=192.168.1.100 srcport=55522 dstip=208.67.222.222 dstport=6379 dstcountry="India"  proto=17 sentbyte=6256 rcvdbyte=233 sentpkt=8 rcvdpkt=53
+date=2014-04-30 time=19:31:44  srcip=192.168.1.25 srcport=19310 dstip=74.125.224.72 dstcountry="France" sentbyte=4439 rcvdbyte=8197 sentpkt=21 rcvdpkt=67
+date=2014-04-30 time=19:31:51  srcip=192.168.1.1 srcport=53105 dstip=192.168.1.254 dstport=3306 dstcountry="Australia"  proto=6 sentbyte=1547 rcvdbyte=1572 sentpkt=18 rcvdpkt=63
+date=2014-04-30 time=18:32:46  srcip=192.168.1.1 srcport=36196 dstip=10.0.0.1 dstport=5432 dstcountry="Canada"  proto=17 sentbyte=9900 rcvdbyte=4405 sentpkt=3 rcvdpkt=61
+date=2014-04-30 time=18:32:47  srcip=192.168.1.100 srcport=7626 dstip=10.0.0.1 dstport=143 dstcountry="Canada"  proto=6 sentbyte=9556 rcvdbyte=8117 sentpkt=37 rcvdpkt=74
+date=2014-04-30 time=18:32:48  srcip=192.168.1.1 srcport=16069 dstip=8.8.8.8 dstport=22 dstcountry="India"  proto=17 sentbyte=5414 rcvdbyte=222 sentpkt=74 rcvdpkt=44
+date=2014-04-30 time=18:52:39  srcip=192.168.1.1 srcport=43713 dstip=172.16.0.1 dstport=25 dstcountry="Canada"  proto=17 sentbyte=7853 rcvdbyte=799 sentpkt=65 rcvdpkt=28
+date=2014-04-30 time=18:52:42  srcip=192.168.1.50 srcport=21497 dstip=74.125.224.72 dstcountry="Japan" sentbyte=8155 rcvdbyte=4346 sentpkt=43 rcvdpkt=29
+date=2014-04-30 time=19:42:30  srcip=192.168.1.25 srcport=11425 dstip=151.101.1.69 dstport=3306 dstcountry="Germany"  proto=6 sentbyte=2370 rcvdbyte=6268 sentpkt=54 rcvdpkt=27
+date=2014-04-30 time=19:22:42  srcip=192.168.1.50 srcport=3894 dstip=172.16.0.1 dstport=6379 dstcountry="Canada"  proto=6 sentbyte=6063 rcvdbyte=1475 sentpkt=85 rcvdpkt=79
+date=2014-04-30 time=19:42:46  srcip=192.168.1.100 srcport=8113 dstip=151.101.1.69 dstport=53 dstcountry="Japan"  proto=17 sentbyte=402 rcvdbyte=3878 sentpkt=90 rcvdpkt=86
+date=2014-04-30 time=19:12:54  srcip=192.168.1.50 srcport=56103 dstip=8.8.8.8 dstport=53 dstcountry="France"  proto=6 sentbyte=9934 rcvdbyte=8763 sentpkt=46 rcvdpkt=46
+date=2014-04-30 time=19:43:02  srcip=192.168.1.100 srcport=50819 dstip=151.101.1.69 dstport=53 dstcountry="France"  proto=17 sentbyte=2733 rcvdbyte=4049 sentpkt=22 rcvdpkt=36
+date=2014-04-30 time=18:32:56  srcip=10.0.0.50 srcport=54846 dstip=151.101.1.69 dstport=6379 dstcountry="Japan"  proto=6 sentbyte=3694 rcvdbyte=7655 sentpkt=25 rcvdpkt=75
+date=2014-04-30 time=19:03:06  srcip=192.168.1.50 srcport=44996 dstip=208.67.222.222 dstcountry="Australia" sentbyte=3564 rcvdbyte=6648 sentpkt=30 rcvdpkt=65
+date=2014-04-30 time=18:43:02  srcip=10.0.0.100 srcport=51173 dstip=74.125.224.72 dstport=6379 dstcountry="Australia"  proto=6 sentbyte=3667 rcvdbyte=2314 sentpkt=63 rcvdpkt=56
+date=2014-04-30 time=19:23:24  srcip=192.168.1.25 srcport=15488 dstip=192.168.1.254 dstport=3306 dstcountry="United Kingdom"  proto=17 sentbyte=4597 rcvdbyte=4392 sentpkt=73 rcvdpkt=53
+date=2014-04-30 time=19:33:36  srcip=192.168.1.100 srcport=49506 dstip=8.8.8.8 dstport=3306 dstcountry="France"  proto=6 sentbyte=5932 rcvdbyte=3585 sentpkt=65 rcvdpkt=24
+date=2014-04-30 time=18:43:08  srcip=10.0.0.50 srcport=50795 dstip=1.1.1.1 dstport=3306 dstcountry="Germany"  proto=17 sentbyte=4365 rcvdbyte=903 sentpkt=16 rcvdpkt=98
+date=2014-04-30 time=19:13:34  srcip=10.0.0.100 srcport=27143 dstip=10.0.0.1 dstcountry="Australia" sentbyte=4720 rcvdbyte=9055 sentpkt=40 rcvdpkt=40
+date=2014-04-30 time=18:53:21  srcip=192.168.1.50 srcport=17584 dstip=208.67.222.222 dstport=6379 dstcountry="United Kingdom"  proto=17 sentbyte=2966 rcvdbyte=7070 sentpkt=3 rcvdpkt=76
+date=2014-04-30 time=20:04:34  srcip=192.168.1.1 srcport=61067 dstip=1.1.1.1 dstport=3306 dstcountry="Canada"  proto=17 sentbyte=8896 rcvdbyte=3307 sentpkt=89 rcvdpkt=2
+date=2014-04-30 time=18:53:27  srcip=10.0.0.100 srcport=38343 dstip=10.0.0.1 dstport=8080 dstcountry="Germany"  proto=17 sentbyte=7541 rcvdbyte=3384 sentpkt=49 rcvdpkt=49
+date=2014-04-30 time=19:44:30  srcip=10.0.0.100 srcport=4964 dstip=208.67.222.222 dstport=5432 dstcountry="Germany"  proto=6 sentbyte=2176 rcvdbyte=2769 sentpkt=76 rcvdpkt=42
+date=2014-04-30 time=19:24:12  srcip=192.168.1.1 srcport=62714 dstip=10.0.0.1 dstport=21 dstcountry="France"  proto=17 sentbyte=4057 rcvdbyte=9601 sentpkt=75 rcvdpkt=23
+date=2014-04-30 time=20:05:14  srcip=192.168.1.50 srcport=2783 dstip=8.8.8.8 dstport=25 dstcountry="Japan"  proto=17 sentbyte=9813 rcvdbyte=1498 sentpkt=34 rcvdpkt=22
+date=2014-04-30 time=18:53:39  srcip=192.168.1.25 srcport=63498 dstip=208.67.222.222 dstcountry="India" sentbyte=6856 rcvdbyte=8214 sentpkt=8 rcvdpkt=4
+date=2014-04-30 time=18:43:26  srcip=192.168.1.100 srcport=5275 dstip=151.101.1.69 dstport=6379 dstcountry="China"  proto=17 sentbyte=5982 rcvdbyte=5111 sentpkt=21 rcvdpkt=44
+date=2014-04-30 time=18:33:11  srcip=192.168.1.100 srcport=27743 dstip=8.8.8.8 dstcountry="United Kingdom" sentbyte=9087 rcvdbyte=6243 sentpkt=46 rcvdpkt=98
+date=2014-04-30 time=18:33:12  srcip=192.168.1.100 srcport=63023 dstip=10.0.0.1 dstport=6379 dstcountry="United Kingdom"  proto=6 sentbyte=5530 rcvdbyte=487 sentpkt=58 rcvdpkt=95
+date=2014-04-30 time=18:53:51  srcip=10.0.0.50 srcport=52729 dstip=10.0.0.1 dstport=80 dstcountry="Germany"  proto=17 sentbyte=7010 rcvdbyte=5405 sentpkt=86 rcvdpkt=39
+date=2014-04-30 time=19:35:14  srcip=192.168.1.25 srcport=52147 dstip=208.67.222.222 dstport=22 dstcountry="France"  proto=17 sentbyte=8946 rcvdbyte=1738 sentpkt=93 rcvdpkt=93
+date=2014-04-30 time=19:56:03  srcip=10.0.0.100 srcport=12757 dstip=192.168.1.254 dstport=53 dstcountry="China"  proto=17 sentbyte=8848 rcvdbyte=4252 sentpkt=30 rcvdpkt=52
+date=2014-04-30 time=19:25:06  srcip=10.0.0.50 srcport=55600 dstip=74.125.224.72 dstport=22 dstcountry="Japan"  proto=6 sentbyte=6318 rcvdbyte=1726 sentpkt=81 rcvdpkt=42
+date=2014-04-30 time=20:06:44  srcip=192.168.1.100 srcport=62394 dstip=8.8.8.8 dstport=6379 dstcountry="United States"  proto=6 sentbyte=7210 rcvdbyte=6879 sentpkt=68 rcvdpkt=49
+date=2014-04-30 time=18:43:42  srcip=192.168.1.50 srcport=57065 dstip=74.125.224.72 dstport=25 dstcountry="India"  proto=17 sentbyte=6311 rcvdbyte=6389 sentpkt=25 rcvdpkt=20
+date=2014-04-30 time=18:43:44  srcip=192.168.1.25 srcport=50979 dstip=192.168.1.254 dstcountry="Australia" sentbyte=5856 rcvdbyte=432 sentpkt=74 rcvdpkt=34
+date=2014-04-30 time=18:54:12  srcip=192.168.1.100 srcport=38598 dstip=192.168.1.254 dstcountry="United Kingdom" sentbyte=9351 rcvdbyte=4637 sentpkt=1 rcvdpkt=59
+date=2014-04-30 time=18:54:15  srcip=192.168.1.50 srcport=54527 dstip=1.1.1.1 dstport=443 dstcountry="France"  proto=6 sentbyte=3139 rcvdbyte=6273 sentpkt=9 rcvdpkt=59
+date=2014-04-30 time=19:15:14  srcip=192.168.1.25 srcport=17840 dstip=74.125.224.72 dstport=8080 dstcountry="Canada"  proto=17 sentbyte=6282 rcvdbyte=5859 sentpkt=83 rcvdpkt=52
+date=2014-04-30 time=20:07:44  srcip=192.168.1.50 srcport=64983 dstip=208.67.222.222 dstcountry="United Kingdom" sentbyte=6984 rcvdbyte=8158 sentpkt=64 rcvdpkt=48
+date=2014-04-30 time=19:04:54  srcip=192.168.1.100 srcport=26529 dstip=151.101.1.69 dstport=143 dstcountry="India"  proto=6 sentbyte=5112 rcvdbyte=9399 sentpkt=68 rcvdpkt=99
+date=2014-04-30 time=19:47:02  srcip=10.0.0.50 srcport=10298 dstip=74.125.224.72 dstport=22 dstcountry="United Kingdom"  proto=6 sentbyte=3717 rcvdbyte=5738 sentpkt=14 rcvdpkt=48
+date=2014-04-30 time=19:26:06  srcip=192.168.1.25 srcport=44840 dstip=10.0.0.1 dstport=443 dstcountry="United Kingdom"  proto=17 sentbyte=6450 rcvdbyte=7447 sentpkt=27 rcvdpkt=54
+date=2014-04-30 time=19:26:12  srcip=192.168.1.25 srcport=49510 dstip=1.1.1.1 dstport=3306 dstcountry="France"  proto=17 sentbyte=9067 rcvdbyte=1430 sentpkt=87 rcvdpkt=3
+date=2014-04-30 time=19:47:26  srcip=192.168.1.50 srcport=47604 dstip=172.16.0.1 dstport=443 dstcountry="Germany"  proto=6 sentbyte=5232 rcvdbyte=4814 sentpkt=94 rcvdpkt=58
+date=2014-04-30 time=18:44:04  srcip=10.0.0.100 srcport=35865 dstip=74.125.224.72 dstport=5432 dstcountry="China"  proto=6 sentbyte=2236 rcvdbyte=1555 sentpkt=11 rcvdpkt=35
+date=2014-04-30 time=19:58:18  srcip=192.168.1.50 srcport=37367 dstip=192.168.1.254 dstport=110 dstcountry="India"  proto=17 sentbyte=7119 rcvdbyte=3775 sentpkt=18 rcvdpkt=92
+date=2014-04-30 time=18:44:08  srcip=192.168.1.100 srcport=41242 dstip=172.16.0.1 dstcountry="Brazil" sentbyte=637 rcvdbyte=5146 sentpkt=9 rcvdpkt=100
+date=2014-04-30 time=19:26:42  srcip=10.0.0.100 srcport=46507 dstip=1.1.1.1 dstport=22 dstcountry="India"  proto=6 sentbyte=4042 rcvdbyte=3319 sentpkt=92 rcvdpkt=11
+date=2014-04-30 time=18:44:12  srcip=10.0.0.100 srcport=62169 dstip=8.8.8.8 dstcountry="Canada" sentbyte=3802 rcvdbyte=8652 sentpkt=97 rcvdpkt=76
+date=2014-04-30 time=18:44:14  srcip=10.0.0.50 srcport=50646 dstip=172.16.0.1 dstcountry="United States" sentbyte=5231 rcvdbyte=5283 sentpkt=71 rcvdpkt=17
+date=2014-04-30 time=19:27:00  srcip=192.168.1.25 srcport=39609 dstip=192.168.1.254 dstport=53 dstcountry="Japan"  proto=17 sentbyte=2207 rcvdbyte=2461 sentpkt=93 rcvdpkt=13
+date=2014-04-30 time=19:27:06  srcip=192.168.1.1 srcport=7875 dstip=208.67.222.222 dstport=25 dstcountry="Canada"  proto=6 sentbyte=7779 rcvdbyte=3091 sentpkt=65 rcvdpkt=51
+date=2014-04-30 time=19:05:46  srcip=192.168.1.1 srcport=50105 dstip=74.125.224.72 dstport=25 dstcountry="Japan"  proto=17 sentbyte=7700 rcvdbyte=3974 sentpkt=53 rcvdpkt=91
+date=2014-04-30 time=19:59:30  srcip=192.168.1.25 srcport=36396 dstip=1.1.1.1 dstport=3306 dstcountry="France"  proto=6 sentbyte=6402 rcvdbyte=4292 sentpkt=34 rcvdpkt=41
+date=2014-04-30 time=18:55:09  srcip=192.168.1.50 srcport=41956 dstip=10.0.0.1 dstcountry="France" sentbyte=4708 rcvdbyte=2523 sentpkt=70 rcvdpkt=9
+date=2014-04-30 time=19:59:48  srcip=192.168.1.1 srcport=52980 dstip=172.16.0.1 dstport=21 dstcountry="India"  proto=17 sentbyte=8455 rcvdbyte=8783 sentpkt=63 rcvdpkt=72
+date=2014-04-30 time=18:55:15  srcip=10.0.0.50 srcport=51517 dstip=192.168.1.254 dstport=22 dstcountry="Germany"  proto=17 sentbyte=6855 rcvdbyte=4889 sentpkt=99 rcvdpkt=58
+date=2014-04-30 time=19:38:30  srcip=192.168.1.100 srcport=36438 dstip=74.125.224.72 dstport=3306 dstcountry="Japan"  proto=17 sentbyte=2898 rcvdbyte=1408 sentpkt=37 rcvdpkt=72
+date=2014-04-30 time=19:06:10  srcip=10.0.0.50 srcport=49423 dstip=151.101.1.69 dstport=8080 dstcountry="China"  proto=6 sentbyte=7657 rcvdbyte=9430 sentpkt=71 rcvdpkt=90
+date=2014-04-30 time=19:17:04  srcip=10.0.0.100 srcport=17397 dstip=10.0.0.1 dstport=6379 dstcountry="Germany"  proto=17 sentbyte=9727 rcvdbyte=6725 sentpkt=24 rcvdpkt=45
+date=2014-04-30 time=18:55:27  srcip=192.168.1.50 srcport=24726 dstip=1.1.1.1 dstport=5432 dstcountry="Australia"  proto=6 sentbyte=4178 rcvdbyte=715 sentpkt=22 rcvdpkt=22
+date=2014-04-30 time=20:00:42  srcip=192.168.1.50 srcport=54834 dstip=172.16.0.1 dstport=8080 dstcountry="Germany"  proto=6 sentbyte=7940 rcvdbyte=6157 sentpkt=86 rcvdpkt=100
+date=2014-04-30 time=18:33:47  srcip=192.168.1.25 srcport=64796 dstip=74.125.224.72 dstport=53 dstcountry="Canada"  proto=17 sentbyte=2451 rcvdbyte=6910 sentpkt=52 rcvdpkt=52
+date=2014-04-30 time=20:01:00  srcip=10.0.0.50 srcport=32080 dstip=1.1.1.1 dstport=5432 dstcountry="United Kingdom"  proto=6 sentbyte=9542 rcvdbyte=6218 sentpkt=22 rcvdpkt=61
+date=2014-04-30 time=19:50:14  srcip=192.168.1.50 srcport=36150 dstip=1.1.1.1 dstport=21 dstcountry="China"  proto=6 sentbyte=6812 rcvdbyte=4728 sentpkt=32 rcvdpkt=32
+date=2014-04-30 time=19:17:34  srcip=10.0.0.100 srcport=18220 dstip=10.0.0.1 dstport=3306 dstcountry="United Kingdom"  proto=6 sentbyte=6555 rcvdbyte=2510 sentpkt=59 rcvdpkt=79
+date=2014-04-30 time=18:55:45  srcip=10.0.0.50 srcport=36553 dstip=151.101.1.69 dstport=8080 dstcountry="United Kingdom"  proto=6 sentbyte=9955 rcvdbyte=6253 sentpkt=15 rcvdpkt=49
+date=2014-04-30 time=19:28:42  srcip=192.168.1.1 srcport=32065 dstip=172.16.0.1 dstport=110 dstcountry="Japan"  proto=17 sentbyte=3767 rcvdbyte=9258 sentpkt=18 rcvdpkt=88
+date=2014-04-30 time=20:01:45  srcip=192.168.1.100 srcport=39856 dstip=151.101.1.69 dstport=8080 dstcountry="Brazil"  proto=6 sentbyte=1244 rcvdbyte=8025 sentpkt=51 rcvdpkt=63
+date=2014-04-30 time=19:39:54  srcip=192.168.1.1 srcport=21682 dstip=10.0.0.1 dstport=53 dstcountry="Brazil"  proto=6 sentbyte=7646 rcvdbyte=1275 sentpkt=42 rcvdpkt=85
+date=2014-04-30 time=18:33:55  srcip=192.168.1.1 srcport=8891 dstip=1.1.1.1 dstport=443 dstcountry="France"  proto=17 sentbyte=6209 rcvdbyte=7083 sentpkt=1 rcvdpkt=83
+date=2014-04-30 time=20:13:14  srcip=192.168.1.1 srcport=12399 dstip=172.16.0.1 dstport=25 dstcountry="India"  proto=6 sentbyte=9339 rcvdbyte=2731 sentpkt=54 rcvdpkt=72
+date=2014-04-30 time=19:07:06  srcip=192.168.1.100 srcport=18554 dstip=208.67.222.222 dstport=443 dstcountry="United Kingdom"  proto=17 sentbyte=6787 rcvdbyte=9965 sentpkt=5 rcvdpkt=9
+date=2014-04-30 time=19:40:22  srcip=10.0.0.50 srcport=38323 dstip=192.168.1.254 dstport=3306 dstcountry="France"  proto=17 sentbyte=9037 rcvdbyte=133 sentpkt=87 rcvdpkt=84
+date=2014-04-30 time=19:07:14  srcip=192.168.1.25 srcport=47604 dstip=8.8.8.8 dstport=443 dstcountry="Canada"  proto=6 sentbyte=2952 rcvdbyte=1649 sentpkt=43 rcvdpkt=33
+date=2014-04-30 time=18:45:06  srcip=192.168.1.1 srcport=60935 dstip=1.1.1.1 dstport=443 dstcountry="Germany"  proto=17 sentbyte=2174 rcvdbyte=9048 sentpkt=52 rcvdpkt=93
+date=2014-04-30 time=20:14:04  srcip=192.168.1.50 srcport=2523 dstip=1.1.1.1 dstport=21 dstcountry="United Kingdom"  proto=17 sentbyte=3514 rcvdbyte=4740 sentpkt=3 rcvdpkt=8
+date=2014-04-30 time=20:14:14  srcip=192.168.1.50 srcport=52652 dstip=1.1.1.1 dstport=5432 dstcountry="China"  proto=6 sentbyte=9894 rcvdbyte=2812 sentpkt=20 rcvdpkt=20
+date=2014-04-30 time=18:34:03  srcip=192.168.1.50 srcport=19734 dstip=74.125.224.72 dstcountry="India" sentbyte=7130 rcvdbyte=3812 sentpkt=91 rcvdpkt=31
+date=2014-04-30 time=18:56:24  srcip=192.168.1.25 srcport=23300 dstip=192.168.1.254 dstport=22 dstcountry="United States"  proto=6 sentbyte=8013 rcvdbyte=8226 sentpkt=30 rcvdpkt=38
+date=2014-04-30 time=18:45:16  srcip=10.0.0.100 srcport=49658 dstip=1.1.1.1 dstport=21 dstcountry="Brazil"  proto=17 sentbyte=3064 rcvdbyte=4790 sentpkt=92 rcvdpkt=6
+date=2014-04-30 time=19:18:54  srcip=10.0.0.100 srcport=58051 dstip=172.16.0.1 dstport=443 dstcountry="Australia"  proto=6 sentbyte=2971 rcvdbyte=1397 sentpkt=9 rcvdpkt=72
+date=2014-04-30 time=19:41:25  srcip=192.168.1.50 srcport=23387 dstip=208.67.222.222 dstport=25 dstcountry="Germany"  proto=6 sentbyte=704 rcvdbyte=3155 sentpkt=49 rcvdpkt=49
+date=2014-04-30 time=20:15:14  srcip=192.168.1.25 srcport=42053 dstip=10.0.0.1 dstport=6379 dstcountry="Japan"  proto=6 sentbyte=2890 rcvdbyte=6458 sentpkt=38 rcvdpkt=73
+date=2014-04-30 time=19:07:54  srcip=192.168.1.1 srcport=4210 dstip=172.16.0.1 dstport=443 dstcountry="Japan"  proto=17 sentbyte=9389 rcvdbyte=2498 sentpkt=12 rcvdpkt=96
+date=2014-04-30 time=20:15:34  srcip=10.0.0.100 srcport=33860 dstip=208.67.222.222 dstport=443 dstcountry="United Kingdom"  proto=17 sentbyte=5490 rcvdbyte=8031 sentpkt=71 rcvdpkt=45
+date=2014-04-30 time=20:04:27  srcip=192.168.1.50 srcport=26064 dstip=10.0.0.1 dstcountry="United Kingdom" sentbyte=4514 rcvdbyte=7092 sentpkt=35 rcvdpkt=75
+date=2014-04-30 time=19:30:42  srcip=192.168.1.1 srcport=1933 dstip=10.0.0.1 dstport=22 dstcountry="United Kingdom"  proto=17 sentbyte=2505 rcvdbyte=1483 sentpkt=87 rcvdpkt=81
+date=2014-04-30 time=19:53:26  srcip=192.168.1.100 srcport=43101 dstip=10.0.0.1 dstport=53 dstcountry="France"  proto=17 sentbyte=466 rcvdbyte=6512 sentpkt=81 rcvdpkt=77
+date=2014-04-30 time=19:42:14  srcip=10.0.0.50 srcport=22471 dstip=151.101.1.69 dstport=21 dstcountry="China"  proto=6 sentbyte=3313 rcvdbyte=6391 sentpkt=13 rcvdpkt=86
+date=2014-04-30 time=19:19:39  srcip=192.168.1.50 srcport=53896 dstip=192.168.1.254 dstport=5432 dstcountry="France"  proto=17 sentbyte=8356 rcvdbyte=5887 sentpkt=38 rcvdpkt=25
+date=2014-04-30 time=19:42:28  srcip=192.168.1.25 srcport=4200 dstip=172.16.0.1 dstport=110 dstcountry="Germany"  proto=17 sentbyte=349 rcvdbyte=5875 sentpkt=3 rcvdpkt=89
+date=2014-04-30 time=18:45:40  srcip=192.168.1.25 srcport=41904 dstip=192.168.1.254 dstport=80 dstcountry="Japan"  proto=17 sentbyte=9145 rcvdbyte=9246 sentpkt=3 rcvdpkt=50
+date=2014-04-30 time=19:54:06  srcip=192.168.1.25 srcport=2199 dstip=172.16.0.1 dstport=21 dstcountry="United Kingdom"  proto=17 sentbyte=9877 rcvdbyte=6069 sentpkt=35 rcvdpkt=24
+date=2014-04-30 time=19:31:24  srcip=192.168.1.1 srcport=43068 dstip=1.1.1.1 dstport=110 dstcountry="Brazil"  proto=6 sentbyte=2539 rcvdbyte=9974 sentpkt=91 rcvdpkt=97
+date=2014-04-30 time=19:54:22  srcip=10.0.0.50 srcport=9327 dstip=172.16.0.1 dstport=6379 dstcountry="France"  proto=17 sentbyte=3460 rcvdbyte=470 sentpkt=14 rcvdpkt=30
+date=2014-04-30 time=18:57:15  srcip=10.0.0.50 srcport=8490 dstip=1.1.1.1 dstport=53 dstcountry="France"  proto=17 sentbyte=3396 rcvdbyte=6276 sentpkt=46 rcvdpkt=94
+date=2014-04-30 time=20:06:06  srcip=192.168.1.100 srcport=29283 dstip=151.101.1.69 dstport=143 dstcountry="United Kingdom"  proto=6 sentbyte=5260 rcvdbyte=7968 sentpkt=21 rcvdpkt=43
+date=2014-04-30 time=19:43:17  srcip=10.0.0.100 srcport=63199 dstip=172.16.0.1 dstport=110 dstcountry="United States"  proto=6 sentbyte=6471 rcvdbyte=4998 sentpkt=95 rcvdpkt=57
+date=2014-04-30 time=19:31:54  srcip=10.0.0.50 srcport=21830 dstip=10.0.0.1 dstport=53 dstcountry="France"  proto=17 sentbyte=5752 rcvdbyte=7413 sentpkt=93 rcvdpkt=48
+date=2014-04-30 time=18:45:56  srcip=10.0.0.50 srcport=18955 dstip=172.16.0.1 dstport=25 dstcountry="United Kingdom"  proto=6 sentbyte=8005 rcvdbyte=8958 sentpkt=24 rcvdpkt=99
+date=2014-04-30 time=19:55:10  srcip=192.168.1.100 srcport=49733 dstip=172.16.0.1 dstcountry="France" sentbyte=8967 rcvdbyte=4454 sentpkt=31 rcvdpkt=3
+date=2014-04-30 time=18:34:27  srcip=192.168.1.50 srcport=57832 dstip=10.0.0.1 dstport=25 dstcountry="Germany"  proto=17 sentbyte=2809 rcvdbyte=178 sentpkt=51 rcvdpkt=90
+date=2014-04-30 time=19:43:52  srcip=192.168.1.1 srcport=4482 dstip=1.1.1.1 dstport=5432 dstcountry="Brazil"  proto=17 sentbyte=9157 rcvdbyte=783 sentpkt=41 rcvdpkt=20
+date=2014-04-30 time=19:09:14  srcip=10.0.0.50 srcport=6524 dstip=192.168.1.254 dstport=25 dstcountry="China"  proto=6 sentbyte=7220 rcvdbyte=4854 sentpkt=41 rcvdpkt=28
+date=2014-04-30 time=20:18:54  srcip=10.0.0.100 srcport=44901 dstip=172.16.0.1 dstport=53 dstcountry="Japan"  proto=6 sentbyte=4092 rcvdbyte=2178 sentpkt=45 rcvdpkt=27
+date=2014-04-30 time=18:34:31  srcip=192.168.1.25 srcport=38666 dstip=151.101.1.69 dstcountry="France" sentbyte=6299 rcvdbyte=4425 sentpkt=90 rcvdpkt=27
+date=2014-04-30 time=19:55:58  srcip=192.168.1.50 srcport=3979 dstip=192.168.1.254 dstcountry="Canada" sentbyte=9580 rcvdbyte=4106 sentpkt=41 rcvdpkt=45
+date=2014-04-30 time=18:57:51  srcip=192.168.1.50 srcport=49616 dstip=1.1.1.1 dstport=110 dstcountry="Australia"  proto=6 sentbyte=3495 rcvdbyte=7545 sentpkt=68 rcvdpkt=40
+date=2014-04-30 time=19:09:34  srcip=192.168.1.50 srcport=50389 dstip=172.16.0.1 dstport=8080 dstcountry="Japan"  proto=6 sentbyte=5494 rcvdbyte=25 sentpkt=13 rcvdpkt=18
+date=2014-04-30 time=19:44:41  srcip=10.0.0.100 srcport=12542 dstip=74.125.224.72 dstport=21 dstcountry="France"  proto=17 sentbyte=4259 rcvdbyte=4451 sentpkt=68 rcvdpkt=65
+date=2014-04-30 time=19:21:24  srcip=192.168.1.50 srcport=37836 dstip=8.8.8.8 dstport=6379 dstcountry="Canada"  proto=6 sentbyte=1889 rcvdbyte=1729 sentpkt=87 rcvdpkt=86
+date=2014-04-30 time=20:20:04  srcip=192.168.1.1 srcport=56042 dstip=10.0.0.1 dstport=110 dstcountry="India"  proto=6 sentbyte=1093 rcvdbyte=414 sentpkt=52 rcvdpkt=96
+date=2014-04-30 time=20:20:14  srcip=192.168.1.100 srcport=17782 dstip=208.67.222.222 dstport=80 dstcountry="Australia"  proto=17 sentbyte=3658 rcvdbyte=7461 sentpkt=82 rcvdpkt=77
+date=2014-04-30 time=18:34:39  srcip=10.0.0.50 srcport=31213 dstip=192.168.1.254 dstport=110 dstcountry="China"  proto=6 sentbyte=746 rcvdbyte=9265 sentpkt=64 rcvdpkt=75
+date=2014-04-30 time=19:57:02  srcip=10.0.0.100 srcport=40476 dstip=172.16.0.1 dstport=53 dstcountry="Brazil"  proto=17 sentbyte=2429 rcvdbyte=2895 sentpkt=33 rcvdpkt=16
+date=2014-04-30 time=18:58:15  srcip=192.168.1.25 srcport=14603 dstip=8.8.8.8 dstport=8080 dstcountry="Canada"  proto=17 sentbyte=4056 rcvdbyte=1786 sentpkt=22 rcvdpkt=8
+date=2014-04-30 time=18:34:42  srcip=10.0.0.100 srcport=23304 dstip=10.0.0.1 dstport=25 dstcountry="Australia"  proto=6 sentbyte=3772 rcvdbyte=78 sentpkt=49 rcvdpkt=55
+date=2014-04-30 time=20:21:04  srcip=192.168.1.100 srcport=13609 dstip=208.67.222.222 dstport=6379 dstcountry="Australia"  proto=17 sentbyte=3340 rcvdbyte=8705 sentpkt=51 rcvdpkt=24
+date=2014-04-30 time=18:34:44  srcip=10.0.0.100 srcport=39555 dstip=8.8.8.8 dstport=6379 dstcountry="France"  proto=6 sentbyte=1375 rcvdbyte=2085 sentpkt=76 rcvdpkt=4
+date=2014-04-30 time=19:57:42  srcip=192.168.1.1 srcport=50773 dstip=74.125.224.72 dstcountry="China" sentbyte=3861 rcvdbyte=2224 sentpkt=98 rcvdpkt=63
+date=2014-04-30 time=18:34:46  srcip=10.0.0.50 srcport=1438 dstip=10.0.0.1 dstport=80 dstcountry="United Kingdom"  proto=17 sentbyte=5955 rcvdbyte=8685 sentpkt=30 rcvdpkt=61
+date=2014-04-30 time=19:46:05  srcip=10.0.0.50 srcport=33692 dstip=8.8.8.8 dstport=110 dstcountry="France"  proto=17 sentbyte=8547 rcvdbyte=9879 sentpkt=11 rcvdpkt=75
+date=2014-04-30 time=19:46:12  srcip=192.168.1.1 srcport=42464 dstip=74.125.224.72 dstport=6379 dstcountry="Canada"  proto=17 sentbyte=7374 rcvdbyte=4634 sentpkt=32 rcvdpkt=30
+date=2014-04-30 time=18:34:49  srcip=10.0.0.100 srcport=36291 dstip=8.8.8.8 dstport=8080 dstcountry="United Kingdom"  proto=6 sentbyte=6144 rcvdbyte=8708 sentpkt=56 rcvdpkt=51
+date=2014-04-30 time=18:34:50  srcip=192.168.1.50 srcport=45283 dstip=192.168.1.254 dstport=143 dstcountry="United States"  proto=6 sentbyte=9122 rcvdbyte=2336 sentpkt=14 rcvdpkt=14
+date=2014-04-30 time=20:22:24  srcip=192.168.1.25 srcport=14944 dstip=192.168.1.254 dstport=80 dstcountry="Australia"  proto=17 sentbyte=3784 rcvdbyte=8231 sentpkt=96 rcvdpkt=37
+date=2014-04-30 time=19:10:46  srcip=10.0.0.100 srcport=48704 dstip=208.67.222.222 dstport=5432 dstcountry="Brazil"  proto=17 sentbyte=2600 rcvdbyte=5802 sentpkt=57 rcvdpkt=45
+date=2014-04-30 time=18:34:53  srcip=192.168.1.1 srcport=52797 dstip=8.8.8.8 dstport=443 dstcountry="Germany"  proto=17 sentbyte=4695 rcvdbyte=5169 sentpkt=25 rcvdpkt=17
+date=2014-04-30 time=20:10:54  srcip=10.0.0.50 srcport=15534 dstip=8.8.8.8 dstport=6379 dstcountry="Germany"  proto=17 sentbyte=9136 rcvdbyte=76 sentpkt=23 rcvdpkt=10
+date=2014-04-30 time=18:58:57  srcip=192.168.1.100 srcport=1824 dstip=172.16.0.1 dstport=8080 dstcountry="Brazil"  proto=17 sentbyte=4978 rcvdbyte=1121 sentpkt=14 rcvdpkt=68
+date=2014-04-30 time=19:59:10  srcip=192.168.1.25 srcport=48085 dstip=8.8.8.8 dstcountry="Brazil" sentbyte=1609 rcvdbyte=4174 sentpkt=81 rcvdpkt=78
+date=2014-04-30 time=19:23:09  srcip=192.168.1.50 srcport=10891 dstip=1.1.1.1 dstport=25 dstcountry="France"  proto=17 sentbyte=523 rcvdbyte=4422 sentpkt=99 rcvdpkt=95
+date=2014-04-30 time=18:59:06  srcip=192.168.1.50 srcport=8935 dstip=151.101.1.69 dstport=53 dstcountry="United Kingdom"  proto=6 sentbyte=3720 rcvdbyte=94 sentpkt=34 rcvdpkt=82
+date=2014-04-30 time=19:47:29  srcip=10.0.0.100 srcport=33546 dstip=8.8.8.8 dstport=110 dstcountry="China"  proto=6 sentbyte=1657 rcvdbyte=8521 sentpkt=3 rcvdpkt=21
+date=2014-04-30 time=18:59:12  srcip=192.168.1.50 srcport=36209 dstip=151.101.1.69 dstport=110 dstcountry="Australia"  proto=6 sentbyte=4678 rcvdbyte=5266 sentpkt=61 rcvdpkt=72
+date=2014-04-30 time=19:35:36  srcip=10.0.0.100 srcport=62894 dstip=74.125.224.72 dstport=443 dstcountry="India"  proto=6 sentbyte=5081 rcvdbyte=85 sentpkt=50 rcvdpkt=53
+date=2014-04-30 time=18:47:10  srcip=10.0.0.100 srcport=59689 dstip=8.8.8.8 dstport=53 dstcountry="United Kingdom"  proto=6 sentbyte=764 rcvdbyte=1066 sentpkt=9 rcvdpkt=8
+date=2014-04-30 time=19:23:39  srcip=192.168.1.50 srcport=40216 dstip=151.101.1.69 dstcountry="Japan" sentbyte=9218 rcvdbyte=4214 sentpkt=86 rcvdpkt=60
+date=2014-04-30 time=19:11:34  srcip=10.0.0.100 srcport=7882 dstip=208.67.222.222 dstport=6379 dstcountry="Japan"  proto=17 sentbyte=6392 rcvdbyte=2024 sentpkt=55 rcvdpkt=9
+date=2014-04-30 time=20:12:33  srcip=192.168.1.100 srcport=31567 dstip=74.125.224.72 dstport=143 dstcountry="India"  proto=17 sentbyte=9510 rcvdbyte=4594 sentpkt=81 rcvdpkt=85
+date=2014-04-30 time=19:23:54  srcip=192.168.1.50 srcport=40389 dstip=1.1.1.1 dstport=443 dstcountry="Germany"  proto=6 sentbyte=6294 rcvdbyte=9952 sentpkt=18 rcvdpkt=13
+date=2014-04-30 time=19:36:12  srcip=192.168.1.25 srcport=44617 dstip=1.1.1.1 dstcountry="China" sentbyte=2482 rcvdbyte=8213 sentpkt=34 rcvdpkt=100
+date=2014-04-30 time=18:59:36  srcip=10.0.0.50 srcport=63710 dstip=1.1.1.1 dstport=25 dstcountry="Germany"  proto=6 sentbyte=5802 rcvdbyte=471 sentpkt=63 rcvdpkt=58
+date=2014-04-30 time=19:24:09  srcip=192.168.1.25 srcport=14794 dstip=192.168.1.254 dstport=21 dstcountry="Brazil"  proto=6 sentbyte=9031 rcvdbyte=5117 sentpkt=48 rcvdpkt=73
+date=2014-04-30 time=18:59:42  srcip=10.0.0.50 srcport=27600 dstip=208.67.222.222 dstport=25 dstcountry="France"  proto=17 sentbyte=4146 rcvdbyte=1314 sentpkt=12 rcvdpkt=73
+date=2014-04-30 time=20:25:44  srcip=192.168.1.1 srcport=33001 dstip=74.125.224.72 dstport=22 dstcountry="United Kingdom"  proto=6 sentbyte=8296 rcvdbyte=9878 sentpkt=33 rcvdpkt=41
+date=2014-04-30 time=20:01:18  srcip=10.0.0.100 srcport=48994 dstip=1.1.1.1 dstport=110 dstcountry="United States"  proto=6 sentbyte=4504 rcvdbyte=1255 sentpkt=4 rcvdpkt=52
+date=2014-04-30 time=18:59:51  srcip=192.168.1.25 srcport=48999 dstip=208.67.222.222 dstport=53 dstcountry="Germany"  proto=17 sentbyte=6077 rcvdbyte=5016 sentpkt=86 rcvdpkt=25
+date=2014-04-30 time=20:13:54  srcip=192.168.1.100 srcport=2325 dstip=10.0.0.1 dstport=21 dstcountry="United States"  proto=17 sentbyte=8617 rcvdbyte=928 sentpkt=34 rcvdpkt=40
+date=2014-04-30 time=19:12:18  srcip=192.168.1.25 srcport=3696 dstip=172.16.0.1 dstport=80 dstcountry="United States"  proto=17 sentbyte=3559 rcvdbyte=2524 sentpkt=99 rcvdpkt=72
+date=2014-04-30 time=19:12:22  srcip=192.168.1.50 srcport=23791 dstip=192.168.1.254 dstport=6379 dstcountry="United Kingdom"  proto=6 sentbyte=7900 rcvdbyte=2515 sentpkt=88 rcvdpkt=96
+date=2014-04-30 time=19:00:03  srcip=192.168.1.1 srcport=46356 dstip=192.168.1.254 dstport=53 dstcountry="Canada"  proto=6 sentbyte=7728 rcvdbyte=7114 sentpkt=87 rcvdpkt=1
+date=2014-04-30 time=20:14:30  srcip=192.168.1.100 srcport=55577 dstip=151.101.1.69 dstport=6379 dstcountry="United States"  proto=17 sentbyte=3035 rcvdbyte=2751 sentpkt=67 rcvdpkt=68
+date=2014-04-30 time=19:49:49  srcip=192.168.1.50 srcport=3587 dstip=74.125.224.72 dstport=5432 dstcountry="China"  proto=17 sentbyte=5894 rcvdbyte=3966 sentpkt=34 rcvdpkt=11
+date=2014-04-30 time=19:49:56  srcip=192.168.1.50 srcport=43500 dstip=151.101.1.69 dstport=110 dstcountry="Germany"  proto=6 sentbyte=221 rcvdbyte=7090 sentpkt=43 rcvdpkt=8
+date=2014-04-30 time=20:14:57  srcip=10.0.0.100 srcport=37378 dstip=208.67.222.222 dstport=110 dstcountry="Canada"  proto=17 sentbyte=4663 rcvdbyte=3680 sentpkt=55 rcvdpkt=6
+date=2014-04-30 time=20:15:06  srcip=10.0.0.50 srcport=24497 dstip=172.16.0.1 dstport=6379 dstcountry="Australia"  proto=6 sentbyte=7344 rcvdbyte=7161 sentpkt=8 rcvdpkt=45
+date=2014-04-30 time=19:00:21  srcip=192.168.1.1 srcport=50123 dstip=192.168.1.254 dstport=8080 dstcountry="Japan"  proto=17 sentbyte=2321 rcvdbyte=6966 sentpkt=37 rcvdpkt=73
+date=2014-04-30 time=18:47:54  srcip=10.0.0.50 srcport=41948 dstip=8.8.8.8 dstport=22 dstcountry="France"  proto=17 sentbyte=1513 rcvdbyte=6057 sentpkt=17 rcvdpkt=64
+date=2014-04-30 time=20:03:02  srcip=192.168.1.25 srcport=7157 dstip=10.0.0.1 dstport=5432 dstcountry="France"  proto=6 sentbyte=6725 rcvdbyte=8343 sentpkt=4 rcvdpkt=39
+date=2014-04-30 time=20:15:42  srcip=10.0.0.50 srcport=55365 dstip=74.125.224.72 dstport=53 dstcountry="India"  proto=17 sentbyte=3409 rcvdbyte=3380 sentpkt=99 rcvdpkt=5
+date=2014-04-30 time=20:28:24  srcip=192.168.1.50 srcport=32870 dstip=8.8.8.8 dstcountry="Japan" sentbyte=5045 rcvdbyte=6306 sentpkt=2 rcvdpkt=76
+date=2014-04-30 time=20:03:26  srcip=10.0.0.50 srcport=52023 dstip=192.168.1.254 dstport=25 dstcountry="Japan"  proto=6 sentbyte=3269 rcvdbyte=4019 sentpkt=32 rcvdpkt=85
+date=2014-04-30 time=19:00:39  srcip=10.0.0.50 srcport=36799 dstip=172.16.0.1 dstport=8080 dstcountry="Australia"  proto=6 sentbyte=3647 rcvdbyte=8413 sentpkt=83 rcvdpkt=73
+date=2014-04-30 time=20:03:42  srcip=192.168.1.25 srcport=33585 dstip=151.101.1.69 dstport=80 dstcountry="Japan"  proto=6 sentbyte=3426 rcvdbyte=3799 sentpkt=86 rcvdpkt=45
+date=2014-04-30 time=19:38:36  srcip=192.168.1.1 srcport=37042 dstip=10.0.0.1 dstport=21 dstcountry="United Kingdom"  proto=6 sentbyte=2933 rcvdbyte=656 sentpkt=10 rcvdpkt=83
+date=2014-04-30 time=19:26:04  srcip=10.0.0.100 srcport=21856 dstip=1.1.1.1 dstport=3306 dstcountry="Japan"  proto=6 sentbyte=4765 rcvdbyte=5695 sentpkt=73 rcvdpkt=34
+date=2014-04-30 time=20:04:06  srcip=10.0.0.100 srcport=50015 dstip=151.101.1.69 dstport=6379 dstcountry="Australia"  proto=17 sentbyte=9747 rcvdbyte=1755 sentpkt=50 rcvdpkt=34
+date=2014-04-30 time=19:00:54  srcip=192.168.1.100 srcport=17288 dstip=172.16.0.1 dstport=5432 dstcountry="Canada"  proto=17 sentbyte=1841 rcvdbyte=2654 sentpkt=5 rcvdpkt=16
+date=2014-04-30 time=19:26:19  srcip=192.168.1.1 srcport=50786 dstip=74.125.224.72 dstport=443 dstcountry="France"  proto=6 sentbyte=2455 rcvdbyte=8924 sentpkt=63 rcvdpkt=4
+date=2014-04-30 time=19:13:42  srcip=10.0.0.100 srcport=15767 dstip=172.16.0.1 dstport=80 dstcountry="China"  proto=17 sentbyte=3769 rcvdbyte=8727 sentpkt=23 rcvdpkt=51
+date=2014-04-30 time=20:04:38  srcip=192.168.1.100 srcport=54418 dstip=208.67.222.222 dstport=110 dstcountry="India"  proto=6 sentbyte=107 rcvdbyte=5431 sentpkt=17 rcvdpkt=69
+date=2014-04-30 time=20:30:14  srcip=192.168.1.25 srcport=20294 dstip=208.67.222.222 dstcountry="United Kingdom" sentbyte=2331 rcvdbyte=885 sentpkt=52 rcvdpkt=76
+date=2014-04-30 time=19:13:54  srcip=10.0.0.50 srcport=11475 dstip=1.1.1.1 dstport=21 dstcountry="France"  proto=6 sentbyte=4644 rcvdbyte=874 sentpkt=87 rcvdpkt=19
+date=2014-04-30 time=19:01:12  srcip=192.168.1.50 srcport=19747 dstip=192.168.1.254 dstport=21 dstcountry="India"  proto=6 sentbyte=1295 rcvdbyte=9904 sentpkt=38 rcvdpkt=55
+date=2014-04-30 time=19:52:23  srcip=10.0.0.100 srcport=33592 dstip=74.125.224.72 dstcountry="Japan" sentbyte=4720 rcvdbyte=9269 sentpkt=96 rcvdpkt=24
+date=2014-04-30 time=19:39:42  srcip=10.0.0.100 srcport=41236 dstip=74.125.224.72 dstport=143 dstcountry="Germany"  proto=17 sentbyte=122 rcvdbyte=531 sentpkt=43 rcvdpkt=47
+date=2014-04-30 time=20:18:15  srcip=192.168.1.25 srcport=24465 dstip=8.8.8.8 dstport=53 dstcountry="France"  proto=6 sentbyte=4242 rcvdbyte=2856 sentpkt=93 rcvdpkt=51
+date=2014-04-30 time=19:39:54  srcip=192.168.1.1 srcport=51159 dstip=8.8.8.8 dstport=6379 dstcountry="Canada"  proto=6 sentbyte=5073 rcvdbyte=7528 sentpkt=72 rcvdpkt=1
+date=2014-04-30 time=19:27:09  srcip=192.168.1.1 srcport=48834 dstip=151.101.1.69 dstcountry="Brazil" sentbyte=6998 rcvdbyte=2436 sentpkt=75 rcvdpkt=78
+date=2014-04-30 time=20:31:34  srcip=10.0.0.100 srcport=39282 dstip=192.168.1.254 dstport=6379 dstcountry="Japan"  proto=6 sentbyte=7852 rcvdbyte=450 sentpkt=24 rcvdpkt=15
+date=2014-04-30 time=20:18:51  srcip=192.168.1.50 srcport=60699 dstip=192.168.1.254 dstport=22 dstcountry="China"  proto=17 sentbyte=6703 rcvdbyte=6816 sentpkt=36 rcvdpkt=56
+date=2014-04-30 time=20:31:54  srcip=10.0.0.100 srcport=48867 dstip=8.8.8.8 dstport=5432 dstcountry="United States"  proto=17 sentbyte=5209 rcvdbyte=524 sentpkt=4 rcvdpkt=62
+date=2014-04-30 time=18:48:44  srcip=10.0.0.50 srcport=17079 dstip=172.16.0.1 dstport=53 dstcountry="France"  proto=17 sentbyte=3799 rcvdbyte=113 sentpkt=91 rcvdpkt=56
+date=2014-04-30 time=19:01:42  srcip=192.168.1.100 srcport=16714 dstip=172.16.0.1 dstport=80 dstcountry="Australia"  proto=6 sentbyte=2222 rcvdbyte=2822 sentpkt=35 rcvdpkt=49
+date=2014-04-30 time=19:27:39  srcip=192.168.1.25 srcport=41874 dstip=208.67.222.222 dstport=25 dstcountry="United Kingdom"  proto=6 sentbyte=5572 rcvdbyte=6628 sentpkt=45 rcvdpkt=80
+date=2014-04-30 time=20:32:34  srcip=10.0.0.50 srcport=53583 dstip=8.8.8.8 dstport=110 dstcountry="India"  proto=17 sentbyte=6686 rcvdbyte=5828 sentpkt=57 rcvdpkt=77
+date=2014-04-30 time=20:19:45  srcip=192.168.1.100 srcport=61917 dstip=1.1.1.1 dstport=53 dstcountry="Japan"  proto=17 sentbyte=6273 rcvdbyte=9329 sentpkt=17 rcvdpkt=90
+date=2014-04-30 time=19:40:54  srcip=192.168.1.100 srcport=24293 dstip=208.67.222.222 dstport=110 dstcountry="Australia"  proto=17 sentbyte=445 rcvdbyte=5113 sentpkt=90 rcvdpkt=43
+date=2014-04-30 time=20:07:02  srcip=192.168.1.100 srcport=19746 dstip=8.8.8.8 dstport=25 dstcountry="Germany"  proto=6 sentbyte=5751 rcvdbyte=2119 sentpkt=44 rcvdpkt=41
+date=2014-04-30 time=19:54:08  srcip=192.168.1.50 srcport=25816 dstip=10.0.0.1 dstport=80 dstcountry="China"  proto=17 sentbyte=1633 rcvdbyte=1314 sentpkt=13 rcvdpkt=93
+date=2014-04-30 time=19:15:06  srcip=192.168.1.50 srcport=19215 dstip=10.0.0.1 dstport=110 dstcountry="France"  proto=6 sentbyte=4240 rcvdbyte=8643 sentpkt=94 rcvdpkt=77
+date=2014-04-30 time=18:49:02  srcip=192.168.1.100 srcport=36312 dstip=172.16.0.1 dstport=443 dstcountry="India"  proto=6 sentbyte=1341 rcvdbyte=2297 sentpkt=1 rcvdpkt=78
+date=2014-04-30 time=19:02:09  srcip=192.168.1.100 srcport=10375 dstip=10.0.0.1 dstport=21 dstcountry="Canada"  proto=17 sentbyte=6138 rcvdbyte=1586 sentpkt=23 rcvdpkt=45
+date=2014-04-30 time=19:41:30  srcip=192.168.1.1 srcport=33501 dstip=1.1.1.1 dstport=110 dstcountry="France"  proto=17 sentbyte=7808 rcvdbyte=2233 sentpkt=94 rcvdpkt=32
+date=2014-04-30 time=19:41:36  srcip=192.168.1.1 srcport=36607 dstip=172.16.0.1 dstport=80 dstcountry="Brazil"  proto=6 sentbyte=6359 rcvdbyte=2515 sentpkt=89 rcvdpkt=20
+date=2014-04-30 time=19:54:50  srcip=192.168.1.25 srcport=54388 dstip=192.168.1.254 dstport=5432 dstcountry="Germany"  proto=6 sentbyte=2592 rcvdbyte=4417 sentpkt=72 rcvdpkt=80
+date=2014-04-30 time=19:28:39  srcip=10.0.0.100 srcport=10727 dstip=208.67.222.222 dstport=143 dstcountry="United States"  proto=17 sentbyte=7762 rcvdbyte=1041 sentpkt=10 rcvdpkt=79
+date=2014-04-30 time=19:55:04  srcip=192.168.1.25 srcport=38836 dstip=151.101.1.69 dstport=53 dstcountry="France"  proto=6 sentbyte=4384 rcvdbyte=8972 sentpkt=11 rcvdpkt=90
+date=2014-04-30 time=19:55:11  srcip=10.0.0.50 srcport=16006 dstip=74.125.224.72 dstport=25 dstcountry="France"  proto=17 sentbyte=6975 rcvdbyte=5925 sentpkt=89 rcvdpkt=63
+date=2014-04-30 time=20:08:30  srcip=192.168.1.100 srcport=33003 dstip=8.8.8.8 dstport=53 dstcountry="Australia"  proto=17 sentbyte=8808 rcvdbyte=6716 sentpkt=45 rcvdpkt=67
+date=2014-04-30 time=19:55:25  srcip=192.168.1.100 srcport=45614 dstip=74.125.224.72 dstport=22 dstcountry="India"  proto=6 sentbyte=4669 rcvdbyte=5617 sentpkt=57 rcvdpkt=97
+date=2014-04-30 time=19:29:04  srcip=192.168.1.100 srcport=50308 dstip=1.1.1.1 dstport=443 dstcountry="Brazil"  proto=6 sentbyte=2628 rcvdbyte=6375 sentpkt=99 rcvdpkt=50
+date=2014-04-30 time=18:36:09  srcip=192.168.1.50 srcport=14758 dstip=192.168.1.254 dstport=143 dstcountry="India"  proto=17 sentbyte=3016 rcvdbyte=3798 sentpkt=11 rcvdpkt=44
+date=2014-04-30 time=20:35:34  srcip=192.168.1.50 srcport=10951 dstip=192.168.1.254 dstport=6379 dstcountry="Australia"  proto=17 sentbyte=5902 rcvdbyte=3792 sentpkt=28 rcvdpkt=89
+date=2014-04-30 time=19:42:36  srcip=192.168.1.100 srcport=47310 dstip=172.16.0.1 dstport=3306 dstcountry="France"  proto=17 sentbyte=860 rcvdbyte=9945 sentpkt=93 rcvdpkt=26
+date=2014-04-30 time=19:29:24  srcip=192.168.1.100 srcport=50472 dstip=10.0.0.1 dstport=80 dstcountry="China"  proto=6 sentbyte=4044 rcvdbyte=3218 sentpkt=31 rcvdpkt=38
+date=2014-04-30 time=20:22:45  srcip=192.168.1.100 srcport=57357 dstip=151.101.1.69 dstport=25 dstcountry="Brazil"  proto=17 sentbyte=1348 rcvdbyte=6306 sentpkt=100 rcvdpkt=64
+date=2014-04-30 time=19:42:54  srcip=192.168.1.25 srcport=44263 dstip=192.168.1.254 dstport=21 dstcountry="United Kingdom"  proto=6 sentbyte=5777 rcvdbyte=7500 sentpkt=73 rcvdpkt=32
+date=2014-04-30 time=19:29:39  srcip=192.168.1.100 srcport=2089 dstip=10.0.0.1 dstport=5432 dstcountry="Canada"  proto=17 sentbyte=5448 rcvdbyte=3997 sentpkt=55 rcvdpkt=73
+date=2014-04-30 time=19:16:22  srcip=10.0.0.50 srcport=11645 dstip=74.125.224.72 dstport=5432 dstcountry="China"  proto=6 sentbyte=865 rcvdbyte=7813 sentpkt=66 rcvdpkt=51
+date=2014-04-30 time=19:56:35  srcip=192.168.1.50 srcport=3126 dstip=74.125.224.72 dstport=80 dstcountry="France"  proto=6 sentbyte=9973 rcvdbyte=1267 sentpkt=90 rcvdpkt=65
+date=2014-04-30 time=19:16:30  srcip=192.168.1.25 srcport=34746 dstip=8.8.8.8 dstport=25 dstcountry="China"  proto=6 sentbyte=1320 rcvdbyte=6874 sentpkt=15 rcvdpkt=7
+date=2014-04-30 time=20:10:14  srcip=192.168.1.100 srcport=2848 dstip=208.67.222.222 dstport=8080 dstcountry="Brazil"  proto=6 sentbyte=2472 rcvdbyte=3178 sentpkt=1 rcvdpkt=88
+date=2014-04-30 time=18:49:46  srcip=192.168.1.25 srcport=20524 dstip=8.8.8.8 dstport=443 dstcountry="Brazil"  proto=17 sentbyte=8967 rcvdbyte=2809 sentpkt=88 rcvdpkt=13
+date=2014-04-30 time=18:49:48  srcip=10.0.0.100 srcport=31919 dstip=208.67.222.222 dstport=80 dstcountry="United Kingdom"  proto=6 sentbyte=7054 rcvdbyte=5298 sentpkt=72 rcvdpkt=28
+date=2014-04-30 time=20:37:34  srcip=192.168.1.50 srcport=14638 dstip=8.8.8.8 dstport=3306 dstcountry="Canada"  proto=6 sentbyte=5526 rcvdbyte=7694 sentpkt=79 rcvdpkt=39
+date=2014-04-30 time=20:37:44  srcip=10.0.0.100 srcport=3092 dstip=1.1.1.1 dstport=110 dstcountry="France"  proto=17 sentbyte=770 rcvdbyte=3986 sentpkt=92 rcvdpkt=86
+date=2014-04-30 time=19:57:24  srcip=192.168.1.1 srcport=25529 dstip=8.8.8.8 dstport=53 dstcountry="India"  proto=6 sentbyte=8324 rcvdbyte=6687 sentpkt=94 rcvdpkt=31
+date=2014-04-30 time=19:44:00  srcip=10.0.0.100 srcport=20047 dstip=74.125.224.72 dstport=8080 dstcountry="United States"  proto=6 sentbyte=5902 rcvdbyte=9976 sentpkt=74 rcvdpkt=26
+date=2014-04-30 time=18:49:58  srcip=10.0.0.100 srcport=1794 dstip=172.16.0.1 dstport=8080 dstcountry="Germany"  proto=6 sentbyte=541 rcvdbyte=9717 sentpkt=46 rcvdpkt=10
+date=2014-04-30 time=18:36:27  srcip=192.168.1.1 srcport=12207 dstip=10.0.0.1 dstcountry="United Kingdom" sentbyte=2750 rcvdbyte=6812 sentpkt=14 rcvdpkt=23
+date=2014-04-30 time=20:38:34  srcip=192.168.1.25 srcport=56649 dstip=74.125.224.72 dstport=25 dstcountry="Japan"  proto=17 sentbyte=7841 rcvdbyte=7468 sentpkt=72 rcvdpkt=57
+date=2014-04-30 time=19:44:24  srcip=192.168.1.1 srcport=35938 dstip=151.101.1.69 dstport=25 dstcountry="United Kingdom"  proto=17 sentbyte=2435 rcvdbyte=8228 sentpkt=35 rcvdpkt=82
+date=2014-04-30 time=19:17:18  srcip=10.0.0.100 srcport=4699 dstip=151.101.1.69 dstport=22 dstcountry="China"  proto=6 sentbyte=2985 rcvdbyte=3238 sentpkt=47 rcvdpkt=11
+date=2014-04-30 time=18:36:31  srcip=10.0.0.100 srcport=52529 dstip=74.125.224.72 dstport=22 dstcountry="Japan"  proto=6 sentbyte=5849 rcvdbyte=442 sentpkt=52 rcvdpkt=92
+date=2014-04-30 time=20:11:58  srcip=10.0.0.100 srcport=54638 dstip=8.8.8.8 dstport=3306 dstcountry="Australia"  proto=17 sentbyte=3210 rcvdbyte=4297 sentpkt=88 rcvdpkt=50
+date=2014-04-30 time=18:50:12  srcip=192.168.1.1 srcport=47774 dstip=151.101.1.69 dstport=143 dstcountry="Japan"  proto=17 sentbyte=4640 rcvdbyte=1621 sentpkt=98 rcvdpkt=80
+date=2014-04-30 time=20:12:14  srcip=192.168.1.1 srcport=48358 dstip=151.101.1.69 dstport=443 dstcountry="United Kingdom"  proto=6 sentbyte=319 rcvdbyte=4117 sentpkt=11 rcvdpkt=90
+date=2014-04-30 time=19:45:00  srcip=192.168.1.100 srcport=1111 dstip=10.0.0.1 dstport=443 dstcountry="Brazil"  proto=17 sentbyte=6427 rcvdbyte=3730 sentpkt=78 rcvdpkt=50
+date=2014-04-30 time=19:31:24  srcip=192.168.1.25 srcport=11286 dstip=10.0.0.1 dstport=143 dstcountry="Germany"  proto=6 sentbyte=6810 rcvdbyte=446 sentpkt=64 rcvdpkt=4
+date=2014-04-30 time=19:04:03  srcip=192.168.1.50 srcport=53837 dstip=1.1.1.1 dstport=6379 dstcountry="France"  proto=17 sentbyte=4742 rcvdbyte=8949 sentpkt=62 rcvdpkt=88
+date=2014-04-30 time=19:45:18  srcip=10.0.0.50 srcport=51937 dstip=151.101.1.69 dstport=3306 dstcountry="United Kingdom"  proto=6 sentbyte=4985 rcvdbyte=7550 sentpkt=1 rcvdpkt=38
+date=2014-04-30 time=19:17:54  srcip=192.168.1.1 srcport=58316 dstip=1.1.1.1 dstport=3306 dstcountry="China"  proto=17 sentbyte=3054 rcvdbyte=9351 sentpkt=69 rcvdpkt=43
+date=2014-04-30 time=19:31:44  srcip=10.0.0.100 srcport=9761 dstip=74.125.224.72 dstport=443 dstcountry="United States"  proto=6 sentbyte=3135 rcvdbyte=2885 sentpkt=45 rcvdpkt=6
+date=2014-04-30 time=18:36:41  srcip=10.0.0.50 srcport=29337 dstip=192.168.1.254 dstport=143 dstcountry="India"  proto=6 sentbyte=5011 rcvdbyte=4170 sentpkt=3 rcvdpkt=5
+date=2014-04-30 time=20:13:18  srcip=192.168.1.25 srcport=43020 dstip=192.168.1.254 dstport=443 dstcountry="France"  proto=17 sentbyte=4863 rcvdbyte=5110 sentpkt=12 rcvdpkt=42
+date=2014-04-30 time=20:13:26  srcip=192.168.1.25 srcport=33461 dstip=8.8.8.8 dstport=443 dstcountry="India"  proto=6 sentbyte=5269 rcvdbyte=5274 sentpkt=74 rcvdpkt=22
+date=2014-04-30 time=18:50:34  srcip=10.0.0.50 srcport=15455 dstip=192.168.1.254 dstport=8080 dstcountry="China"  proto=6 sentbyte=1212 rcvdbyte=515 sentpkt=44 rcvdpkt=91
+date=2014-04-30 time=20:27:33  srcip=192.168.1.1 srcport=44650 dstip=172.16.0.1 dstport=53 dstcountry="China"  proto=17 sentbyte=2599 rcvdbyte=2103 sentpkt=65 rcvdpkt=54
+date=2014-04-30 time=19:32:14  srcip=192.168.1.100 srcport=29003 dstip=10.0.0.1 dstport=110 dstcountry="India"  proto=17 sentbyte=9509 rcvdbyte=692 sentpkt=18 rcvdpkt=73
+date=2014-04-30 time=20:27:51  srcip=10.0.0.100 srcport=31243 dstip=208.67.222.222 dstport=21 dstcountry="United Kingdom"  proto=6 sentbyte=8366 rcvdbyte=4623 sentpkt=23 rcvdpkt=47
+date=2014-04-30 time=20:41:54  srcip=192.168.1.25 srcport=12339 dstip=192.168.1.254 dstport=8080 dstcountry="Germany"  proto=6 sentbyte=6342 rcvdbyte=7641 sentpkt=11 rcvdpkt=34
+date=2014-04-30 time=19:18:34  srcip=192.168.1.1 srcport=51908 dstip=151.101.1.69 dstcountry="Brazil" sentbyte=8753 rcvdbyte=669 sentpkt=96 rcvdpkt=51
+date=2014-04-30 time=20:14:22  srcip=192.168.1.50 srcport=39220 dstip=192.168.1.254 dstport=110 dstcountry="United Kingdom"  proto=17 sentbyte=3219 rcvdbyte=8052 sentpkt=90 rcvdpkt=17
+date=2014-04-30 time=18:50:48  srcip=192.168.1.25 srcport=30950 dstip=208.67.222.222 dstport=8080 dstcountry="China"  proto=6 sentbyte=1061 rcvdbyte=9284 sentpkt=8 rcvdpkt=19
+date=2014-04-30 time=19:18:46  srcip=192.168.1.25 srcport=23344 dstip=192.168.1.254 dstcountry="United Kingdom" sentbyte=1177 rcvdbyte=5056 sentpkt=32 rcvdpkt=37
+date=2014-04-30 time=19:18:50  srcip=10.0.0.50 srcport=59720 dstip=1.1.1.1 dstport=8080 dstcountry="India"  proto=6 sentbyte=7649 rcvdbyte=7678 sentpkt=81 rcvdpkt=69
+date=2014-04-30 time=20:28:54  srcip=192.168.1.1 srcport=11562 dstip=192.168.1.254 dstport=21 dstcountry="Brazil"  proto=6 sentbyte=8143 rcvdbyte=7207 sentpkt=90 rcvdpkt=42
+date=2014-04-30 time=19:47:00  srcip=192.168.1.100 srcport=24297 dstip=192.168.1.254 dstport=22 dstcountry="United States"  proto=17 sentbyte=508 rcvdbyte=699 sentpkt=96 rcvdpkt=6
+date=2014-04-30 time=19:19:02  srcip=192.168.1.25 srcport=14742 dstip=151.101.1.69 dstport=22 dstcountry="France"  proto=6 sentbyte=932 rcvdbyte=1163 sentpkt=70 rcvdpkt=4
+date=2014-04-30 time=18:51:00  srcip=10.0.0.50 srcport=24080 dstip=192.168.1.254 dstport=22 dstcountry="Japan"  proto=6 sentbyte=8121 rcvdbyte=6302 sentpkt=48 rcvdpkt=4
+date=2014-04-30 time=19:19:10  srcip=192.168.1.25 srcport=12099 dstip=208.67.222.222 dstport=22 dstcountry="Brazil"  proto=17 sentbyte=4386 rcvdbyte=198 sentpkt=66 rcvdpkt=14
+date=2014-04-30 time=20:01:29  srcip=10.0.0.100 srcport=49257 dstip=208.67.222.222 dstport=443 dstcountry="Germany"  proto=17 sentbyte=4569 rcvdbyte=4076 sentpkt=64 rcvdpkt=21
+date=2014-04-30 time=20:29:48  srcip=192.168.1.25 srcport=5622 dstip=1.1.1.1 dstport=6379 dstcountry="Australia"  proto=17 sentbyte=620 rcvdbyte=8815 sentpkt=60 rcvdpkt=19
+date=2014-04-30 time=20:15:50  srcip=192.168.1.25 srcport=37601 dstip=151.101.1.69 dstport=5432 dstcountry="Canada"  proto=6 sentbyte=447 rcvdbyte=8270 sentpkt=64 rcvdpkt=34
+date=2014-04-30 time=20:15:58  srcip=192.168.1.25 srcport=54478 dstip=172.16.0.1 dstport=6379 dstcountry="India"  proto=17 sentbyte=4577 rcvdbyte=7317 sentpkt=16 rcvdpkt=100
+date=2014-04-30 time=19:33:39  srcip=192.168.1.1 srcport=27076 dstip=74.125.224.72 dstport=25 dstcountry="Germany"  proto=17 sentbyte=4080 rcvdbyte=9715 sentpkt=74 rcvdpkt=30
+date=2014-04-30 time=20:02:04  srcip=192.168.1.25 srcport=25505 dstip=8.8.8.8 dstcountry="United States" sentbyte=4059 rcvdbyte=9519 sentpkt=12 rcvdpkt=16
+date=2014-04-30 time=19:19:38  srcip=10.0.0.50 srcport=35211 dstip=172.16.0.1 dstport=143 dstcountry="China"  proto=6 sentbyte=4663 rcvdbyte=5 sentpkt=95 rcvdpkt=78
+date=2014-04-30 time=19:05:30  srcip=10.0.0.50 srcport=19382 dstip=8.8.8.8 dstport=110 dstcountry="Australia"  proto=6 sentbyte=6540 rcvdbyte=8942 sentpkt=39 rcvdpkt=25
+date=2014-04-30 time=19:05:33  srcip=10.0.0.100 srcport=61777 dstip=74.125.224.72 dstcountry="United States" sentbyte=4651 rcvdbyte=817 sentpkt=99 rcvdpkt=94
+date=2014-04-30 time=20:45:14  srcip=192.168.1.25 srcport=2386 dstip=172.16.0.1 dstcountry="Australia" sentbyte=2830 rcvdbyte=602 sentpkt=94 rcvdpkt=72
+date=2014-04-30 time=19:48:24  srcip=192.168.1.1 srcport=25495 dstip=151.101.1.69 dstport=6379 dstcountry="France"  proto=6 sentbyte=7109 rcvdbyte=8032 sentpkt=21 rcvdpkt=39
+date=2014-04-30 time=19:05:42  srcip=192.168.1.100 srcport=41123 dstip=74.125.224.72 dstport=80 dstcountry="Australia"  proto=6 sentbyte=750 rcvdbyte=6871 sentpkt=60 rcvdpkt=41
+date=2014-04-30 time=19:20:02  srcip=10.0.0.50 srcport=64424 dstip=192.168.1.254 dstport=443 dstcountry="United States"  proto=17 sentbyte=8794 rcvdbyte=8690 sentpkt=11 rcvdpkt=21
+date=2014-04-30 time=20:45:54  srcip=10.0.0.50 srcport=43614 dstip=208.67.222.222 dstport=22 dstcountry="China"  proto=6 sentbyte=4713 rcvdbyte=2727 sentpkt=23 rcvdpkt=76
+date=2014-04-30 time=19:05:51  srcip=192.168.1.50 srcport=41967 dstip=192.168.1.254 dstport=6379 dstcountry="India"  proto=6 sentbyte=9604 rcvdbyte=8398 sentpkt=84 rcvdpkt=94
+date=2014-04-30 time=20:17:34  srcip=10.0.0.100 srcport=13434 dstip=8.8.8.8 dstport=8080 dstcountry="Germany"  proto=6 sentbyte=5531 rcvdbyte=1065 sentpkt=54 rcvdpkt=82
+date=2014-04-30 time=20:17:42  srcip=192.168.1.25 srcport=15080 dstip=74.125.224.72 dstport=22 dstcountry="France"  proto=17 sentbyte=5845 rcvdbyte=7863 sentpkt=22 rcvdpkt=17
+date=2014-04-30 time=18:51:38  srcip=192.168.1.1 srcport=36153 dstip=1.1.1.1 dstport=143 dstcountry="China"  proto=17 sentbyte=6864 rcvdbyte=8072 sentpkt=65 rcvdpkt=80
+date=2014-04-30 time=18:51:40  srcip=192.168.1.25 srcport=54680 dstip=172.16.0.1 dstport=143 dstcountry="United States"  proto=6 sentbyte=671 rcvdbyte=7275 sentpkt=85 rcvdpkt=4
+date=2014-04-30 time=19:20:30  srcip=10.0.0.50 srcport=39910 dstip=151.101.1.69 dstport=8080 dstcountry="United Kingdom"  proto=6 sentbyte=4504 rcvdbyte=7551 sentpkt=91 rcvdpkt=24
+date=2014-04-30 time=19:49:24  srcip=192.168.1.25 srcport=9879 dstip=151.101.1.69 dstport=5432 dstcountry="United Kingdom"  proto=6 sentbyte=4570 rcvdbyte=4069 sentpkt=5 rcvdpkt=45
+date=2014-04-30 time=19:20:38  srcip=10.0.0.50 srcport=32559 dstip=192.168.1.254 dstport=53 dstcountry="United States"  proto=6 sentbyte=696 rcvdbyte=4611 sentpkt=54 rcvdpkt=2
+date=2014-04-30 time=18:51:48  srcip=10.0.0.50 srcport=40517 dstip=151.101.1.69 dstport=25 dstcountry="India"  proto=6 sentbyte=2377 rcvdbyte=9801 sentpkt=23 rcvdpkt=99
+date=2014-04-30 time=19:06:18  srcip=10.0.0.50 srcport=24032 dstip=1.1.1.1 dstport=80 dstcountry="China"  proto=6 sentbyte=4021 rcvdbyte=2116 sentpkt=16 rcvdpkt=100
+date=2014-04-30 time=20:04:17  srcip=10.0.0.50 srcport=46122 dstip=8.8.8.8 dstport=25 dstcountry="France"  proto=6 sentbyte=7024 rcvdbyte=9075 sentpkt=61 rcvdpkt=87
+date=2014-04-30 time=19:06:24  srcip=192.168.1.1 srcport=38748 dstip=192.168.1.254 dstport=143 dstcountry="Australia"  proto=17 sentbyte=2196 rcvdbyte=3637 sentpkt=66 rcvdpkt=20
+date=2014-04-30 time=20:04:31  srcip=192.168.1.50 srcport=55982 dstip=74.125.224.72 dstport=8080 dstcountry="Germany"  proto=17 sentbyte=8035 rcvdbyte=4457 sentpkt=46 rcvdpkt=8
+date=2014-04-30 time=20:19:10  srcip=10.0.0.50 srcport=8511 dstip=10.0.0.1 dstcountry="India" sentbyte=393 rcvdbyte=5147 sentpkt=55 rcvdpkt=81
+date=2014-04-30 time=19:35:39  srcip=192.168.1.25 srcport=50930 dstip=172.16.0.1 dstport=443 dstcountry="Brazil"  proto=17 sentbyte=6785 rcvdbyte=253 sentpkt=92 rcvdpkt=60
+date=2014-04-30 time=20:04:52  srcip=192.168.1.1 srcport=39011 dstip=192.168.1.254 dstcountry="France" sentbyte=9913 rcvdbyte=2879 sentpkt=86 rcvdpkt=4
+date=2014-04-30 time=20:48:44  srcip=192.168.1.25 srcport=42331 dstip=208.67.222.222 dstport=80 dstcountry="United Kingdom"  proto=17 sentbyte=4556 rcvdbyte=6266 sentpkt=92 rcvdpkt=79
+date=2014-04-30 time=20:19:42  srcip=192.168.1.100 srcport=6714 dstip=8.8.8.8 dstport=8080 dstcountry="India"  proto=6 sentbyte=9031 rcvdbyte=6130 sentpkt=13 rcvdpkt=6
+date=2014-04-30 time=20:05:13  srcip=192.168.1.100 srcport=26769 dstip=172.16.0.1 dstport=25 dstcountry="Japan"  proto=17 sentbyte=7693 rcvdbyte=6856 sentpkt=3 rcvdpkt=43
+date=2014-04-30 time=19:36:04  srcip=192.168.1.100 srcport=40572 dstip=8.8.8.8 dstport=5432 dstcountry="Japan"  proto=17 sentbyte=3497 rcvdbyte=3883 sentpkt=47 rcvdpkt=98
+date=2014-04-30 time=18:37:33  srcip=10.0.0.100 srcport=62010 dstip=1.1.1.1 dstport=3306 dstcountry="United States"  proto=6 sentbyte=131 rcvdbyte=9787 sentpkt=16 rcvdpkt=18
+date=2014-04-30 time=19:50:54  srcip=10.0.0.100 srcport=43846 dstip=172.16.0.1 dstport=143 dstcountry="India"  proto=6 sentbyte=8797 rcvdbyte=7911 sentpkt=85 rcvdpkt=91
+date=2014-04-30 time=18:37:35  srcip=10.0.0.50 srcport=50517 dstip=74.125.224.72 dstport=80 dstcountry="Australia"  proto=17 sentbyte=6374 rcvdbyte=2699 sentpkt=29 rcvdpkt=12
+date=2014-04-30 time=19:07:00  srcip=192.168.1.25 srcport=63224 dstip=151.101.1.69 dstport=6379 dstcountry="France"  proto=17 sentbyte=9863 rcvdbyte=2201 sentpkt=72 rcvdpkt=49
+date=2014-04-30 time=19:21:46  srcip=192.168.1.100 srcport=16799 dstip=208.67.222.222 dstport=5432 dstcountry="Germany"  proto=17 sentbyte=7072 rcvdbyte=4016 sentpkt=20 rcvdpkt=83
+date=2014-04-30 time=20:50:14  srcip=10.0.0.100 srcport=53218 dstip=1.1.1.1 dstport=443 dstcountry="France"  proto=17 sentbyte=8499 rcvdbyte=1992 sentpkt=45 rcvdpkt=26
+date=2014-04-30 time=20:06:09  srcip=192.168.1.100 srcport=55817 dstip=192.168.1.254 dstport=110 dstcountry="Japan"  proto=6 sentbyte=1068 rcvdbyte=430 sentpkt=89 rcvdpkt=46
+date=2014-04-30 time=19:36:44  srcip=192.168.1.100 srcport=20429 dstip=74.125.224.72 dstport=6379 dstcountry="India"  proto=17 sentbyte=3109 rcvdbyte=7847 sentpkt=18 rcvdpkt=100
+date=2014-04-30 time=20:06:23  srcip=192.168.1.25 srcport=44490 dstip=172.16.0.1 dstport=8080 dstcountry="Japan"  proto=6 sentbyte=1279 rcvdbyte=6295 sentpkt=13 rcvdpkt=2
+date=2014-04-30 time=19:07:18  srcip=192.168.1.50 srcport=48504 dstip=8.8.8.8 dstport=143 dstcountry="Brazil"  proto=17 sentbyte=1663 rcvdbyte=6618 sentpkt=15 rcvdpkt=96
+date=2014-04-30 time=19:22:10  srcip=192.168.1.50 srcport=63661 dstip=74.125.224.72 dstport=5432 dstcountry="United Kingdom"  proto=6 sentbyte=6197 rcvdbyte=3904 sentpkt=91 rcvdpkt=72
+date=2014-04-30 time=20:06:44  srcip=192.168.1.50 srcport=12178 dstip=74.125.224.72 dstport=8080 dstcountry="China"  proto=17 sentbyte=2711 rcvdbyte=6179 sentpkt=3 rcvdpkt=76
+date=2014-04-30 time=18:52:36  srcip=192.168.1.1 srcport=27367 dstip=151.101.1.69 dstport=8080 dstcountry="Canada"  proto=6 sentbyte=1620 rcvdbyte=5151 sentpkt=44 rcvdpkt=22
+date=2014-04-30 time=18:52:38  srcip=10.0.0.100 srcport=2784 dstip=1.1.1.1 dstport=21 dstcountry="Germany"  proto=6 sentbyte=1500 rcvdbyte=5895 sentpkt=82 rcvdpkt=84
+date=2014-04-30 time=18:37:47  srcip=192.168.1.1 srcport=11971 dstip=151.101.1.69 dstport=25 dstcountry="Canada"  proto=6 sentbyte=2888 rcvdbyte=58 sentpkt=33 rcvdpkt=24
+date=2014-04-30 time=20:07:12  srcip=192.168.1.25 srcport=28288 dstip=10.0.0.1 dstport=143 dstcountry="Australia"  proto=6 sentbyte=5864 rcvdbyte=8946 sentpkt=37 rcvdpkt=14
+date=2014-04-30 time=18:52:44  srcip=192.168.1.1 srcport=23509 dstip=74.125.224.72 dstport=110 dstcountry="Brazil"  proto=6 sentbyte=4359 rcvdbyte=8227 sentpkt=80 rcvdpkt=19
+date=2014-04-30 time=20:22:22  srcip=192.168.1.100 srcport=55668 dstip=74.125.224.72 dstport=8080 dstcountry="Australia"  proto=6 sentbyte=9588 rcvdbyte=7904 sentpkt=95 rcvdpkt=36
+date=2014-04-30 time=20:37:27  srcip=192.168.1.100 srcport=37240 dstip=1.1.1.1 dstport=143 dstcountry="India"  proto=6 sentbyte=590 rcvdbyte=3788 sentpkt=22 rcvdpkt=4
+date=2014-04-30 time=20:37:36  srcip=192.168.1.25 srcport=45751 dstip=10.0.0.1 dstport=143 dstcountry="Japan"  proto=6 sentbyte=1127 rcvdbyte=3860 sentpkt=79 rcvdpkt=75
+date=2014-04-30 time=20:22:46  srcip=192.168.1.100 srcport=24929 dstip=8.8.8.8 dstcountry="Germany" sentbyte=7183 rcvdbyte=7914 sentpkt=37 rcvdpkt=73
+date=2014-04-30 time=18:37:54  srcip=10.0.0.100 srcport=30305 dstip=1.1.1.1 dstport=21 dstcountry="India"  proto=6 sentbyte=1806 rcvdbyte=5225 sentpkt=64 rcvdpkt=39
+date=2014-04-30 time=18:37:55  srcip=192.168.1.25 srcport=28946 dstip=208.67.222.222 dstport=53 dstcountry="Australia"  proto=17 sentbyte=2409 rcvdbyte=8880 sentpkt=71 rcvdpkt=52
+date=2014-04-30 time=18:52:58  srcip=192.168.1.1 srcport=31186 dstip=151.101.1.69 dstport=22 dstcountry="Brazil"  proto=6 sentbyte=568 rcvdbyte=2134 sentpkt=83 rcvdpkt=44
+date=2014-04-30 time=18:37:57  srcip=10.0.0.50 srcport=64094 dstip=8.8.8.8 dstport=3306 dstcountry="France"  proto=6 sentbyte=2811 rcvdbyte=7896 sentpkt=98 rcvdpkt=60
+date=2014-04-30 time=19:23:10  srcip=192.168.1.1 srcport=8355 dstip=208.67.222.222 dstport=443 dstcountry="Australia"  proto=6 sentbyte=8519 rcvdbyte=4397 sentpkt=10 rcvdpkt=15
+date=2014-04-30 time=20:08:29  srcip=192.168.1.100 srcport=27969 dstip=151.101.1.69 dstport=25 dstcountry="United Kingdom"  proto=17 sentbyte=4871 rcvdbyte=4567 sentpkt=83 rcvdpkt=63
+date=2014-04-30 time=19:38:24  srcip=192.168.1.100 srcport=45735 dstip=151.101.1.69 dstport=6379 dstcountry="France"  proto=17 sentbyte=2382 rcvdbyte=5186 sentpkt=90 rcvdpkt=21
+date=2014-04-30 time=20:54:04  srcip=192.168.1.25 srcport=1193 dstip=74.125.224.72 dstport=80 dstcountry="Canada"  proto=17 sentbyte=8855 rcvdbyte=7421 sentpkt=92 rcvdpkt=52
+date=2014-04-30 time=20:23:58  srcip=10.0.0.50 srcport=39953 dstip=151.101.1.69 dstport=6379 dstcountry="Germany"  proto=17 sentbyte=2984 rcvdbyte=6287 sentpkt=13 rcvdpkt=2
+date=2014-04-30 time=19:23:30  srcip=10.0.0.50 srcport=58919 dstip=151.101.1.69 dstport=5432 dstcountry="Australia"  proto=17 sentbyte=3323 rcvdbyte=8070 sentpkt=6 rcvdpkt=52
+date=2014-04-30 time=19:08:24  srcip=10.0.0.50 srcport=26062 dstip=208.67.222.222 dstport=6379 dstcountry="Brazil"  proto=17 sentbyte=7649 rcvdbyte=5835 sentpkt=87 rcvdpkt=97
+date=2014-04-30 time=19:38:49  srcip=192.168.1.50 srcport=29296 dstip=10.0.0.1 dstport=25 dstcountry="United Kingdom"  proto=6 sentbyte=3375 rcvdbyte=866 sentpkt=50 rcvdpkt=54
+date=2014-04-30 time=20:39:42  srcip=192.168.1.100 srcport=31801 dstip=192.168.1.254 dstport=3306 dstcountry="Brazil"  proto=17 sentbyte=4879 rcvdbyte=9262 sentpkt=85 rcvdpkt=82
+date=2014-04-30 time=20:39:51  srcip=192.168.1.1 srcport=8892 dstip=192.168.1.254 dstport=5432 dstcountry="India"  proto=17 sentbyte=7115 rcvdbyte=9017 sentpkt=75 rcvdpkt=4
+date=2014-04-30 time=18:38:08  srcip=192.168.1.1 srcport=30089 dstip=1.1.1.1 dstport=22 dstcountry="Brazil"  proto=17 sentbyte=2240 rcvdbyte=8229 sentpkt=87 rcvdpkt=53
+date=2014-04-30 time=19:23:54  srcip=192.168.1.50 srcport=18043 dstip=8.8.8.8 dstport=443 dstcountry="China"  proto=6 sentbyte=1680 rcvdbyte=8990 sentpkt=15 rcvdpkt=25
+date=2014-04-30 time=19:54:30  srcip=192.168.1.25 srcport=56564 dstip=151.101.1.69 dstport=22 dstcountry="India"  proto=17 sentbyte=8457 rcvdbyte=2039 sentpkt=12 rcvdpkt=12
+date=2014-04-30 time=20:09:53  srcip=192.168.1.50 srcport=4780 dstip=151.101.1.69 dstport=6379 dstcountry="United Kingdom"  proto=17 sentbyte=3701 rcvdbyte=7046 sentpkt=93 rcvdpkt=34
+date=2014-04-30 time=18:38:12  srcip=192.168.1.25 srcport=29801 dstip=192.168.1.254 dstport=3306 dstcountry="Brazil"  proto=6 sentbyte=2666 rcvdbyte=3258 sentpkt=11 rcvdpkt=77
+date=2014-04-30 time=19:39:29  srcip=192.168.1.100 srcport=41837 dstip=192.168.1.254 dstcountry="Germany" sentbyte=6240 rcvdbyte=4970 sentpkt=45 rcvdpkt=3
+date=2014-04-30 time=20:56:14  srcip=10.0.0.50 srcport=20434 dstip=74.125.224.72 dstport=80 dstcountry="France"  proto=6 sentbyte=600 rcvdbyte=2353 sentpkt=31 rcvdpkt=37
+date=2014-04-30 time=19:55:00  srcip=192.168.1.50 srcport=1478 dstip=151.101.1.69 dstport=3306 dstcountry="United Kingdom"  proto=6 sentbyte=1667 rcvdbyte=6853 sentpkt=12 rcvdpkt=88
+date=2014-04-30 time=19:24:22  srcip=192.168.1.1 srcport=2340 dstip=172.16.0.1 dstport=22 dstcountry="Germany"  proto=17 sentbyte=6982 rcvdbyte=4647 sentpkt=11 rcvdpkt=42
+date=2014-04-30 time=20:25:58  srcip=192.168.1.25 srcport=8436 dstip=192.168.1.254 dstport=53 dstcountry="Germany"  proto=6 sentbyte=8769 rcvdbyte=622 sentpkt=13 rcvdpkt=73
+date=2014-04-30 time=19:09:06  srcip=192.168.1.100 srcport=18847 dstip=172.16.0.1 dstport=6379 dstcountry="United Kingdom"  proto=17 sentbyte=1561 rcvdbyte=1820 sentpkt=14 rcvdpkt=34
+date=2014-04-30 time=18:38:19  srcip=10.0.0.50 srcport=58180 dstip=74.125.224.72 dstport=443 dstcountry="France"  proto=6 sentbyte=9305 rcvdbyte=9221 sentpkt=21 rcvdpkt=9
+date=2014-04-30 time=19:55:30  srcip=192.168.1.25 srcport=26791 dstip=74.125.224.72 dstport=110 dstcountry="Brazil"  proto=17 sentbyte=3654 rcvdbyte=469 sentpkt=99 rcvdpkt=11
+date=2014-04-30 time=20:11:03  srcip=10.0.0.50 srcport=9697 dstip=172.16.0.1 dstport=53 dstcountry="Japan"  proto=6 sentbyte=9105 rcvdbyte=8709 sentpkt=74 rcvdpkt=90
+date=2014-04-30 time=20:42:06  srcip=10.0.0.100 srcport=2998 dstip=192.168.1.254 dstport=25 dstcountry="United States"  proto=6 sentbyte=4760 rcvdbyte=5583 sentpkt=59 rcvdpkt=22
+date=2014-04-30 time=20:26:46  srcip=192.168.1.1 srcport=27076 dstip=74.125.224.72 dstport=25 dstcountry="India"  proto=17 sentbyte=8567 rcvdbyte=663 sentpkt=13 rcvdpkt=95
+date=2014-04-30 time=20:11:24  srcip=192.168.1.25 srcport=51888 dstip=192.168.1.254 dstport=53 dstcountry="United Kingdom"  proto=17 sentbyte=6397 rcvdbyte=9906 sentpkt=41 rcvdpkt=99
+date=2014-04-30 time=18:38:25  srcip=192.168.1.100 srcport=22170 dstip=151.101.1.69 dstport=443 dstcountry="France"  proto=6 sentbyte=2048 rcvdbyte=8988 sentpkt=14 rcvdpkt=73
+date=2014-04-30 time=19:40:34  srcip=10.0.0.50 srcport=40448 dstip=74.125.224.72 dstport=22 dstcountry="Japan"  proto=17 sentbyte=7771 rcvdbyte=5433 sentpkt=86 rcvdpkt=11
+date=2014-04-30 time=19:40:39  srcip=192.168.1.50 srcport=41077 dstip=208.67.222.222 dstcountry="Canada" sentbyte=8604 rcvdbyte=8006 sentpkt=21 rcvdpkt=63
+date=2014-04-30 time=18:54:02  srcip=192.168.1.50 srcport=9238 dstip=172.16.0.1 dstport=443 dstcountry="Japan"  proto=6 sentbyte=2034 rcvdbyte=8002 sentpkt=36 rcvdpkt=4
+date=2014-04-30 time=20:43:09  srcip=192.168.1.25 srcport=21230 dstip=208.67.222.222 dstport=5432 dstcountry="China"  proto=17 sentbyte=7828 rcvdbyte=8274 sentpkt=71 rcvdpkt=50
+date=2014-04-30 time=18:38:30  srcip=192.168.1.50 srcport=32856 dstip=151.101.1.69 dstport=443 dstcountry="France"  proto=17 sentbyte=5813 rcvdbyte=7290 sentpkt=41 rcvdpkt=78
+date=2014-04-30 time=18:38:31  srcip=192.168.1.25 srcport=7775 dstip=8.8.8.8 dstcountry="France" sentbyte=437 rcvdbyte=3724 sentpkt=100 rcvdpkt=16
+date=2014-04-30 time=19:41:04  srcip=10.0.0.100 srcport=18112 dstip=151.101.1.69 dstport=21 dstcountry="United Kingdom"  proto=17 sentbyte=218 rcvdbyte=2766 sentpkt=2 rcvdpkt=61
+date=2014-04-30 time=19:25:30  srcip=192.168.1.25 srcport=52814 dstip=151.101.1.69 dstport=6379 dstcountry="Germany"  proto=17 sentbyte=1622 rcvdbyte=2360 sentpkt=6 rcvdpkt=77
+date=2014-04-30 time=19:09:54  srcip=192.168.1.1 srcport=41476 dstip=172.16.0.1 dstport=443 dstcountry="China"  proto=17 sentbyte=8995 rcvdbyte=8892 sentpkt=76 rcvdpkt=66
+date=2014-04-30 time=18:54:16  srcip=192.168.1.1 srcport=37783 dstip=10.0.0.1 dstport=3306 dstcountry="United Kingdom"  proto=17 sentbyte=8778 rcvdbyte=6729 sentpkt=31 rcvdpkt=66
+date=2014-04-30 time=19:25:42  srcip=192.168.1.100 srcport=41544 dstip=172.16.0.1 dstport=5432 dstcountry="United Kingdom"  proto=6 sentbyte=653 rcvdbyte=3977 sentpkt=87 rcvdpkt=78
+date=2014-04-30 time=20:12:55  srcip=192.168.1.100 srcport=14222 dstip=74.125.224.72 dstport=443 dstcountry="Canada"  proto=6 sentbyte=930 rcvdbyte=9690 sentpkt=97 rcvdpkt=31
+date=2014-04-30 time=19:41:34  srcip=10.0.0.50 srcport=23568 dstip=151.101.1.69 dstport=80 dstcountry="Japan"  proto=17 sentbyte=3408 rcvdbyte=2156 sentpkt=30 rcvdpkt=100
+date=2014-04-30 time=19:41:39  srcip=10.0.0.50 srcport=53351 dstip=172.16.0.1 dstport=53 dstcountry="Germany"  proto=17 sentbyte=3745 rcvdbyte=9337 sentpkt=68 rcvdpkt=29
+date=2014-04-30 time=20:44:48  srcip=192.168.1.25 srcport=64436 dstip=74.125.224.72 dstcountry="France" sentbyte=7901 rcvdbyte=7145 sentpkt=20 rcvdpkt=77
+date=2014-04-30 time=21:00:44  srcip=192.168.1.1 srcport=35598 dstip=10.0.0.1 dstport=8080 dstcountry="United Kingdom"  proto=6 sentbyte=926 rcvdbyte=7838 sentpkt=53 rcvdpkt=28
+date=2014-04-30 time=19:57:42  srcip=10.0.0.100 srcport=51642 dstip=151.101.1.69 dstport=22 dstcountry="Canada"  proto=6 sentbyte=2675 rcvdbyte=9287 sentpkt=23 rcvdpkt=49
+date=2014-04-30 time=20:29:26  srcip=192.168.1.50 srcport=64620 dstip=208.67.222.222 dstport=5432 dstcountry="Brazil"  proto=17 sentbyte=1404 rcvdbyte=5856 sentpkt=67 rcvdpkt=94
+date=2014-04-30 time=18:54:34  srcip=192.168.1.1 srcport=21857 dstip=192.168.1.254 dstcountry="United States" sentbyte=423 rcvdbyte=32 sentpkt=37 rcvdpkt=6
+date=2014-04-30 time=18:54:36  srcip=192.168.1.25 srcport=8920 dstip=1.1.1.1 dstport=443 dstcountry="Australia"  proto=17 sentbyte=8039 rcvdbyte=6511 sentpkt=87 rcvdpkt=48
+date=2014-04-30 time=19:10:30  srcip=192.168.1.25 srcport=10838 dstip=172.16.0.1 dstport=21 dstcountry="Australia"  proto=17 sentbyte=8577 rcvdbyte=6229 sentpkt=60 rcvdpkt=36
+date=2014-04-30 time=20:29:58  srcip=192.168.1.50 srcport=32451 dstip=1.1.1.1 dstport=53 dstcountry="United Kingdom"  proto=17 sentbyte=2193 rcvdbyte=5100 sentpkt=18 rcvdpkt=63
+date=2014-04-30 time=20:14:12  srcip=192.168.1.25 srcport=27407 dstip=10.0.0.1 dstport=22 dstcountry="Australia"  proto=17 sentbyte=9637 rcvdbyte=9253 sentpkt=17 rcvdpkt=39
+date=2014-04-30 time=18:38:49  srcip=10.0.0.100 srcport=38412 dstip=74.125.224.72 dstport=6379 dstcountry="China"  proto=6 sentbyte=4471 rcvdbyte=3018 sentpkt=30 rcvdpkt=66
+date=2014-04-30 time=18:38:50  srcip=10.0.0.100 srcport=63111 dstip=1.1.1.1 dstport=443 dstcountry="India"  proto=6 sentbyte=8027 rcvdbyte=6230 sentpkt=16 rcvdpkt=35
+date=2014-04-30 time=19:26:42  srcip=192.168.1.1 srcport=55535 dstip=74.125.224.72 dstport=5432 dstcountry="United States"  proto=6 sentbyte=3803 rcvdbyte=5054 sentpkt=72 rcvdpkt=16
+date=2014-04-30 time=18:54:50  srcip=192.168.1.100 srcport=41781 dstip=10.0.0.1 dstport=3306 dstcountry="Germany"  proto=17 sentbyte=6886 rcvdbyte=1876 sentpkt=12 rcvdpkt=50
+date=2014-04-30 time=19:42:49  srcip=10.0.0.50 srcport=23245 dstip=8.8.8.8 dstport=443 dstcountry="United Kingdom"  proto=6 sentbyte=8545 rcvdbyte=4258 sentpkt=28 rcvdpkt=71
+date=2014-04-30 time=20:14:54  srcip=10.0.0.100 srcport=20192 dstip=208.67.222.222 dstport=143 dstcountry="France"  proto=17 sentbyte=5108 rcvdbyte=612 sentpkt=55 rcvdpkt=88
+date=2014-04-30 time=20:31:02  srcip=10.0.0.50 srcport=10083 dstip=151.101.1.69 dstport=8080 dstcountry="Germany"  proto=17 sentbyte=4687 rcvdbyte=7851 sentpkt=57 rcvdpkt=81
+date=2014-04-30 time=21:03:14  srcip=192.168.1.1 srcport=44131 dstip=74.125.224.72 dstport=3306 dstcountry="China"  proto=6 sentbyte=9957 rcvdbyte=1841 sentpkt=19 rcvdpkt=72
+date=2014-04-30 time=18:38:57  srcip=192.168.1.50 srcport=10375 dstip=10.0.0.1 dstport=6379 dstcountry="Australia"  proto=6 sentbyte=9854 rcvdbyte=5061 sentpkt=40 rcvdpkt=78
+date=2014-04-30 time=20:15:22  srcip=10.0.0.100 srcport=48141 dstip=10.0.0.1 dstport=8080 dstcountry="Japan"  proto=17 sentbyte=3882 rcvdbyte=9462 sentpkt=26 rcvdpkt=48
+date=2014-04-30 time=18:55:04  srcip=192.168.1.25 srcport=21213 dstip=1.1.1.1 dstport=21 dstcountry="Brazil"  proto=17 sentbyte=9245 rcvdbyte=1212 sentpkt=73 rcvdpkt=38
+date=2014-04-30 time=20:31:42  srcip=192.168.1.25 srcport=23310 dstip=8.8.8.8 dstport=80 dstcountry="Australia"  proto=17 sentbyte=7059 rcvdbyte=6833 sentpkt=95 rcvdpkt=68
+date=2014-04-30 time=20:15:43  srcip=192.168.1.50 srcport=39925 dstip=74.125.224.72 dstport=8080 dstcountry="Japan"  proto=17 sentbyte=7790 rcvdbyte=8299 sentpkt=34 rcvdpkt=98
+date=2014-04-30 time=19:27:26  srcip=10.0.0.50 srcport=21100 dstip=10.0.0.1 dstport=8080 dstcountry="Germany"  proto=6 sentbyte=8271 rcvdbyte=653 sentpkt=15 rcvdpkt=7
+date=2014-04-30 time=19:59:48  srcip=192.168.1.25 srcport=27338 dstip=192.168.1.254 dstport=6379 dstcountry="China"  proto=17 sentbyte=3779 rcvdbyte=783 sentpkt=4 rcvdpkt=47
+date=2014-04-30 time=20:16:04  srcip=10.0.0.50 srcport=53739 dstip=10.0.0.1 dstport=3306 dstcountry="Brazil"  proto=6 sentbyte=7272 rcvdbyte=74 sentpkt=8 rcvdpkt=35
+date=2014-04-30 time=20:48:33  srcip=10.0.0.50 srcport=16642 dstip=172.16.0.1 dstport=110 dstcountry="United States"  proto=6 sentbyte=4929 rcvdbyte=1126 sentpkt=56 rcvdpkt=2
+date=2014-04-30 time=19:11:30  srcip=192.168.1.100 srcport=20518 dstip=10.0.0.1 dstport=22 dstcountry="Brazil"  proto=17 sentbyte=2604 rcvdbyte=8095 sentpkt=65 rcvdpkt=36
+date=2014-04-30 time=19:43:59  srcip=10.0.0.50 srcport=41490 dstip=151.101.1.69 dstport=110 dstcountry="Brazil"  proto=6 sentbyte=4164 rcvdbyte=9273 sentpkt=51 rcvdpkt=53
+date=2014-04-30 time=19:11:36  srcip=192.168.1.25 srcport=7814 dstip=8.8.8.8 dstport=25 dstcountry="United States"  proto=17 sentbyte=1731 rcvdbyte=3885 sentpkt=82 rcvdpkt=53
+date=2014-04-30 time=20:32:54  srcip=192.168.1.50 srcport=9895 dstip=10.0.0.1 dstport=110 dstcountry="Brazil"  proto=17 sentbyte=7591 rcvdbyte=351 sentpkt=74 rcvdpkt=47
+date=2014-04-30 time=18:39:10  srcip=10.0.0.50 srcport=62593 dstip=10.0.0.1 dstport=21 dstcountry="France"  proto=17 sentbyte=3446 rcvdbyte=3564 sentpkt=92 rcvdpkt=68
+date=2014-04-30 time=20:00:36  srcip=192.168.1.50 srcport=51364 dstip=151.101.1.69 dstport=5432 dstcountry="India"  proto=17 sentbyte=3104 rcvdbyte=2960 sentpkt=25 rcvdpkt=19
+date=2014-04-30 time=21:05:54  srcip=10.0.0.50 srcport=50690 dstip=10.0.0.1 dstport=22 dstcountry="United States"  proto=17 sentbyte=1635 rcvdbyte=5830 sentpkt=28 rcvdpkt=31
+date=2014-04-30 time=20:33:26  srcip=192.168.1.100 srcport=6280 dstip=1.1.1.1 dstport=6379 dstcountry="Canada"  proto=6 sentbyte=6756 rcvdbyte=5592 sentpkt=27 rcvdpkt=44
+date=2014-04-30 time=19:44:34  srcip=192.168.1.1 srcport=44378 dstip=10.0.0.1 dstport=143 dstcountry="Brazil"  proto=6 sentbyte=2387 rcvdbyte=5828 sentpkt=77 rcvdpkt=57
+date=2014-04-30 time=18:55:36  srcip=192.168.1.100 srcport=22103 dstip=151.101.1.69 dstport=21 dstcountry="Canada"  proto=17 sentbyte=7295 rcvdbyte=4058 sentpkt=79 rcvdpkt=34
+date=2014-04-30 time=19:12:00  srcip=10.0.0.50 srcport=64967 dstip=10.0.0.1 dstport=53 dstcountry="Australia"  proto=17 sentbyte=9395 rcvdbyte=9884 sentpkt=25 rcvdpkt=64
+date=2014-04-30 time=19:12:03  srcip=192.168.1.100 srcport=14303 dstip=192.168.1.254 dstport=110 dstcountry="Japan"  proto=6 sentbyte=5483 rcvdbyte=1917 sentpkt=24 rcvdpkt=37
+date=2014-04-30 time=20:34:06  srcip=10.0.0.50 srcport=33941 dstip=10.0.0.1 dstport=143 dstcountry="Germany"  proto=6 sentbyte=7879 rcvdbyte=4454 sentpkt=79 rcvdpkt=12
+date=2014-04-30 time=19:28:34  srcip=192.168.1.25 srcport=38855 dstip=8.8.8.8 dstport=80 dstcountry="United Kingdom"  proto=17 sentbyte=3104 rcvdbyte=4000 sentpkt=87 rcvdpkt=55
+date=2014-04-30 time=18:55:46  srcip=192.168.1.50 srcport=22306 dstip=8.8.8.8 dstport=143 dstcountry="Canada"  proto=17 sentbyte=8564 rcvdbyte=9873 sentpkt=38 rcvdpkt=82
+date=2014-04-30 time=20:18:03  srcip=192.168.1.50 srcport=53593 dstip=8.8.8.8 dstport=143 dstcountry="China"  proto=17 sentbyte=9573 rcvdbyte=3723 sentpkt=5 rcvdpkt=26
+date=2014-04-30 time=18:55:50  srcip=10.0.0.100 srcport=13969 dstip=1.1.1.1 dstport=6379 dstcountry="United Kingdom"  proto=6 sentbyte=4490 rcvdbyte=2341 sentpkt=65 rcvdpkt=45
+date=2014-04-30 time=18:55:52  srcip=192.168.1.50 srcport=35030 dstip=192.168.1.254 dstport=443 dstcountry="United States"  proto=17 sentbyte=6018 rcvdbyte=8665 sentpkt=99 rcvdpkt=54
+date=2014-04-30 time=20:18:24  srcip=192.168.1.1 srcport=35260 dstip=192.168.1.254 dstcountry="Brazil" sentbyte=7737 rcvdbyte=3292 sentpkt=64 rcvdpkt=39
+date=2014-04-30 time=20:51:33  srcip=192.168.1.1 srcport=14341 dstip=74.125.224.72 dstport=443 dstcountry="Brazil"  proto=17 sentbyte=6577 rcvdbyte=9242 sentpkt=53 rcvdpkt=82
+date=2014-04-30 time=21:08:14  srcip=192.168.1.1 srcport=15402 dstip=8.8.8.8 dstport=53 dstcountry="United States"  proto=17 sentbyte=841 rcvdbyte=6794 sentpkt=16 rcvdpkt=24
+date=2014-04-30 time=18:39:27  srcip=192.168.1.25 srcport=3571 dstip=208.67.222.222 dstport=22 dstcountry="Japan"  proto=6 sentbyte=997 rcvdbyte=5443 sentpkt=85 rcvdpkt=82
+date=2014-04-30 time=20:18:52  srcip=192.168.1.50 srcport=10489 dstip=208.67.222.222 dstport=25 dstcountry="Brazil"  proto=6 sentbyte=4641 rcvdbyte=7232 sentpkt=85 rcvdpkt=38
+date=2014-04-30 time=18:56:04  srcip=10.0.0.50 srcport=25355 dstip=172.16.0.1 dstport=143 dstcountry="United States"  proto=17 sentbyte=5763 rcvdbyte=3764 sentpkt=59 rcvdpkt=12
+date=2014-04-30 time=20:19:06  srcip=10.0.0.100 srcport=29857 dstip=172.16.0.1 dstport=110 dstcountry="Canada"  proto=17 sentbyte=165 rcvdbyte=2758 sentpkt=43 rcvdpkt=31
+date=2014-04-30 time=19:45:59  srcip=192.168.1.1 srcport=36291 dstip=10.0.0.1 dstport=53 dstcountry="Canada"  proto=17 sentbyte=808 rcvdbyte=84 sentpkt=39 rcvdpkt=68
+date=2014-04-30 time=18:56:10  srcip=10.0.0.100 srcport=19804 dstip=8.8.8.8 dstport=53 dstcountry="United States"  proto=6 sentbyte=8296 rcvdbyte=5945 sentpkt=84 rcvdpkt=15
+date=2014-04-30 time=20:19:27  srcip=10.0.0.50 srcport=39388 dstip=8.8.8.8 dstport=110 dstcountry="Japan"  proto=6 sentbyte=6923 rcvdbyte=5530 sentpkt=21 rcvdpkt=60
