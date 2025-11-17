@@ -4,6 +4,7 @@
 import unittest
 import sys
 import os
+import json
 from io import StringIO
 
 # Add parent directory to path to import fg_log_parser
@@ -15,7 +16,8 @@ from fg_log_parser import (
     translate_protonr,
     get_communication_matrix,
     print_communication_matrix,
-    print_communication_matrix_as_csv
+    print_communication_matrix_as_csv,
+    print_communication_matrix_as_json
 )
 
 
@@ -286,6 +288,248 @@ class TestPrintCommunicationMatrixAsCSV(unittest.TestCase):
 
         self.assertEqual(lines[0], 'srcip;dstip;dport;proto;count;action;sentbytes;rcvdbytes')
         self.assertEqual(lines[1], '192.168.1.1;8.8.8.8;53;UDP;1;None;10;10')
+
+
+class TestPrintCommunicationMatrixAsJSON(unittest.TestCase):
+    """Test cases for print_communication_matrix_as_json function."""
+
+    def test_print_json_simple(self):
+        """Test JSON output for simple matrix."""
+        matrix = {'192.168.1.1': {'8.8.8.8': {'53': {'UDP': {'count': 1}}}}}
+
+        # Capture stdout
+        captured_output = StringIO()
+        sys.stdout = captured_output
+
+        print_communication_matrix_as_json(matrix)
+
+        # Restore stdout
+        sys.stdout = sys.__stdout__
+
+        output = captured_output.getvalue()
+        data = json.loads(output)
+
+        self.assertEqual(len(data), 1)
+        self.assertEqual(data[0]['srcip'], '192.168.1.1')
+        self.assertEqual(data[0]['dstip'], '8.8.8.8')
+        self.assertEqual(data[0]['dport'], '53')
+        self.assertEqual(data[0]['proto'], 'UDP')
+        self.assertEqual(data[0]['count'], 1)
+        self.assertNotIn('sentbytes', data[0])
+        self.assertNotIn('rcvdbytes', data[0])
+        self.assertNotIn('action', data[0])
+
+    def test_print_json_with_bytes(self):
+        """Test JSON output with byte counts."""
+        matrix = {
+            '192.168.1.1': {
+                '8.8.8.8': {
+                    '53': {
+                        'UDP': {
+                            'count': 1,
+                            'sentbytes': 10,
+                            'rcvdbytes': 20
+                        }
+                    }
+                }
+            }
+        }
+
+        # Capture stdout
+        captured_output = StringIO()
+        sys.stdout = captured_output
+
+        print_communication_matrix_as_json(matrix, countbytes=True)
+
+        # Restore stdout
+        sys.stdout = sys.__stdout__
+
+        output = captured_output.getvalue()
+        data = json.loads(output)
+
+        self.assertEqual(len(data), 1)
+        self.assertEqual(data[0]['srcip'], '192.168.1.1')
+        self.assertEqual(data[0]['dstip'], '8.8.8.8')
+        self.assertEqual(data[0]['dport'], '53')
+        self.assertEqual(data[0]['proto'], 'UDP')
+        self.assertEqual(data[0]['count'], 1)
+        self.assertEqual(data[0]['sentbytes'], 10)
+        self.assertEqual(data[0]['rcvdbytes'], 20)
+        self.assertNotIn('action', data[0])
+
+    def test_print_json_with_action(self):
+        """Test JSON output with action field."""
+        matrix = {
+            '192.168.1.1': {
+                '8.8.8.8': {
+                    '53': {
+                        'UDP': {
+                            'count': 1,
+                            'action': 'accept'
+                        }
+                    }
+                }
+            }
+        }
+
+        # Capture stdout
+        captured_output = StringIO()
+        sys.stdout = captured_output
+
+        print_communication_matrix_as_json(matrix, showaction=True)
+
+        # Restore stdout
+        sys.stdout = sys.__stdout__
+
+        output = captured_output.getvalue()
+        data = json.loads(output)
+
+        self.assertEqual(len(data), 1)
+        self.assertEqual(data[0]['srcip'], '192.168.1.1')
+        self.assertEqual(data[0]['dstip'], '8.8.8.8')
+        self.assertEqual(data[0]['dport'], '53')
+        self.assertEqual(data[0]['proto'], 'UDP')
+        self.assertEqual(data[0]['count'], 1)
+        self.assertEqual(data[0]['action'], 'accept')
+        self.assertNotIn('sentbytes', data[0])
+        self.assertNotIn('rcvdbytes', data[0])
+
+    def test_print_json_with_none_values(self):
+        """Test JSON output with None values."""
+        matrix = {
+            '192.168.1.1': {
+                '8.8.8.8': {
+                    None: {
+                        None: {'count': 1}
+                    }
+                }
+            }
+        }
+
+        # Capture stdout
+        captured_output = StringIO()
+        sys.stdout = captured_output
+
+        print_communication_matrix_as_json(matrix)
+
+        # Restore stdout
+        sys.stdout = sys.__stdout__
+
+        output = captured_output.getvalue()
+        data = json.loads(output)
+
+        self.assertEqual(len(data), 1)
+        self.assertEqual(data[0]['srcip'], '192.168.1.1')
+        self.assertEqual(data[0]['dstip'], '8.8.8.8')
+        self.assertIsNone(data[0]['dport'])
+        self.assertIsNone(data[0]['proto'])
+        self.assertEqual(data[0]['count'], 1)
+
+    def test_print_json_multiple_records(self):
+        """Test JSON output with multiple records."""
+        matrix = {
+            '192.168.1.1': {
+                '8.8.8.8': {
+                    '53': {'UDP': {'count': 3}},
+                    None: {None: {'count': 1}}
+                }
+            }
+        }
+
+        # Capture stdout
+        captured_output = StringIO()
+        sys.stdout = captured_output
+
+        print_communication_matrix_as_json(matrix)
+
+        # Restore stdout
+        sys.stdout = sys.__stdout__
+
+        output = captured_output.getvalue()
+        data = json.loads(output)
+
+        self.assertEqual(len(data), 2)
+
+        # First record
+        self.assertEqual(data[0]['srcip'], '192.168.1.1')
+        self.assertEqual(data[0]['dstip'], '8.8.8.8')
+        self.assertEqual(data[0]['dport'], '53')
+        self.assertEqual(data[0]['proto'], 'UDP')
+        self.assertEqual(data[0]['count'], 3)
+
+        # Second record
+        self.assertEqual(data[1]['srcip'], '192.168.1.1')
+        self.assertEqual(data[1]['dstip'], '8.8.8.8')
+        self.assertIsNone(data[1]['dport'])
+        self.assertIsNone(data[1]['proto'])
+        self.assertEqual(data[1]['count'], 1)
+
+    def test_print_json_valid_format(self):
+        """Test that output is valid JSON."""
+        matrix = {
+            '192.168.1.1': {
+                '8.8.8.8': {
+                    '53': {'UDP': {'count': 1}}
+                }
+            }
+        }
+
+        # Capture stdout
+        captured_output = StringIO()
+        sys.stdout = captured_output
+
+        print_communication_matrix_as_json(matrix)
+
+        # Restore stdout
+        sys.stdout = sys.__stdout__
+
+        output = captured_output.getvalue()
+
+        # Should not raise an exception if valid JSON
+        try:
+            data = json.loads(output)
+            self.assertIsInstance(data, list)
+        except json.JSONDecodeError:
+            self.fail("Output is not valid JSON")
+
+    def test_print_json_all_options(self):
+        """Test JSON output with all options enabled."""
+        matrix = {
+            '192.168.1.1': {
+                '8.8.8.8': {
+                    '53': {
+                        'UDP': {
+                            'count': 5,
+                            'action': 'accept',
+                            'sentbytes': 100,
+                            'rcvdbytes': 200
+                        }
+                    }
+                }
+            }
+        }
+
+        # Capture stdout
+        captured_output = StringIO()
+        sys.stdout = captured_output
+
+        print_communication_matrix_as_json(matrix, countbytes=True, showaction=True)
+
+        # Restore stdout
+        sys.stdout = sys.__stdout__
+
+        output = captured_output.getvalue()
+        data = json.loads(output)
+
+        self.assertEqual(len(data), 1)
+        self.assertEqual(data[0]['srcip'], '192.168.1.1')
+        self.assertEqual(data[0]['dstip'], '8.8.8.8')
+        self.assertEqual(data[0]['dport'], '53')
+        self.assertEqual(data[0]['proto'], 'UDP')
+        self.assertEqual(data[0]['count'], 5)
+        self.assertEqual(data[0]['action'], 'accept')
+        self.assertEqual(data[0]['sentbytes'], 100)
+        self.assertEqual(data[0]['rcvdbytes'], 200)
 
 
 if __name__ == '__main__':

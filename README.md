@@ -9,6 +9,7 @@
 * [Features](#features)
 * [Example Session](#example-session)
 * [Example Session with CSV output](#example-session-with-csv-output)
+* [Example Session with JSON output](#example-session-with-json-output)
 * [Tests](#tests)
 
 <!-- toc stop -->
@@ -64,6 +65,7 @@ The help message contains information about general options and log format optio
         --version               Shows version information
         -n --noipcheck          Do not check if src and dst ip are present
         -c --csv                Print matrix in csv format (default is nested format)
+        -j --json               Print matrix in json format (default is nested format)
 
         Log Format Options (case sensitive):
         --srcipfield=<srcipfield>       Src ip address field [default: srcip]
@@ -96,10 +98,10 @@ matrix has the form:
                     Sentbytes
 
 # Features
-* Missing values will be substituted with ‘None’
-* Log format can be specified with parameters for `srcip`, `dstip`, `dport`, `protocol`, `rcvdbytes`, `sentbytes` fields. 
-* Default logfile format is the fortigate traffic log. The log format can be adjusted to other log formats, for example iptables logs. 
-* Export to .csv format is possible
+* Missing values will be substituted with 'None'
+* Log format can be specified with parameters for `srcip`, `dstip`, `dport`, `protocol`, `rcvdbytes`, `sentbytes` fields.
+* Default logfile format is the fortigate traffic log. The log format can be adjusted to other log formats, for example iptables logs.
+* Export to CSV and JSON formats is possible
 
 # Example Session
 
@@ -142,10 +144,54 @@ matrix has the form:
 
 # Example Session with CSV output
 
-    python3 fg_log_parser.py -c -f testlogs/fg.log 
+    python3 fg_log_parser.py -c -f testlogs/fg.log
     srcip;dstip;dport;proto;count;action;sentbytes;rcvdbytes
     192.168.1.1;8.8.8.8;53;UDP;3;None
     192.168.1.1;8.8.8.8;None;None;1;None
+
+# Example Session with JSON output
+
+    python3 fg_log_parser.py -j -f testlogs/fg.log
+    [
+      {
+        "srcip": "192.168.1.1",
+        "dstip": "8.8.8.8",
+        "dport": "53",
+        "proto": "UDP",
+        "count": 3
+      },
+      {
+        "srcip": "192.168.1.1",
+        "dstip": "8.8.8.8",
+        "dport": null,
+        "proto": null,
+        "count": 1
+      }
+    ]
+
+With byte counting enabled:
+
+    python3 fg_log_parser.py -j -b -f testlogs/fg.log
+    [
+      {
+        "srcip": "192.168.1.1",
+        "dstip": "8.8.8.8",
+        "dport": "53",
+        "proto": "UDP",
+        "count": 3,
+        "sentbytes": 3,
+        "rcvdbytes": 3
+      },
+      {
+        "srcip": "192.168.1.1",
+        "dstip": "8.8.8.8",
+        "dport": null,
+        "proto": null,
+        "count": 1,
+        "sentbytes": 1,
+        "rcvdbytes": 1
+      }
+    ]
 
 # Tests
 

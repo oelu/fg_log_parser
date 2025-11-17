@@ -13,6 +13,7 @@ Options:
     --version               Shows version information
     -n --noipcheck          Do not check if src and dst ip are present
     -c --csv                Print matrix in csv format (default is nested format)
+    -j --json               Print matrix in json format (default is nested format)
 
     Log Format Options (case sensitive):
     --srcipfield=<srcipfield>       Src ip address field [default: srcip]
@@ -42,6 +43,7 @@ __version__ = '0.3'
 
 import sys
 import re
+import json
 import logging as log
 
 try:
@@ -309,6 +311,63 @@ def print_communication_matrix_as_csv(matrix, countbytes=False, showaction=False
                     else:
                         print("%s;%s;%s;%s;%s;%s" % (srcip, dstip, dport, proto, count, action))
 
+def print_communication_matrix_as_json(matrix, countbytes=False, showaction=False):
+    """
+    Prints communication matrix in JSON format (flat array structure).
+
+    Example:
+    >>> matrix = {'192.168.1.1': {'8.8.8.8': {'53': {'UDP': {'count': 1}}}}}
+    >>> print_communication_matrix_as_json(matrix)
+    [
+      {
+        "srcip": "192.168.1.1",
+        "dstip": "8.8.8.8",
+        "dport": "53",
+        "proto": "UDP",
+        "count": 1
+      }
+    ]
+
+    Example 2 (option countbytes set):
+    >>> matrix = {'192.168.1.1': {'8.8.8.8': {'53': {'UDP': {'count': 1, 'sentbytes': 10, 'rcvdbytes': 10}}}}}
+    >>> print_communication_matrix_as_json(matrix, countbytes=True)
+    [
+      {
+        "srcip": "192.168.1.1",
+        "dstip": "8.8.8.8",
+        "dport": "53",
+        "proto": "UDP",
+        "count": 1,
+        "sentbytes": 10,
+        "rcvdbytes": 10
+      }
+    ]
+    """
+    records = []
+
+    for srcip in matrix.keys():
+        for dstip in matrix.get(srcip):
+            for dport in matrix[srcip][dstip].keys():
+                for proto in matrix[srcip][dstip].get(dport):
+                    record = {
+                        "srcip": srcip,
+                        "dstip": dstip,
+                        "dport": dport,
+                        "proto": proto,
+                        "count": matrix[srcip][dstip][dport][proto].get("count")
+                    }
+
+                    if showaction:
+                        record["action"] = matrix[srcip][dstip][dport][proto].get("action")
+
+                    if countbytes:
+                        record["sentbytes"] = matrix[srcip][dstip][dport][proto].get("sentbytes")
+                        record["rcvdbytes"] = matrix[srcip][dstip][dport][proto].get("rcvdbytes")
+
+                    records.append(record)
+
+    print(json.dumps(records, indent=2))
+
 def main():
     """
     Main function.
@@ -323,6 +382,7 @@ def main():
     verbose = arguments['--verbose']
     noipcheck = arguments['--noipcheck']
     csv = arguments['--csv']
+    jsonformat = arguments['--json']
     showaction = arguments['--showaction']
 
     # define logfile format
@@ -353,7 +413,9 @@ def main():
     # parse log
     log.info("Reading firewall log...")
     matrix = get_communication_matrix(logfile, logformat, countbytes, noipcheck, showaction)
-    if csv:
+    if jsonformat:
+        print_communication_matrix_as_json(matrix, countbytes, showaction)
+    elif csv:
         print_communication_matrix_as_csv(matrix, countbytes, showaction)
     else:
         print_communication_matrix(matrix)
