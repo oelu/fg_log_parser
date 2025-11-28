@@ -1,40 +1,7 @@
 #!/usr/bin/python3
 """Fortigate Log Parser
+
 Parses a Fortigate log file and presents a communication matrix.
-
-Usage: fg_log_parser.py
-  fg_log_parser.py (-f <logfile> | --file <logfile>) [options]
-
-Options:
-    -s --showaction         Show action field.
-    -b --countbytes         Count bytes for each communication quartet
-    -h --help               Show this message
-    -v --verbose            Activate verbose messages
-    --version               Shows version information
-    -n --noipcheck          Do not check if src and dst ip are present
-    -c --csv                Print matrix in csv format (default is nested format)
-    -j --json               Print matrix in json format (default is nested format)
-
-    Log Format Options (case sensitive):
-    --srcipfield=<srcipfield>       Src ip address field [default: srcip]
-    --dstipfield=<dstipfield>       Dst ip address field [default: dstip]
-    --dstportfield=<dstportfield>   Dst port field [default: dstport]
-    --protofield=<protofield>       Protocol field [default: proto]
-    --actionfield=<actionfield>     Action field [default: action]
-
-
-    If countbytes options is set you may have to specify:
-    --sentbytesfield=<sentbytesfield>  Field for sent bytes [default: sentbyte]
-    --rcvdbytesfield=<rcvdbytesfield>  Field for rcvd bytes [default: rcvdbyte]
-
-Examples:
-    Parse Fortigate Log:
-        fg_log_parser.py -f fg.log
-    Parse Iptables Log:
-        fg_log_parser.py -f filter --srcipfield=SRC --dstipfield=DST --dstportfield=DPT --protofield=PROTO
-    Parse Fortianalyzer Log:
-        fg_log_parser.py -f faz.log --srcipfield=src --dstipfield=dst
-
 """
 
 __author__ = 'olivier'
@@ -45,14 +12,7 @@ import sys
 import re
 import json
 import logging as log
-
-try:
-    from docopt import docopt
-except ImportError as ioex:
-    print("ERROR: Could not import a required module", file=sys.stderr)
-    print(f"ERROR: {ioex}", file=sys.stderr)
-    print("Please install dependencies: pip3 install -r requirements.txt", file=sys.stderr)
-    sys.exit(1)
+import argparse
 
 
 def split_kv(line):
@@ -372,28 +332,74 @@ def main():
     """
     Main function.
     """
-    # get arguments from docopt
-    arguments = docopt(__doc__)
-    arguments = docopt(__doc__, version='Fortigate Log Parser 0.3')
-    # assign docopt argument
-    # check module documentation for argument description
-    logfile = arguments['<logfile>']
-    countbytes = arguments['--countbytes']
-    verbose = arguments['--verbose']
-    noipcheck = arguments['--noipcheck']
-    csv = arguments['--csv']
-    jsonformat = arguments['--json']
-    showaction = arguments['--showaction']
+    # create argument parser
+    parser = argparse.ArgumentParser(
+        description='Parses a Fortigate log file and presents a communication matrix.',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog='''Examples:
+  Parse Fortigate Log:
+    fg_log_parser.py -f fg.log
+  Parse Iptables Log:
+    fg_log_parser.py -f filter --srcipfield=SRC --dstipfield=DST --dstportfield=DPT --protofield=PROTO
+  Parse Fortianalyzer Log:
+    fg_log_parser.py -f faz.log --srcipfield=src --dstipfield=dst
+''')
+
+    # required arguments
+    parser.add_argument('-f', '--file', dest='file', metavar='<logfile>', required=True,
+                        help='Logfile to parse')
+
+    # boolean flags
+    parser.add_argument('-s', '--showaction', action='store_true',
+                        help='Show action field')
+    parser.add_argument('-b', '--countbytes', action='store_true',
+                        help='Count bytes for each communication quartet')
+    parser.add_argument('-v', '--verbose', action='store_true',
+                        help='Activate verbose messages')
+    parser.add_argument('-n', '--noipcheck', action='store_true',
+                        help='Do not check if src and dst ip are present')
+    parser.add_argument('-c', '--csv', action='store_true',
+                        help='Print matrix in csv format (default is nested format)')
+    parser.add_argument('-j', '--json', action='store_true',
+                        help='Print matrix in json format (default is nested format)')
+    parser.add_argument('--version', action='version', version='Fortigate Log Parser 0.3')
+
+    # log format options
+    parser.add_argument('--srcipfield', default='srcip',
+                        help='Src ip address field (default: srcip)')
+    parser.add_argument('--dstipfield', default='dstip',
+                        help='Dst ip address field (default: dstip)')
+    parser.add_argument('--dstportfield', default='dstport',
+                        help='Dst port field (default: dstport)')
+    parser.add_argument('--protofield', default='proto',
+                        help='Protocol field (default: proto)')
+    parser.add_argument('--actionfield', default='action',
+                        help='Action field (default: action)')
+    parser.add_argument('--sentbytesfield', default='sentbyte',
+                        help='Field for sent bytes (default: sentbyte)')
+    parser.add_argument('--rcvdbytesfield', default='rcvdbyte',
+                        help='Field for rcvd bytes (default: rcvdbyte)')
+
+    # parse arguments
+    args = parser.parse_args()
+
+    # assign arguments
+    logfile = args.file
+    countbytes = args.countbytes
+    verbose = args.verbose
+    noipcheck = args.noipcheck
+    csv = args.csv
+    jsonformat = args.json
+    showaction = args.showaction
 
     # define logfile format
-    # note: default values are set in the docopt string, see __doc__
-    logformat = {'srcipfield': arguments['--srcipfield'],
-                 'dstipfield': arguments['--dstipfield'],
-                 'dstportfield': arguments['--dstportfield'],
-                 'protofield': arguments['--protofield'],
-                 'sentbytesfield': arguments['--sentbytesfield'],
-                 'rcvdbytesfield': arguments['--rcvdbytesfield'],
-                 'actionfield': arguments['--actionfield']
+    logformat = {'srcipfield': args.srcipfield,
+                 'dstipfield': args.dstipfield,
+                 'dstportfield': args.dstportfield,
+                 'protofield': args.protofield,
+                 'sentbytesfield': args.sentbytesfield,
+                 'rcvdbytesfield': args.rcvdbytesfield,
+                 'actionfield': args.actionfield
                  }
 
     # set loglevel
@@ -403,11 +409,11 @@ def main():
     else:
         log.basicConfig(format="%(levelname)s: %(message)s")
     log.info("Script was started with arguments: ")
-    log.info(arguments)
+    log.info(args)
 
     # check if logfile argument is present
     if logfile is None:
-        print(__doc__)
+        parser.print_help()
         sys.exit(1)
 
     # parse log

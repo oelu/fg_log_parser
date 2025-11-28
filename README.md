@@ -3,7 +3,7 @@
 <!-- toc -->
 * [Installation](#installation)
   * [Download the Repository](#download-the-repository)
-  * [Install Dependencies](#install-dependencies)
+  * [Requirements](#requirements)
   * [Make the Script Executable (Optional)](#make-the-script-executable-optional)
 * [Usage](#usage)
 * [Features](#features)
@@ -27,15 +27,9 @@ Clone the repository from GitHub:
 
 Alternatively, download the repository as a ZIP file and extract it.
 
-## Install Dependencies
+## Requirements
 
-Install the required Python packages:
-
-    pip3 install -r requirements.txt
-
-Or install manually:
-
-    pip3 install docopt>=0.6.2
+This script uses only Python 3 built-in modules and has no external dependencies.
 
 ## Make the Script Executable (Optional)
 
@@ -48,43 +42,51 @@ Then run it directly:
     ./fg_log_parser.py -f your_logfile.log
 
 # Usage
-The help message contains information about general options and log format options. 
+The help message contains information about general options and log format options.
 
     $ python3 fg_log_parser.py --help
-    Fortigate Log Parser
-    Parses a Fortigate logfile and presents a communication matrix.
-    
-    Usage: fg_log_parser.py
-        fg_log_parser.py (-f <logfile> | --file <logfile>) [options]
+    usage: fg_log_parser.py [-h] -f <logfile> [-s] [-b] [-v] [-n] [-c] [-j]
+                            [--version] [--srcipfield SRCIPFIELD]
+                            [--dstipfield DSTIPFIELD]
+                            [--dstportfield DSTPORTFIELD]
+                            [--protofield PROTOFIELD] [--actionfield ACTIONFIELD]
+                            [--sentbytesfield SENTBYTESFIELD]
+                            [--rcvdbytesfield RCVDBYTESFIELD]
 
-    Options:
-        -s --showaction         Show action field.
-        -b --countbytes         Count bytes for each communication quartet
-        -h --help               Show this message
-        -v --verbose            Activate verbose messages
-        --version               Shows version information
-        -n --noipcheck          Do not check if src and dst ip are present
-        -c --csv                Print matrix in csv format (default is nested format)
-        -j --json               Print matrix in json format (default is nested format)
+    Parses a Fortigate log file and presents a communication matrix.
 
-        Log Format Options (case sensitive):
-        --srcipfield=<srcipfield>       Src ip address field [default: srcip]
-        --dstipfield=<dstipfield>       Dst ip address field [default: dstip]
-        --dstportfield=<dstportfield>   Dst port field [default: dstport]
-        --protofield=<protofield>       Protocol field [default: proto]
-    
-    
-        If countbytes options is set you may have to specify:
-        --sentbytesfield=<sentbytesfield>  Field for sent bytes [default: sentbyte]
-        --rcvdbytesfield=<rcvdbytesfield>  Field for rcvd bytes [default: rcvdbyte]
-    
+    options:
+      -h, --help            show this help message and exit
+      -f, --file <logfile>  Logfile to parse
+      -s, --showaction      Show action field
+      -b, --countbytes      Count bytes for each communication quartet
+      -v, --verbose         Activate verbose messages
+      -n, --noipcheck       Do not check if src and dst ip are present
+      -c, --csv             Print matrix in csv format (default is nested format)
+      -j, --json            Print matrix in json format (default is nested format)
+      --version             show program's version number and exit
+      --srcipfield SRCIPFIELD
+                            Src ip address field (default: srcip)
+      --dstipfield DSTIPFIELD
+                            Dst ip address field (default: dstip)
+      --dstportfield DSTPORTFIELD
+                            Dst port field (default: dstport)
+      --protofield PROTOFIELD
+                            Protocol field (default: proto)
+      --actionfield ACTIONFIELD
+                            Action field (default: action)
+      --sentbytesfield SENTBYTESFIELD
+                            Field for sent bytes (default: sentbyte)
+      --rcvdbytesfield RCVDBYTESFIELD
+                            Field for rcvd bytes (default: rcvdbyte)
+
     Examples:
-        Parse Fortigate Log:
-            fg_log_parser.py -f fg.log
-        Parse Iptables Log:
-            fg_log_parser.py -f filter --srcipfield=SRC --dstipfield=DST --dstportfield=DPT --protofield=PROTO
-        Parse Fortianalyzer Log:
-            fg_log_parser.py -f faz.log --srcipfield=src --dstipfield=dst
+      Parse Fortigate Log:
+        fg_log_parser.py -f fg.log
+      Parse Iptables Log:
+        fg_log_parser.py -f filter --srcipfield=SRC --dstipfield=DST --dstportfield=DPT --protofield=PROTO
+      Parse Fortianalyzer Log:
+        fg_log_parser.py -f faz.log --srcipfield=src --dstipfield=dst
 
 The communication
 matrix has the form: 

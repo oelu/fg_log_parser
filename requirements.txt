@@ -1,1 +1,1 @@
-docopt>=0.6.2
+# No external dependencies required - using built-in argparse module
