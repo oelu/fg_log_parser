@@ -13,9 +13,14 @@ import re
 import json
 import logging as log
 import argparse
+from pathlib import Path
+from typing import Dict, Any, Optional, Union
+
+# Pre-compiled regex for splitting key-value pairs (avoids recompilation per line)
+KV_PATTERN = re.compile(r'(?:[^\s,""]|"(?:\\.|[^""])*")+')
 
 
-def split_kv(line):
+def split_kv(line: str) -> Dict[str, str]:
     """
     Splits lines in key and value pairs and returns a dictionary.
 
@@ -23,23 +28,30 @@ def split_kv(line):
         >>> line = 'srcip=192.168.1.1 dstip=8.8.8.8 \
         ...         dport=53 proto=53 dstcountry="United States"'
         >>> split_kv(line)
-        {'srcip': '192.168.1.1', 'dport': '53', 'dstip': '8.8.8.8', 'dstcountry': '"United States"', 'proto': '53'}
+        {'srcip': '192.168.1.1', 'dstip': '8.8.8.8', 'dport': '53', 'proto': '53', 'dstcountry': '"United States"'}
 
     """
     kvdelim = '='  # key and value deliminator
     logline = {}  # dictionary for logline
-    # split line in key and value pairs
-    # regex matches internal sub strings such as key = "word1 word2"
-    for field in re.findall(r'(?:[^\s,""]|"(?:\\.|[^""])*")+', line):
+    # split line in key and value pairs using pre-compiled regex
+    for field in KV_PATTERN.findall(line):
         if kvdelim in field:
-            key, value = field.split(kvdelim)
+            key, value = field.split(kvdelim, 1)  # maxsplit=1 handles "key=val=ue"
             logline[key] = value
     return logline
 
 
-def check_log_format(line, srcipfield, dstipfield):
+def check_log_format(line: str, srcipfield: str, dstipfield: str) -> bool:
     """
-    checks if srcipfield and dstipfield are in logline
+    Checks if srcipfield and dstipfield appear in the raw log line string.
+
+    Args:
+        line: Raw log line string
+        srcipfield: Field name to search for (e.g., 'srcip')
+        dstipfield: Field name to search for (e.g., 'dstip')
+
+    Returns:
+        True if both fields found in line, False otherwise
 
     Examples:
         >>> line ='srcip=192.168.1.1 dstip=8.8.8.8 dstport=53 proto=53'
@@ -52,17 +64,16 @@ def check_log_format(line, srcipfield, dstipfield):
         >>> check_log_format(line, "srcip", "dstip")
         False
     """
-    log.info("check_log_format: checking line: ")
-    log.info(line)
+    log.debug("check_log_format: checking line: %s", line[:200])
     if srcipfield in line and dstipfield in line:
-        log.info("check_log_format: found srcipfield %s", srcipfield)
-        log.info("check_log_format: found dstipfield %s", dstipfield)
+        log.debug("check_log_format: found srcipfield %s", srcipfield)
+        log.debug("check_log_format: found dstipfield %s", dstipfield)
         return True
     else:
         return False
 
 
-def translate_protonr(protocolnr):
+def translate_protonr(protocolnr: Optional[str]) -> Union[str, int, None]:
     """
     Translates ports as names.
 
@@ -92,11 +103,11 @@ def translate_protonr(protocolnr):
         return protocolnr
 
 
-def get_communication_matrix(logfile,
-                             logformat,
-                             countbytes=False,
-                             noipcheck=False,
-                             showaction=False):
+def get_communication_matrix(logfile: str,
+                             logformat: Dict[str, str],
+                             countbytes: bool = False,
+                             noipcheck: bool = False,
+                             showaction: bool = False) -> Dict[str, Any]:
     """
     Reads firewall logfile and returns communication matrix as a dictionary.
 
@@ -112,10 +123,19 @@ def get_communication_matrix(logfile,
 
     """
 
-    log.info("get_communication_matrix() started with parameters: ")
-    log.info("Option logfile: %s", logfile)
-    log.info("Option countbytes: %s", countbytes)
-    log.info("Option showaction: %s", showaction)
+    log.debug("get_communication_matrix() started with parameters: ")
+    log.debug("Option logfile: %s", logfile)
+    log.debug("Option countbytes: %s", countbytes)
+    log.debug("Option showaction: %s", showaction)
+
+    # validate file exists before processing
+    logfile_path = Path(logfile)
+    if not logfile_path.exists():
+        log.error("Logfile not found: %s", logfile)
+        sys.exit(1)
+    if not logfile_path.is_file():
+        log.error("Path is not a file: %s", logfile)
+        sys.exit(1)
 
     # assign log format options from logformat dict
     srcipfield = logformat['srcipfield']
@@ -128,31 +148,25 @@ def get_communication_matrix(logfile,
 
     matrix = {}  # communication matrix
 
-    with open(logfile, 'r') as infile:
+    with open(logfile, 'r', encoding='utf-8', errors='replace') as infile:
         # parse each line in file
         linecount = 1  # linecount for detailed error message
 
         for line in infile:
-            """
-            For loop creates a nested dictionary with multiple levels.
-
-            Level description:
-            Level 1:        srcips (source ips)
-            Level 2:        dstips (destination ips)
-            Level 3:        dstport (destination port number)
-            Level 4:        proto (protocol number)
-            Level 4.5:      action (Fortigate action)
-            Level 5:        occurrence count
-                            sentbytes
-                            rcvdbytes
-            """
+            # Communication matrix structure:
+            # Level 1: srcip (source IP)
+            # Level 2: dstip (destination IP)
+            # Level 3: dstport (destination port)
+            # Level 4: proto (protocol)
+            # Level 5: count, sentbytes, rcvdbytes
 
             # check if necessary fields are in first line
             if linecount == 1 and not noipcheck:
                 # print error message if srcip or dstip are missing
                 if not check_log_format(line, srcipfield, dstipfield):
-                    log.error("srcipfield or dstipfield not in line: %s ", linecount)
-                    log.error("Check Log Format options and consult help message!")
+                    log.error("Required fields missing in line %s", linecount)
+                    log.error("Expected fields: '%s' and '%s'", srcipfield, dstipfield)
+                    log.error("Line content: %s", line[:200])
                     sys.exit(1)
 
             # split each line in key and value pairs.
@@ -174,11 +188,11 @@ def get_communication_matrix(logfile,
                 rcvdbytes = logline.get(rcvdbytesfield)
             # extend matrix for each source ip
             if srcip not in matrix:
-                log.info("Found new srcip %s", srcip)
+                log.debug("Found new srcip %s", srcip)
                 matrix[srcip] = {}
             # extend matrix for each dstip in srcip
             if dstip not in matrix[srcip]:
-                log.info("Found new dstip: %s for sourceip: %s", dstip, srcip)
+                log.debug("Found new dstip: %s for sourceip: %s", dstip, srcip)
                 matrix[srcip][dstip] = {}
             # extend matrix for each port in comm. pair
             if dstport not in matrix[srcip][dstip]:
@@ -190,30 +204,32 @@ def get_communication_matrix(logfile,
                 if showaction:
                     matrix[srcip][dstip][dstport][proto]["action"] = action
                 if countbytes:
-                    matrix[srcip][dstip][dstport][proto]["sentbytes"] \
-                        = int(sentbytes)
-                    matrix[srcip][dstip][dstport][proto]["rcvdbytes"] \
-                        = int(rcvdbytes)
+                    try:
+                        matrix[srcip][dstip][dstport][proto]["sentbytes"] = int(sentbytes) if sentbytes else 0
+                        matrix[srcip][dstip][dstport][proto]["rcvdbytes"] = int(rcvdbytes) if rcvdbytes else 0
+                    except (ValueError, TypeError) as e:
+                        log.warning("Line %s: Invalid byte values (sent=%s, rcvd=%s): %s",
+                                    linecount, sentbytes, rcvdbytes, e)
+                        matrix[srcip][dstip][dstport][proto]["sentbytes"] = 0
+                        matrix[srcip][dstip][dstport][proto]["rcvdbytes"] = 0
             # if proto is already in matrix
             # increase count of variable count and sum bytes
             elif proto in matrix[srcip][dstip][dstport]:
                 matrix[srcip][dstip][dstport][proto]["count"] += 1
                 if countbytes:
                     try:
-                        matrix[srcip][dstip][dstport][proto]["sentbytes"] \
-                            += int(sentbytes)
-                    except TypeError:
-                        pass
+                        matrix[srcip][dstip][dstport][proto]["sentbytes"] += int(sentbytes) if sentbytes else 0
+                    except (TypeError, ValueError) as e:
+                        log.warning("Line %s: Invalid sentbytes value '%s': %s", linecount, sentbytes, e)
                     try:
-                        matrix[srcip][dstip][dstport][proto]["rcvdbytes"] \
-                            += int(rcvdbytes)
-                    except TypeError:
-                        pass
+                        matrix[srcip][dstip][dstport][proto]["rcvdbytes"] += int(rcvdbytes) if rcvdbytes else 0
+                    except (TypeError, ValueError) as e:
+                        log.warning("Line %s: Invalid rcvdbytes value '%s': %s", linecount, rcvdbytes, e)
         log.info("Parsed %s lines in logfile: %s ", linecount, logfile)
     return matrix
 
 
-def print_communication_matrix(matrix, indent=0):
+def print_communication_matrix(matrix: Dict[str, Any], indent: int = 0) -> None:
     """
     Prints the communication matrix in a nice format.
 
@@ -236,42 +252,49 @@ def print_communication_matrix(matrix, indent=0):
             print('    ' * (indent+1) + str(value))
     return None
 
-def print_communication_matrix_as_csv(matrix, countbytes=False, showaction=False):
+def print_communication_matrix_as_csv(matrix: Dict[str, Any],
+                                      countbytes: bool = False,
+                                      showaction: bool = False) -> None:
     """
     Prints communication matrix in csv format.
 
     Example:
     >>> matrix = {'192.168.1.1': {'8.8.8.8': {'53': {'UDP': {'count': 1}}}}}
     >>> print_communication_matrix_as_csv(matrix)
-    srcip;dstip;dport;proto;count;action;sentbytes;rcvdbytes
-    192.168.1.1;8.8.8.8;53;UDP;1;None
+    srcip;dstip;dport;proto;count
+    192.168.1.1;8.8.8.8;53;UDP;1
 
     Example 2 (option countbytes set):
     >>> matrix = {'192.168.1.1': {'8.8.8.8': {'53': {'UDP': {'count': 1, 'sentbytes': 10, 'rcvdbytes': 10}}}}}
     >>> print_communication_matrix_as_csv(matrix, countbytes=True)
-    srcip;dstip;dport;proto;count;action;sentbytes;rcvdbytes
-    192.168.1.1;8.8.8.8;53;UDP;1;None;10;10
+    srcip;dstip;dport;proto;count;sentbytes;rcvdbytes
+    192.168.1.1;8.8.8.8;53;UDP;1;10;10
 
     """
-    # Header
-    print("srcip;dstip;dport;proto;count;action;sentbytes;rcvdbytes")
-    for srcip in matrix.keys():
-        for dstip in matrix.get(srcip):
-            for dport in matrix[srcip][dstip].keys():
-                for proto in matrix[srcip][dstip].get(dport):
-                    count = matrix[srcip][dstip][dport][proto].get("count")
-                    if showaction:
-                        action = matrix[srcip][dstip][dport][proto].get("action")
-                    else:
-                        action = "None"
-                    if countbytes:
-                            rcvdbytes = matrix[srcip][dstip][dport][proto].get("rcvdbytes")
-                            sentbytes = matrix[srcip][dstip][dport][proto].get("sentbytes")
-                            print("%s;%s;%s;%s;%s;%s;%s;%s" % (srcip, dstip, dport, proto, count, action, sentbytes, rcvdbytes))
-                    else:
-                        print("%s;%s;%s;%s;%s;%s" % (srcip, dstip, dport, proto, count, action))
+    # Dynamic header based on options
+    header = ["srcip", "dstip", "dport", "proto", "count"]
+    if showaction:
+        header.append("action")
+    if countbytes:
+        header.extend(["sentbytes", "rcvdbytes"])
+    print(";".join(header))
 
-def print_communication_matrix_as_json(matrix, countbytes=False, showaction=False):
+    for srcip in matrix:
+        for dstip in matrix[srcip]:
+            for dport in matrix[srcip][dstip]:
+                for proto in matrix[srcip][dstip][dport]:
+                    row = [str(srcip or ""), str(dstip or ""), str(dport or ""), str(proto or ""),
+                           str(matrix[srcip][dstip][dport][proto].get("count", ""))]
+                    if showaction:
+                        row.append(str(matrix[srcip][dstip][dport][proto].get("action") or ""))
+                    if countbytes:
+                        row.append(str(matrix[srcip][dstip][dport][proto].get("sentbytes") or ""))
+                        row.append(str(matrix[srcip][dstip][dport][proto].get("rcvdbytes") or ""))
+                    print(";".join(row))
+
+def print_communication_matrix_as_json(matrix: Dict[str, Any],
+                                       countbytes: bool = False,
+                                       showaction: bool = False) -> None:
     """
     Prints communication matrix in JSON format (flat array structure).
 
@@ -305,10 +328,10 @@ def print_communication_matrix_as_json(matrix, countbytes=False, showaction=Fals
     """
     records = []
 
-    for srcip in matrix.keys():
-        for dstip in matrix.get(srcip):
-            for dport in matrix[srcip][dstip].keys():
-                for proto in matrix[srcip][dstip].get(dport):
+    for srcip in matrix:
+        for dstip in matrix[srcip]:
+            for dport in matrix[srcip][dstip]:
+                for proto in matrix[srcip][dstip][dport]:
                     record = {
                         "srcip": srcip,
                         "dstip": dstip,
@@ -328,7 +351,7 @@ def print_communication_matrix_as_json(matrix, countbytes=False, showaction=Fals
 
     print(json.dumps(records, indent=2))
 
-def main():
+def main() -> int:
     """
     Main function.
     """
@@ -405,19 +428,13 @@ def main():
     # set loglevel
     if verbose:
         log.basicConfig(format="%(levelname)s: %(message)s", level=log.DEBUG)
-        log.info("Verbose output activated.")
+        log.debug("Verbose output activated.")
     else:
         log.basicConfig(format="%(levelname)s: %(message)s")
-    log.info("Script was started with arguments: ")
-    log.info(args)
-
-    # check if logfile argument is present
-    if logfile is None:
-        parser.print_help()
-        sys.exit(1)
+    log.debug("Script was started with arguments: %s", args)
 
     # parse log
-    log.info("Reading firewall log...")
+    log.debug("Reading firewall log...")
     matrix = get_communication_matrix(logfile, logformat, countbytes, noipcheck, showaction)
     if jsonformat:
         print_communication_matrix_as_json(matrix, countbytes, showaction)
