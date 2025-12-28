@@ -17,7 +17,8 @@ from fg_log_parser import (
     get_communication_matrix,
     print_communication_matrix,
     print_communication_matrix_as_csv,
-    print_communication_matrix_as_json
+    print_communication_matrix_as_json,
+    load_hosts_csv
 )
 
 
@@ -255,8 +256,8 @@ class TestPrintCommunicationMatrixAsCSV(unittest.TestCase):
         output = captured_output.getvalue()
         lines = output.strip().split('\n')
 
-        self.assertEqual(lines[0], 'srcip;dstip;dport;proto;count;action;sentbytes;rcvdbytes')
-        self.assertEqual(lines[1], '192.168.1.1;8.8.8.8;53;UDP;1;None')
+        self.assertEqual(lines[0], 'srcip;src.name;dstip;dst.name;dport;proto;count')
+        self.assertEqual(lines[1], '192.168.1.1;;8.8.8.8;;53;UDP;1')
 
     def test_print_csv_with_bytes(self):
         """Test CSV output with byte counts."""
@@ -286,8 +287,8 @@ class TestPrintCommunicationMatrixAsCSV(unittest.TestCase):
         output = captured_output.getvalue()
         lines = output.strip().split('\n')
 
-        self.assertEqual(lines[0], 'srcip;dstip;dport;proto;count;action;sentbytes;rcvdbytes')
-        self.assertEqual(lines[1], '192.168.1.1;8.8.8.8;53;UDP;1;None;10;10')
+        self.assertEqual(lines[0], 'srcip;src.name;dstip;dst.name;dport;proto;count;sentbytes;rcvdbytes')
+        self.assertEqual(lines[1], '192.168.1.1;;8.8.8.8;;53;UDP;1;10;10')
 
 
 class TestPrintCommunicationMatrixAsJSON(unittest.TestCase):
@@ -530,6 +531,144 @@ class TestPrintCommunicationMatrixAsJSON(unittest.TestCase):
         self.assertEqual(data[0]['action'], 'accept')
         self.assertEqual(data[0]['sentbytes'], 100)
         self.assertEqual(data[0]['rcvdbytes'], 200)
+
+
+class TestLoadHostsCSV(unittest.TestCase):
+    """Test cases for load_hosts_csv function."""
+
+    def setUp(self):
+        """Create temporary CSV hosts file."""
+        self.test_csv = '/tmp/test_hosts.csv'
+        with open(self.test_csv, 'w') as f:
+            f.write('name;addr;addr6\n')
+            f.write('dns.server;8.8.8.8;2001:4860:4860::8888\n')
+            f.write('client.host;192.168.1.1;fd00::1\n')
+
+    def tearDown(self):
+        """Remove temporary file."""
+        if os.path.exists(self.test_csv):
+            os.remove(self.test_csv)
+
+    def test_load_hosts_csv_ipv4(self):
+        """Test loading IPv4 addresses from CSV."""
+        hosts = load_hosts_csv(self.test_csv)
+        self.assertEqual(hosts.get('8.8.8.8'), 'dns.server')
+        self.assertEqual(hosts.get('192.168.1.1'), 'client.host')
+
+    def test_load_hosts_csv_ipv6(self):
+        """Test loading IPv6 addresses from CSV."""
+        hosts = load_hosts_csv(self.test_csv)
+        self.assertEqual(hosts.get('2001:4860:4860::8888'), 'dns.server')
+        self.assertEqual(hosts.get('fd00::1'), 'client.host')
+
+    def test_load_hosts_csv_unknown_ip(self):
+        """Test that unknown IPs return None."""
+        hosts = load_hosts_csv(self.test_csv)
+        self.assertIsNone(hosts.get('10.0.0.1'))
+
+    def test_load_hosts_csv_empty_file(self):
+        """Test loading empty CSV file."""
+        empty_csv = '/tmp/empty_hosts.csv'
+        with open(empty_csv, 'w') as f:
+            f.write('name;addr;addr6\n')
+        hosts = load_hosts_csv(empty_csv)
+        self.assertEqual(hosts, {})
+        os.remove(empty_csv)
+
+
+class TestPrintWithHosts(unittest.TestCase):
+    """Test cases for print functions with hosts parameter."""
+
+    def setUp(self):
+        """Set up test fixtures."""
+        self.hosts = {
+            '192.168.1.1': 'client.host',
+            '8.8.8.8': 'dns.server'
+        }
+        self.matrix = {'192.168.1.1': {'8.8.8.8': {'53': {'UDP': {'count': 1}}}}}
+
+    def test_csv_with_hosts(self):
+        """Test CSV output with host name resolution."""
+        captured_output = StringIO()
+        sys.stdout = captured_output
+
+        print_communication_matrix_as_csv(self.matrix, hosts=self.hosts)
+
+        sys.stdout = sys.__stdout__
+        output = captured_output.getvalue()
+        lines = output.strip().split('\n')
+
+        self.assertEqual(lines[0], 'srcip;src.name;dstip;dst.name;dport;proto;count')
+        self.assertEqual(lines[1], '192.168.1.1;client.host;8.8.8.8;dns.server;53;UDP;1')
+
+    def test_csv_with_partial_hosts(self):
+        """Test CSV output when only some IPs have names."""
+        partial_hosts = {'192.168.1.1': 'client.host'}
+
+        captured_output = StringIO()
+        sys.stdout = captured_output
+
+        print_communication_matrix_as_csv(self.matrix, hosts=partial_hosts)
+
+        sys.stdout = sys.__stdout__
+        output = captured_output.getvalue()
+        lines = output.strip().split('\n')
+
+        self.assertEqual(lines[1], '192.168.1.1;client.host;8.8.8.8;;53;UDP;1')
+
+    def test_json_with_hosts(self):
+        """Test JSON output with host name resolution."""
+        captured_output = StringIO()
+        sys.stdout = captured_output
+
+        print_communication_matrix_as_json(self.matrix, hosts=self.hosts)
+
+        sys.stdout = sys.__stdout__
+        output = captured_output.getvalue()
+        data = json.loads(output)
+
+        self.assertEqual(data[0]['src.name'], 'client.host')
+        self.assertEqual(data[0]['dst.name'], 'dns.server')
+
+    def test_json_with_empty_hosts(self):
+        """Test JSON output with empty hosts dict."""
+        captured_output = StringIO()
+        sys.stdout = captured_output
+
+        print_communication_matrix_as_json(self.matrix, hosts={})
+
+        sys.stdout = sys.__stdout__
+        output = captured_output.getvalue()
+        data = json.loads(output)
+
+        self.assertEqual(data[0]['src.name'], '')
+        self.assertEqual(data[0]['dst.name'], '')
+
+    def test_nested_with_hosts(self):
+        """Test nested output with host name resolution."""
+        captured_output = StringIO()
+        sys.stdout = captured_output
+
+        print_communication_matrix(self.matrix, hosts=self.hosts)
+
+        sys.stdout = sys.__stdout__
+        output = captured_output.getvalue()
+
+        self.assertIn('192.168.1.1 (client.host)', output)
+        self.assertIn('8.8.8.8 (dns.server)', output)
+
+    def test_nested_without_hosts(self):
+        """Test nested output without host names (no parentheses)."""
+        captured_output = StringIO()
+        sys.stdout = captured_output
+
+        print_communication_matrix(self.matrix, hosts={})
+
+        sys.stdout = sys.__stdout__
+        output = captured_output.getvalue()
+
+        self.assertIn('192.168.1.1', output)
+        self.assertNotIn('(', output)
 
 
 if __name__ == '__main__':

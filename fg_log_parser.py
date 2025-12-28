@@ -17,6 +17,40 @@ from pathlib import Path
 from typing import Dict, Any, Optional, Union
 
 # Pre-compiled regex for splitting key-value pairs (avoids recompilation per line)
+
+
+def load_hosts_csv(csv_file: str) -> Dict[str, str]:
+    """
+    Load hosts CSV file and return address-to-name lookup dictionary.
+
+    CSV format (semicolon-delimited):
+        name;addr;addr6
+        host.addr1;10.0.1.100;fd00:1::100
+
+    Returns dict mapping both IPv4 and IPv6 addresses to host names.
+    """
+    hosts = {}
+    with open(csv_file, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+        if len(lines) < 2:
+            return hosts
+        # skip header line
+        for line in lines[1:]:
+            line = line.strip()
+            if not line:
+                continue
+            parts = line.split(';')
+            if len(parts) >= 2:
+                name = parts[0]
+                addr = parts[1] if len(parts) > 1 else ''
+                addr6 = parts[2] if len(parts) > 2 else ''
+                if addr:
+                    hosts[addr] = name
+                if addr6:
+                    hosts[addr6] = name
+    return hosts
+
+
 KV_PATTERN = re.compile(r'(?:[^\s,""]|"(?:\\.|[^""])*")+')
 
 
@@ -229,7 +263,9 @@ def get_communication_matrix(logfile: str,
     return matrix
 
 
-def print_communication_matrix(matrix: Dict[str, Any], indent: int = 0) -> None:
+def print_communication_matrix(matrix: Dict[str, Any], indent: int = 0,
+                               hosts: Optional[Dict[str, str]] = None,
+                               _level: int = 0) -> None:
     """
     Prints the communication matrix in a nice format.
 
@@ -243,36 +279,45 @@ def print_communication_matrix(matrix: Dict[str, Any], indent: int = 0) -> None:
                     count
                         1
     """
+    if hosts is None:
+        hosts = {}
     for key, value in matrix.items():
         # values are printed with 4 whitespace indent
-        print('    ' * indent + str(key))
+        line = '    ' * indent + str(key)
+        # Add hostname for srcip (level 0) and dstip (level 1)
+        if _level in (0, 1) and key and hosts.get(key):
+            line += f" ({hosts.get(key)})"
+        print(line)
         if isinstance(value, dict):
-            print_communication_matrix(value, indent+1)
+            print_communication_matrix(value, indent+1, hosts, _level+1)
         else:
             print('    ' * (indent+1) + str(value))
     return None
 
 def print_communication_matrix_as_csv(matrix: Dict[str, Any],
                                       countbytes: bool = False,
-                                      showaction: bool = False) -> None:
+                                      showaction: bool = False,
+                                      hosts: Optional[Dict[str, str]] = None) -> None:
     """
     Prints communication matrix in csv format.
 
     Example:
     >>> matrix = {'192.168.1.1': {'8.8.8.8': {'53': {'UDP': {'count': 1}}}}}
     >>> print_communication_matrix_as_csv(matrix)
-    srcip;dstip;dport;proto;count
-    192.168.1.1;8.8.8.8;53;UDP;1
+    srcip;src.name;dstip;dst.name;dport;proto;count
+    192.168.1.1;;8.8.8.8;;53;UDP;1
 
     Example 2 (option countbytes set):
     >>> matrix = {'192.168.1.1': {'8.8.8.8': {'53': {'UDP': {'count': 1, 'sentbytes': 10, 'rcvdbytes': 10}}}}}
     >>> print_communication_matrix_as_csv(matrix, countbytes=True)
-    srcip;dstip;dport;proto;count;sentbytes;rcvdbytes
-    192.168.1.1;8.8.8.8;53;UDP;1;10;10
+    srcip;src.name;dstip;dst.name;dport;proto;count;sentbytes;rcvdbytes
+    192.168.1.1;;8.8.8.8;;53;UDP;1;10;10
 
     """
+    if hosts is None:
+        hosts = {}
     # Dynamic header based on options
-    header = ["srcip", "dstip", "dport", "proto", "count"]
+    header = ["srcip", "src.name", "dstip", "dst.name", "dport", "proto", "count"]
     if showaction:
         header.append("action")
     if countbytes:
@@ -283,7 +328,10 @@ def print_communication_matrix_as_csv(matrix: Dict[str, Any],
         for dstip in matrix[srcip]:
             for dport in matrix[srcip][dstip]:
                 for proto in matrix[srcip][dstip][dport]:
-                    row = [str(srcip or ""), str(dstip or ""), str(dport or ""), str(proto or ""),
+                    src_name = hosts.get(srcip, "") if srcip else ""
+                    dst_name = hosts.get(dstip, "") if dstip else ""
+                    row = [str(srcip or ""), src_name, str(dstip or ""), dst_name,
+                           str(dport or ""), str(proto or ""),
                            str(matrix[srcip][dstip][dport][proto].get("count", ""))]
                     if showaction:
                         row.append(str(matrix[srcip][dstip][dport][proto].get("action") or ""))
@@ -294,7 +342,8 @@ def print_communication_matrix_as_csv(matrix: Dict[str, Any],
 
 def print_communication_matrix_as_json(matrix: Dict[str, Any],
                                        countbytes: bool = False,
-                                       showaction: bool = False) -> None:
+                                       showaction: bool = False,
+                                       hosts: Optional[Dict[str, str]] = None) -> None:
     """
     Prints communication matrix in JSON format (flat array structure).
 
@@ -304,7 +353,9 @@ def print_communication_matrix_as_json(matrix: Dict[str, Any],
     [
       {
         "srcip": "192.168.1.1",
+        "src.name": "",
         "dstip": "8.8.8.8",
+        "dst.name": "",
         "dport": "53",
         "proto": "UDP",
         "count": 1
@@ -317,7 +368,9 @@ def print_communication_matrix_as_json(matrix: Dict[str, Any],
     [
       {
         "srcip": "192.168.1.1",
+        "src.name": "",
         "dstip": "8.8.8.8",
+        "dst.name": "",
         "dport": "53",
         "proto": "UDP",
         "count": 1,
@@ -326,15 +379,21 @@ def print_communication_matrix_as_json(matrix: Dict[str, Any],
       }
     ]
     """
+    if hosts is None:
+        hosts = {}
     records = []
 
     for srcip in matrix:
         for dstip in matrix[srcip]:
             for dport in matrix[srcip][dstip]:
                 for proto in matrix[srcip][dstip][dport]:
+                    src_name = hosts.get(srcip, "") if srcip else ""
+                    dst_name = hosts.get(dstip, "") if dstip else ""
                     record = {
                         "srcip": srcip,
+                        "src.name": src_name,
                         "dstip": dstip,
+                        "dst.name": dst_name,
                         "dport": dport,
                         "proto": proto,
                         "count": matrix[srcip][dstip][dport][proto].get("count")
@@ -366,6 +425,13 @@ def main() -> int:
     fg_log_parser.py -f filter --srcipfield=SRC --dstipfield=DST --dstportfield=DPT --protofield=PROTO
   Parse Fortianalyzer Log:
     fg_log_parser.py -f faz.log --srcipfield=src --dstipfield=dst
+
+Host File Format (--csv-hosts-file):
+  Semicolon-delimited CSV with header: name;addr;addr6
+  Example:
+    name;addr;addr6
+    webserver;10.0.1.100;fd00:1::100
+    database;10.0.2.50;fd00:2::50
 ''')
 
     # required arguments
@@ -402,6 +468,8 @@ def main() -> int:
                         help='Field for sent bytes (default: sentbyte)')
     parser.add_argument('--rcvdbytesfield', default='rcvdbyte',
                         help='Field for rcvd bytes (default: rcvdbyte)')
+    parser.add_argument('--csv-hosts-file', metavar='<file>',
+                        help='CSV file for IP-to-name resolution (adds src.name, dst.name)')
 
     # parse arguments
     args = parser.parse_args()
@@ -414,6 +482,7 @@ def main() -> int:
     csv = args.csv
     jsonformat = args.json
     showaction = args.showaction
+    csv_hosts_file = args.csv_hosts_file
 
     # define logfile format
     logformat = {'srcipfield': args.srcipfield,
@@ -433,15 +502,25 @@ def main() -> int:
         log.basicConfig(format="%(levelname)s: %(message)s")
     log.debug("Script was started with arguments: %s", args)
 
+    # load hosts file if specified
+    hosts = {}
+    if csv_hosts_file:
+        hosts_path = Path(csv_hosts_file)
+        if not hosts_path.exists():
+            log.error("Hosts file not found: %s", csv_hosts_file)
+            sys.exit(1)
+        hosts = load_hosts_csv(csv_hosts_file)
+        log.debug("Loaded %d host entries from %s", len(hosts), csv_hosts_file)
+
     # parse log
     log.debug("Reading firewall log...")
     matrix = get_communication_matrix(logfile, logformat, countbytes, noipcheck, showaction)
     if jsonformat:
-        print_communication_matrix_as_json(matrix, countbytes, showaction)
+        print_communication_matrix_as_json(matrix, countbytes, showaction, hosts)
     elif csv:
-        print_communication_matrix_as_csv(matrix, countbytes, showaction)
+        print_communication_matrix_as_csv(matrix, countbytes, showaction, hosts)
     else:
-        print_communication_matrix(matrix)
+        print_communication_matrix(matrix, hosts=hosts)
     return 0
 
 if __name__ == "__main__":
