@@ -10,7 +10,6 @@
 - [Features](#features)
 - [Host Name Resolution](#host-name-resolution)
   - [CSV Host File Format](#csv-host-file-format)
-  - [Converting YAML to CSV](#converting-yaml-to-csv)
   - [Example Usage](#example-usage)
 - [Example Session](#example-session)
 - [Example Session with CSV output](#example-session-with-csv-output)
@@ -35,10 +34,6 @@ Alternatively, download the repository as a ZIP file and extract it.
 ## Requirements
 
 This script uses only Python 3 built-in modules and has no external dependencies.
-
-For the `yaml_to_csv.py` helper script, PyYAML is required:
-
-    pip install pyyaml
 
 ## Make the Script Executable (Optional)
 
@@ -141,17 +136,6 @@ The host file is a semicolon-delimited CSV with the following format:
 - `name`: The hostname to display
 - `addr`: IPv4 address
 - `addr6`: IPv6 address (optional)
-
-## Converting YAML to CSV
-
-Use the `yaml_to_csv.py` helper script to convert YAML host files:
-
-    # YAML input format:
-    # - name: webserver
-    #   addr: 10.0.1.100
-    #   addr6: 'fd00:1::100'
-
-    python3 yaml_to_csv.py hosts.yaml -o hosts.csv
 
 ## Example Usage
 
